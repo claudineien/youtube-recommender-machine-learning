@@ -7,6 +7,9 @@
   </ol>
 </h4>
 
+> Definir o problema
+> Definir a melhor solução
+
 ```python
 class pesquisar:
   def __init__():
