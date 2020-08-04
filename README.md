@@ -98,20 +98,20 @@
 </div>
 <p>O gráfico a seguir mostra a relação inversa entre tempo de produção da informação e o valor da informação</p>
 <picture>
-    <img src=".\vlr-info_x_tempoproduinfo.png" alt="Grafico : Valor Informação x Tempo de produção da Informação">
+    <img src="img/vlr-info_x_tempoproduinfo.png" alt="Grafico : Valor Informação x Tempo de produção da Informação">
 </picture>
-<br>
+<br><br><br><br><br><br><br><br>
 <h4>DIFERENÇAS NA ESTRUTURA BÁSICA DE SOLUÇÃO DE ANÁLISE DE DADOS</h4>
 <div style="overflow-x:auto;">
   <table>
     <tr>
-      <th>Elementoss</th>
+      <th>Elementos</th>
       <th>Análise Tradicional de Dados</th>
       <th>Análise de Big Data</th>
     </tr>
     <tr>
       <td>Fontes de dados</td>
-      <td>Estruturados e não Estruturados</td>
+      <td>Normalmente dados relacionais estruturados, hieráquico ou de rede. Alguns casos não estruturados</td>
       <td>Estruturados e não estruturados com enorme quantidade de variedades de fontes de dados</td>
     </tr>
     <tr>
@@ -136,6 +136,8 @@
     </tr>
   </table>
 </div>
+
+
 
 <p></p>
 <p></p>
