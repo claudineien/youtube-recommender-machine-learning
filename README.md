@@ -1,3 +1,5 @@
+[![Up to Date](https://github.com/ikatyang/emoji-cheat-sheet/workflows/Up%20to%20Date/badge.svg)](https://github.com/ikatyang/emoji-cheat-sheet/actions?query=workflow%3A%22Up+to+Date%22)
+
 <h1 align="center">Data Science na prática</h1>
 
 <div class="myDiv">
@@ -5,57 +7,68 @@
   <p>This is some text in a div element.</p>
 </div>
 
-[![Up to Date](https://github.com/ikatyang/emoji-cheat-sheet/workflows/Up%20to%20Date/badge.svg)](https://github.com/ikatyang/emoji-cheat-sheet/actions?query=workflow%3A%22Up+to+Date%22)
-
-<h3>Índice</h3>
-<h4>
-  <ol>
-    <li>Estratégia para planejar, executar e concluir</li>
-  </ol>
-</h4>
-
-<table>
-    <caption>Derinir o Problema</caption>
+<h1>BIG DATA NA VISÃO GERENCIAL</h1>
+<p>A era da informação e conhecimento sempre existiram. Para saber disto basta lembrar de Sócrates 469 a.C, Platão 428 a.C, Aristóteles 384 a.C, entre outros filósofos, matemáticos, físicos, cientitas, escritores, entre outros contribuidores, que contribuiram com milhares de milhares de informações e conhecimentos.</p>
+<p>A diferença entre a época dos citados seres humanos e nossa época é que nos últimos 30 anos foram produzidos uma quantidade incomparável de informações e conhecimentos em relação os anteriores últimos 1000 anos, por conta da alta velocidade de propagação</p>
+<p>Analisar dados é sobreviver, esta além de ser uma simples atividade</p>
+<p>A globalização e competitividade mundial obriga as organizações a serem talentosamente eficientes  na extração de informações e conhecimentos no enorme universo exponencial de dados eletrônicos</p>
+<p>O produto do talento eficiente na extração de informações e conhecimento será no mínimo : menos custo, mais vendas, clientes mais satisfeitos, fornecedores mais eficientes, conformidade com órgãos reguladores e conformidade com órgãos fiscalizadores</p>
+<p>O PMBOK (2013) define que um projeto é um esforço temporário para produzir um produto ou serviço exclusivo. Um projeto Big Data possui estas mesmas características, e pode gerar resultados por tempo indeterminado.</p>
+<p>Um projeto Big Data esta entre os mais complexos e com maiores riscos de todas as indústrias, produzindo algo abstrato, não tangível, envolve muitas estruturas, sistemas, formatos, pessoas e infraestrutura</p>
+<p>Um projeto que envolve uma única fonte de dados relacionais para produzir dimensões em um data mart, não pode ser considerado Big Data. </p>
+<h4>ENTENDER PROJETO BIG DATA</h4>
+<p>Envolve grandes volumes de dados (petabytes, exabytes, até o infinito), velocidade, variedade, veracidade e valor.</p>
+<p></p>
+<h4>PROJETO BIG DATA</h4>
+<p>Um projeto Big Data envolve muitas fontes de dados, os que envolvem poucas deve haver uma desestruturada ou semi-estruturada ou fontes de dados NoSQL, ou volumes de dados além de um projeto tradicional.</p>
+<p>O PMBOK registra que nem todos os processos são obrigatórios. Nem aplicarmos aplica-los com a mesma intensidade. Quais processos usar e intensidade aplicar será responsabilidade do gerente do projeto e sua equipe. Os fatores que envolve são: complexidade, novos elementos relacionados, pessoas, tecnologias, dados de origem ou origem dos dados.</p>
+<h4>CRIAÇÃO DE PROTÓTIPOS</h4>
+<p>
+    <ol>
+        <li>Baixa complexidade : há experiência prévia e tecnologia madura e testada, talvez seja dispensável um protótipo</li>
+        <li>Média complexidade : pouca experiência e com entrega de artefatos de visualização, pode ter protótipos em ferramentas que simulem maquetes de telas</li>
+        <li>Grande complexidade : quase sem experiência alguma, pode requerer protótipo funcional para verificar viabilidade e minimizar riscos</li>
+    </ol>
+</p>
+<h4>DIFERENÇA ENTRE PROJETO TRADICIONAL DE ANALISE DE DADOS E PROJETO BIG DATA</h4>
+<div style="overflow-x:auto;">
+  <table>
     <tr>
-        <th scope="col">Player</th>
-        <th scope="col">Gloobles</th>
-        <th scope="col">Za'taak</th>
+      <th>Características</th>
+      <th>Projeto Tradicional</th>
+      <th>Projeto Big Data</th>
     </tr>
     <tr>
-        <th scope="row">TR-7</th>
-        <td>7</td>
-        <td>4,569</td>
+      <td>Veracidade</td>
+      <td>Importante</td>
+      <td>Importante</td>
     </tr>
     <tr>
-        <th scope="row">Khiresh Odo</th>
-        <td>7</td>
-        <td>7,223</td>
+      <td>Valor</td>
+      <td>Importante</td>
+      <td>Importante</td>
     </tr>
     <tr>
-        <th scope="row">Mia Oolong</th>
-        <td>9</td>
-        <td>6,219</td>
+      <td>Velocidade</td>
+      <td>Auditoria manual, por amostragem, pode demandar semanas ou meses, definido período para executar</td>
+      <td>Com computador o processo é quase todo eletrônico, o mínimo de erro, milhões de vezes mais rápido, forma contínua</td>
     </tr>
-</table>
+    <tr>
+      <td>Volume</td>
+      <td>Construídos em data warehouse, contendo até terabytes de dados</td>
+      <td>Construídos em data warehouse e/ou nuvem, partir de petabyte de dados</td>
+    </tr>
+    <tr>
+      <td>Variedade</td>
+      <td>Dados relacionais estruturados, hieráquico ou de rede</td>
+      <td>Além do tradicional, incluem dados não estruturados, semi-estruturados : redes sociais, sensores, web, documentos, emails, etc, etc...</td>
+    </tr>
+  </table>
+</div>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
 
-
-| DEFINIR O PROBLEMA ? DEFINE THE PROBLEM ? |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Antes mesmo de iniciar um projeto data science, definir o problema que você esta tentando resolver. Nesta etapa, você deve estar alinhado com o objetivo do requisito de negócio|
-|	Before you even begin a Data Science project, define de problem you're trying to solve. At this stage, you should be clear with the business requirement objectives             |
-
-<ol>
-  <li>Definir o problema</li>
-  <li>Definir a solução</li>
-</ol>
-
-InLine `<addr>` Code
-
-```python
-class pesquisar:
-  def __init__():
-    return
-```
-
-:shipit:
-
+<a href="https://www.youtube.com/watch?v=B-JmU842t_Q">A HISTÓRIA DA INFORMAÇÃO Documentário 2012</a><br>
+<a href="https://www.youtube.com/watch?v=eOrpDa0BH1c">Consumo de informação | Ricardo Cappra, para PUCRS Online</a>
