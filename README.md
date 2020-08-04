@@ -5,8 +5,8 @@
 <h3>Índice</h3>
 <h4>
   <ol>
-    <li>A estratégia para planejar, executar e concluir I</li>
-    <li>A estratégia para planejar, executar e concluir II</li>
+    <li>A estratégia I : planejar, executar e concluir</li>
+    <li>A estratégia II : preparação dos dados</li>
   </ol>
 </h4>
 
