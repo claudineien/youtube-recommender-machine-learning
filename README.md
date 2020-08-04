@@ -40,18 +40,18 @@
     </tr>
     <tr>
       <td>Veracidade</td>
-      <td>Importante</td>
-      <td>Importante</td>
+      <td>Pode demorar semanas ou meses</td>
+      <td>Pode ser milhões de vezes mais rápido, e de forma contínua, e com maior índice de acerto</td>
     </tr>
     <tr>
       <td>Valor</td>
-      <td>Importante</td>
-      <td>Importante</td>
+      <td>Pode demorar semanas ou meses, para obter se o resultado é positivo ou negativo</td>
+      <td>Pode ser milhões de vezes mais rápido, para obter se o resultado é positivo ou negativo</td>
     </tr>
     <tr>
       <td>Velocidade</td>
       <td>Auditoria manual, por amostragem, pode demandar semanas ou meses, definido período para executar</td>
-      <td>Com computador o processo é quase todo eletrônico, o mínimo de erro, milhões de vezes mais rápido, forma contínua</td>
+      <td>Com computador o processo é quase todo eletrônico, o mínimo de erro, milhões de vezes mais rápido, e de forma contínua</td>
     </tr>
     <tr>
       <td>Volume</td>
