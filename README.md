@@ -46,7 +46,7 @@
     <tr>
       <td>Valor</td>
       <td>Pode demorar semanas ou meses, para ter certeza se o resultado é positivo ou negativo</td>
-      <td>Pode ser milhões de vezes mais rápido, para ter certeza se o resultado é positivo ou negativo</td>
+      <td>Provavelmente em algumas horas saiba se o resultado é positivo ou negativo</td>
     </tr>
     <tr>
       <td>Velocidade</td>
@@ -56,7 +56,7 @@
     <tr>
       <td>Volume</td>
       <td>Construídos em data warehouse, contendo até terabytes de dados</td>
-      <td>Construídos em data warehouse e/ou nuvem, partir de petabyte de dados</td>
+      <td>Construídos em data warehouse e/ou nuvem, a partir de petabyte de dados</td>
     </tr>
     <tr>
       <td>Variedade</td>
@@ -79,20 +79,14 @@
       <td>Geralmente Sim</td>
     </tr>
     <tr>
-      <td>Trafego de dados</td>
+      <td>Tráfego de dados</td>
       <td>Mais dados do servidor ao cliente ou do servidor para fora da empresas</td>
       <td>O maior tráfego é entre os nós dos servidores</td>
     </tr>
     <tr>
       <td>Carga de dados</td>
       <td>Normalmente é realizado após pré-análise e identificação de valor agregado. Os dados são tratados e carregados em repositórios pequenos (para padrões Big Data), para apoiar decisões.</td>
-      <td>Geralmente carregam grandes volumes (a partir de petabytes) de dados em um sistema HDFS -Hadoop Distributed File System ou para Serviços Cloud, mesmo sem identificar informação com valor agregado. O nome dado a formação de dados é data lakes (lago de dados). Posteriormente parte destes dados podem ser tranferidos a um tradidional data mart
-</td>
-    </tr>
-    <tr>
-      <td>Trafego de dados</td>
-      <td>Mais dados do servidor ao cliente ou do servidor para fora da empresas</td>
-      <td>O maior tráfego é entre os nós dos servidores</td>
+      <td>Geralmente carregam grandes volumes (a partir de petabytes) de dados em um sistema HDFS -Hadoop Distributed File System ou para Serviços Cloud, mesmo sem identificar informação com valor agregado. O nome dado a formação de dados é data lakes (lago de dados). Posteriormente parte destes dados podem ser tranferidos a um tradidional data mart</td>
     </tr>
   </table>
 </div>
@@ -100,7 +94,7 @@
 <picture>
     <img src="img/vlr-info_x_tempoproduinfo.png" alt="Grafico : Valor Informação x Tempo de produção da Informação">
 </picture>
-<br><br><br><br><br><br><br><br>
+<br>
 <h4>DIFERENÇAS NA ESTRUTURA BÁSICA DE SOLUÇÃO DE ANÁLISE DE DADOS</h4>
 <div style="overflow-x:auto;">
   <table>
