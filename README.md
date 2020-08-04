@@ -7,7 +7,7 @@
   <p>This is some text in a div element.</p>
 </div>
 
-<h1>BIG DATA NA VISÃO GERENCIAL</h1>
+<h1>GESTÃO DE PROJETO BIG DATA</h1>
 <p>A era da informação e conhecimento sempre existiram. Para saber disto basta lembrar de Sócrates 469 a.C, Platão 428 a.C, Aristóteles 384 a.C, entre outros filósofos, matemáticos, físicos, cientitas, escritores, entre outros contribuidores, que contribuiram com milhares de milhares de informações e conhecimentos.</p>
 <p>A diferença entre a época dos citados seres humanos e nossa época é que nos últimos 30 anos foram produzidos uma quantidade incomparável de informações e conhecimentos em relação os anteriores últimos 1000 anos, por conta da alta velocidade de propagação</p>
 <p>Analisar dados é sobreviver, esta além de ser uma simples atividade</p>
@@ -62,6 +62,26 @@
       <td>Variedade</td>
       <td>Dados relacionais estruturados, hieráquico ou de rede</td>
       <td>Além do tradicional, incluem dados não estruturados, semi-estruturados : redes sociais, sensores, web, documentos, emails, etc, etc...</td>
+    </tr>
+    <tr>
+      <td>Arquitetura</td>
+      <td>Projeto Centralizado em um servidor</td>
+      <td>Projeto Distribuído entre servidores</td>
+    </tr>
+    <tr>
+      <td>Crescimento</td>
+      <td>Vertical : +memória, +cpu, +servidor</td>
+      <td>Horizontal : adicionados data nodes</td>
+    </tr>
+    <tr>
+      <td>Virtualizados</td>
+      <td>Normalmente não</td>
+      <td>Geralmente Sim</td>
+    </tr>
+    <tr>
+      <td>Trafego de dados</td>
+      <td>Mais dados do servidor ao cliente ou do servidor para fora da empresas</td>
+      <td>O maior tráfego é entre os nós dos servidores</td>
     </tr>
   </table>
   <p>O gráfico a seguir mostra a relação inversa entre tempo de produção da informação e o valor da informação</p>
