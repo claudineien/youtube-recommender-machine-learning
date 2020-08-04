@@ -7,7 +7,7 @@
   <p>This is some text in a div element.</p>
 </div>
 
-<h1>GESTÃO DE PROJETO BIG DATA</h1>
+<h1>VISÃO GERENCIAL EM BIG DATA</h1>
 <p>A era da informação e conhecimento sempre existiram. Para saber disto basta lembrar de Sócrates 469 a.C, Platão 428 a.C, Aristóteles 384 a.C, entre outros filósofos, matemáticos, físicos, cientitas, escritores, entre outros contribuidores, que contribuiram com milhares de milhares de informações e conhecimentos.</p>
 <p>A diferença entre a época dos citados seres humanos e nossa época é que nos últimos 30 anos foram produzidos uma quantidade incomparável de informações e conhecimentos em relação os anteriores últimos 1000 anos, por conta da alta velocidade de propagação</p>
 <p>Analisar dados é sobreviver, esta além de ser uma simples atividade</p>
@@ -22,7 +22,7 @@
 <h4>PROJETO BIG DATA</h4>
 <p>Um projeto Big Data envolve muitas fontes de dados, os que envolvem poucas deve haver uma desestruturada ou semi-estruturada ou fontes de dados NoSQL, ou volumes de dados além de um projeto tradicional.</p>
 <p>O PMBOK registra que nem todos os processos são obrigatórios. Nem aplicarmos aplica-los com a mesma intensidade. Quais processos usar e intensidade aplicar será responsabilidade do gerente do projeto e sua equipe. Os fatores que envolve são: complexidade, novos elementos relacionados, pessoas, tecnologias, dados de origem ou origem dos dados.</p>
-<h4>CRIAÇÃO DE PROTÓTIPOS</h4>
+<h4>CRIAR PROTÓTIPOS</h4>
 <p>
     <ol>
         <li>Baixa complexidade : há experiência prévia e tecnologia madura e testada, talvez seja dispensável um protótipo</li>
@@ -83,16 +83,72 @@
       <td>Mais dados do servidor ao cliente ou do servidor para fora da empresas</td>
       <td>O maior tráfego é entre os nós dos servidores</td>
     </tr>
+    <tr>
+      <td>Carga de dados</td>
+      <td>Normalmente é realizado após pré-análise e identificação de valor agregado. Os dados são tratados e carregados em repositórios pequenos (para padrões Big Data), para apoiar decisões.</td>
+      <td>Geralmente carregam grandes volumes (a partir de petabytes) de dados em um sistema HDFS -Hadoop Distributed File System ou para Serviços Cloud, mesmo sem identificar informação com valor agregado. O nome dado a formação de dados é data lakes (lago de dados). Posteriormente parte destes dados podem ser tranferidos a um tradidional data mart
+</td>
+    </tr>
+    <tr>
+      <td>Trafego de dados</td>
+      <td>Mais dados do servidor ao cliente ou do servidor para fora da empresas</td>
+      <td>O maior tráfego é entre os nós dos servidores</td>
+    </tr>
   </table>
-  <p>O gráfico a seguir mostra a relação inversa entre tempo de produção da informação e o valor da informação</p>
-  <picture>
-    <img src="img/vlr-info_x_tempoproduinfo.png" alt="Grafico : Valor Informação x Tempo de produção da Informação">
-  </picture>
 </div>
+<p>O gráfico a seguir mostra a relação inversa entre tempo de produção da informação e o valor da informação</p>
+<picture>
+    <img src=".\vlr-info_x_tempoproduinfo.png" alt="Grafico : Valor Informação x Tempo de produção da Informação">
+</picture>
+<br>
+<h4>DIFERENÇAS NA ESTRUTURA BÁSICA DE SOLUÇÃO DE ANÁLISE DE DADOS</h4>
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>Elementoss</th>
+      <th>Análise Tradicional de Dados</th>
+      <th>Análise de Big Data</th>
+    </tr>
+    <tr>
+      <td>Fontes de dados</td>
+      <td>Estruturados e não Estruturados</td>
+      <td>Estruturados e não estruturados com enorme quantidade de variedades de fontes de dados</td>
+    </tr>
+    <tr>
+      <td>Carga</td>
+      <td>Realizado por um processo de carga, web service ou uma API</td>
+      <td>Realizado por um processo de carga, web service ou uma API</td>
+    </tr>
+    <tr>
+      <td>Armazenamento</td>
+      <td>Em um banco de dados relacional ou dimensional</td>
+      <td>Em sistemas de arquivos distribuídos com HDFS e em bancos de dados NoSQL</td>
+    </tr>
+    <tr>
+      <td>Análise</td>
+      <td>Utilizar consultas em linguagem estruturada (Pig Latin ou SQL) ou algorítimo machine learning (aprendizado de máquina) utilizando cubos de decisão</td>
+      <td>Utilizar consultas em linguagem estruturada (Pig Latin ou SQL) ou algorítimo machine learning (aprendizado de máquina) utilizam map reduce</td>
+    </tr>
+    <tr>
+      <td>Visualização</td>
+      <td>Painéis, relatórios, KPIs, entre outros</td>
+      <td>Painéis, relatórios, KPIs, entre outros</td>
+    </tr>
+  </table>
+</div>
+
 <p></p>
 <p></p>
 <p></p>
 <p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
 
 <a href="https://www.youtube.com/watch?v=B-JmU842t_Q">A HISTÓRIA DA INFORMAÇÃO Documentário 2012</a><br>
 <a href="https://www.youtube.com/watch?v=eOrpDa0BH1c">Consumo de informação | Ricardo Cappra, para PUCRS Online</a>
