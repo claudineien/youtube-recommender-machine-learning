@@ -45,8 +45,8 @@
     </tr>
     <tr>
       <td>Valor</td>
-      <td>Pode demorar semanas ou meses, para obter se o resultado é positivo ou negativo</td>
-      <td>Pode ser milhões de vezes mais rápido, para obter se o resultado é positivo ou negativo</td>
+      <td>Pode demorar semanas ou meses, para ter certeza se o resultado é positivo ou negativo</td>
+      <td>Pode ser milhões de vezes mais rápido, para ter certeza se o resultado é positivo ou negativo</td>
     </tr>
     <tr>
       <td>Velocidade</td>
@@ -64,6 +64,10 @@
       <td>Além do tradicional, incluem dados não estruturados, semi-estruturados : redes sociais, sensores, web, documentos, emails, etc, etc...</td>
     </tr>
   </table>
+  <p>O gráfico a seguir mostra a relação inversa entre tempo de produção da informação e o valor da informação</p>
+  <picture>
+    <img src=".\vlr-info_x_tempoproduinfo.png" alt="Grafico : Valor Informação x Tempo de produção da Informação">
+  </picture>
 </div>
 <p></p>
 <p></p>
