@@ -132,7 +132,7 @@
 </div>
 <h4>OBJETIVO DO PROJETO BIG DATA</h4>
 <p>O objetivo do projeto big data é responder perguntas. E para isto é necessário:</p>
-<img src="img/triangulobigdata.png" style="width:240px">
+<img src="img/triangulobigdata.png" style="width:140px" alt="Grafico : Triangulo-Pessoas,Processod,Dados,Tecnologia">
 
 <p></p>
 <p></p>
