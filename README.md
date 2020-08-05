@@ -130,10 +130,10 @@
     </tr>
   </table>
 </div>
+<h4>OBJETIVO DO PROJETO BIG DATA</h4>
+<p>O objetivo do projeto big data é responder perguntas. E para isto é necessário:</p>
+<img src="img/Sem título.png" style="width:340px">
 
-
-
-<p></p>
 <p></p>
 <p></p>
 <p></p>
