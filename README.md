@@ -37,9 +37,9 @@
         <li>A métrica primária será : Top N vídeos para colocar na lista watch later</li>
 		<li>As métricas secundárias podem ser :</li>
         <ul>
-            <li>Quantidades de vídeos assistidos até o final</li>
-            <li>Tempo investido selecionando os vídeos recomendados por Machine Learning</li>
-            <li>Os mais assistidos os top N recomendados por Machine Learning do que os top N da busca google ? : [YES] [NO]</li>
+            <li>Quantidades N de vídeos assistidos até o final</li>
+            <li>Tempo X investido selecionando os vídeos recomendados por Machine Learning</li>
+            <li>Os top N recomendados por Machine Learning são mais assistidos do que os top N da busca google ? : [YES] [NO]</li>
         <ul>
     </ul>
 </p>
