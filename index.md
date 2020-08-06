@@ -1,8 +1,9 @@
-<p>Objetivo : Desenvolver um recomendador de vídeos no youtube</p>
+<p>Objetivo : Desenvolver um recomendador de vídeos do youtube</p>
 <p>Nivel Conhecimento : A partir de  Intermediário</p>
-<p>[En]  [Pt-Br]</p>
+<p><a href="blank_">[En]</a>  <a href="blank_">[Pt-Br]</a></p>
+<h1>CICLO DE VIDA DE UMA SOLUÇÃO EM CIÊNCIA DE DADOS</h1>
 <h2>DEFINIR O PROBLEMA E A SOLUÇÃO</h2>
-<h3>DEFINIR O PROBLEMA ?</h3>
+<h3>QUAL É O PROBLEMA ?</h3>
 <p>Antes mesmo de iniciar um projeto de ciência de dados, você deve definir o problema que deverá ser resolvido. O problema deverá estar diretamente relacionado ao objetivo do requisito do negócio.</p>
 <p>Definir o problema é uma responsabilidade do cientista de dados com o time de negócios, responsabilidade bilateral.</p>
 <p>Em nosso projeto : O problema é ' Muito tempo gasto buscando novos vídeos disponíveis no youtube '.</p>
@@ -34,7 +35,7 @@
 <p>Deve haver uma métrica primária e uma ou mais métricas secundárias.</p>
 <p>Em nosso projeto :
     <ul>
-        <li>A métrica primária será : Top N vídeos para colocar na lista watch later</li>
+        <li>A métrica primária será : Top N vídeos incluo na lista watch later</li>
 		<li>As métricas secundárias podem ser :</li>
         <ul>
             <li>Quantidades N de vídeos assistidos até o final</li>
@@ -44,8 +45,8 @@
     </ul>
 </p>
 <p>Importante :<br>
-Definir um problema e a melhor solução à este problema com etapas rápidas e "imperfeitas" é a melhor forma de sairmos do estado zero.</p>
-<p>Para o Cientista de dados :
+Definir um problema ja resolvido diversas vezes e a melhor solução à este problema com etapas rápidas e digamos "imperfeitas" é a melhor forma de sairmos do estado zero.</p>
+<p>Cientista de dados deve considerar que :
     <ol>
         <li>Passos 01 e 02 : serve para entender todo o processo do negócio, para definir o problema e a melhor solução.
         </li>
@@ -55,13 +56,57 @@ Definir um problema e a melhor solução à este problema com etapas rápidas e 
         </li>
     </ol>
 </p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-
-
-<p>fffffff</p><br>
-<p>eeeeee</p><br>
-<p>dddddd</p><br>
+<h2>COLETAR E TRABALHAR OS E/OU NOS DADOS</h2>
+<p>Nesta etapa o Cientista de dados aplicará todas as técnicas para tornar os dados em perfeita conformidade ao modelo de predição que será desenvolvido</p>
+<h3>COLETAR OS DADOS DE ALGUMAS FONTES</h3>
+<p>
+    <ul>
+        <li>banco de dados relacional e estruturado</li>
+        <li>banco de dados NoSQL</li>
+        <li>buscando na internet (scraping)</li>
+        <li>de imagens</li>
+        <li>de emails</li>
+        <li>com as pessoas envolvidas no processo</li>
+        <li>planilhas excel</li>
+        <li>redes sociais</li>
+        <li>sensores</li>
+        <li>documentos word/pdf e similares</li>
+    </ul>
+</p>
+<h3>LIMPAR OS DADOS</h3>
+<p>
+    <ul>
+        <li>remover dados redundantes</li>
+        <li>trabalhar nos dados faltantes</li>
+        <li>trabalhar nos dados duplicados</li>
+        <li>trabalhar nos dados desnecessários</li>
+    </ul>
+</p>
+<h3>ANALISAR E EXPLORAR OS DADOS</h3>
+<p>
+    <ul>
+        <li>Detectar padrões entre os dados</li>
+        <li>Detectar tendências entre os dados</li>
+    </ul>
+</p>
+<h3>MODELAR OS DADOS</h3>
+<p>Nesta fase o Cientista de dados separa seu conjunto de dados nas seguinte proporções :</p>
+<p>
+    <ul>
+        <li>Uma proporção para treinar o modelo, conhecido como conjunto de dados de treino</li>
+        <li>Uma proporção para testar a eficiência do modelo, conhecido com conjunto de dados de teste</li>
+    </ul>
+Nesta fase o modelo de dados esta sendo contruÍdo pelo conjunto de dados de treino e sendo evoluÍdo pelo conjunto de dados de teste.
+</p>
+<h3>OTIMIZAÇÃO E IMPLANTAÇÃO</h3>
+<p>Esta fase serve para melhorar a eficiência do modelo de dados, e realizar mais predições acuradas.</p>
+<p>O objetivo final é implantar o modelo de dados em ambiente de validação ou em ambiente de produção para aceitação dos usuários</p>
+<p>Os usuários deverão testar o desempenho dos modelos de dados e verificar se há qualquer inconsistências com os modelos, que serão corrigidos pelo Cientista de dados.</p>
+<br><br><br><br><br><br><br>
+<hr>
+<p>Bibliografia</p>
+    <ul>
+        <li>Curso Solução Completa de Data Science - Instrutor Mario Filho - Kagle Gran Master</li>
+        <li><a href="https://www.edureka.co/blog/data-science-projects/#A%20Basic%20Approach%20To%20Solving%20A%20Problem%20Using%20Data%20Science">Edureka</a></li>
+        <li></li>
+    </ul>
