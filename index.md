@@ -31,7 +31,7 @@
 <p>Em nosso projeto : criaremos um Web App com os vídeos (links) e as previsões ordenadas</p>
 <h3>COMO SABER SE A SOLUÇÃO DEU CERTO ?</h3>
 <p>O Cientista de dados define as métricas de acordo com a área de negócio e dados obtidos, então compara os resultados entre solução machine learning e os resultados atualmente conquistados sem machine learning.</p>
-<p>Deve haver uma métrica primária e diversas métricas secundárias.</p>
+<p>Deve haver uma métrica primária e uma ou mais métricas secundárias.</p>
 <p>Em nosso projeto :
     <ul>
         <li>A métrica primária será : Top N vídeos para colocar na lista watch later</li>
@@ -40,19 +40,26 @@
             <li>Quantidades N de vídeos assistidos até o final</li>
             <li>Tempo X investido selecionando os vídeos recomendados por Machine Learning</li>
             <li>Os top N recomendados por Machine Learning são mais assistidos do que os top N da busca google ? : [YES] [NO]</li>
-        <ul>
+        </ul>
     </ul>
+</p>
+<p>Importante :<br>
+Definir um problema e a melhor solução à este problema com etapas rápidas e "imperfeitas" é a melhor forma de sairmos do estado zero.</p>
+<p>Para o Cientista de dados :
+    <ol>
+        <li>Passos 01 e 02 : serve para entender todo o processo do negócio, para definir o problema e a melhor solução.
+        </li>
+        <li>Passos 03 e 04 : serve para desenvolver o modelo machine learning sob os processos e métricas do negócio.
+        </li>
+        <li>Passo 05 : serve para testar o modelo machine learning desenvolvido sob os processos e métricas do negócio e disponibilizá-lo em produção.
+        </li>
+    </ol>
 </p>
 <p></p>
 <p></p>
 <p></p>
 <p></p>
 <p></p>
-<p></p>
-<p></p>
-
-
-
 
 
 <p>fffffff</p><br>
