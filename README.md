@@ -105,9 +105,10 @@ Nesta fase o modelo de dados esta sendo contruÍdo pelo conjunto de dados de tre
 <p>Os usuários deverão testar o desempenho dos modelos de dados e verificar se há qualquer inconsistências com os modelos, que serão corrigidos pelo Cientista de dados.</p>
 <br><br><br><br><br><br><br>
 <hr>
-<p>Bibliografia</p>
+<p>Bibliografia
     <ul>
         <li>Curso Solução Completa de Data Science - Instrutor Mario Filho - Kagle Gran Master</li>
         <li><a href="https://www.edureka.co/blog/data-science-projects/#A%20Basic%20Approach%20To%20Solving%20A%20Problem%20Using%20Data%20Science">Edureka</a></li>
         <li></li>
     </ul>
+</p>
