@@ -45,7 +45,7 @@
     </ul>
 </p>
 <p>Importante :<br>
-Definir um problema e a melhor solução à este problema com etapas rápidas e "imperfeitas" é a melhor forma de sairmos do estado zero.</p>
+Definir um problema ja resolvido diversas vezes e a melhor solução à este problema com etapas rápidas e digamos "imperfeitas" é a melhor forma de sairmos do estado zero.</p>
 <p>Cientista de dados deve considerar que :
     <ol>
         <li>Passos 01 e 02 : serve para entender todo o processo do negócio, para definir o problema e a melhor solução.
