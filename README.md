@@ -23,13 +23,14 @@
 		<li>Criar Solução com Hanking dos vídeos que primeiramente eu vou gostar seguido dos que eu menos vou gostar</li>
         <li>Estabelecer uma abordagem de ponto corte : Retornar apenas 3 que eu vou gostar</li>
         <li>Abordagem de ranking : ordenar dos vídeos eu mais vou gostar aos que eu menos vou gostar</li>
+        <li>Consultará pelas seguintes palavras chave : machine-learning, kaggle, datascience</li>
     </ul>
 </p>
 <h3>COMO A SOLUÇÃO SERÁ USADA PRODUTIVAMENTE ?</h3>
 <p>O Cientista de dados analisa o resultado retornado, como este resultado será apresentado e define como devem ser tratados os novos dados.</p>
 <p>O resultado pode ser apresentado em um Web app, ERP system, Dashboard, Excel, etc...</p>
 <p>Em primeiro momento é responsabilidade do Cientista de dados definir como a solução será usada produtivamente. Após ter o modelo definitivo o Cientista de dados com o time de negócios estabelecem como a solução será usada definitivamente em produção.</p>
-<p>Em nosso projeto : criaremos um Web App com os vídeos (links) e as previsões ordenadas</p>
+<p>Em nosso projeto : criaremos um Web App com os vídeos (links) e as previsões ordenadas e com os seguintes dados : Título, Label, Anotações, Descrição</p>
 <h3>COMO SABER SE A SOLUÇÃO DEU CERTO ?</h3>
 <p>O Cientista de dados define as métricas de acordo com a área de negócio e dados obtidos, então compara os resultados entre solução machine learning e os resultados atualmente conquistados sem machine learning.</p>
 <p>Deve haver uma métrica primária e uma ou mais métricas secundárias.</p>
