@@ -1,6 +1,7 @@
-<p>Objetivo : Desenvolver um recomendador de vídeos do youtube</p>
-<p>Nivel Conhecimento : A partir de  Intermediário</p>
-<p><a href="blank_">[En]</a>  <a href="blank_">[Pt-Br]</a></p>
+<h4>Objetivo : Desenvolver um recomendador de vídeos do youtube
+    <p>Nivel Conhecimento : A partir de  Intermediário</p>
+    <p><a href="blank_">[En]</a>  <a href="blank_">[Pt-Br]</a></p>
+</h4>
 <h1>CICLO DE VIDA DE UMA SOLUÇÃO EM CIÊNCIA DE DADOS</h1>
 <h2>DEFINIR O PROBLEMA E A SOLUÇÃO</h2>
 <h3>QUAL É O PROBLEMA ?</h3>
@@ -83,7 +84,14 @@ Definir um problema ja resolvido diversas vezes e a melhor solução à este pro
         <li>trabalhar nos dados desnecessários</li>
     </ul>
 </p>
-<h3>ANALISAR E EXPLORAR OS DADOS</h3>
+<h3>CONVERTER OS DADOS</h3>
+<p>
+    <ul>
+        <li>de objetos para data</li>
+        <li>de objetos para string</li>
+        <li>categóricos para numéricos</li>
+    </ul>
+</p><h3>ANALISAR E EXPLORAR OS DADOS</h3>
 <p>
     <ul>
         <li>Detectar padrões entre os dados</li>
