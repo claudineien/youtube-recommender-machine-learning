@@ -83,7 +83,14 @@ Definir um problema ja resolvido diversas vezes e a melhor solução à este pro
         <li>trabalhar nos dados desnecessários</li>
     </ul>
 </p>
-<h3>ANALISAR E EXPLORAR OS DADOS</h3>
+<h3>CONVERTER OS DADOS</h3>
+<p>
+    <ul>
+        <li>de objetos para data</li>
+        <li>de objetos para string</li>
+        <li>categóricos para numéricos</li>
+    </ul>
+</p><h3>ANALISAR E EXPLORAR OS DADOS</h3>
 <p>
     <ul>
         <li>Detectar padrões entre os dados</li>
