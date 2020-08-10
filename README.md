@@ -60,7 +60,8 @@ Definir um problema ja resolvido diversas vezes e a melhor solução à este pro
 </p>
 <h2>COLETAR E TRABALHAR OS E/OU NOS DADOS</h2>
 <p>Nesta etapa o Cientista de dados aplicará todas as técnicas para tornar os dados em perfeita conformidade ao modelo de predição que será desenvolvido</p>
-<h3>COLETAR OS DADOS DE ALGUMAS FONTES</h3>
+<h3>COLETAR OS DADOS</h3>
+<p>Os dados podem ser coletados das seguintes fontes :</p>
 <p>
     <ul>
         <li>banco de dados relacional e estruturado</li>
@@ -73,6 +74,17 @@ Definir um problema ja resolvido diversas vezes e a melhor solução à este pro
         <li>redes sociais</li>
         <li>sensores</li>
         <li>documentos word/pdf e similares</li>
+    </ul>
+</p>
+<h3>ANALISAR E EXPLORAR OS DADOS<</h3>
+<p>
+    <ul>
+        <li>detectar se há os dados que precisa para desenvolver a solução</li>
+        <li>analisar o tipo de cada dado : string, objeto, float, inteiro</li>
+        <li>analisar o conteúdo de cada dado</li>
+        <li>analisar a correlação entre os dados</li>
+        <li>Detectar padrões entre os dados</li>
+        <li>Detectar tendências entre os dados</li>
     </ul>
 </p>
 <h3>LIMPAR OS DADOS</h3>
@@ -89,6 +101,7 @@ Definir um problema ja resolvido diversas vezes e a melhor solução à este pro
     <ul>
         <li>de objetos para data</li>
         <li>de objetos para string</li>
+        <li>de data para string</li>
         <li>categóricos para numéricos</li>
     </ul>
 </p><h3>ANALISAR E EXPLORAR OS DADOS</h3>
