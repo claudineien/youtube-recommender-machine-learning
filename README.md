@@ -76,7 +76,7 @@ Definir um problema ja resolvido diversas vezes e a melhor solução à este pro
         <li>documentos word/pdf e similares</li>
     </ul>
 </p>
-<h3>ANALISAR E EXPLORAR OS DADOS<</h3>
+<h3>ANALISAR E EXPLORAR OS DADOS</h3>
 <p>
     <ul>
         <li>detectar se há os dados que precisa para desenvolver a solução</li>
