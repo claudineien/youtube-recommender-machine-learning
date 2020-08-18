@@ -129,7 +129,7 @@ Definir um problema ja resolvido diversas vezes e a melhor solução à este pro
 Nesta fase o modelo de dados esta sendo contruÍdo pelo conjunto de dados de treino e sendo evoluÍdo pelo conjunto de dados de teste.
 </p>
 
-<h4>OTIMIZAÇÃO E IMPLANTAÇÃO</h4>
+<h3>OTIMIZAÇÃO E IMPLANTAÇÃO</h3>
 <p>Esta fase serve para melhorar a eficiência do modelo de dados, e realizar mais predições acuradas.</p>
 <p>O objetivo final é implantar o modelo de dados em ambiente de validação ou em ambiente de produção para aceitação dos usuários</p>
 <p>Os usuários deverão testar o desempenho dos modelos de dados e verificar se há qualquer inconsistências com os modelos, que serão corrigidos pelo Cientista de dados.</p>
