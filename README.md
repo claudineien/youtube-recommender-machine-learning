@@ -9,7 +9,7 @@
 <p>Definir o problema é uma responsabilidade do cientista de dados com o time de negócios, responsabilidade bilateral.</p>
 <p>Em nosso projeto : O problema é ' Muito tempo gasto buscando novos vídeos disponíveis no youtube '.</p>
 <hr>
-<h4>DEFINIR A MELHOR SOLUÇÃO ?</h4>
+<h4>QUAL A MELHOR SOLUÇÃO ?</h4>
 <p>O Cientista de dados é o especialista em sua área, é seu trabalho guiar/ajudar a organização a encontrar o que quer e/ou o que precisa.</p>
 <p>O Cientista de dados deve ser capaz de traduzir as questões de negócio ao seu "botão-mágico-para-conquistar-o-mundo-da-nuvem" em algo que possa ser resolvido matematicamente e com seus dados.</p>
 <p>Definir a melhor solução é responsabilidade do Cientista de dados com o time de negócios, responsabilidade bilateral. É um processo iterativo.</p>
