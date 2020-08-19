@@ -1,8 +1,14 @@
-<h3>COLETAR DATA SET DE VÍDEOS DO YOUTUBE</h3>
-<p>Utilizar o notebook <a href="">coletardados_download.ipynb</a> para coletar os dados do youtube</p>
-<p>Uma boa prática é armazenar os dados em um local de fácil acesso para agilizar e facilitar o desenvolvimento e ajustes do modelo de predição machine learning.</p>
-<p>Dica : Baixar algumas amostras, para você analisar se o conteúdo dos dados é suficiente para desenvolver a solução</p>
+<h3>COLETAR DATA SET DE VÍDEOS DO YOUTUBE E LIMPAR</h3>
+<p>O notebook <a href="">dataset_collect_clean.ipynb</a> possui a documentação e explicações de como :
+    <ul>
+        <li>coletar os dados do youtube </li>
+        <li>armazenar os dados em um dataframe da biblioteca pandas</li>
+        <li>tratar os determinados dados para melhor uso pelo modelo de predição</li>
+    </ul>
+</p>
+<p>Dica : Baixar algumas amostras, e analisar se o conteúdo dos dados é suficiente para desenvolver a solução</p>
 
+<h3>COLETAR DATA SET DE VÍDEOS DO YOUTUBE</h3>
 <p>Bibliotecas utilizadas :
     <ul>
         <li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup4</a> : biblioteca python para puxar dados de uma página html e de arquivos xml e fazer o parsing (*)</li>
@@ -12,47 +18,5 @@
     <p>Instalar biblioteca BeautifulSoup4 : pip install beautifulsoup4</p>
     <p>Instalar biblioteca Requests : pip install requests</p>
     <p>Instalar biblioteca youtube-dl : pip install youtube_dl</p>
-    <p>(*) Biblioteca substituída em 31/07/2020 pela biblioteca youtube_dl</p>
+    <p>(*) Biblioteca substituída em 01/07/2020 pela biblioteca youtube_dl</p>
 </p>
-
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
