@@ -8,7 +8,6 @@
 </p>
 <p>Dica : Baixar algumas amostras, e analisar se o conteúdo dos dados é suficiente para desenvolver a solução</p>
 
-<h3>COLETAR DATA SET DE VÍDEOS DO YOUTUBE</h3>
 <p>Bibliotecas utilizadas :
     <ul>
         <li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup4</a> : biblioteca python para puxar dados de uma página html e de arquivos xml e fazer o parsing (*)</li>
