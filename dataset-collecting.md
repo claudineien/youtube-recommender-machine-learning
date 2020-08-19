@@ -1,9 +1,10 @@
-<h3>COLETAR DATA SET DE VÍDEOS DO YOUTUBE E LIMPAR</h3>
+<h3>COLETAR DATASET DE VÍDEOS DO YOUTUBE E FAZER ALGUNS AJUSTES</h3>
 <p>O notebook <a href="">dataset_collect_clean.ipynb</a> possui a documentação e explicações de como :
     <ul>
         <li>coletar os dados do youtube </li>
         <li>armazenar os dados em um dataframe da biblioteca pandas</li>
-        <li>tratar os determinados dados para melhor uso pelo modelo de predição</li>
+        <li>fazer alguns ajustes para melhor uso pelo modelo de predição</li>
+        <li>preparar dataset para labelling</li>
     </ul>
 </p>
 <p>Dica : Baixar algumas amostras, e analisar se o conteúdo dos dados é suficiente para desenvolver a solução</p>
@@ -19,3 +20,50 @@
     <p>Instalar biblioteca youtube-dl : pip install youtube_dl</p>
     <p>(*) Biblioteca substituída em 01/07/2020 pela biblioteca youtube_dl</p>
 </p>
+<!--
+<p>labelling</p>
+<p>Active learning</p>
+feather-format 0.4.1
+pip install feather-format
+https://pypi.org/project/feather-format/
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
+<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>-->
