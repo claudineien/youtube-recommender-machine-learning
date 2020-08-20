@@ -24,4 +24,12 @@
 <p>Importante :<br>
 O notebook <a href="">dataset_collect_clean.ipynb</a> gerará o arquivo <a href="">raw_data_sem_label_youtube-dl.csv</a>.<br>
 Mas por conta da quantidade muito limitada que a biblioteca youtube_dl permite baixar, disponibilizamos os arquivos  <a href="">raw_data_sem_labels.csv</a> e  <a href="">raw_data_with_labels.csv</a> com mais informações para conseguir executar os treinamentos e testes do modelo machine learning</p>
+<br><br><br><br><br>
+<hr>
+<p>Fontes :
+    <ul>
+        <li><a href="https://curso.mariofilho.com/">   
+        Curso Solução Completa de Data Science - Instrutor Mario Filho-Kagle Gran Master</a></li>
+    </ul>
+</p>
 <!--<p></p>-->
