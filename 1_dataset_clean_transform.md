@@ -1,5 +1,6 @@
 <h4>Objetivo : Desenvolver um recomendador de vídeos do youtube
     <p>Nivel Conhecimento : Intermediário à avançado</p>
+    <p>Tipo Machine Learning : Supervisionado</p>
     <p><a href="blank_">[En]</a> | <a href="blank_">[Pt-Br]</a></p>
 </h4>
 <h3>LABELLING</h3>
