@@ -8,19 +8,26 @@
 <hr>
 <h3>LIMPAR E TRANSFORMAR DADOS</h3>
     <ul>
-        <li>Extrair apenas a data de uma coluna com strings e datas</li>
-		<li> - </li>
+        <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
+		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (**)</li>
         <li> - </li>
         <li> - </li>
         <li> - </li>
     </ul>
-<p>Aprender mais : <br>
+
+<p><strong>Aprender mais :</strong><br>
 <a href="​https://strftime.org/">Tabela de códigos para converter strings em datas no Python</a><br>
 <a href="http://gskinner.com/RegExr/">Testador de expressões regulares</a>
 </p>
-<p>Dica : Fique atento quanto na formatação de datas de português para inglês ou vice-versa</p>
-<p>Nota : <br>
-(*) Você pode colocar o nome que quiser, foi escolhido Y para padronizermos o ensinamento</p>
+
+<p><strong>Dica :</strong><br>
+Formatação de datas : Fique atento à formatação de datas de português para inglês ou vice-versa<br>
+Número : Local do ponto em português é diferente do inglês</p>
+
+<p><strong>Nota :</strong><br>
+(*) Você pode colocar o nome que quiser, foi escolhido Y para padronizar o ensinamento<br>
+(**) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) seja gravado</p>
+
 <h3> H3 </h3>
 <p> - </p>
 <p> - 
