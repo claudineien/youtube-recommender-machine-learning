@@ -12,8 +12,11 @@
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
 		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (**)</li>
         <li>Aplicar Features - Tratamento específico nos dados</li>
-        <li> - </li>
-        <li> - </li>
+        <li>Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
+        <li>Treinar modelo machine learning</li>
+        <li> \ </li>
+        <li> / </li>
+        <li> | </li>
     </ul>
 
 <p><strong>Aprender mais :</strong><br>
