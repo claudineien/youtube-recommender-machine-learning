@@ -3,20 +3,18 @@
     Tipo Machine Learning : Supervisionado</p>
     <p><a href="blank_">[En]</a> | <a href="blank_">[Pt-Br]</a></p>
 </h4>
+
 <h3>LABELLING</h3>
-<p>Abrir o arquivo <a href="blank_">raw_data_sem_labels.csv</a> no excel, criar a coluna Y (*) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
+<p>Abrir o arquivo <a href="blank_">raw_data_sem_labels.csv</a> no excel, criar a coluna Y (*1) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
 
 <hr>
 <h3>LIMPAR E TRANSFORMAR DADOS</h3>
     <ul>
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
-		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (**)</li>
+		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (*2)</li>
         <li>Aplicar Features - Tratamento específico nos dados</li>
         <li>Plotar - Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
-        <li>Treinar modelo machine learning</li>
-        <li> \ </li>
-        <li> / </li>
-        <li> | </li>
+        <li>Treinar modelo machine learning (*3)</li>
     </ul>
 
 <p><strong>Aprender mais :</strong><br>
@@ -24,8 +22,9 @@
 <a href="http://gskinner.com/RegExr/">Testador de expressões regulares</a><br>
 <a href="https://numpy.org/doc/stable/reference/arrays.datetime.html">Numpy : Timedelta</a><br> 
 <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">Pandas : Time/Date</a><br>
-<a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py">Curva de Precision/Recall</a>
-<a href="https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics">ROC (Receiver Operating Characteristic) Curve</a>
+<a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py">Curva de Precision/Recall</a><br>
+<a href="https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics">ROC (Receiver Operating Characteristic) Curve</a><br>
+<a href="">Dados train and test</a><br>
 </p>
 
 <p><strong>Dica :</strong><br>
@@ -36,8 +35,29 @@ Semelhança de dados : Para melhor eficiência do modelo machine learning os dad
 </p>
 
 <p><strong>Nota :</strong><br>
-(*) Você pode colocar o nome que quiser, foi escolhido Y para padronizar o ensinamento<br>
-(**) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Este atrapalha a eficiência do modelo machine learning.</p>
+(*1) Você pode colocar o nome que quiser, foi escolhido Y para padronizar o ensinamento<br>
+(*2) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Este atrapalha a eficiência do modelo machine learning.<br>
+</p>
+
+<hr>
+<h3>PLOTAR - EXIBIR DADOS EM GRÁFICO</h3>
+    <ul>
+        <li>Plotar - Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
+    </ul>
+<p>A amostra por data, indica que no final do período há muito mais vídeos, provavelmente a busca do youtube faz seleção aleatória específica, desobedecendo a instrução de ordem estabelecida ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0_dataset_collect_clean.md">COLETAR DATASET</a>, deixando a maior quantidade dos vídeos por último</p>
+
+<hr>
+<h3>TREINAR MODELO MACHINE LEARNING</h3>
+    <ul>
+        <li>Treinar modelo machine learning (*3)</li>
+        <li>Aplicar validação temporal por ser uma time series</li>
+    </ul>
+<p><strong>Dica :</strong><br>
+Semelhança de dados : Para melhor eficiência do modelo machine learning os dados de treino e de teste devem ser o mais semelhantes possível à rotina da realidade. Neste caso upload de vídeos por dia, visualizações por dia ou algo semelhante.<br>
+</p>
+
+<p><strong>Nota :</strong><br>
+(*3) Há bibliotecas com métodos para separar os dados de treino e os dados de teste. Pode ser em percentual e/ou em quantidade</p>
 
 <h3> H3 </h3>
 <p> - </p>
