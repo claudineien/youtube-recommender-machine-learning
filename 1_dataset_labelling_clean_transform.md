@@ -10,14 +10,18 @@
     <ul>
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
 		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (**)</li>
-        <li> - </li>
+        <li>Aplicar Features - Tratar dados</li>
         <li> - </li>
         <li> - </li>
     </ul>
 
 <p><strong>Aprender mais :</strong><br>
 <a href="​https://strftime.org/">Tabela de códigos para converter strings em datas no Python</a><br>
-<a href="http://gskinner.com/RegExr/">Testador de expressões regulares</a>
+<a href="http://gskinner.com/RegExr/">Testador de expressões regulares</a><br>
+<a href="https://numpy.org/doc/stable/reference/arrays.datetime.html">Numpy : Timedelta</a><br> 
+<a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">Pandas : Time/Date</a><br>
+<a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py">Curva de Precision/Recall</a>
+<a href="https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics">ROC (Receiver Operating Characteristic) Curve</a>
 </p>
 
 <p><strong>Dica :</strong><br>
@@ -26,7 +30,7 @@ Número : Local do ponto em português é diferente do inglês</p>
 
 <p><strong>Nota :</strong><br>
 (*) Você pode colocar o nome que quiser, foi escolhido Y para padronizar o ensinamento<br>
-(**) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) seja gravado</p>
+(**) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Este atrapalha a eficiência do modelo machine learning.</p>
 
 <h3> H3 </h3>
 <p> - </p>
