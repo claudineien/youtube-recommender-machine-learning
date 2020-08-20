@@ -4,18 +4,25 @@
     <p><a href="blank_">[En]</a> | <a href="blank_">[Pt-Br]</a></p>
 </h4>
 <h3>LABELLING</h3>
-<p>Abrir o arquivo <a href="blank_">raw_data_sem_labels.csv</a> no excel, criar a coluna Y e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
-<p> - </p>
+<p>Abrir o arquivo <a href="blank_">raw_data_sem_labels.csv</a> no excel, criar a coluna Y (*) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
 <hr>
 <h3>LIMPAR E TRANSFORMAR DADOS</h3>
-<p> - </p>
-<p> - </p>
-<p> - </p>
-<p>Nota : </p>
-<p> - </p>
+    <ul>
+        <li>Extrair apenas a data de uma coluna com strings e datas</li>
+		<li> - </li>
+        <li> - </li>
+        <li> - </li>
+        <li> - </li>
+    </ul>
+<p>Aprender mais : <br>
+<a href="​https://strftime.org/">Tabela de códigos para converter strings em datas no Python</a><br>
+<a href="http://gskinner.com/RegExr/">Testador de expressões regulares</a>
+</p>
+<p>Dica : Fique atento quanto na formatação de datas de português para inglês ou vice-versa</p>
+<p>Nota : <br>
+(*) Você pode colocar o nome que quiser, foi escolhido Y para padronizermos o ensinamento</p>
 <h3> H3 </h3>
 <p> - </p>
-<p>Nota : </p>
 <p> - 
     <ul>
         <li>Exibir apenas os vídeos que eu vou gostar</li>
