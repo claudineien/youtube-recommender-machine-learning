@@ -12,7 +12,7 @@
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
 		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (**)</li>
         <li>Aplicar Features - Tratamento específico nos dados</li>
-        <li>Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
+        <li>Plotar - Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
         <li>Treinar modelo machine learning</li>
         <li> \ </li>
         <li> / </li>
@@ -31,7 +31,9 @@
 <p><strong>Dica :</strong><br>
 Formatação de datas : Fique atento à formatação de datas de português para inglês ou vice-versa<br>
 Número : O local do ponto em português é diferente do inglês<br>
-Datas : Em formato número é mais eficiente para os algoritmos machine learning</p>
+Datas : Em formato número é mais eficiente para os algoritmos machine learning<br>
+Semelhança de dados : Para melhor eficiência do modelo machine learning os dados de treino e de teste devem ser o mais semelhantes possível a rotina da realidade<br>
+</p>
 
 <p><strong>Nota :</strong><br>
 (*) Você pode colocar o nome que quiser, foi escolhido Y para padronizar o ensinamento<br>
