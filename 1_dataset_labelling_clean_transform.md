@@ -5,12 +5,13 @@
 </h4>
 <h3>LABELLING</h3>
 <p>Abrir o arquivo <a href="blank_">raw_data_sem_labels.csv</a> no excel, criar a coluna Y (*) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
+
 <hr>
 <h3>LIMPAR E TRANSFORMAR DADOS</h3>
     <ul>
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
 		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (**)</li>
-        <li>Aplicar Features - Tratar dados</li>
+        <li>Aplicar Features - Tratamento específico nos dados</li>
         <li> - </li>
         <li> - </li>
     </ul>
@@ -26,7 +27,8 @@
 
 <p><strong>Dica :</strong><br>
 Formatação de datas : Fique atento à formatação de datas de português para inglês ou vice-versa<br>
-Número : Local do ponto em português é diferente do inglês</p>
+Número : O local do ponto em português é diferente do inglês<br>
+Datas : Em formato número é mais eficiente para os algoritmos machine learning</p>
 
 <p><strong>Nota :</strong><br>
 (*) Você pode colocar o nome que quiser, foi escolhido Y para padronizar o ensinamento<br>
