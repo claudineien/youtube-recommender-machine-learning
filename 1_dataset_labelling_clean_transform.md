@@ -12,9 +12,8 @@
     <ul>
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
 		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (*2)</li>
-        <li>Aplicar Features - Tratamento específico nos dados</li>
+        <li>Aplicar Features - Tratamentos específicos nos dados</li>
         <li>Plotar - Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
-        <li>Treinar modelo machine learning (*3)</li>
     </ul>
 
 <p><strong>Aprender mais :</strong><br>
@@ -30,8 +29,9 @@
 <p><strong>Dica :</strong><br>
 Formatação de datas : Fique atento à formatação de datas de português para inglês ou vice-versa<br>
 Número : O local do ponto em português é diferente do inglês<br>
-Datas : Em formato número é mais eficiente para os algoritmos machine learning<br>
-Semelhança de dados : Para melhor eficiência do modelo machine learning os dados de treino e de teste devem ser o mais semelhantes possível a rotina da realidade<br>
+Transformar Data em valor numérico : O formato número é mais eficiente aos algoritmos machine learning<br>
+Modelo ml x Realidade : Para melhor eficiência do modelo machine learning os dados de treino e de teste devem ser o mais semelhantes possível a rotina da realidade em uma empresa ou em uma pesquisa de campo<br>
+Métrica realística : Encontrar características iguais entre os dados, ainda que seja necessário converter quantidade de dados x por ano em por dia. Ex : Upload de vídeos por dia, visualizações por dia ou algo semelhante.
 </p>
 
 <p><strong>Nota :</strong><br>
@@ -42,148 +42,113 @@ Semelhança de dados : Para melhor eficiência do modelo machine learning os dad
 <hr>
 <h3>PLOTAR - EXIBIR DADOS EM GRÁFICO</h3>
     <ul>
-        <li>Plotar - Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
+        <li>Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
+        <li>Permite analisar os dados para desenhar o melhor cenário de para o modelo machine learning</li>
     </ul>
 <p>A amostra por data, indica que no final do período há muito mais vídeos, provavelmente a busca do youtube faz seleção aleatória específica, desobedecendo a instrução de ordem estabelecida ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0_dataset_collect_clean.md">COLETAR DATASET</a>, deixando a maior quantidade dos vídeos por último.</p>
-<p>O pico de vídeos do final do período é um fator de atenção e que deve ser melhor análisado em um ambiente machine learning real.</p>
+<p>O pico de vídeos do final do período é um fator de atenção e que deve ser melhor analisado em um ambiente machine learning real.</p>
+</p>
 
 <hr>
-<h3>TREINAR MODELO MACHINE LEARNING</h3>
+<h3>1o MODELO MACHINE LEARNING</h3>
+Este primeiro modelo será para analisar rapidamente a influência da predição do modelo machine learning com duas features. Utilizaremos a Decision tree (Árvore de decisão).
     <ul>
+        <li>Separar dados de treino e dados de teste - Aplicar validação temporal por ser uma time series</li>
+        <li>Executar o algoritmo Decision tree</li>
         <li>Treinar modelo machine learning (*3)</li>
-        <li>Aplicar validação temporal por ser uma time series</li>
-        <li>Aplicar árvore de decisão para analisar relação features x árvore</li>
+        <li>Executar a probabilidade da Decision tree (*4)</li>
+        <li>Aplicar a métrica de média de precisão (*5)</li>
+        <li>Tratar o ranking dos vídeos (*5)</li>
+        <li>Aplicar a curva <a href="blank_">ROC</a></li>
     </ul>
+
+<p><strong>Aprender mais :</strong><br>
+<a href="​https://www.youtube.com/watch?v=Y1XAP6omGzo">Entendiendo las Curvas ROC</a><br>
+<a href="blank_">ROC</a>
+</p>
+
+<br>
 <p><strong>Dica :</strong><br>
-Semelhança de dados : Para melhor eficiência do modelo machine learning os dados de treino e de teste devem ser o mais semelhantes possível à rotina da realidade. Neste caso upload de vídeos por dia, visualizações por dia ou algo semelhante.<br>
-Arvore de decisão : Uma das melhores maneiras de entender a relação das features com o alvo e através de uma árvore de decisão
+50% para treino e 50% para teste : Por ser uma time series, é quase 100% certeza que os dados de treino serão diferentes dos dados de validação, e a metodologia mais eficiente é dividir os dados o mais próximo possível de 50%<br>
+Arvore de decisão : Uma das melhores maneiras de entender a relação das features (recursos) com o target (alvo)<br>
 </p>
 
 <p><strong>Nota :</strong><br>
-(*3) Há bibliotecas com métodos para separar os dados de treino e os dados de teste. Pode ser em percentual e/ou em quantidade</p>
+(*3) Há bibliotecas com métodos para separar os dados de treino e os dados de teste, que pode ser em percentual e/ou em quantidade<br>
+(*4) A probabilidade mostra o valor provavel de positivo 1-vídeos que quer assistir e/ou negativo 0-vídeos que não quer assistir. Queremos somente a probabilidade de ser 1.<br>
+(*5) Métrica de média de precisão : utilizado o método average_precision_score, que será nosso baseline, e seja qual for o modelo machine learning a average_precision deve ser o mais próximo possível de 1.0. Esta serve para melhor visualizarmos o ranking dos vídeos : dos mais interessantes para os menos interessantes
+</p>
+
+```
+    average_precision_score
+    Métrica de média de precisão : seja qual for o modelo machine learning a average_precision deve ser o mais próximo possível de 1.0.
+
+    Em cada ponto de corte definido ao calcular precision e recall aparecerá uma curva, a área sobre a curva é a average precision
+
+    Precision : é o número que responde a pergunta de todos os modelos que disse que são positivos, 50% destes são realmente positivos
+    Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
+
+    roc_auc_score()
+    todos os elementos positivos e as probabilidades de serem  positivos ou não
+    todos os elementos negativos e as probabilidades de serem negativos ou não
+
+    o score de um elemento probabilidade positivo é maior
+    que o elemento probabilidade negativo = True
+    o score de um elemento probabilidade positivo é maior
+    que o elemento probabilidade negativo = False
+    calcular a média dos resultados valores True e False
+
+Pergunta e resposta:
+    Average precision:  média ponderada de cada precisão, usando como peso a precisão anterior.
+    AUC: É a área sobre a curva ROC (TP x FN)
+    Resposta : As duas são AUC (área sob a curva), o que muda é a curva. Uma é a curva de precision-recall (average_precision, AUPRC) e a outra é a curva ROC (roc_auc_score, ROC-AUC)
+```
 
 <h3> H3 </h3>
 <p> - 
     <ul>
-        <li>Exibir apenas os vídeos que eu vou gostar</li>
-		<li>Criar Solução com Hanking dos vídeos que primeiramente eu vou gostar seguido dos que eu menos vou gostar</li>
-        <li>Estabelecer uma abordagem de ponto corte : Retornar apenas 3 que eu vou gostar</li>
-        <li>Abordagem de ranking : ordenar dos vídeos eu mais vou gostar aos que eu menos vou gostar</li>
-        <li>Consultará pelas seguintes palavras chave : machine-learning, kaggle, datascience</li>
+        <li> ul li</li>
     </ul>
 </p>
-<h4>COMO A SOLUÇÃO SERÁ USADA PRODUTIVAMENTE ?</h4>
-<p>O Cientista de dados analisa o resultado retornado, como este resultado será apresentado e define como devem ser tratados os novos dados.</p>
-<p>O resultado pode ser apresentado em um Web app, ERP system, Dashboard, Excel, etc...</p>
-<p>Em primeiro momento é responsabilidade do Cientista de dados definir como a solução será usada produtivamente. Após ter o modelo definitivo o Cientista de dados com o time de negócios estabelecem como a solução será usada definitivamente em produção.</p>
-<p>Em nosso projeto : criaremos um Web App com os vídeos (links) e as previsões ordenadas e com os seguintes dados : Título, Label, Anotações, Descrição</p>
-<h4>COMO SABER SE A SOLUÇÃO DEU CERTO ?</h4>
-<p>O Cientista de dados define as métricas de acordo com a área de negócio e dados obtidos, então compara os resultados entre solução machine learning e os resultados atualmente conquistados sem machine learning.</p>
-<p>Deve haver uma métrica primária e uma ou mais métricas secundárias.</p>
-<p>Em nosso projeto :
+<h4> h4 </h4>
+<p> p </p>
+
+<h4> h4 </h4>
+<p> p </p>
+<p> p
     <ul>
-        <li>A métrica primária será : Top N vídeos incluo na lista watch later</li>
-		<li>As métricas secundárias podem ser :</li>
-        <ul>
-            <li>Quantidades N de vídeos assistidos até o final</li>
-            <li>Tempo X investido selecionando os vídeos recomendados por Machine Learning</li>
-            <li>Os top N recomendados por Machine Learning são mais assistidos do que os top N da busca google ? : [YES] [NO]</li>
+        <li> li </li>
+        <ul> ul
+            <li> li </li>
         </ul>
     </ul>
 </p>
-<p>Importante :<br>
-Definir um problema ja resolvido diversas vezes e a melhor solução à este problema com etapas rápidas e digamos "imperfeitas" é a melhor forma de sairmos do estado zero.</p>
-<p>Cientista de dados deve considerar que :
-    <ol>
-        <li>Passos 01 e 02 : serve para entender todo o processo do negócio, para definir o problema e a melhor solução.
-        </li>
-        <li>Passos 03 e 04 : serve para desenvolver o modelo machine learning sob os processos e métricas do negócio.
-        </li>
-        <li>Passo 05 : serve para testar o modelo machine learning desenvolvido sob os processos e métricas do negócio e disponibilizá-lo em produção.
-        </li>
+
+<p> p 
+    <ol> ol
+        <li> li </li>
     </ol>
 </p>
 
-<h3>COLETAR E TRABALHAR OS E/OU NOS DADOS</h3>
-<p>Nesta etapa o Cientista de dados aplicará todas as técnicas para tornar os dados em perfeita conformidade ao modelo de predição que será desenvolvido</p>
+<h3> h3 </h3>
+<p> p </p>
 
-<h4>COLETAR OS DADOS</h4>
-<p>Os dados podem ser coletados das seguintes fontes :</p>
-<p>
-    <ul>
-        <li>banco de dados relacional e estruturado</li>
-        <li>banco de dados NoSQL</li>
-        <li>buscando na internet (scraping)</li>
-        <li>de imagens</li>
-        <li>de emails</li>
-        <li>com as pessoas envolvidas no processo</li>
-        <li>planilhas excel</li>
-        <li>redes sociais</li>
-        <li>sensores</li>
-        <li>documentos word/pdf e similares</li>
+<h4> h4 </h4>
+<p> p </p>
+<p> p
+    <ul> ul
+        <li> li </li>
     </ul>
 </p>
 
-<h4>ANALISAR E EXPLORAR OS DADOS</h4>
-<p>
-    <ul>
-        <li>detectar se há os dados que precisa para desenvolver a solução</li>
-        <li>analisar o tipo de cada dado : string, objeto, float, inteiro</li>
-        <li>analisar o conteúdo de cada dado</li>
-        <li>analisar a correlação entre os dados</li>
-        <li>Detectar padrões entre os dados</li>
-        <li>Detectar tendências entre os dados</li>
-    </ul>
-</p>
 
-<h4>LIMPAR OS DADOS</h4>
-<p>
-    <ul>
-        <li>remover dados redundantes</li>
-        <li>trabalhar nos dados faltantes</li>
-        <li>trabalhar nos dados duplicados</li>
-        <li>trabalhar nos dados desnecessários</li>
-    </ul>
-</p>
-
-<h4>CONVERTER OS DADOS</h4>
-<p>
-    <ul>
-        <li>de objetos para data</li>
-        <li>de objetos para string</li>
-        <li>de data para string</li>
-        <li>categóricos para numéricos</li>
-    </ul>
-</p>
-
-<h4>ANALISAR E EXPLORAR OS DADOS</h4>
-<p>
-    <ul>
-        <li>Detectar padrões entre os dados</li>
-        <li>Detectar tendências entre os dados</li>
-    </ul>
-</p>
-
-<h4>MODELAR OS DADOS</h4>
-<p>Nesta fase o Cientista de dados separa seu conjunto de dados nas seguinte proporções :</p>
-<p>
-    <ul>
-        <li>Uma proporção para treinar o modelo, conhecido como conjunto de dados de treino</li>
-        <li>Uma proporção para testar a eficiência do modelo, conhecido com conjunto de dados de teste</li>
-    </ul>
-Nesta fase o modelo de dados esta sendo contruÍdo pelo conjunto de dados de treino e sendo evoluÍdo pelo conjunto de dados de teste.
-</p>
-
-<h3>OTIMIZAR E IMPLANTAR</h3>
-<p>Esta fase serve para melhorar a eficiência do modelo de dados, e realizar mais predições acuradas.</p>
-<p>O objetivo final é implantar o modelo de dados em ambiente de validação ou em ambiente de produção para aceitação dos usuários</p>
-<p>Os usuários deverão testar o desempenho dos modelos de dados e verificar se há qualquer inconsistências com os modelos, que serão corrigidos pelo Cientista de dados.</p>
-<br><br><br><br><br>
+<br>
 <hr>
 <p>Fontes :
     <ul>
         <li><a href="https://curso.mariofilho.com/">   
         Curso Solução Completa de Data Science - Instrutor Mario Filho-Kagle Gran Master</a></li>
+        <li><a href="https://www.youtube.com/watch?v=NbnVfpRJNp0">CURVA ROC</a></li>
     </ul>
 </p>
 
