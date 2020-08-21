@@ -3,7 +3,7 @@
     Tipo Machine Learning : Supervisionado</p>
     <p><a href="blank_">[En]</a> | <a href="blank_">[Pt-Br]</a></p>
 </h4>
-
+<h1 align='center'>1o Modelo Machine Learning</h1>
 <h3>LABELLING</h3>
 <p>Abrir o arquivo <a href="blank_">raw_data_sem_labels.csv</a> no excel, criar a coluna Y (*1) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
 
