@@ -44,23 +44,25 @@ Semelhança de dados : Para melhor eficiência do modelo machine learning os dad
     <ul>
         <li>Plotar - Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
     </ul>
-<p>A amostra por data, indica que no final do período há muito mais vídeos, provavelmente a busca do youtube faz seleção aleatória específica, desobedecendo a instrução de ordem estabelecida ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0_dataset_collect_clean.md">COLETAR DATASET</a>, deixando a maior quantidade dos vídeos por último</p>
+<p>A amostra por data, indica que no final do período há muito mais vídeos, provavelmente a busca do youtube faz seleção aleatória específica, desobedecendo a instrução de ordem estabelecida ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0_dataset_collect_clean.md">COLETAR DATASET</a>, deixando a maior quantidade dos vídeos por último.</p>
+<p>O pico de vídeos do final do período é um fator de atenção e que deve ser melhor análisado em um ambiente machine learning real.</p>
 
 <hr>
 <h3>TREINAR MODELO MACHINE LEARNING</h3>
     <ul>
         <li>Treinar modelo machine learning (*3)</li>
         <li>Aplicar validação temporal por ser uma time series</li>
+        <li>Aplicar árvore de decisão para analisar relação features x árvore</li>
     </ul>
 <p><strong>Dica :</strong><br>
 Semelhança de dados : Para melhor eficiência do modelo machine learning os dados de treino e de teste devem ser o mais semelhantes possível à rotina da realidade. Neste caso upload de vídeos por dia, visualizações por dia ou algo semelhante.<br>
+Arvore de decisão : Uma das melhores maneiras de entender a relação das features com o alvo e através de uma árvore de decisão
 </p>
 
 <p><strong>Nota :</strong><br>
 (*3) Há bibliotecas com métodos para separar os dados de treino e os dados de teste. Pode ser em percentual e/ou em quantidade</p>
 
 <h3> H3 </h3>
-<p> - </p>
 <p> - 
     <ul>
         <li>Exibir apenas os vídeos que eu vou gostar</li>
