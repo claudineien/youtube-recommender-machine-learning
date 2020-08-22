@@ -89,7 +89,7 @@ Vamos lembrar :<br>
 
 <h3>INTERPRETAR A DECISION TREE</h3>
 <p>Uma boa forma de entender como o as features (recursos) estão se relacionando com o target (alvo)</p>
-<img src=".\notebook\dados_brutos\decisiontree.png">
+<img src=".\img\decisiontree.png">
 </p>
 <p>
 Houve um balanceamento (class_weight="balanced") no peso dos vídeos, que mostra no nó raiz 15110.0 visualizações em uma amostra de vídeos de 228, índice esta em 50% (gini) e os valores balanceados [114.0,114.0]. Então :<br>
