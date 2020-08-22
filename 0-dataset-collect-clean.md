@@ -1,4 +1,4 @@
-<h3>COLETAR DATASET DE VÍDEOS DO YOUTUBE E FAZER ALGUNS AJUSTES</h3>
+<h3 align="center">COLETAR DATASET DE VÍDEOS DO YOUTUBE E FAZER ALGUNS AJUSTES</h3>
 <p>O notebook <a href="">dataset_collect_clean.ipynb</a> possui a documentação e explicações de como :
     <ul>
         <li>coletar os dados do youtube </li>
@@ -18,7 +18,7 @@
     <p>Instalar biblioteca BeautifulSoup4 : pip install beautifulsoup4</p>
     <p>Instalar biblioteca Requests : pip install requests</p>
     <p>Instalar biblioteca youtube-dl : pip install youtube_dl</p>
-    <p>(*) Biblioteca substituída em 01/07/2020 pela biblioteca youtube_dl</p>
+    <p>(*) Biblioteca substituída pela biblioteca youtube_dl</p>
 </p>
 
 <p>Importante :<br>
