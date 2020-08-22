@@ -29,7 +29,7 @@ ERROR: 0OX7Y4b1AIg: YouTube said: Unable to extract video data<br>
 Solução|Fix:<br>
 Don’t forget to first uninstall the version you have then, for more information read <br>
 <a href="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#how-do-i-update-youtube-dl">README.md</a> and follow the steps shown there.<br>
-Don’t forget to first subscribed on reddit to access <a href="https://www.reddit.com/r/youtubedl/comments/hqc577/getting_error_unable_to_extract_video_data/">reddit - YouTube said: ...</a>
+Firstly subscribe on reddit to access <a href="https://www.reddit.com/r/youtubedl/comments/hqc577/getting_error_unable_to_extract_video_data/">reddit - YouTube said: ...</a>
 
 </p>
 <br><br><br><br><br>
