@@ -22,8 +22,8 @@
 </p>
 
 <p>Importante :<br>
-O notebook <a href="">0_dataset_collect_clean.ipynb</a> gerará o arquivo <a href="">raw_data_sem_label_youtube-dl.csv</a>.<br>
-Mas por conta da quantidade muito limitada que a biblioteca youtube_dl permite baixar, disponibilizamos os arquivos  <a href="">raw_data_sem_labels.csv</a> e  <a href="">raw_data_with_labels.csv</a> com mais informações para conseguir executar os treinamentos e testes do modelo machine learning</p><br>
+O notebook <a href="">0_dataset_collect_clean.ipynb</a> gerará o arquivo raw_data_sem_label_youtube-dl.csv.<br>
+Mas por conta da quantidade muito limitada que a biblioteca youtube_dl permite baixar, disponibilizamos os arquivos <a href=".\file-csv\raw_data_sem_labels.csv">raw_data_sem_labels.csv</a> e  <a href="">raw_data_with_labels.csv</a> com mais informações para conseguir executar os treinamentos e testes do modelo machine learning</p><br>
 <p>Erros|Errors e|and Soluções|Solutions :<br>
 Erro | ERROR: 0OX7Y4b1AIg: YouTube said: Unable to extract video data<br>
 Solução | Fix:<br>
