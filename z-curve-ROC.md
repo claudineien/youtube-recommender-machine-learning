@@ -48,7 +48,6 @@ Falso Negativo : Na classificação real o Alvo é verdadeiro, mas para o classi
         <tr>
             <th></th>
             <th></th>
-            <th></th>
             <th scope="col">Alvo</th>
             <th scope="col">Não-Alvo</th>
         </tr>
@@ -56,14 +55,12 @@ Falso Negativo : Na classificação real o Alvo é verdadeiro, mas para o classi
         <tbody>
         <tr>
             <th>Classificação</th>
-            <th></th>
             <td scope="row">Alvo</td>
             <td><strong>Verdadeiro Positivo</strong></td>
             <td>Falso Positivo</td>
         </tr>
         <tr>
             <th>Machine Learning</th>
-            <td></td>
             <td scope="row">Não-Alvo</td>
             <td>Falso Negativo</td>
             <td><strong>Verdadeiro Negativo</strong></td>
