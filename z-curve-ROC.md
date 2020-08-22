@@ -71,12 +71,12 @@ Falso Negativo : Na classificação real o Alvo é verdadeiro, mas para o classi
 <p>O <strong>modelo machine learning ideal</strong> será quando a proporção entre falso negativo e falso positivo for a menor possível e quando o acerto do verdadeiro positivo e verdadeiro negativo for a maior possível.</p>
 <p>Importante saber que ao aumentar a sensibilidade perde-se na especificidade e vice-versa.</p>
 <br>
-<img src=".\img\grafico_roc.png">
+<img src=".\notebook\dados_brutos\grafico_roc.png">
 <br>
 <p>
 NÃO ALVO = Dados que não interessa<br>
 ALVO = Dados que interessam<br>
-ESCORE = É a scala de medida<br>
+ESCORE = É a escala de medida<br>
 
 </p>
 <hr>
@@ -196,30 +196,6 @@ p
 feather-format 0.4.1
 pip install feather-format
 https://pypi.org/project/feather-format/
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
 <p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
 <p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
 <p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
