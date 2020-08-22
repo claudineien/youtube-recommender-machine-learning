@@ -3,6 +3,7 @@
     Tipo Machine Learning : Supervisionado</p>
     <p><a href="blank_">[En]</a> | <a href="blank_">[Pt-Br]</a></p>
 </h4>
+
 <h1 align='center'>1o Modelo Machine Learning</h1>
 <h3>LABELLING</h3>
 <p>Abrir o arquivo <a href="blank_">raw_data_sem_labels.csv</a> no excel, criar a coluna Y (*1) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
@@ -60,11 +61,13 @@ Este primeiro modelo será para analisar rapidamente a influência da predição
         <li>Aplicar a métrica de média de precisão (*5)</li>
         <li>Tratar o ranking dos vídeos (*5)</li>
         <li>Aplicar a curva <a href="blank_">ROC</a></li>
+        <li>Exibir a Decision tree para analisar o modelo</a></li>
     </ul>
 
 <p><strong>Aprender mais :</strong><br>
 <a href="​https://www.youtube.com/watch?v=Y1XAP6omGzo">Entendiendo las Curvas ROC</a><br>
-<a href="blank_">ROC</a>
+<a href="blank_">ROC</a><br>
+<a href="​https://scikit-learn.org/stable/modules/generated/sklearn.tree.plot_tree.html">Método plot_tree</a><br>
 </p>
 
 <br>
@@ -76,79 +79,32 @@ Arvore de decisão : Uma das melhores maneiras de entender a relação das featu
 <p><strong>Nota :</strong><br>
 (*3) Há bibliotecas com métodos para separar os dados de treino e os dados de teste, que pode ser em percentual e/ou em quantidade<br>
 (*4) A probabilidade mostra o valor provavel de positivo 1-vídeos que quer assistir e/ou negativo 0-vídeos que não quer assistir. Queremos somente a probabilidade de ser 1.<br>
-(*5) Métrica de média de precisão : utilizado o método average_precision_score, que será nosso baseline, e seja qual for o modelo machine learning a average_precision deve ser o mais próximo possível de 1.0. Esta serve para melhor visualizarmos o ranking dos vídeos : dos mais interessantes para os menos interessantes
+(*5) Métrica de média de precisão : o método average_precision_score, nos dará o nosso baseline, e seja qual for o modelo machine learning a average_precision deve ser o mais próximo possível de 1.0. Esta serve para melhor visualizarmos o ranking dos vídeos : dos mais interessantes para os menos interessantes. Em cada ponto de corte definido ao calcular precision e recall aparecerá uma curva, a área sobre a curva é a average precision.<br>
+
+Vamos lembrar :<br>
+
+:: Precision : é o número que responde a pergunta de todos os modelos que disse que são positivos, 50% destes são realmente positivos<br>
+
+::Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
 </p>
 
-```
-    average_precision_score
-    Métrica de média de precisão : seja qual for o modelo machine learning a average_precision deve ser o mais próximo possível de 1.0.
-
-    Em cada ponto de corte definido ao calcular precision e recall aparecerá uma curva, a área sobre a curva é a average precision
-
-    Precision : é o número que responde a pergunta de todos os modelos que disse que são positivos, 50% destes são realmente positivos
-    Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
-
-    roc_auc_score()
-    todos os elementos positivos e as probabilidades de serem  positivos ou não
-    todos os elementos negativos e as probabilidades de serem negativos ou não
-
-    o score de um elemento probabilidade positivo é maior
-    que o elemento probabilidade negativo = True
-    o score de um elemento probabilidade positivo é maior
-    que o elemento probabilidade negativo = False
-    calcular a média dos resultados valores True e False
-
-Pergunta e resposta:
-    Average precision:  média ponderada de cada precisão, usando como peso a precisão anterior.
-    AUC: É a área sobre a curva ROC (TP x FN)
-    Resposta : As duas são AUC (área sob a curva), o que muda é a curva. Uma é a curva de precision-recall (average_precision, AUPRC) e a outra é a curva ROC (roc_auc_score, ROC-AUC)
-```
-
-<h3> H3 </h3>
-<p> - 
-    <ul>
-        <li> ul li</li>
-    </ul>
+<h3>INTERPRETAR A DECISION TREE</h3>
+<p>Uma boa forma de entender como o as features (recursos) estão se relacionando com o target (alvo)</p>
+<img src=".\notebook\dados_brutos\decisiontree.png">
 </p>
-<h4> h4 </h4>
-<p> p </p>
-
-<h4> h4 </h4>
-<p> p </p>
-<p> p
-    <ul>
-        <li> li </li>
-        <ul> ul
-            <li> li </li>
-        </ul>
-    </ul>
+<p>
+Houve um balanceamento (class_weight="balanced") no peso dos vídeos, que mostra no nó raiz 15110.0 visualizações em uma amostra de vídeos de 228, índice esta em 50% (gini) e os valores balanceados [114.0,114.0]. Então :<br>
+<ol>
+    <li>quando inferior ao nó raiz (à esquerda), no 1o nível de nó vemos que a quantidade por dia é inferior a 1 visualização por dia para 133 amostras de vídeo, no 2o nó à esquerda as 14 amostras são exemplos negativos 0.0, não interessantes. No nó a direita há mais amostras e estes provavelmente são vídeos que interessam por ter 92.625 positivos.
+    </li>
+    <li>quando superior ao nó raiz (à direita), no 1o nível de nó vemos que a quantidade pode ser menor ou igual ou superior a 26712.0. Se inferior temos 20 amostas negativas 0.0, não interessantes. A direita há muita amostra porem pela classificação 21.375 provavelmente são vídeos que não interessam.</li>
 </p>
-
-<p> p 
-    <ol> ol
-        <li> li </li>
-    </ol>
-</p>
-
-<h3> h3 </h3>
-<p> p </p>
-
-<h4> h4 </h4>
-<p> p </p>
-<p> p
-    <ul> ul
-        <li> li </li>
-    </ul>
-</p>
-
 
 <br>
 <hr>
 <p>Fontes :
     <ul>
-        <li><a href="https://curso.mariofilho.com/">   
-        Curso Solução Completa de Data Science - Instrutor Mario Filho-Kagle Gran Master</a></li>
-        <li><a href="https://www.youtube.com/watch?v=NbnVfpRJNp0">CURVA ROC</a></li>
+        <li><a href="https://curso.mariofilho.com/">Curso Solução Completa de Data Science - Instrutor Mario Filho-Kagle Gran Master</a></li>
     </ul>
 </p>
 
@@ -158,44 +114,4 @@ Pergunta e resposta:
 feather-format 0.4.1
 pip install feather-format
 https://pypi.org/project/feather-format/
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>
 <p> - = - + + : > < { [ * & % $ # @ ! } ]</p>-->
