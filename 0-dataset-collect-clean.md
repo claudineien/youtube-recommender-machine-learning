@@ -1,4 +1,4 @@
-<h3>COLETAR DATASET DE VÍDEOS DO YOUTUBE E FAZER ALGUNS AJUSTES</h3>
+<h3 align="center">COLETAR DATASET DE VÍDEOS DO YOUTUBE E FAZER ALGUNS AJUSTES</h3>
 <p>O notebook <a href="">dataset_collect_clean.ipynb</a> possui a documentação e explicações de como :
     <ul>
         <li>coletar os dados do youtube </li>
@@ -22,8 +22,16 @@
 </p>
 
 <p>Importante :<br>
-O notebook <a href="">dataset_collect_clean.ipynb</a> gerará o arquivo <a href="">raw_data_sem_label_youtube-dl.csv</a>.<br>
-Mas por conta da quantidade muito limitada que a biblioteca youtube_dl permite baixar, disponibilizamos os arquivos  <a href="">raw_data_sem_labels.csv</a> e  <a href="">raw_data_with_labels.csv</a> com mais informações para conseguir executar os treinamentos e testes do modelo machine learning</p>
+O notebook <a href="">0_dataset_collect_clean.ipynb</a> gerará o arquivo <a href="">raw_data_sem_label_youtube-dl.csv</a>.<br>
+Mas por conta da quantidade muito limitada que a biblioteca youtube_dl permite baixar, disponibilizamos os arquivos  <a href="">raw_data_sem_labels.csv</a> e  <a href="">raw_data_with_labels.csv</a> com mais informações para conseguir executar os treinamentos e testes do modelo machine learning</p><br>
+<p>Erros e Soluções :<br>
+ERROR: 0OX7Y4b1AIg: YouTube said: Unable to extract video data<br>
+Solução|Fix:<br>
+Don’t forget to first uninstall the version you have then, for more information read README.md<br>
+<a href="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#how-do-i-update-youtube-dl">README.md</a> and follow the steps shown there.<br>
+Don’t forget to first subscribed on reddit to access <a href="https://www.reddit.com/r/youtubedl/comments/hqc577/getting_error_unable_to_extract_video_data/">reddit - YouTube said: ...</a>
+
+</p>
 <br><br><br><br><br>
 <hr>
 <p>Fontes :
