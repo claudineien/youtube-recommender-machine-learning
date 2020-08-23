@@ -5,8 +5,11 @@
 </h4>
 
 <h1 align='center'>1o Modelo Machine Learning</h1>
+<p>Neste modelo você aprenderá a fazer um labelling, ler um dataset que esta em um arquivo .csv, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo DecisionTreeClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva <a href="blank_">ROC</a>
+</p>
+
 <h3>LABELLING</h3>
-<p>Abrir o arquivo <a href="blank_">raw_data_sem_labels.csv</a> no excel, criar a coluna Y (*1) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
+<p>Abrir o arquivo <a href="blank_">raw_data_sem_labels.csv</a> no excel através da opção de importar dados de um arquivo .csv, criar a coluna Y (*1) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
 
 <hr>
 <h3>LIMPAR E TRANSFORMAR DADOS</h3>
@@ -18,7 +21,7 @@
     </ul>
 
 <p><strong>Aprender mais :</strong><br>
-<a href="​https://strftime.org/">Tabela de códigos para converter strings em datas no Python</a><br>
+<a href="https://strftime.org/">Tabela de códigos para converter strings em datas no Python</a><br>
 <a href="http://gskinner.com/RegExr/">Testador de expressões regulares</a><br>
 <a href="https://numpy.org/doc/stable/reference/arrays.datetime.html">Numpy : Timedelta</a><br> 
 <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">Pandas : Time/Date</a><br>
@@ -65,9 +68,9 @@ Este primeiro modelo será para analisar rapidamente a influência da predição
     </ul>
 
 <p><strong>Aprender mais :</strong><br>
-<a href="​https://www.youtube.com/watch?v=Y1XAP6omGzo">Entendiendo las Curvas ROC</a><br>
+<a href="https://www.youtube.com/watch?v=Y1XAP6omGzo">Entendiendo las Curvas ROC</a><br>
 <a href="blank_">ROC</a><br>
-<a href="​https://scikit-learn.org/stable/modules/generated/sklearn.tree.plot_tree.html">Método plot_tree</a><br>
+<a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.plot_tree.html">Método plot_tree</a><br>
 </p>
 
 <br>
@@ -89,7 +92,7 @@ Vamos lembrar :<br>
 
 <h3>INTERPRETAR A DECISION TREE</h3>
 <p>Uma boa forma de entender como o as features (recursos) estão se relacionando com o target (alvo)</p>
-<img src=".\img\decisiontree.png">
+<img src="img\decisiontree.png">
 </p>
 <p>
 Houve um balanceamento (class_weight="balanced") no peso dos vídeos, que mostra no nó raiz 15110.0 visualizações em uma amostra de vídeos de 228, índice esta em 50% (gini) e os valores balanceados [114.0,114.0]. Então :<br>
