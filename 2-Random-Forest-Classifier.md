@@ -8,6 +8,8 @@
 <p>Neste modelo você aprenderá a fazer um labelling, ler um dataset que esta em um arquivo .csv, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo RandomForestClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva <a href="blank_">ROC</a>
 </p>
 
+<p>Neste motivo é demonstrado como gerar mais conteúdo de dados para treinar o modelo machine learning.</p>
+
 <h3>LABELLING</h3>
 <p>Abrir o arquivo <a href="blank_">raw_data_sem_labels.csv</a> no excel através da opção de importar dados de um arquivo .csv, criar a coluna Y (*1) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
 
@@ -51,11 +53,12 @@ Neste segundo modelo a predição será realizada sob o título do vídeo, após
         <li>Separar dados de treino e dados de teste - Aplicar validação temporal por ser uma time series (*3)</li>
         <li>Importar o objeto TfidfVectorizer</li>
         <li>Separar as descrições dos títulos para treino e teste</li>
-        <li>Transformar os títulos com o algoritmo TfidfVectorizer</li>
+        <li>Transformar os textos dos títulos com o algoritmo TfidfVectorizer (*4)</li>
+        <li>Concatenar matriz densa e matriz sparsa (*5)</li>
         <li>Treinar modelo machine learning </li>
-        <li>Executar a probabilidade do RandomForestClassifier (*4)</li>
-        <li>Aplicar a métrica de média de precisão (*5)</li>
-        <li>Tratar o ranking dos vídeos (*5)</li>
+        <li>Executar a probabilidade do RandomForestClassifier (*6)</li>
+        <li>Aplicar a métrica de média de precisão (*6)</li>
+        <li>Tratar o ranking dos vídeos (*7)</li>
         <li>Aplicar a curva <a href="blank_">ROC</a></li>
         <li>Exibir a Decision tree para analisar o modelo</a></li>
     </ul>
@@ -65,16 +68,25 @@ Neste segundo modelo a predição será realizada sob o título do vídeo, após
 <a href="https://docs.scipy.org/doc/scipy/reference/sparse.html">Sparse matrices</a><br>
 </p>
 
-<br>
+<p><strong>Atenção</strong>:<br>
+<a href="https://github.com/scikit-learn/scikit-learn/issues/16017">TfidfVectorizer ngrams does not work when vocabulary provided #16017</a>
+</p>
+
 <p><strong>Dica :</strong><br>
 50% para treino e 50% para teste : Por ser uma time series, é quase 100% certeza que os dados de treino serão diferentes dos dados de validação, e a metodologia mais eficiente é dividir os dados o mais próximo possível de 50%<br>
 Arvore de decisão : Uma das melhores maneiras de entender a relação das features (recursos) com o target (alvo)<br>
+Concatenar variaveis : Pode utilizar as funções hstack e/ou vstack do scipy sparse. A primeira juntará horizontalmente e a segunda verticalmente.
+Não as funções de mesmo nome do objeto numpy, por que não é otimizado para lidar com matriz sparsa.
 </p>
 
 <p><strong>Nota :</strong><br>
 (*3) Há bibliotecas com métodos para separar os dados de treino e os dados de teste, que pode ser em percentual e/ou em quantidade<br>
-(*4) A probabilidade o percentual de acerto dos títulos acertados no teste.<br>
-(*5) Métrica de média de precisão : o método average_precision_score, nos dará o nosso baseline, e seja qual for o modelo machine learning a average_precision deve ser o mais próximo possível de 1.0. Esta serve para melhor visualizarmos o ranking dos vídeos : dos mais interessantes para os menos interessantes. Em cada ponto de corte definido ao calcular precision e recall aparecerá uma curva, a área sobre a curva é a average precision.<br>
+(*4) TfidfVectorizer dá mais peso palavras que aparecem bastante em determinado exemplo mas não aparece tanto no dadtaset como um todo. Palavras que aparecem pouco entre todos os videos mas aparecerem muito em um video tem mais peso. Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor
+Há uma forma mais simples que é criar matriz com contagem de palavras em que em cada linha tem um video, e cada coluna é uma palavra e coloca a quantas vezes a palavra aparece no cruzamento da linha do video com a palavra do titulo do vídeo
+(*5) Matriz esparsa armazena valores diferentes de zero -é mais otimizada.
+(*6) A probabilidade o percentual de acerto dos títulos acertados no teste.<br>
+(*7) Métrica de média de precisão : o método average_precision_score, nos dará o nosso baseline, e seja qual for o modelo machine learning a average_precision deve ser o mais próximo possível de 1.0.<br>
+Em cada ponto de corte definido ao calcular precision e recall aparecerá uma curva, a área sobre a curva é a average precision.<br>
 
 Vamos lembrar :<br>
 :/: Precision : é o número que responde a pergunta de todos os modelos que disse que são positivos, 50% destes são realmente positivos<br>
