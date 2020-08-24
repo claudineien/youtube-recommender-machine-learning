@@ -35,7 +35,8 @@ Formatação de datas : Fique atento à formatação de datas de português para
 Número : O local do ponto em português é diferente do inglês<br>
 Transformar Data em valor numérico : O formato número é mais eficiente aos algoritmos machine learning<br>
 Modelo ml x Realidade : Para melhor eficiência do modelo machine learning os dados de treino e de teste devem ser o mais semelhantes possível a rotina da realidade em uma empresa ou em uma pesquisa de campo<br>
-Métrica realística : Encontrar características iguais entre os dados, ainda que seja necessário converter quantidade de dados x por ano em por dia. Ex : Upload de vídeos por dia, visualizações por dia ou algo semelhante.
+Métrica realística : Encontrar características iguais entre os dados, ainda que seja necessário converter quantidade de dados x por ano em por dia. Ex : Upload de vídeos por dia, visualizações por dia ou algo semelhante.<br>
+Features x Banco de dados : Em um projeto real se houver muitas features, uma boa atitude é salvar em banco de dados
 </p>
 
 <p><strong>Nota :</strong><br>
@@ -44,23 +45,15 @@ Métrica realística : Encontrar características iguais entre os dados, ainda q
 </p>
 
 <hr>
-<h3>PLOTAR - EXIBIR DADOS EM GRÁFICO</h3>
-    <ul>
-        <li>Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
-        <li>Permite analisar os dados para desenhar o melhor cenário de para o modelo machine learning</li>
-    </ul>
-<p>A amostra por data, indica que no final do período há muito mais vídeos, provavelmente a busca do youtube faz seleção aleatória específica, desobedecendo a instrução de ordem estabelecida ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0_dataset_collect_clean.md">COLETAR DATASET</a>, deixando a maior quantidade dos vídeos por último.</p>
-<p>O pico de vídeos do final do período é um fator de atenção e que deve ser melhor analisado em um ambiente machine learning real.</p>
-</p>
-
-<hr>
 <h3>MODELO MACHINE LEARNING</h3>
-Este primeiro modelo será para analisar rapidamente a influência da predição do modelo machine learning com duas features. Utilizaremos a Decision tree (Árvore de decisão).
+Neste segundo modelo a predição será realizada sob o título do vídeo, após ser transformado pelo objeto TfidfVectorizer.A predição do modelo machine learning será com o algoritmo RandomForestClassifier.
     <ul>
-        <li>Separar dados de treino e dados de teste - Aplicar validação temporal por ser uma time series</li>
-        <li>Executar o algoritmo Decision tree</li>
-        <li>Treinar modelo machine learning (*3)</li>
-        <li>Executar a probabilidade da Decision tree (*4)</li>
+        <li>Separar dados de treino e dados de teste - Aplicar validação temporal por ser uma time series (*3)</li>
+        <li>Importar o objeto TfidfVectorizer</li>
+        <li>Separar as descrições dos títulos para treino e teste</li>
+        <li>Transformar os títulos com o algoritmo TfidfVectorizer</li>
+        <li>Treinar modelo machine learning </li>
+        <li>Executar a probabilidade do RandomForestClassifier (*4)</li>
         <li>Aplicar a métrica de média de precisão (*5)</li>
         <li>Tratar o ranking dos vídeos (*5)</li>
         <li>Aplicar a curva <a href="blank_">ROC</a></li>
@@ -68,9 +61,8 @@ Este primeiro modelo será para analisar rapidamente a influência da predição
     </ul>
 
 <p><strong>Aprender mais :</strong><br>
-<a href="https://www.youtube.com/watch?v=Y1XAP6omGzo">Entendiendo las Curvas ROC</a><br>
-<a href="blank_">ROC</a><br>
-<a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.plot_tree.html">Método plot_tree</a><br>
+<a href="https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction">Bag of Words (e TF-IDF)</a><br>
+<a href="https://docs.scipy.org/doc/scipy/reference/sparse.html">Sparse matrices</a><br>
 </p>
 
 <br>
@@ -81,7 +73,7 @@ Arvore de decisão : Uma das melhores maneiras de entender a relação das featu
 
 <p><strong>Nota :</strong><br>
 (*3) Há bibliotecas com métodos para separar os dados de treino e os dados de teste, que pode ser em percentual e/ou em quantidade<br>
-(*4) A probabilidade mostra o valor provavel de positivo 1-vídeos que quer assistir e/ou negativo 0-vídeos que não quer assistir. Queremos somente a probabilidade de ser 1.<br>
+(*4) A probabilidade o percentual de acerto dos títulos acertados no teste.<br>
 (*5) Métrica de média de precisão : o método average_precision_score, nos dará o nosso baseline, e seja qual for o modelo machine learning a average_precision deve ser o mais próximo possível de 1.0. Esta serve para melhor visualizarmos o ranking dos vídeos : dos mais interessantes para os menos interessantes. Em cada ponto de corte definido ao calcular precision e recall aparecerá uma curva, a área sobre a curva é a average precision.<br>
 
 Vamos lembrar :<br>
