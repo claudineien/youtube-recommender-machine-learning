@@ -51,7 +51,6 @@ Métrica realística : Encontrar características iguais entre os dados, ainda q
     </ul>
 <p>A amostra por data, indica que no final do período há muito mais vídeos, provavelmente a busca do youtube faz seleção aleatória específica, desobedecendo a instrução de ordem estabelecida ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0_dataset_collect_clean.md">COLETAR DATASET</a>, deixando a maior quantidade dos vídeos por último.</p>
 <p>O pico de vídeos do final do período é um fator de atenção e que deve ser melhor analisado em um ambiente machine learning real.</p>
-</p>
 
 <hr>
 <h3>MODELO MACHINE LEARNING</h3>
