@@ -5,7 +5,7 @@
 </h4>
 
 <h1 align='center'>Active Learning</h1>
-<p>Active learning nos ajuda a selecionar exemplos em dataset para ter um modelo com uma melhor performance. É utilizado em pequenos projetos, em projetos com orçamento baixo e/ou com pouco tempo para fazer anotações em dados que serão treinados. Conseguimos separar com maior qualidade os dados que precisamos que recebam anotações de especialistas.<p>
+<p>Active learning nos ajuda a selecionar exemplos em dataset para ter um modelo com uma melhor performance. É utilizado em pequenos projetos, em projetos com orçamento baixo e/ou em projetos com pouco tempo para fazer anotações em dados que serão treinados. Conseguimos separar com maior qualidade os dados que precisamos que recebam anotações de especialistas.<p>
 <p>Dependendo do projeto, fazer anotações pode aumentar muito o seu custo, e realizar anotações aleatorias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning.</p>
 <p>Ex : Em projetos de tratamento de imagem radiográfica, ressonância magnética, e similares, que exige experiência médica especializada para anotar nos datasets (imagem radiografica, ressonância magnética, etc), uma situação de tumor benigno ou maligno.
 </p>
