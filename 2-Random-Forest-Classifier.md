@@ -74,7 +74,6 @@ Neste segundo modelo a predição será realizada sob o título do vídeo, após
 
 <p><strong>Dica :</strong><br>
 50% para treino e 50% para teste : Por ser uma time series, é quase 100% certeza que os dados de treino serão diferentes dos dados de validação, e a metodologia mais eficiente é dividir os dados o mais próximo possível de 50%<br>
-Arvore de decisão : Uma das melhores maneiras de entender a relação das features (recursos) com o target (alvo)<br>
 Concatenar variaveis : Pode utilizar as funções hstack e/ou vstack do scipy sparse. A primeira juntará horizontalmente e a segunda verticalmente.
 Não as funções de mesmo nome do objeto numpy, por que não é otimizado para lidar com matriz sparsa.
 </p>
@@ -92,18 +91,6 @@ Vamos lembrar :<br>
 :/: Precision : é o número que responde a pergunta de todos os modelos que disse que são positivos, 50% destes são realmente positivos<br>
 
 :/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
-</p>
-
-<h3>INTERPRETAR A DECISION TREE</h3>
-<p>Uma boa forma de entender como o as features (recursos) estão se relacionando com o target (alvo)</p>
-<img src="img\decisiontree.png">
-</p>
-<p>
-Houve um balanceamento (class_weight="balanced") no peso dos vídeos, que mostra no nó raiz 15110.0 visualizações em uma amostra de vídeos de 228, índice esta em 50% (gini) e os valores balanceados [114.0,114.0]. Então :<br>
-<ol>
-    <li>quando inferior ao nó raiz (à esquerda), no 1o nível de nó vemos que a quantidade por dia é inferior a 1 visualização por dia para 133 amostras de vídeo, no 2o nó à esquerda as 14 amostras são exemplos negativos 0.0, não interessantes. No nó a direita há mais amostras e estes provavelmente são vídeos que interessam por ter 92.625 positivos.
-    </li>
-    <li>quando superior ao nó raiz (à direita), no 1o nível de nó vemos que a quantidade pode ser menor ou igual ou superior a 26712.0. Se inferior temos 20 amostas negativas 0.0, não interessantes. A direita há muita amostra porem pela classificação 21.375 provavelmente são vídeos que não interessam.</li>
 </p>
 
 <br>
