@@ -53,7 +53,7 @@ Métrica realística : Encontrar características iguais entre os dados, ainda q
 <p>O pico de vídeos do final do período é um fator de atenção e que deve ser melhor analisado em um ambiente machine learning real.</p>
 
 <hr>
-<h3>MODELO MACHINE LEARNING</h3>
+<h3>MODELO MACHINE LEARNING-DecisionTreeClassifier</h3>
 Este primeiro modelo será para analisar rapidamente a influência da predição do modelo machine learning com duas features. Utilizaremos a Decision tree (Árvore de decisão).
     <ul>
         <li>Separar dados de treino e dados de teste - Aplicar validação temporal por ser uma time series</li>
