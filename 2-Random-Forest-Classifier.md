@@ -81,8 +81,8 @@ Não as funções de mesmo nome do objeto numpy, por que não é otimizado para 
 <p><strong>Nota :</strong><br>
 (*3) Há bibliotecas com métodos para separar os dados de treino e os dados de teste, que pode ser em percentual e/ou em quantidade<br>
 (*4) TfidfVectorizer dá mais peso palavras que aparecem bastante em determinado exemplo mas não aparece tanto no dadtaset como um todo. Palavras que aparecem pouco entre todos os videos mas aparecerem muito em um video tem mais peso. Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor
-Há uma forma mais simples que é criar matriz com contagem de palavras em que em cada linha tem um video, e cada coluna é uma palavra e coloca a quantas vezes a palavra aparece no cruzamento da linha do video com a palavra do titulo do vídeo
-(*5) Matriz esparsa armazena valores diferentes de zero -é mais otimizada.
+Há uma forma mais simples que é criar matriz com contagem de palavras em que em cada linha tem um video, e cada coluna é uma palavra e coloca a quantas vezes a palavra aparece no cruzamento da linha do video com a palavra do titulo do vídeo<br>
+(*5) Matriz esparsa armazena valores diferentes de zero -é mais otimizada.<br>
 (*6) A probabilidade o percentual de acerto dos títulos acertados no teste.<br>
 (*7) Métrica de média de precisão : o método average_precision_score, nos dará o nosso baseline, e seja qual for o modelo machine learning a average_precision deve ser o mais próximo possível de 1.0.<br>
 Em cada ponto de corte definido ao calcular precision e recall aparecerá uma curva, a área sobre a curva é a average precision.<br>
