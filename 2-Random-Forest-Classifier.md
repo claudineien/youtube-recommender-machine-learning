@@ -93,6 +93,90 @@ Vamos lembrar :<br>
 :/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
 </p>
 
+<hr>
+<h4>Objetivo : Desenvolver um recomendador de vídeos do youtube
+    <p>Nivel Conhecimento : Intermediário à avançado<br>
+    Tipo Machine Learning : Supervisionado</p>
+    <p><a href="blank_">[En]</a> | <a href="blank_">[Pt-Br]</a></p>
+</h4>
+
+<h1 align='center'>Active Learning</h1>
+<p>Active learning nos ajuda a selecionar exemplos em dataset para desenvolver um modelo com uma melhor performance. É utilizado em pequenos projetos, em projetos com orçamento baixo e/ou em projetos com pouco tempo para fazer anotações em dados que serão treinados. Conseguimos separar com maior qualidade os dados que precisamos que recebam anotações de especialistas.<p>
+<p>Dependendo do projeto, fazer anotações pode aumentar muito o seu custo, e realizar anotações aleatorias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning.</p>
+<p>Ex : Em projetos de tratamento de imagem radiográfica, ressonância magnética, e similares, que exige experiência médica especializada para anotar nos datasets (imagem radiografica, ressonância magnética, etc), uma situação de tumor benigno ou maligno.
+</p>
+
+<br>
+<p>
+Dica de experiência :
+Pegar uma quantidade de exemplos que o modelo esta com problema em classificar.<br>
+Suponha que sejam 100, então selecionaremos 70 exemplos e deixaremos 30 exemplos como aleatorios. Os 30 exemplos aleatórios é para identificar mais alguns exemplos que o modelo esteja com dificuldade em classificar.<br>
+Exemplos difíceis de classificar : pegar os exemplos próximos entre 45% e 55% (próximos à fronteira 50%-50%) e identificando os exemplos Falso positivos. Exemplos inferiores a 20% de probabilidade de ser Verdadeiro Positivo provavelmente são irrelevantes a este processo.
+</p>
+
+<hr>
+<h3>LIMPAR E TRANSFORMAR DADOS</h3>
+    <ul>
+        <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
+		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (*1)</li>
+        <li>Aplicar Features - Tratamentos específicos nos dados</li>
+        <li>Importar o objeto TfidfVectorizer</li>
+        <li>Pegar as descrições dos títulos dos vídeos</li>
+        <li>Transformar os textos dos títulos com o algoritmo TfidfVectorizer (*2)</li>
+        <li>Concatenar matriz densa e matriz sparsa (*3)</li>
+        <li>Executar a probabilidade do RandomForestClassifier (*4)</li>
+        <li>Concatenar os dataframes difíceis e aleatórios</li>
+        <li>Exibir exemplos difíceis separados de classificar e os aleatórios</li>
+    </ul>
+
+<p><strong>Aprender mais :</strong><br>
+    <a href="https://strftime.org/">Tabela de códigos para converter strings em datas no Python</a><br>
+    <a href="http://gskinner.com/RegExr/">Testador de expressões regulares</a><br>
+    <a href="https://numpy.org/doc/stable/reference/arrays.datetime.html">Numpy : Timedelta</a><br> 
+    <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">Pandas : Time/Date</a><br>
+    <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py">Curva de Precision/Recall</a><br>
+    <a href="https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics">ROC (Receiver Operating Characteristic) Curve</a><br>
+    <a href="">Dados train and test</a><br>
+</p>
+
+<p><strong>Dica :</strong><br>
+Formatação de datas : Fique atento à formatação de datas de português para inglês ou vice-versa<br>
+Número : O local do ponto em português é diferente do inglês<br>
+Transformar Data em valor numérico : O formato número é mais eficiente aos algoritmos machine learning<br>
+Modelo ml x Realidade : Para melhor eficiência do modelo machine learning os dados de treino e de teste devem ser o mais semelhantes possível a rotina da realidade em uma empresa ou em uma pesquisa de campo<br>
+</p>
+
+<p><strong>Nota :</strong><br>
+(*1) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Este atrapalha a eficiência do modelo machine learning.<br>
+</p>
+
+<p><strong>Aprender mais :</strong><br>
+    <a href="https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction">Bag of Words (e TF-IDF)</a><br>
+    <a href="https://docs.scipy.org/doc/scipy/reference/sparse.html">Sparse matrices</a><br>
+</p>
+
+<p><strong>Atenção</strong>:<br>
+<a href="https://github.com/scikit-learn/scikit-learn/issues/16017">TfidfVectorizer ngrams does not work when vocabulary provided #16017</a>
+</p>
+
+<p><strong>Dica :</strong><br>
+50% para treino e 50% para teste : Por ser uma time series, é quase 100% certeza que os dados de treino serão diferentes dos dados de validação, e a metodologia mais eficiente é dividir os dados o mais próximo possível de 50%<br>
+Concatenar variaveis : Pode utilizar as funções hstack e/ou vstack do scipy sparse. A primeira juntará horizontalmente e a segunda verticalmente.
+Não as funções de mesmo nome do objeto numpy, por que não é otimizado para lidar com matriz sparsa.
+</p>
+
+<p><strong>Nota :</strong><br>
+(*2) TfidfVectorizer dá mais peso as palavras que aparecem bastante em determinado exemplo mas não aparece tanto no dadtaset como um todo. Palavras que aparecem pouco entre todos os videos mas aparecerem muito em um video tem mais peso. Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor
+Há uma forma mais simples que é criar matriz com contagem de palavras em que em cada linha tem um video, e cada coluna é uma palavra e coloca a quantas vezes a palavra aparece no cruzamento da linha do video com a palavra do titulo do vídeo<br>
+(*3) Matriz esparsa armazena valores diferentes de zero -é mais otimizada.<br>
+(*4) A probabilidade o percentual de acerto dos títulos acertados no teste.<br>
+
+Vamos lembrar :<br>
+:/: Precision : é o número que responde a pergunta de todos os modelos que disse que são positivos, 50% destes são realmente positivos<br>
+
+:/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
+</p>
+
 <br>
 <hr>
 <p>Fontes :
