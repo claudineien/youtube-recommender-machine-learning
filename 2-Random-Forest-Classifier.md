@@ -29,7 +29,7 @@
 <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">Pandas : Time/Date</a><br>
 <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py">Curva de Precision/Recall</a><br>
 <a href="https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics">ROC (Receiver Operating Characteristic) Curve</a><br>
-<a href="">Dados train and test</a><br>
+<a href=".\file-csv">Dados train and test</a><br>
 </p>
 
 <p><strong>Dica :</strong><br>
@@ -135,7 +135,7 @@ Uma boa prática para selecionarmos os exemplos difíceis do modelo classificar 
     <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">Pandas : Time/Date</a><br>
     <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py">Curva de Precision/Recall</a><br>
     <a href="https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics">ROC (Receiver Operating Characteristic) Curve</a><br>
-    <a href="">Dados train and test</a><br>
+    <a href=".\file-csv">Dados train and test</a><br>
     <a href="https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction">Bag of Words (e TF-IDF)</a><br>
     <a href="https://docs.scipy.org/doc/scipy/reference/sparse.html">Sparse matrices</a><br>
     <a href="https://github.com/scikit-learn/scikit-learn/issues/16017">TfidfVectorizer ngrams does not work when vocabulary provided #16017</a>
