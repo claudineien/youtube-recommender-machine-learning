@@ -41,9 +41,9 @@ Falso Negativo : Na classificação real o Alvo é verdadeiro, mas para o classi
     <table>
         <thead>
         <tr>
-            <td><td>
-            <td></td>
+            <td colspan="2"><td>
             <td colspan="2"><strong>Classificação Real</strong></td>
+            <td></td>
         </tr>
         <tr>
             <th></th>
