@@ -176,26 +176,6 @@ Vamos lembrar :<br>
 :/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
 </p>
 
-<hr>
-<h4>Objetivo : Desenvolver um recomendador de vídeos do youtube
-    <p>Nivel Conhecimento : Intermediário à avançado<br>
-    Tipo Machine Learning : Supervisionado</p>
-    <p><a href="blank_">[En]</a> | <a href="blank_">[Pt-Br]</a></p>
-</h4>
-
-<h1 align='center'>Medir Impacto do Active Learning</h1>
-<p>
-01 df1 com aproximadamente 500 anotações e labelling e df2 com 100 novos exemplos com labels.<br>
-O df2 possui a mais, a coluna p com a probabilidade do modelo treinado pelo algorítmo RandomForestClassifier, adicionada no momento do Active Learning, e receberá a nova coluna Novo <br>
-? Curioso ?<br>
-Se usar as probabilidades geradas pelo modelo RandomForestClassifier Quais são as métricas, qual o erro, qual o average_precision, qual é o auc no dataset que acabou de fazer as labels se utilizar a probabilidade do modelo RandomForestClassifier ? Objetivo é entender se esta perto ou longe do objetivo de ter um bom modelo machine learning<br>
-Ao aplicar average_precision_score e roc_auc_score neste ultimo dataset comparando com o dataset criado para o modelo RandomForestClassifier percebemos que a alteração é mínima.
-O auc esta sensível ao número de exemplos, por que em 100 exemplos apenas 14 são verdadeiros positivo
-<br>
-
-02
-</p>
-
 <br>
 <hr>
 <p>Fontes :
