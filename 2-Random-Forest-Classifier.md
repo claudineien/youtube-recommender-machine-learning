@@ -101,17 +101,16 @@ Vamos lembrar :<br>
 </h4>
 
 <h1 align='center'>Active Learning</h1>
-<p>Active learning nos ajuda a selecionar exemplos em dataset para desenvolver um modelo com uma melhor performance. É utilizado em pequenos projetos, em projetos com orçamento baixo e/ou em projetos com pouco tempo para fazer anotações em dados que serão treinados. Conseguimos separar com maior qualidade os dados que precisamos que recebam anotações de especialistas.<p>
-<p>Dependendo do projeto, fazer anotações pode aumentar muito o seu custo, e realizar anotações aleatorias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning.</p>
-<p>Ex : Em projetos de tratamento de imagem radiográfica, ressonância magnética, e similares, que exige experiência médica especializada para anotar nos datasets (imagem radiografica, ressonância magnética, etc), uma situação de tumor benigno ou maligno.
+<p>Active Learning é uma técnica que ajuda a escolher melhor quais dados devem receber anotação em um dataset, para desenvolvermos um modelo com melhor performance.</p>
+<p>Normalmente utilizado em pequenos projetos, em projetos com orçamento baixo e/ou em projetos com pouco tempo para fazer anotações em dados que serão treinados.<p>
+<p>Dependendo do projeto, fazer anotações pode aumentar muito o seu custo, e realizar anotações aleatórias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning.</p>
+<p>Por exemplo:<br>
+Em projetos de tratamento de imagem radiográfica, ressonância magnética, e similares, que exige experiência médica especializada para anotar nos datasets uma situação de tumor benigno ou maligno ou nenhum dos dois, o Active Learning nos ajuda a separar com maior qualidade os dados que precisamos que recebam as anotações destes especialistas.
 </p>
 
-<br>
-<p>
-Dica de experiência :
-Pegar uma quantidade de exemplos que o modelo esta com problema em classificar.<br>
-Suponha que sejam 100, então selecionaremos 70 exemplos e deixaremos 30 exemplos como aleatorios. Os 30 exemplos aleatórios é para identificar mais alguns exemplos que o modelo esteja com dificuldade em classificar.<br>
-Exemplos difíceis de classificar : pegar os exemplos próximos entre 45% e 55% (próximos à fronteira 50%-50%) e identificando os exemplos Falso positivos. Exemplos inferiores a 20% de probabilidade de ser Verdadeiro Positivo provavelmente são irrelevantes a este processo.
+<p><strong>Dica :</strong><br>
+Pegar uma quantidade de exemplos que o modelo esta com problema em classificar, selecionar entre 65% e 70% manualmente e deixar entre 35% e 30% automaticamente aleatório, para identificarmos mais alguns exemplos que o modelo esteja com dificuldade em classificar.<br>
+Uma boa prática para selecionarmos os exemplos difíceis do modelo classificar é pegar os exemplos entre 45% e 55% (próximos à fronteira 50%-50%) e identificar os exemplos falsos positivo. Exemplos inferiores a 20% de probabilidade de ser Verdadeiro Positivo provavelmente são irrelevantes a este processo.
 </p>
 
 <hr>
@@ -175,6 +174,26 @@ Vamos lembrar :<br>
 :/: Precision : é o número que responde a pergunta de todos os modelos que disse que são positivos, 50% destes são realmente positivos<br>
 
 :/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
+</p>
+
+<hr>
+<h4>Objetivo : Desenvolver um recomendador de vídeos do youtube
+    <p>Nivel Conhecimento : Intermediário à avançado<br>
+    Tipo Machine Learning : Supervisionado</p>
+    <p><a href="blank_">[En]</a> | <a href="blank_">[Pt-Br]</a></p>
+</h4>
+
+<h1 align='center'>Medir Impacto do Active Learning</h1>
+<p>
+01 df1 com aproximadamente 500 anotações e labelling e df2 com 100 novos exemplos com labels.<br>
+O df2 possui a mais, a coluna p com a probabilidade do modelo treinado pelo algorítmo RandomForestClassifier, adicionada no momento do Active Learning, e receberá a nova coluna Novo <br>
+? Curioso ?<br>
+Se usar as probabilidades geradas pelo modelo RandomForestClassifier Quais são as métricas, qual o erro, qual o average_precision, qual é o auc no dataset que acabou de fazer as labels se utilizar a probabilidade do modelo RandomForestClassifier ? Objetivo é entender se esta perto ou longe do objetivo de ter um bom modelo machine learning<br>
+Ao aplicar average_precision_score e roc_auc_score neste ultimo dataset comparando com o dataset criado para o modelo RandomForestClassifier percebemos que a alteração é mínima.
+O auc esta sensível ao número de exemplos, por que em 100 exemplos apenas 14 são verdadeiros positivo
+<br>
+
+02
 </p>
 
 <br>
