@@ -42,12 +42,10 @@ Falso Negativo : Na classificação real o Alvo é verdadeiro, mas para o classi
         <thead>
         <tr>
             <td colspan="2"><td>
-            <td colspan="2"><strong>Classificação Real</strong></td>
-            <td></td>
+            <td colspan="0"><strong>Classificação Real</strong></td>
         </tr>
         <tr>
-            <th></th>
-            <th></th>
+            <td colspan="2"></td>
             <th scope="col">Alvo</th>
             <th scope="col">Não-Alvo</th>
         </tr>
