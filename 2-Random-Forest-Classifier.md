@@ -11,7 +11,7 @@
 <p>Neste modelo é demonstrado como gerar mais conteúdo de dados para treinar o modelo machine learning.</p>
 
 <h3>LABELLING</h3>
-<p>Abrir o arquivo <a href="blank_">raw_data_sem_labels.csv</a> no excel através da opção de importar dados de um arquivo .csv, criar a coluna Y (*1) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
+<p>Abrir o arquivo <a href=".\file-csv">raw_data_sem_labels.csv</a> no excel através da opção de importar dados de um arquivo .csv, criar a coluna Y (*1) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
 
 <hr>
 <h3>LIMPAR E TRANSFORMAR DADOS</h3>
