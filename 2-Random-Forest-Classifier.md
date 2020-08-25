@@ -136,6 +136,9 @@ Uma boa prática para selecionarmos os exemplos difíceis do modelo classificar 
     <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py">Curva de Precision/Recall</a><br>
     <a href="https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics">ROC (Receiver Operating Characteristic) Curve</a><br>
     <a href="">Dados train and test</a><br>
+    <a href="https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction">Bag of Words (e TF-IDF)</a><br>
+    <a href="https://docs.scipy.org/doc/scipy/reference/sparse.html">Sparse matrices</a><br>
+    <a href="https://github.com/scikit-learn/scikit-learn/issues/16017">TfidfVectorizer ngrams does not work when vocabulary provided #16017</a>
 </p>
 
 <p><strong>Dica :</strong><br>
@@ -143,28 +146,13 @@ Formatação de datas : Fique atento à formatação de datas de português para
 Número : O local do ponto em português é diferente do inglês<br>
 Transformar Data em valor numérico : O formato número é mais eficiente aos algoritmos machine learning<br>
 Modelo ml x Realidade : Para melhor eficiência do modelo machine learning os dados de treino e de teste devem ser o mais semelhantes possível a rotina da realidade em uma empresa ou em uma pesquisa de campo<br>
-</p>
-
-<p><strong>Nota :</strong><br>
-(*1) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Este atrapalha a eficiência do modelo machine learning.<br>
-</p>
-
-<p><strong>Aprender mais :</strong><br>
-    <a href="https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction">Bag of Words (e TF-IDF)</a><br>
-    <a href="https://docs.scipy.org/doc/scipy/reference/sparse.html">Sparse matrices</a><br>
-</p>
-
-<p><strong>Atenção</strong>:<br>
-<a href="https://github.com/scikit-learn/scikit-learn/issues/16017">TfidfVectorizer ngrams does not work when vocabulary provided #16017</a>
-</p>
-
-<p><strong>Dica :</strong><br>
 50% para treino e 50% para teste : Por ser uma time series, é quase 100% certeza que os dados de treino serão diferentes dos dados de validação, e a metodologia mais eficiente é dividir os dados o mais próximo possível de 50%<br>
 Concatenar variaveis : Pode utilizar as funções hstack e/ou vstack do scipy sparse. A primeira juntará horizontalmente e a segunda verticalmente.
 Não as funções de mesmo nome do objeto numpy, por que não é otimizado para lidar com matriz sparsa.
 </p>
 
 <p><strong>Nota :</strong><br>
+(*1) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Este atrapalha a eficiência do modelo machine learning.<br>
 (*2) TfidfVectorizer dá mais peso as palavras que aparecem bastante em determinado exemplo mas não aparece tanto no dadtaset como um todo. Palavras que aparecem pouco entre todos os videos mas aparecerem muito em um video tem mais peso. Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor
 Há uma forma mais simples que é criar matriz com contagem de palavras em que em cada linha tem um video, e cada coluna é uma palavra e coloca a quantas vezes a palavra aparece no cruzamento da linha do video com a palavra do titulo do vídeo<br>
 (*3) Matriz esparsa armazena valores diferentes de zero -é mais otimizada.<br>
