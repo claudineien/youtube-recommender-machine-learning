@@ -10,6 +10,9 @@
 
 <h3>LABELLING</h3>
 <p>Abrir o arquivo <a href=".\file-csv">raw_data_sem_labels.csv</a> no excel através da opção de importar dados de um arquivo .csv, criar a coluna Y (*1) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
+<p><strong>Importante:</strong><br>
+Este trabalho ja foi realizado para padronizar o treinamento e esta no arquivo <a href=".\file-csv">raw_data_with_labels.csv</a>
+</p>
 
 <hr>
 <h3>LIMPAR E TRANSFORMAR DADOS</h3>
