@@ -5,12 +5,18 @@
 </h4>
 
 <h1 align='center'>Medir Impacto do Active Learning</h1>
-<p>Por termos poucos dados de validação e o auc estar muito instável, aplicaremos algumas técnicas para entendermos se o active learning esta trazendo efeito podemos medir aumentando os dados de validação, os dados de treino e/ou ambos. Normalmente no active learning aumentam-se os dados para treino. Depois avaliar com as métricas roc_auc_score e average_precision_score.<br>
+<p>Por termos poucos dados de validação e o auc estar muito instável é importante saber se o Active Learning esta trazendo bom efeito ao projeto. Podemos medir o impacto aplicando as seguintes técnicas :<br>
+<ol>
+    <li>aumentando apenas os dados de validação</li>
+    <li>aumentando apenas os dados de treino</li>
+    <li>aumentando os dados de validação e de treino</li>
+</ol>
+Depois será importante executar as métricas roc_auc_score e average_precision_score.
 </p>
 
 <p>
-Algumas observações :<br>
-O arquivo <a href="\file-csv">raw_data_with_labels.csv</a> terá aproximadamente 500 anotações e esta com labelling e o arquivo <a href="\file-csv" >active_labels1_done.csv</a> terá 100 novos exemplos com labels mais a coluna p com a probabilidade do modelo treinado pelo algorítmo RandomForestClassifier, adicionada no momento do Active Learning, e receberá agora a nova coluna Novo com valor 1.
+O arquivo <a href="\file-csv">raw_data_with_labels.csv</a> terá aproximadamente 500 anotações e esta com labelling 1-Vídeos Que Gosto, 0-Vídeos Que Não Gosto no campo Y.<br>
+O arquivo <a href="\file-csv" >active_labels1_done.csv</a> contém 100 exemplos com labels gerados pelo notebook <a href=".\file-csv">2_Random_Forest_Classifier.ipynb</a> mais a coluna p com a probabilidade gerado pelo algorítmo RandomForestClassifier no mesmo notebook, adicionada pela técnica Active Learning, e receberá agora a nova coluna Novo com valor 1.
 </p>
 
 <p>Se aplicarmos as métricas roc_auc_score e average_precision_score sob a probabilidade gerado pelo modelo RandomForestClassifier x labelling gravados no arquivo <a href="\file-csv" >active_labels1_done.csv</a> gerado pelo notebook <a href=".\file-csv">2_Random_Forest_Classifier.ipynb</a> sob as técnicas Active Learning, então :<br>
@@ -44,11 +50,12 @@ Bom... por ser a primeira vez que aplicamos este procedimento não teremos parâ
     </ul>
 </p>
 
-<p>Uma prática que ajudará a comparar o efeito do active learning é:</p>
+<p>Uma prática que ajudará a medir do Active Learning é comparar:</p>
 <p>Criar um novo dataframe no notebook <a href=".\file-csv">3_Medir_Active_Learning.ipynb</a>.<br>
 Este dataframe vai unir o dataset <a href=".\file-csv">active_labels1_done.csv</a> contendo 100 exemplos mais uma nova coluna [Novo] igual a 1 ao dataframe original <a href=".\file-csv">raw_data_with_labels.csv</a>.<br>
 Após esta união de datasets atualizaremos para 0 os dados da coluna [Novo] que são diferentes dos 100 exemplos que estão com 1.<br>
-Significado :<br>
+Eliminar a coluna p relacionada a probabilidade de acerto dos vídeos.<br>
+Legenda :<br>
 1-Relacionados aos 100 exemplos do dataset <a href=".\file-csv">active_labels1_done.csv</a><br>
 0-Relacionados aos exemplos do dataset <a href=".\file-csv">raw_data_with_labels.csv</a>
 </p>
