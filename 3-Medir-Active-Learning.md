@@ -7,21 +7,30 @@
 <h1 align='center'>Medir Impacto do Active Learning</h1>
 <p>Por termos poucos dados de validação e o auc estar muito instável, aplicaremos algumas técnicas para entendermos se o active learning esta trazendo efeito podemos medir aumentando os dados de validação, os dados de treino e/ou ambos. Normalmente no active learning aumentam-se os dados para treino. Depois avaliar com as métricas roc_auc_score e average_precision_score.<br>
 </p>
+
 <p>
-01 df1 com aproximadamente 500 anotações e labelling e df2 com 100 novos exemplos com labels.<br>
-O df2 possui a mais, a coluna p com a probabilidade do modelo treinado pelo algorítmo RandomForestClassifier, adicionada no momento do Active Learning, e receberá a nova coluna Novo com valor 1.<br>
-? Curioso ?<br>
-Se usar as probabilidades geradas pelo modelo RandomForestClassifier Quais são as métricas, qual o erro, qual o average_precision, qual é o auc no dataset que acabou de fazer as labels se utilizar a probabilidade do modelo RandomForestClassifier ? Objetivo é entender se esta perto ou longe do objetivo de ter um bom modelo machine learning<br>
-Ao aplicar average_precision_score e roc_auc_score neste ultimo dataset comparando com o dataset criado para o modelo RandomForestClassifier percebemos que a alteração é mínima em ambos. O auc é sensível por que estamos trabalhando com uma quantidade muito pequena de dados.
-<br>
-Criar um novo dataframe e juntar o dataset que acabou de criar ao dataset original.<br>
-Este novo dataframe terá 100 exemplos com o campo Novo igual a 1-Exemplos que acabou de criar a anotação e igual a 0-Exemplos que já tinham as anotações. Esta prática ajudará a comparar o efeito do active learning.
+Algumas observações :<br>
+O arquivo <a href="\file-csv">raw_data_with_labels.csv</a> terá aproximadamente 500 anotações e esta com labelling e o arquivo <a href="\file-csv" >active_labels1_done.csv</a> terá 100 novos exemplos com labels mais a coluna p com a probabilidade do modelo treinado pelo algorítmo RandomForestClassifier, adicionada no momento do Active Learning, e receberá agora a nova coluna Novo com valor 1.
+</p>
+
+<p>Se aplicarmos as métricas roc_auc_score e average_precision_score sob a probabilidade gerado pelo modelo RandomForestClassifier x labelling gravados no arquivo <a href="\file-csv" >active_labels1_done.csv</a> gerado pelo notebook <a href=".\file-csv">2_Random_Forest_Classifier.ipynb</a> sob as técnicas Active Learning, então :<br>
+01 Quais são as métricas ?<br>
+02 Qual é o erro ?<br>
+03 Qual o average_precision_score ?<br>
+04 Qual é o roc_auc_score ? <br>
+Bom... por ser a primeira vez que aplicamos este procedimento não teremos parâmetro para avaliar, mas é possível entender se esta perto ou longe do objetivo de ter um bom modelo machine learning.
+</p>
+
+<p>Ao aplicar average_precision_score e roc_auc_score neste ultimo dataset comparando com o dataset criado para o modelo RandomForestClassifier percebemos que a alteração é mínima em ambos, mas uma informação é certa : o auc esta sensível por que estamos trabalhando com uma quantidade muito pequena de dados.
 </p>
 
 <hr>
-<h3>LIMPAR E TRANSFORMAR DADOS</h3>
+<h3>ABRIR .CSV, LIMPAR E TRANSFORMAR DADOS</h3>
 <p>
     <ul>
+        <li>Abrir o arquivo <a href="\file-csv">raw_data_with_labels.csv</a></li>
+        <li>Abrir o arquivo <a href="\file-csv" >active_labels1_done.csv</a></li>
+        <li>Em ambos os arquivos pegar somente linhas cuja coluna Y é diferente de nula</li>
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
 		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (*1)</li>
         <li>Aplicar Features - Tratamentos específicos nos dados</li>
@@ -33,6 +42,15 @@ Este novo dataframe terá 100 exemplos com o campo Novo igual a 1-Exemplos que a
         <li>Executar a probabilidade do RandomForestClassifier (*4)</li>
         <li>Aplicar roc_auc_score e average_precision_score</li>
     </ul>
+</p>
+
+<p>Uma prática que ajudará a comparar o efeito do active learning é:</p>
+<p>Criar um novo dataframe no notebook <a href=".\file-csv">3_Medir_Active_Learning.ipynb</a>.<br>
+Este dataframe vai unir o dataset <a href=".\file-csv">active_labels1_done.csv</a> contendo 100 exemplos mais uma nova coluna [Novo] igual a 1 ao dataframe original <a href=".\file-csv">raw_data_with_labels.csv</a>.<br>
+Após esta união de datasets atualizaremos para 0 os dados da coluna [Novo] que são diferentes dos 100 exemplos que estão com 1.<br>
+Significado :<br>
+1-Relacionados aos 100 exemplos do dataset <a href=".\file-csv">active_labels1_done.csv</a><br>
+0-Relacionados aos exemplos do dataset <a href=".\file-csv">raw_data_with_labels.csv</a>
 </p>
 
 <hr>
