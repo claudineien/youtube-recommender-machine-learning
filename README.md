@@ -135,7 +135,7 @@ Nesta fase o modelo de dados esta sendo contruÍdo pelo conjunto de dados de tre
 <p>Os usuários deverão testar o desempenho dos modelos de dados e verificar se há qualquer inconsistências com os modelos, que serão corrigidos pelo Cientista de dados.</p>
 <br><br><br><br><br><br><br>
 <hr>
-<p>Bibliografia
+<p>Fonte
     <ul>
         <li><a href="https://curso.mariofilho.com/">   
         Curso Solução Completa de Data Science - Instrutor Mario Filho-Kagle Gran Master</a></li>
