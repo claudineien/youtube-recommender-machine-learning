@@ -1,7 +1,7 @@
+<h4><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></h4>
 <h4>Objetivo : Desenvolver um recomendador de vídeos do youtube
     <p>Nivel Conhecimento : Intermediário à avançado<br>
     Tipo Machine Learning : Supervisionado</p>
-    <p><a href="blank_">[En]</a> | <a href="blank_">[Pt-Br]</a></p>
 </h4>
 
 <h1 align='center'>Medir Impacto do Active Learning</h1>
@@ -15,54 +15,51 @@ Depois será importante executar as métricas roc_auc_score e average_precision_
 </p>
 
 <p>
-O arquivo <a href="\file-csv">raw_data_with_labels.csv</a> terá aproximadamente 500 anotações e esta com labelling 1-Vídeos Que Gosto, 0-Vídeos Que Não Gosto no campo Y.<br>
-O arquivo <a href="\file-csv" >active_labels1_done.csv</a> contém 100 exemplos com labels gerados pelo notebook <a href=".\file-csv">2_Random_Forest_Classifier.ipynb</a> mais a coluna p com a probabilidade gerado pelo algorítmo RandomForestClassifier no mesmo notebook, adicionada pela técnica Active Learning, e receberá agora a nova coluna Novo com valor 1.
+O arquivo <a href="\file-csv">raw_data_with_labels.csv</a> tem aproximadamente 500 anotações e estão com labelling 1-Vídeos Que Gosto, 0-Vídeos Que Não Gosto no campo Y.<br>
+O arquivo <a href="\file-csv" >active_labels.csv</a> contém 100 exemplos gerados pelo notebook <a href=".\file-csv">2_Random_Forest_Classifier.ipynb</a>, e através do excel foram feitas os labelling na coluna y : 1-Vídeos Que Gosto, 0-Vídeos Que Não Gosto. Este arquivo .csv também contém a coluna p com a probabilidade gerado pelo algorítmo RandomForestClassifier do mesmo notebook adicionada pela técnica Active Learning. Agora receberá através do notebook <a href="3_Medir_Active_Learning.ipynb" >3_Medir_Active_Learning.ipynb</a> coluna Novo preenchida com 1 para indicar que são os 100 exemplos que o algoritmo esta com dificuldade em classificar.
 </p>
 
-<p>Se aplicarmos as métricas roc_auc_score e average_precision_score sob a probabilidade gerado pelo modelo RandomForestClassifier x labelling gravados no arquivo <a href="\file-csv" >active_labels1_done.csv</a> gerado pelo notebook <a href=".\file-csv">2_Random_Forest_Classifier.ipynb</a> sob as técnicas Active Learning, então :<br>
+<p>Se aplicarmos as métricas roc_auc_score e average_precision_score sob a probabilidade gerado pelo modelo RandomForestClassifier x labelling gravados no arquivo <a href="\file-csv" >active_labels.csv</a> gerado pelo notebook <a href=".\file-csv">2_Random_Forest_Classifier.ipynb</a> sob as técnicas Active Learning, tentamos responder as seguintes perguntas :<br>
 01 Quais são as métricas ?<br>
 02 Qual é o erro ?<br>
 03 Qual o average_precision_score ?<br>
 04 Qual é o roc_auc_score ? <br>
-Bom... por ser a primeira vez que aplicamos este procedimento não teremos parâmetro para avaliar, mas é possível entender se esta perto ou longe do objetivo de ter um bom modelo machine learning.
+Bom... por ser a primeira vez que aplicamos este procedimento não teremos parâmetro para avaliar, mas é possível comparar com o resultado do modelo anterior e entender se esta perto ou longe do objetivo de ter um bom modelo machine learning
 </p>
 
 <p>Ao aplicar average_precision_score e roc_auc_score neste ultimo dataset comparando com o dataset criado para o modelo RandomForestClassifier percebemos que a alteração é mínima em ambos, mas uma informação é certa : o auc esta sensível por que estamos trabalhando com uma quantidade muito pequena de dados.
 </p>
 
-<hr>
+<p>Uma técnica que ajudará a medir do Active Learning é :</p>
+<p>Criar um novo dataframe no notebook <a href=".\file-csv">3_Medir_Active_Learning.ipynb</a>.<br>
+Este dataframe vai unir o dataset <a href=".\file-csv">active_labels.csv</a> contendo 100 exemplos mais uma nova coluna [Novo] igual a 1 ao dataframe original <a href=".\file-csv">raw_data_with_labels.csv</a>.<br>
+Após esta união de datasets atualizaremos para 0 os dados da coluna [Novo] que são diferentes dos 100 exemplos que estão com 1 (*1)<br>
+Eliminar a coluna p relacionada a probabilidade de acerto dos vídeos, por que não será usada nos próximos textes.<br>
+</p>
+<p>A seguir passos a executar :</p>
+
 <h3>ABRIR .CSV, LIMPAR E TRANSFORMAR DADOS</h3>
 <p>
     <ul>
         <li>Abrir o arquivo <a href="\file-csv">raw_data_with_labels.csv</a></li>
-        <li>Abrir o arquivo <a href="\file-csv" >active_labels1_done.csv</a></li>
-        <li>Em ambos os arquivos pegar somente linhas cuja coluna Y é diferente de nula</li>
+        <li>Abrir o arquivo <a href="\file-csv" >active_labels.csv</a></li>
+        <li>Em ambos os arquivos pegar somente as linhas cuja coluna Y é diferente de nula</li>
+        <li>Aplicar o algoritmo fillna() para eliminar o conteúdo nan (*1)
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
-		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (*1)</li>
+		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número</li>
         <li>Aplicar Features - Tratamentos específicos nos dados</li>
-        <li>Selecionar um intervalo de datas mais amplo</li>
-        <li>Importar o objeto TfidfVectorizer</li>
-        <li>Pegar as descrições dos títulos dos vídeos</li>
-        <li>Transformar os textos dos títulos com o algoritmo TfidfVectorizer (*2)</li>
-        <li>Concatenar matriz densa e matriz sparsa (*3)</li>
-        <li>Executar a probabilidade do RandomForestClassifier (*4)</li>
-        <li>Aplicar roc_auc_score e average_precision_score</li>
     </ul>
 </p>
 
-<p>Uma prática que ajudará a medir do Active Learning é comparar:</p>
-<p>Criar um novo dataframe no notebook <a href=".\file-csv">3_Medir_Active_Learning.ipynb</a>.<br>
-Este dataframe vai unir o dataset <a href=".\file-csv">active_labels1_done.csv</a> contendo 100 exemplos mais uma nova coluna [Novo] igual a 1 ao dataframe original <a href=".\file-csv">raw_data_with_labels.csv</a>.<br>
-Após esta união de datasets atualizaremos para 0 os dados da coluna [Novo] que são diferentes dos 100 exemplos que estão com 1.<br>
-Eliminar a coluna p relacionada a probabilidade de acerto dos vídeos.<br>
-Legenda :<br>
+<p>Nota :<br>
+(*1)<br>
 1-Relacionados aos 100 exemplos do dataset <a href=".\file-csv">active_labels1_done.csv</a><br>
 0-Relacionados aos exemplos do dataset <a href=".\file-csv">raw_data_with_labels.csv</a>
 </p>
 
 <hr>
 <h3>AUMENTAR DATASET DE VALIDAÇÃO</h3>
-<p>Esta é a maneira menos tradicional.<br>
+<p>Este é o precedimento menos tradicional e esta sendo realizado somente por termos muito pouco dados. É indicado que o dataset de validação não seja alterado.<br>
     <ul>
         <li>Selecionar um intervalo de datas mais amplo</li>
         <li>Importar o objeto TfidfVectorizer</li>
@@ -76,7 +73,7 @@ Legenda :<br>
 
 <hr>
 <h3>AUMENTAR DATASET DE TREINO</h3>
-<p>Esta é a maneira mais tradicional.<br>
+<p>Este é o procedimento mais tradicional.<br>
     <ul>
         <li>Selecionar um intervalo de datas mais amplo</li>
         <li>Importar o objeto TfidfVectorizer</li>
