@@ -1,17 +1,26 @@
-<h4>Objetivo : Desenvolver um recomendador de vídeos do youtube
-    <p>Nivel Conhecimento : Intermediário à avançado<br>
-    Tipo Machine Learning : Supervisionado</p>
-    <p><a href="blank_">[En]</a> | <a href="blank_">[Pt-Br]</a></p>
-</h4>
+<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></br>
+Projeto : Recomendador de vídeos do youtube<br>
+Nivel Conhecimento : Iniciante à avançado<br>
+Tipo Machine Learning : Supervisionado<br>
+LinkedIn : https://www.linkedin.com/in/claudineien/
+</h5>
+<br>
 
-<h1 align='center'>1o Modelo Machine Learning-DecisionTreeClassifier</h1>
+<h1 align='center'>1o Modelo Machine Learning<br>
+DecisionTreeClassifier</h1>
 <p>Neste modelo você aprenderá a fazer um labelling, ler um dataset que esta em um arquivo .csv, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo DecisionTreeClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva <a href="blank_">ROC</a>
 </p>
 
+<hr>
 <h3>LABELLING</h3>
-<p>Abrir o arquivo <a href=".\file-csv">raw_data_sem_labels.csv</a> no excel através da opção de importar dados de um arquivo .csv, criar a coluna Y (*1) e nesta coluna inserir o número 0 nas linhas cujo título do vídeo não interesse e não quer assistir ou inserir 1 nas linhas cujo vídeo seja interessante e quer assistir.</p>
-<p><strong>Importante:</strong><br>
-Este trabalho ja foi realizado para padronizar o treinamento e esta no arquivo <a href=".\file-csv">raw_data_with_labels.csv</a>
+<p>
+<ol>
+    <li>Abrir o arquivo <a href=".\file-csv">raw_data_sem_labels.csv</a> em uma planilha eletrônica como ms excel, <a href="https://gsuite.google.com/intl/pt-BR/products/sheets/">google sheets</a>,<a href="https://pt-br.libreoffice.org/descubra/calc/"> LibreOffice</a> através da opção de importar um arquivo .csv</li>
+    <li>Criar a coluna Y (*1)</li>
+    <li>Nesta coluna inserir o número 0 nas linhas cujo título do vídeo não, provavelmente, não vamos assistir ou inserir 1 nas linhas cujo vídeo seja interessante e vamos assistir.</li><br>
+    <p><strong>Importante:</strong><br>
+    Baixar o arquivo <a href=".\file-csv">raw_data_with_labels.csv</a>, cujo o labelling foi aplicado para facilitar o entendimento em cada técnica executada</p>
+</ol>
 </p>
 
 <hr>
@@ -102,15 +111,9 @@ Houve um balanceamento (class_weight="balanced") no peso dos vídeos, que mostra
     <li>quando inferior ao nó raiz (à esquerda), no 1o nível de nó vemos que a quantidade por dia é inferior a 1 visualização por dia para 133 amostras de vídeo, no 2o nó à esquerda as 14 amostras são exemplos negativos 0.0, não interessantes. No nó a direita há mais amostras e estes provavelmente são vídeos que interessam por ter 92.625 positivos.
     </li>
     <li>quando superior ao nó raiz (à direita), no 1o nível de nó vemos que a quantidade pode ser menor ou igual ou superior a 26712.0. Se inferior temos 20 amostas negativas 0.0, não interessantes. A direita há muita amostra porem pela classificação 21.375 provavelmente são vídeos que não interessam.</li>
+</ol>
 </p>
 
-<br>
-<hr>
-<p>Fontes :
-    <ul>
-        <li><a href="https://curso.mariofilho.com/">Curso Solução Completa de Data Science - Instrutor Mario Filho-Kagle Gran Master</a></li>
-    </ul>
-</p>
 
 <!--
 <p>labelling</p>
@@ -119,3 +122,19 @@ feather-format 0.4.1
 pip install feather-format
 https://pypi.org/project/feather-format/
 <p> - = - + + : > < { [ * & % $ # @ ! } ]</p>-->
+
+<br>
+<hr>
+<p>Fontes de estudo :
+    <ul>
+        <li>Curso <a href="https://curso.mariofilho.com/">   
+        Solução Completa de Data Science</a> - Instrutor Mario Filho-Kagle Gran Master</li>
+        <li><a href="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#how-do-i-update-youtube-dl">youtube_dl README.md</a></li>
+        <li><a href="https://www.reddit.com/r/youtubedl/comments/hqc577/getting_error_unable_to_extract_video_data/">reddit - YouTube</a></li>
+        <li><a href="https://pypi.org/project/yt-search/">yt-search</a></li>
+        <li><a href="https://python-pytube.readthedocs.io/en/latest/user/quickstart.html#downloading-a-video">pytube3</a></li>
+        <li><a href="https://www.geeksforgeeks.org/python-program-to-download-complete-youtube-playlist/?ref=rp">BeautifulSoup</a></li>
+        <li><a href="https://www.bogotobogo.com/VideoStreaming/YouTube/youtube-dl-embedding.php">youtube-dl embedded</a></li>
+        <li><a href="https://www.bogotobogo.com/VideoStreaming/YouTube/Dissecting-YouTube-URLs.php">BeautifulSoup to download complete Youtube playlist</a></li>
+    </ul>
+</p>
