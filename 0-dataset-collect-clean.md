@@ -32,7 +32,7 @@ Para facilitar o entendimento em cada técnica executada, baixar o arquivo <a hr
 </p>
 
 <hr>
-<p>Fontes :
+<p>Fontes de estudo :
     <ul>
         <li>Curso <a href="https://curso.mariofilho.com/">   
         Solução Completa de Data Science</a> - Instrutor Mario Filho-Kagle Gran Master</li>
@@ -46,7 +46,14 @@ Para facilitar o entendimento em cada técnica executada, baixar o arquivo <a hr
     </ul>
 </p>
 
+<!--
 
+
+
+-->
+
+<br>
+<br>
 <br>
 <br>
 <br>
