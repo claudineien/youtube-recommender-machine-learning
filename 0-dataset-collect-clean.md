@@ -22,8 +22,9 @@ Para facilitar o entendimento em cada técnica executada, baixar o arquivo <a hr
         <li>gravar os dados em arquivo com extensão .csv, para realizar o labelling</li>
     </ul>
 </p>
-
-<p>Inconsistências youtube_dl no Github :<br>
+<br>
+<hr>
+<p>Inconsistências na biblioteca youtube_dl no Github :<br>
     <ul>
         <li><a href="https://github.com/ytdl-org/youtube-dl/issues/26219">ytsearchdateall only returns the first page (20 videos) of results</a></li>
         <li><a href="https://github.com/ytdl-org/youtube-dl/issues/26484">How can we use extract_info from youtube-dl to extract 50, 60, 70 or more videos ?</a></li>
@@ -44,6 +45,7 @@ Para facilitar o entendimento em cada técnica executada, baixar o arquivo <a hr
         <li><a href="https://www.bogotobogo.com/VideoStreaming/YouTube/Dissecting-YouTube-URLs.php">BeautifulSoup to download complete Youtube playlist</a></li>
     </ul>
 </p>
+
 
 <br>
 <br>
