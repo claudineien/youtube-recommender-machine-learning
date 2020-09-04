@@ -6,8 +6,7 @@ LinkedIn : https://www.linkedin.com/in/claudineien/
 </h5>
 <br>
 
-<h1 align='center'>1o Modelo Machine Learning<br>
-DecisionTreeClassifier</h1>
+<h1 align='center'>1o Modelo Machine Learning - DecisionTreeClassifier</h1>
 <p>Nesta etapa aprenderemos a fazer um labelling, ler um dataset que esta em um arquivo .csv, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo DecisionTreeClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva <a href="blank_">ROC</a>
 </p>
 
