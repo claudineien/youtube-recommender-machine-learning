@@ -8,39 +8,30 @@ LinkedIn : https://www.linkedin.com/in/claudineien/
 
 <h1 align='center'>1o Modelo Machine Learning<br>
 DecisionTreeClassifier</h1>
-<p>Neste modelo você aprenderá a fazer um labelling, ler um dataset que esta em um arquivo .csv, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo DecisionTreeClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva <a href="blank_">ROC</a>
+<p>Nesta etapa aprenderemos a fazer um labelling, ler um dataset que esta em um arquivo .csv, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo DecisionTreeClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva <a href="blank_">ROC</a>
 </p>
 
 <hr>
 <h3>LABELLING</h3>
 <p>
 <ol>
-    <li>Abrir o arquivo <a href=".\file-csv">raw_data_sem_labels.csv</a> em uma planilha eletrônica como ms excel, <a href="https://gsuite.google.com/intl/pt-BR/products/sheets/">google sheets</a>,<a href="https://pt-br.libreoffice.org/descubra/calc/"> LibreOffice</a> através da opção de importar um arquivo .csv</li>
+    <li>Abrir o arquivo <a href=".\file-csv">raw_data_sem_labels.csv</a> em uma planilha eletrônica como ms excel, <a href="https://gsuite.google.com/intl/pt-BR/products/sheets/">google sheets</a> ou <a href="https://pt-br.libreoffice.org/descubra/calc/"> LibreOffice</a> através da opção de importar um arquivo .csv</li>
     <li>Criar a coluna Y (*1)</li>
-    <li>Nesta coluna inserir o número 0 nas linhas cujo título do vídeo não, provavelmente, não vamos assistir ou inserir 1 nas linhas cujo vídeo seja interessante e vamos assistir.</li><br>
+    <li>Inserir na coluna Y o número 0 nas linhas cujo título do vídeo, provavelmente, não vamos assistir ou inserir 1 nas linhas cujo vídeo provavelmente, vamos assistir.</li><br>
     <p><strong>Importante:</strong><br>
-    Baixar o arquivo <a href=".\file-csv">raw_data_with_labels.csv</a>, cujo o labelling foi aplicado para facilitar o entendimento em cada técnica executada</p>
+    Baixar o arquivo <a href=".\file-csv">raw_data_with_labels.csv</a>, cujo o labelling foi aplicado para facilitar nosso entendimento em cada técnica executada</p>
 </ol>
 </p>
 
 <hr>
 <h3>LIMPAR E TRANSFORMAR DADOS</h3>
     <ul>
+        <li>armazenar os dados em um dataframe utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li>
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
 		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (*2)</li>
         <li>Aplicar Features - Tratamentos específicos nos dados</li>
         <li>Plotar - Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
     </ul>
-
-<p><strong>Aprender mais :</strong><br>
-<a href="https://strftime.org/">Tabela de códigos para converter strings em datas no Python</a><br>
-<a href="http://gskinner.com/RegExr/">Testador de expressões regulares</a><br>
-<a href="https://numpy.org/doc/stable/reference/arrays.datetime.html">Numpy : Timedelta</a><br> 
-<a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">Pandas : Time/Date</a><br>
-<a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py">Curva de Precision/Recall</a><br>
-<a href="https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics">ROC (Receiver Operating Characteristic) Curve</a><br>
-<a href="">Dados train and test</a><br>
-</p>
 
 <p><strong>Dica :</strong><br>
 Formatação de datas : Fique atento à formatação de datas de português para inglês ou vice-versa<br>
@@ -51,7 +42,7 @@ Métrica realística : Encontrar características iguais entre os dados, ainda q
 </p>
 
 <p><strong>Nota :</strong><br>
-(*1) Você pode colocar o nome que quiser, foi escolhido Y para padronizar o ensinamento<br>
+(*1) Você pode colocar o nome que quiser, foi escolhido Y para facilitar nosso entendimento<br>
 (*2) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Este atrapalha a eficiência do modelo machine learning.<br>
 </p>
 
@@ -59,14 +50,14 @@ Métrica realística : Encontrar características iguais entre os dados, ainda q
 <h3>PLOTAR - EXIBIR DADOS EM GRÁFICO</h3>
     <ul>
         <li>Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
-        <li>Permite analisar os dados para desenhar o melhor cenário de para o modelo machine learning</li>
+        <li>Permite analisar os dados para ajudar a desenhar o melhor cenário de para o modelo machine learning</li>
     </ul>
-<p>A amostra por data, indica que no final do período há muito mais vídeos, provavelmente a busca do youtube faz seleção aleatória específica, desobedecendo a instrução de ordem estabelecida ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0_dataset_collect_clean.md">COLETAR DATASET</a>, deixando a maior quantidade dos vídeos por último.</p>
-<p>O pico de vídeos do final do período é um fator de atenção e que deve ser melhor analisado em um ambiente machine learning real.</p>
+
+<p>O gráfico mostra um grande volume de vídeos no final do período informado em relação aos meses anteriores. Isto merece muita atenção para evitar grande desbalanceamento na definição do dataset para treino e dataset para teste, e evitar erro na intepretação no ajuste do modelo de classificação machine learning.</p>
 
 <hr>
 <h3>MODELO MACHINE LEARNING</h3>
-Este primeiro modelo será para analisar rapidamente a influência da predição do modelo machine learning com duas features. Utilizaremos a Decision tree (Árvore de decisão).
+Neste primeiro utilizaremos a Decision tree (Árvore de decisão para analisar rapidamente a influência da predição do modelo machine learning apenas com features view e view_por_dia.
     <ul>
         <li>Separar dados de treino e dados de teste - Aplicar validação temporal por ser uma time series</li>
         <li>Executar o algoritmo Decision tree</li>
@@ -77,12 +68,6 @@ Este primeiro modelo será para analisar rapidamente a influência da predição
         <li>Aplicar a curva <a href="blank_">ROC</a></li>
         <li>Exibir a Decision tree para analisar o modelo</a></li>
     </ul>
-
-<p><strong>Aprender mais :</strong><br>
-<a href="https://www.youtube.com/watch?v=Y1XAP6omGzo">Entendiendo las Curvas ROC</a><br>
-<a href="blank_">ROC</a><br>
-<a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.plot_tree.html">Método plot_tree</a><br>
-</p>
 
 <br>
 <p><strong>Dica :</strong><br>
@@ -114,27 +99,20 @@ Houve um balanceamento (class_weight="balanced") no peso dos vídeos, que mostra
 </ol>
 </p>
 
-
-<!--
-<p>labelling</p>
-<p>Active learning</p>
-feather-format 0.4.1
-pip install feather-format
-https://pypi.org/project/feather-format/
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>-->
-
 <br>
 <hr>
 <p>Fontes de estudo :
     <ul>
         <li>Curso <a href="https://curso.mariofilho.com/">   
         Solução Completa de Data Science</a> - Instrutor Mario Filho-Kagle Gran Master</li>
-        <li><a href="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#how-do-i-update-youtube-dl">youtube_dl README.md</a></li>
-        <li><a href="https://www.reddit.com/r/youtubedl/comments/hqc577/getting_error_unable_to_extract_video_data/">reddit - YouTube</a></li>
-        <li><a href="https://pypi.org/project/yt-search/">yt-search</a></li>
-        <li><a href="https://python-pytube.readthedocs.io/en/latest/user/quickstart.html#downloading-a-video">pytube3</a></li>
-        <li><a href="https://www.geeksforgeeks.org/python-program-to-download-complete-youtube-playlist/?ref=rp">BeautifulSoup</a></li>
-        <li><a href="https://www.bogotobogo.com/VideoStreaming/YouTube/youtube-dl-embedding.php">youtube-dl embedded</a></li>
-        <li><a href="https://www.bogotobogo.com/VideoStreaming/YouTube/Dissecting-YouTube-URLs.php">BeautifulSoup to download complete Youtube playlist</a></li>
+        <li><a href="https://www.youtube.com/watch?v=Y1XAP6omGzo">Entendiendo las Curvas ROC</a></li>
+        <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.plot_tree.html">Método plot_tree</a></li>
+        <li><a href="https://strftime.org/">Tabela de códigos para converter strings em datas no Python</a></li>
+        <li><a href="http://gskinner.com/RegExr/">Testador de expressões regulares</a></li>
+        <li><a href="https://numpy.org/doc/stable/reference/arrays.datetime.html">Numpy : Timedelta</a></li>
+        <li><a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">Pandas : Time/Date</a></li>
+        <li><a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py">Curva de Precision/Recall</a></li>
+        <li><a href="https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics">ROC (Receiver Operating Characteristic) Curve</a></li>
+        <li><a href="https://pypi.org/project/feather-format/">feather-format</a></li>
     </ul>
 </p>
