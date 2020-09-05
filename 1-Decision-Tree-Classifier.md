@@ -1,10 +1,26 @@
-<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></br>
-Projeto : Recomendador de vídeos do youtube<br>
-Nivel Conhecimento : Iniciante à avançado<br>
-Tipo Machine Learning : Supervisionado<br>
-LinkedIn : https://www.linkedin.com/in/claudineien/
+<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a>
 </h5>
-<br>
+<h5>
+<div>
+  <table>
+    <tr>
+      <th>PROJETO</th>
+      <th>NÍVEL DE CONHECIMENTO</th>
+      <th>TIPO DE DADOS</th>
+      <th>TIPO MACHINE LEARNING</th>
+    </tr>
+    <tr>
+      <td>Recomendador de vídeos do youtube</td>
+      <td>Iniciante à avançado</td>
+      <td>Time Series</td>
+      <td>Supervisionado</td>
+    </tr>
+    <tr>
+        <td colspan="4">LinkedIn : https://www.linkedin.com/in/claudineien/</td>
+    </tr>
+  </table>
+</div>
+</h5>
 
 <h1 align='center'>1o Modelo Machine Learning - DecisionTreeClassifier</h1>
 <p>Nesta etapa aprenderemos a fazer um labelling, ler um dataset que esta em um arquivo .csv, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo DecisionTreeClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva <a href="blank_">ROC</a>
@@ -52,11 +68,12 @@ Métrica realística : Encontrar características iguais entre os dados, ainda q
         <li>Permite analisar os dados para ajudar a desenhar o melhor cenário de para o modelo machine learning</li>
     </ul>
 
-<p>O gráfico mostra um grande volume de vídeos no final do período informado em relação aos meses anteriores. Isto merece muita atenção para evitar grande desbalanceamento na definição do dataset para treino e dataset para teste, e evitar erro na intepretação no ajuste do modelo de classificação machine learning.</p>
+<p>O gráfico mostra um grande volume de vídeos no final do período que nós informamos no código, em relação aos meses anteriores. Isto merece muita atenção, por que pode significar que o youtube deixou de trazer exatamente os últimos vídeos que solicitamos e assim possivelmente evitaremos grande desbalanceamento na definição do dataset para treino e dataset para teste, consequentemente evitaremos erros nos ajustes do modelo de classificação machine learning.<br>
+Para aumentar a qualidade dos dataset criaremos features por visualizações totais e visualizações por dia por data de upload.</p>
 
 <hr>
 <h3>MODELO MACHINE LEARNING</h3>
-Neste primeiro utilizaremos a Decision tree (Árvore de decisão para analisar rapidamente a influência da predição do modelo machine learning apenas com features view e view_por_dia.
+Neste primeiro utilizaremos a Decision tree (Árvore de decisão para analisar rapidamente a influência da predição do modelo machine learning apenas com features view e view_por_dia por data de upload.
     <ul>
         <li>Separar dados de treino e dados de teste - Aplicar validação temporal por ser uma time series</li>
         <li>Executar o algoritmo Decision tree</li>
@@ -86,13 +103,13 @@ Vamos lembrar :<br>
 </p>
 
 <h3>INTERPRETAR A DECISION TREE</h3>
-<p>Uma boa forma de entender como o as features (recursos) estão se relacionando com o target (alvo)</p>
+<p>Esta é uma boa forma de entender rapidamente como o as features (recursos) se relacionam ao target (alvo)</p>
 <img src="img\decisiontree.png">
 </p>
 <p>
-Houve um balanceamento (class_weight="balanced") no peso dos vídeos, que mostra no nó raiz 15110.0 visualizações em uma amostra de vídeos de 228, índice esta em 50% (gini) e os valores balanceados [114.0,114.0]. Então :<br>
+Aplicamos balanceamento (class_weight="balanced") no peso dos vídeos, e o nó raiz exibe que dentro do total 15110.0 visualizações, em uma amostra de vídeos de 228, a heterogeneidade em 50% (gini) e os valores com peso balanceado em 114.0 exemplos negativos e 114.0 positivos. Então :<br>
 <ol>
-    <li>quando inferior ao nó raiz (à esquerda), no 1o nível de nó vemos que a quantidade por dia é inferior a 1 visualização por dia para 133 amostras de vídeo, no 2o nó à esquerda as 14 amostras são exemplos negativos 0.0, não interessantes. No nó a direita há mais amostras e estes provavelmente são vídeos que interessam por ter 92.625 positivos.
+    <li>quando inferior ao nó raiz (à esquerda), no 1o nível do nó vemos que a quantidade por dia é inferior a 1 visualização por dia para 133 amostras de vídeo, no 2o nó à esquerda as 14 amostras são exemplos negativos 0.0, não interessantes. No nó a direita há mais amostras e estes provavelmente são vídeos que interessam por ter uma pontuação positiva de 92.625.
     </li>
     <li>quando superior ao nó raiz (à direita), no 1o nível de nó vemos que a quantidade pode ser menor ou igual ou superior a 26712.0. Se inferior temos 20 amostas negativas 0.0, não interessantes. A direita há muita amostra porem pela classificação 21.375 provavelmente são vídeos que não interessam.</li>
 </ol>
