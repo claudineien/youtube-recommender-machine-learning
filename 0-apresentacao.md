@@ -29,7 +29,7 @@ O modelo consultará os últimos nnn vídeos por data de upload/publicação, co
 
 <hr>
 <h3 align="left">PROCEDIMENTOS</h3>
-<p>Para entendermos a tarefa de um Cientista de Dados e executarmos corretamente esta aplicação devemos ler e seguir os seguintes documentos :
+<p>Para entendermos a tarefa de um Cientista de Dados e executarmos corretamente esta aplicação devemos ler e seguir ordenadamente os seguintes documentos :
 <ol>
     <li><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-dataset-collect-clean.md">0-dataset-collect-clean.md</a></li>
     <li><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a></li>
