@@ -92,7 +92,7 @@ Arvore de decisão : Uma das melhores maneiras de entender a relação das featu
 </p>
 
 <p>
-Aplicamos balanceamento (class_weight="balanced") no peso dos vídeos, e o nó raiz exibe que dentro do total 15110.0 visualizações, em uma amostra de vídeos de 228, a heterogeneidade em 50% (gini) e os valores com peso balanceado em 114.0 exemplos negativos e 114.0 positivos. Então :<br>
+Aplicamos balanceamento (class_weight="balanced") no peso dos vídeos, e o nó raiz exibe dentro do total 15110.0 visualizações, amostra de 228 vídeos, heterogeneidade em 50% (gini) e os valores com peso balanceado em 114.0 exemplos negativos e 114.0 positivos. Então :<br>
 <ol>
     <li>quando inferior ao nó raiz (à esquerda), no 1o nível do nó vemos que a quantidade por dia é inferior a 1 visualização por dia para 133 amostras de vídeo, no 2o nó à esquerda as 14 amostras são exemplos negativos 0.0, não interessantes. No nó a direita há mais amostras e estes provavelmente são vídeos que interessam por ter uma pontuação positiva de 92.625.
     </li>
@@ -101,9 +101,9 @@ Aplicamos balanceamento (class_weight="balanced") no peso dos vídeos, e o nó r
 </p>
 
 <p><strong>Nota :</strong><br>
-(*1) Você pode colocar o nome que quiser, foi escolhido Y para facilitar nosso entendimento<br>
+(*1) Você pode colocar o nome que quiser, foi escolhido Y (Youtube) para facilitar nosso entendimento.<br>
 (*2) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Este atrapalha a eficiência do modelo machine learning.<br>
-(*3) Há bibliotecas com métodos para separar os dados de treino e os dados de teste, que pode ser em percentual e/ou em quantidade<br>
+(*3) Há bibliotecas com métodos para separar os dados de treino e os dados de teste, que pode ser em percentual e/ou em quantidade.<br>
 (*4) A probabilidade mostra o valor provavel de positivo 1-vídeos que quer assistir e/ou negativo 0-vídeos que não quer assistir. Queremos somente a probabilidade de ser 1.<br>
 (*5) Métrica de média de precisão : o método average_precision_score, nos dará o nosso baseline, e seja qual for o modelo machine learning a average_precision deve ser o mais próximo possível de 1.0. Esta serve para melhor visualizarmos o ranking dos vídeos : dos mais interessantes para os menos interessantes. Em cada ponto de corte definido ao calcular precision e recall aparecerá uma curva, a área sobre a curva é a average precision.<br>
 
