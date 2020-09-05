@@ -2,10 +2,10 @@
 <div>
   <table>
     <tr>
-      <th>PROJETO</th>
-      <th>NÍVEL DE CONHECIMENTO</th>
-      <th>TIPO DE DADOS</th>
-      <th>TIPO MACHINE LEARNING</th>
+      <th><strong>PROJETO</strong></th>
+      <th><strong>NÍVEL DE CONHECIMENTO</strong></th>
+      <th><strong>TIPO DE DADOS</strong></th>
+      <th><strong>TIPO MACHINE LEARNING</strong></th>
     </tr>
     <tr>
       <td>Recomendador de vídeos do youtube</td>
