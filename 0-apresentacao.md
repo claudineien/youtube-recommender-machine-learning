@@ -31,7 +31,7 @@ LinkedIn : https://www.linkedin.com/in/claudineien/
 <br>
 <hr>
 <h3 align="left">SOBRE O RECOMENDADOR DE VÍDEOS DO YOUTUBE</h3>
-<p>Criaremos um modelo machine learning time series para trazer os vídeos que adequados ao nosso gosto e que provavelmente vamos assistir os últimos vídeos por data de publicação, com base no título, visualizações totais desde seu upload, visualizações por dia desde seu upload, . . . </p>
+<p>Criaremos um modelo preditivo em machine learning sob dados tipo time series, para trazer os vídeos que possívelmente assitiremos. O modelo consultará os últimos nnn vídeos por data de publicação, com base no título, visualizações totais desde seu upload, visualizações por dia desde seu upload, . . . </p>
 
 <br>
 <hr>
