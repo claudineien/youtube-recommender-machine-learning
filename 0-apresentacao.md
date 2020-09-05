@@ -1,12 +1,3 @@
-<!--<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></br>
-Projeto : Recomendador de vídeos do youtube<br>
-Nivel Conhecimento : Iniciante à avançado<br>
-Tipo de dados : Time Series<br>
-Tipo Machine Learning : Supervisionado<br>
-
-LinkedIn : https://www.linkedin.com/in/claudineien/
-</h5>-->
-
 <h5><div>
   <table>
     <tr>
@@ -28,12 +19,11 @@ LinkedIn : https://www.linkedin.com/in/claudineien/
 </div>
 </h5>
 
-<br>
 <hr>
 <h3 align="left">SOBRE O RECOMENDADOR DE VÍDEOS DO YOUTUBE</h3>
-<p>Criaremos um modelo preditivo em machine learning sob dados tipo time series, para trazer os vídeos que possívelmente assitiremos. O modelo consultará os últimos nnn vídeos por data de publicação, com base no título, visualizações totais desde seu upload, visualizações por dia desde seu upload, . . . </p>
+<p>Criaremos um modelo preditivo em machine learning sob dados tipo time series, para trazer os vídeos que possívelmente assistiremos.<br>
+O modelo consultará os últimos nnn vídeos por data de publicação, com base no título, visualizações totais desde seu upload, visualizações por dia desde seu upload, . . . </p>
 
-<br>
 <hr>
 <h3 align="left">PROCEDIMENTOS</h3>
 <p>Para entendermos a tarefa de um Cientista de Dados e executarmos corretamente esta aplicação devemos seguir os seguintes procedimentos :
@@ -48,14 +38,12 @@ LinkedIn : https://www.linkedin.com/in/claudineien/
 </ol>
 </p>
 
-<br>
 <hr>
 <h3 align="left">PROCESSO : COLETAR DADOS</h3>
 <p>
 Para cumprirmos o processo de coletar os dados de vídeos do youtube foi escolhida a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>, por facilitar trazer as informações em um dicionário python. Isto agiliza o manuseio dos dados.
 </p>
 
-<br>
 <hr>
 <h3 align="left">PROCESSO : QUALIDADE DO DATASET</h3>
 <p>
@@ -150,3 +138,12 @@ A alta qualidade do dataset significa alto sucesso ao modelo de predição machi
 
 <a id="itemtec" >Tecnologias utilizadas neste projeto</a><br>
 <em><a href="#itemtec">Tecnologias utilizadas neste projeto</a></em>
+
+<!--<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></br>
+Projeto : Recomendador de vídeos do youtube<br>
+Nivel Conhecimento : Iniciante à avançado<br>
+Tipo de dados : Time Series<br>
+Tipo Machine Learning : Supervisionado<br>
+
+LinkedIn : https://www.linkedin.com/in/claudineien/
+</h5>-->
