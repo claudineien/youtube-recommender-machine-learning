@@ -44,7 +44,7 @@ O modelo consultará os últimos nnn vídeos por data de upload/publicação, co
 <hr>
 <h3 align="left">PROCESSO : COLETAR DADOS</h3>
 <p>
-Para cumprirmos o processo de coletar os dados de vídeos do youtube foi escolhida a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>, por facilitar trazer as informações em um dicionário python. Isto agiliza o manuseio dos dados.
+Para cumprirmos o processo de coletar os dados de vídeos do youtube foi escolhida a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>. Esta traz as informações em formato de dicionário do python, e agiliza todo e qualquer procedimento de manuseio dos dados.
 </p>
 
 <hr>
@@ -54,9 +54,10 @@ No processo de qualidade do dataset nós vamos :
     <ul>
         <li>separar as colunas considerados mais adequadas para o modelo classificador</li>
         <li>criar um campo para identificar se o vídeo é o que desejamos assistir ou não</li>
-        <li>limpar e transformar alguns dados</li>
-        <li>eliminar dados nulos ou com conteúdo <em>nan</em></li>
-        <li></li>
+        <li>limpar, converter/transformar alguns dados</li>
+        <li>substituir dados nulos ou com conteúdo <em>nan</em></li>
+        <li>aplicar técnicas para reduzir o impacto de tokens que ocorrem com muita frequência</li>
+        <li>aplicaremos a técnica para concatenar conteúdo denso com conteúdo esparso</li>
     </ul>
 </p>
 
