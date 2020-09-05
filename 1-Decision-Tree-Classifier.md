@@ -56,11 +56,6 @@ Modelo ml x Realidade : Para melhor eficiência do modelo machine learning os da
 Métrica realística : Encontrar características iguais entre os dados, ainda que seja necessário converter quantidade de dados x por ano em por dia. Ex : Upload de vídeos por dia, visualizações por dia ou algo semelhante.
 </p>
 
-<p><strong>Nota :</strong><br>
-(*1) Você pode colocar o nome que quiser, foi escolhido Y para facilitar nosso entendimento<br>
-(*2) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Este atrapalha a eficiência do modelo machine learning.<br>
-</p>
-
 <hr>
 <h3>PLOTAR - EXIBIR DADOS EM GRÁFICO</h3>
     <ul>
@@ -91,7 +86,23 @@ Neste primeiro utilizaremos a Decision tree (Árvore de decisão para analisar r
 Arvore de decisão : Uma das melhores maneiras de entender a relação das features (recursos) com o target (alvo)<br>
 </p>
 
+<h3>INTERPRETAR A DECISION TREE</h3>
+<p>Esta é uma boa forma de entender rapidamente como o as features (recursos) se relacionam ao target (alvo)</p>
+<img src="img\decisiontree.png">
+</p>
+
+<p>
+Aplicamos balanceamento (class_weight="balanced") no peso dos vídeos, e o nó raiz exibe que dentro do total 15110.0 visualizações, em uma amostra de vídeos de 228, a heterogeneidade em 50% (gini) e os valores com peso balanceado em 114.0 exemplos negativos e 114.0 positivos. Então :<br>
+<ol>
+    <li>quando inferior ao nó raiz (à esquerda), no 1o nível do nó vemos que a quantidade por dia é inferior a 1 visualização por dia para 133 amostras de vídeo, no 2o nó à esquerda as 14 amostras são exemplos negativos 0.0, não interessantes. No nó a direita há mais amostras e estes provavelmente são vídeos que interessam por ter uma pontuação positiva de 92.625.
+    </li>
+    <li>quando superior ao nó raiz (à direita), no 1o nível de nó vemos que a quantidade pode ser menor ou igual ou superior a 26712.0. Se inferior temos 20 amostas negativas 0.0, não interessantes. A direita há muita amostra porem pela classificação 21.375 provavelmente são vídeos que não interessam.</li>
+</ol>
+</p>
+
 <p><strong>Nota :</strong><br>
+(*1) Você pode colocar o nome que quiser, foi escolhido Y para facilitar nosso entendimento<br>
+(*2) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Este atrapalha a eficiência do modelo machine learning.<br>
 (*3) Há bibliotecas com métodos para separar os dados de treino e os dados de teste, que pode ser em percentual e/ou em quantidade<br>
 (*4) A probabilidade mostra o valor provavel de positivo 1-vídeos que quer assistir e/ou negativo 0-vídeos que não quer assistir. Queremos somente a probabilidade de ser 1.<br>
 (*5) Métrica de média de precisão : o método average_precision_score, nos dará o nosso baseline, e seja qual for o modelo machine learning a average_precision deve ser o mais próximo possível de 1.0. Esta serve para melhor visualizarmos o ranking dos vídeos : dos mais interessantes para os menos interessantes. Em cada ponto de corte definido ao calcular precision e recall aparecerá uma curva, a área sobre a curva é a average precision.<br>
@@ -100,19 +111,6 @@ Vamos lembrar :<br>
 :/: Precision : é o número que responde a pergunta de todos os modelos que disse que são positivos, 50% destes são realmente positivos<br>
 
 :/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
-</p>
-
-<h3>INTERPRETAR A DECISION TREE</h3>
-<p>Esta é uma boa forma de entender rapidamente como o as features (recursos) se relacionam ao target (alvo)</p>
-<img src="img\decisiontree.png">
-</p>
-<p>
-Aplicamos balanceamento (class_weight="balanced") no peso dos vídeos, e o nó raiz exibe que dentro do total 15110.0 visualizações, em uma amostra de vídeos de 228, a heterogeneidade em 50% (gini) e os valores com peso balanceado em 114.0 exemplos negativos e 114.0 positivos. Então :<br>
-<ol>
-    <li>quando inferior ao nó raiz (à esquerda), no 1o nível do nó vemos que a quantidade por dia é inferior a 1 visualização por dia para 133 amostras de vídeo, no 2o nó à esquerda as 14 amostras são exemplos negativos 0.0, não interessantes. No nó a direita há mais amostras e estes provavelmente são vídeos que interessam por ter uma pontuação positiva de 92.625.
-    </li>
-    <li>quando superior ao nó raiz (à direita), no 1o nível de nó vemos que a quantidade pode ser menor ou igual ou superior a 26712.0. Se inferior temos 20 amostas negativas 0.0, não interessantes. A direita há muita amostra porem pela classificação 21.375 provavelmente são vídeos que não interessam.</li>
-</ol>
 </p>
 
 <br>
