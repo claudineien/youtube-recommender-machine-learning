@@ -40,13 +40,15 @@
 
 <hr>
 <h3>LIMPAR E TRANSFORMAR DADOS</h3>
-    <ul>
-        <li>armazenar os dados em um dataframe utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li>
+<p>Primeiramente abrir o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1_Decision_Tree_Classifier.ipynb">1_Decision_Tree_Classifier.ipynb</a> e executar as linhas com os códigos para :
+    <ol>
+        <li>armazenar os dados do dataset em um dataframe utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li>
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
 		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (*2)</li>
         <li>Aplicar Features - Tratamentos específicos nos dados</li>
         <li>Plotar - Exibir dados em gráfico para auxiliar na análise da limpeza e/ou tratamento dos dados</li>
-    </ul>
+    </ol>
+</p>
 
 <p><strong>Dica :</strong><br>
 Formatação de datas : Fique atento à formatação de datas de português para inglês ou vice-versa<br>
