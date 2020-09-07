@@ -1,7 +1,5 @@
 <h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a>
 </h5>
-<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a>
-</h5>
 <h6>
 <div>
   <table>
