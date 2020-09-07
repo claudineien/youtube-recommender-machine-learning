@@ -28,7 +28,7 @@
 
 <p>Este modelo é igual ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>, do processo Labelling à criação das features.<br>
 </p>
-<p><strong>Importante :</strong><br>
+<p><strong>Prática ideal do Data Scientist :</strong><br>
 Utilizar o mesmo dataset durante os testes de escolha dos modelos machine learning nos ajuda detectar o modelo ideal.
 </p>
 
@@ -38,28 +38,23 @@ O objetivo neste processo é aplicar o algorítimo RandomForestClassifier para p
 Mas antes, vamos aplicar a técnica Active Learning que vai nos ajudar a :
 <ol>
     <li>selecionar os melhores exemplos-dados em datasets para fazermos anotações</li>
-    <li>agilizar coleta das anotações em projetos com prazo curto para fazer anotações</li>
-    <li>facilitar a coleta das anotações de profissionais especialistas como médicos, biólogos, entre outros</li>
-    <li>desenvolver modelos machine learning com melhor performance preditiva</li>
+    <li>agilizar na coleta das anotações em projetos com prazo curto para fazer anotações</li>
+    <li>facilitar a coleta das anotações de profissionais especialistas como médicos, biólogos, astronomos, entre outros</li>
+    <li>desenvolver modelos machine learning mais performáticos</li>
     <li>evitar altos custos em qualquer projeto</li>
     <li>economizar investimentos financeiros em qualquer projeto</li>
     <li>agilizar no desenvolvimento de testes em modelos preditivos machine learning</li>
 </ol>
 </p>
 
-<p>Dependendo do projeto, fazer anotações pode aumentar muito o seu custo e/ou tempo para finalizar o projeto, e realizar anotações aleatórias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning.</p>
-
-<p>Exemplo :<br>
-Imagens radiográficas, ressonância magnética e similares precisam de especialistas médicos para fazer anotações de tumor maligno, tumor benigno, não tumor. Estes especialistas são caros e o active learning ajuda a reduzir custos com estes profissionais.
+<p>Dependendo do projeto, fazer anotações pode aumentar muito o seu custo e/ou tempo para finalizar o projeto, e realizar anotações aleatórias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning. Por exemplo :<br>
+Imagens radiográficas, ressonância magnética e similares precisam de especialistas médicos para fazer anotações de tumor maligno, tumor benigno, não tumor. Estes especialistas são caros e o active learning ajuda a reduzir custos na coleta das anotações com estes profissionais.
 </p>
 
 <p>Para realizar a técnica active learning primeiramente aplicaremos as técnicas :<br>
     <ul>
         <li>Term-frequency :
-        Utilizaremos o algorítmo TfidfVectorizer para transformar strings em uma representação numérica significativa criando uma matriz esparsa (1*).<br>
-        O argumento min_df do algoritmo TfidfVectorizer :<br>
-        -> min_df=2 : o algorítmo vai considerar significante as palavras que aparecerem o mínimo possível por linha dentro do conjunto de linhas dentro do dataset.<br>
-        -> min_df=1 : o algorítmo vai considerar significante cada palavra diferente encontrada, por linha dentro do conjunto de linhas dentro do dataset.<br>
+        Utilizaremos o algorítmo TfidfVectorizer (1*) para transformar strings em uma representação numérica significativa criando uma matriz esparsa (2*).<br>
         </li>
         <li>Concatenaremos variáveis com dados numéricos a variáveis com dados string.</li>
         <li>Concatenaremos matriz densa a uma matriz esparsa</li>
@@ -67,15 +62,15 @@ Imagens radiográficas, ressonância magnética e similares precisam de especial
 </p>
 
 <p><strong>Atenção :</strong><br>
-No notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> criaremos uma linha com resultados average precision e auc roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer que serão utilizados pelo algorítimo RandomForestClassifier. Desta forma vamos entender como esta o nosso modelo em relação a baseline gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>.
+No notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> criaremos uma linha com resultados average precision e auc-roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer que serão utilizados pelo algorítimo RandomForestClassifier. Desta forma vamos entender como esta o nosso modelo em relação a baseline gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>.
 </p>
 
 <hr>
 <h3>ACTIVE LEARNING</h3>
 <p>
-A técnica active learning de forma rápida nos ajudará a selecionar e disponibilizar os dados que o modelo machine learning esta com muita dificuldade em predizer -se é o vídeo que vamos assistir ou não.<br>
-Vamos fazer as anotações necessárias manualmente e unir estes dados ao dataset <a href=".\file-csv">raw_data_with_labels.csv</a> (criado no inicio de nosso trabalho).<br>
-Vamos aprender a verificar se o active learning esta produzindo bons resultados.<br>
+A técnica active learning de forma rápida nos ajudará a selecionar e disponibilizar os dados muito difíceis do modelo machine learning predizer, ou seja, se o vídeo é o que vamos assistir ou não.<br>
+Depois vamos fazer as anotações necessárias manualmente e unir estes dados ao dataset <a href=".\file-csv">raw_data_with_labels.csv</a> (criado no inicio de nosso trabalho).<br>
+Também vamos aprender a verificar se o active learning esta produzindo bons resultados.<br>
 </p>
 
 <p>
@@ -83,14 +78,14 @@ Através deste notebook vamos :<br>
 <p>
     <ol>
         <li>abrir o arquivo <a href=".\file-csv">raw_data_with_labels.csv</a> utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li></li>
-        <li>selecionar os dados cujo Y é nulo e que por linha, pelo menos uma coluna esteja preenchida com um dado válido.</li>
+        <li>selecionar os dados cujo Y é nulo e por linha haja pelo menos uma coluna preenchida com um dado válido.</li>
         <li>armazenar os dados do dataset em um dataframe utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li>
         <li>gravar o dataset em outro dataframe para termos mais liberdade nas alterações</li>
         <li>extrair os titulos dos vídeos</li>
         <li>extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
 		<li>extrair apenas o número de uma coluna tipo objeto, com strings e número</li>
         <li>criar Features - Tratamentos específicos nos dados</li>
-        <li>aplicar o TfidfVectorizer, treinado anteriormente, sobre os títulos dos vídeos</li>
+        <li>aplicar o TfidfVectorizer, treinado anteriormente, sobre os títulos dos vídeos difíceis de serem preditos</li>
         <li>concatenar conteúdo denso com conteúdo esparso utilizando a função hstack</li>
     </ol>
 </p>
@@ -104,8 +99,8 @@ Perceba que a predição foi realizada pelo algorítmo TfidfVectorizer, treinado
 </p>
 
 <p>
-Uma boa prática para selecionarmos os exemplos difíceis do modelo predizer, é pegar os vídeos mais próximos da fronteira dos 50% positivo e 50% negativo (verdadeiro ou falso). Podemos considerar esta fronteira como marco 0.<br>
-Dependendo da quantidade de dados no dataset, será necessário considerar dados mais distantes da fronteira 50-50.<br>
+Uma boa prática para selecionarmos os exemplos difíceis do modelo predizer, é pegar os vídeos mais próximos da fronteira dos 50% positivo e 50% negativo (verdadeiro ou falso).<br>
+Mas muita atenção ! Dependendo da quantidade de dados no dataset, será necessário considerar dados mais distantes da fronteira 50-50.<br>
 Outro detalhe é que amostras muito distantes da fronteira, provavelmente são vídeos que realmente não assistiremos.
 </p>
 
@@ -113,8 +108,8 @@ Outro detalhe é que amostras muito distantes da fronteira, provavelmente são v
 Neste processo nós programaremos um intervalo fixo para pegar entre 70 e 75 registros e deixaremos aleatório entre 30 e 35 registros, desconsiderando os já selecionados, é claro.
 </p>
 
-<p><strong>Atenção : </strong>
-O processo de separação de dados, limpeza de dados, transformação de dados são 99% iguais aos que aprendemos nos notebooks <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-dataset-collect-clean.md">0-dataset-collect-clean.md</a> e <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>
+<p><strong>Atenção : </strong><br>
+O processo de separação de dados, limpeza de dados, transformação de dados são ações, instruções, scripts 99% iguais aos que aprendemos nos notebooks <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-dataset-collect-clean.md">0-dataset-collect-clean.md</a> e <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>
 </p>
 
 <p><strong>Dicas :</strong><br>
@@ -131,10 +126,12 @@ O processo de separação de dados, limpeza de dados, transformação de dados s
 </p>
 
 <p><strong>Nota :</strong><br>
-(*1) Matriz esparsa armazena valores diferentes de zero -é mais otimizada.<br>
-
-(*2) TfidfVectorizer dá mais peso as palavras que aparecem com menor frequência por linha de vídeo, considerando todas as linhas do dataset e vai ignorar as palavras que repetem em todas as linhas de vídeos, dentro do dataset.<br>
-Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor.<br>
+(*1) TfidfVectorizer dá mais peso as palavras que aparecem com menor frequência por linha de vídeo, considerando todas as linhas do dataset e vai ignorar as palavras que repetem em todas as linhas de vídeos, dentro do dataset.<br>
+Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor.<br><br>
+O argumento min_df do algoritmo TfidfVectorizer :<br>
+-> min_df=2 : o algorítmo vai considerar significante as palavras que aparecerem o mínimo possível por linha dentro do conjunto de linhas dentro do dataset.<br>
+-> min_df=1 : o algorítmo vai considerar significante cada palavra diferente encontrada, por linha dentro do conjunto de linhas dentro do dataset. Uma palavra considerada única em uma linha, pode estar na linha seguinte e será considerada incorretamente como difrentes, então dependendo do projeto esta configuração pode prejudicar.<br><br>
+(*2) Matriz esparsa armazena valores diferentes de zero e isto significa matriz mais otimizada.<br>
 </p>
 
 <br>
