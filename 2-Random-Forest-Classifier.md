@@ -22,153 +22,6 @@
 </div>
 </h5>
 
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-
 <h1 align='center'>2o Modelo Machine Learning - RandomForestClassifier</h1>
 <p>Primeiramente abrir o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb.</a>
 </p>
@@ -217,14 +70,6 @@ Imagens radiográficas, ressonância magnética e similares precisam de especial
 No notebook  <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> criaremos uma linha com resultados average precision e auc roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer e utilizado pelo algorítimo RandomForestClassifier. Desta forma entendemos como esta o nosso modelo em relação baseline.
 </p>
 
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
 <hr>
 <h3>ACTIVE LEARNING</h3>
 <p>Agora iniciaremos a técnica active learning</p>
@@ -236,11 +81,6 @@ selecionar entre 65% e 70% manualmente e deixar entre 35% e 30% automaticamente 
 para posteriormente identificarmos mais alguns exemplos que o modelo esteja com dificuldade em classificar.<br>
 Uma boa prática para selecionarmos os exemplos difíceis do modelo classificar é pegar os exemplos entre 45% e 55% (próximos à fronteira 50%-50%) e identificar os exemplos falsos positivo. Exemplos inferiores a 20% de probabilidade de ser Verdadeiro Positivo provavelmente são irrelevantes a este processo.
 </p>
-
-
-
-
-
 
 <p><strong>Dicas :</strong><br>
 Utilizar a função scipy sparse que é muito mais performática do que a função numpy sparse.<br>
@@ -265,7 +105,6 @@ Vamos lembrar :<br>
 
 :/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
 </p>
-
 
 <hr>
 <h3>MODELO MACHINE LEARNING</h3>
@@ -299,11 +138,6 @@ Neste segundo modelo a predição será realizada sob o título do vídeo, após
         <li>Exibir exemplos difíceis separados de classificar e os aleatórios</li>
     </ul>
 
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
-<p>-</p>
 <br>
 <hr>
 <p>Fontes de estudo :
