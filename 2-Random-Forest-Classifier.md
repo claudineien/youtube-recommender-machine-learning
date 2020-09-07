@@ -21,7 +21,6 @@
   </table>
 </div>
 </h5>
-<hr>
 
 <h1 align='center'>2o Modelo Machine Learning - RandomForestClassifier</h1>
 <p>Primeiramente abrir o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb.</a>
@@ -75,7 +74,7 @@ Também vamos aprender a verificar se o active learning esta produzindo bons res
 </p>
 
 <p>
-Através deste notebook vamos :<br>
+Através do notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> vamos :<br>
 <p>
     <ol>
         <li>abrir o arquivo <a href=".\file-csv">raw_data_with_labels.csv</a> utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li></li>
@@ -108,6 +107,11 @@ Outro detalhe é que amostras muito distantes da fronteira, provavelmente são v
 <p>
 Neste processo nós programaremos um intervalo fixo para pegar entre 70 e 75 registros e deixaremos aleatório entre 30 e 35 registros, desconsiderando os já selecionados, é claro.
 </p>
+
+<p>
+Por fim, será gerado o arquivo active_labels.csv disponibilizado <a href=".\file-csv">aqui</a>. Neste devemos aplicar o labelling na coluna Y -Youtube.
+</p>
+
 
 <p><strong>Atenção : </strong><br>
 O processo de separação de dados, limpeza de dados, transformação de dados são ações, instruções, scripts 99% iguais aos que aprendemos nos notebooks <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-dataset-collect-clean.md">0-dataset-collect-clean.md</a> e <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>
