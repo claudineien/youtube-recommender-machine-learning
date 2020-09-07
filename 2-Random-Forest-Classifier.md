@@ -1,6 +1,7 @@
 <h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></h5>
 
-<h6>
+<h5>
+<div>
   <table>
     <tr>
       <th>PROJETO</th>
@@ -18,8 +19,9 @@
         <td colspan="4">LinkedIn : https://www.linkedin.com/in/claudineien/</td>
     </tr>
   </table>
-</h6>
-<br>
+</div>
+</h5>
+<hr>
 
 <h1 align='center'>2o Modelo Machine Learning - RandomForestClassifier</h1>
 <p>Primeiramente abrir o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb.</a>
