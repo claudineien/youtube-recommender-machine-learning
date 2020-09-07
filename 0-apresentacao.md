@@ -29,12 +29,12 @@ O modelo consultará os últimos nnn vídeos por data de upload/publicação, co
 
 <hr>
 <h3 align="left">PROCEDIMENTOS</h3>
-<p>Para entendermos a tarefa de um Cientista de Dados e executarmos corretamente esta aplicação devemos ler e seguir ordenadamente os seguintes documentos :
+<p>Para entendermos a tarefa de um Cientista de Dados e executarmos corretamente esta aplicação devemos primeiramente ler e depois seguir ordenadamente os seguintes documentos :
 <ol>
     <li><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-dataset-collect-clean.md">0-dataset-collect-clean.md</a></li>
     <li><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a></li>
     <li><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Random-Forest-Classifier.md">2-Random-Forest-Classifier.md</a></li>
-    <li></li>
+    <li><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3-Medir-Active-Learning.md">3-Medir-Active-Learning.md</a></li>
     <li></li>
     <li></li>
     <li></li>
@@ -44,7 +44,7 @@ O modelo consultará os últimos nnn vídeos por data de upload/publicação, co
 <hr>
 <h3 align="left">PROCESSO : COLETAR DADOS</h3>
 <p>
-Para cumprirmos o processo de coletar os dados de vídeos do youtube foi escolhida a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>. Esta traz as informações em formato de dicionário do python, e agiliza todo e qualquer procedimento de manuseio dos dados.
+Para cumprirmos o processo de coletar os dados de vídeos do youtube foi escolhida a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>. Esta biblioteca traz as informações em formato de dicionário do python, e isto agiliza todo e qualquer procedimento de manuseio dos dados.
 </p>
 
 <hr>
@@ -63,14 +63,29 @@ No processo de qualidade do dataset nós vamos :
 
 <br>
 <hr>
-<h3 align="left">PROCESSO : ANALISAR E ESCOLHER MODELO MACHINE LEARNING</h3>
+<h3 align="left">PROCESSO : ANALISAR EFICIÊNCIA DO MODELO MACHINE LEARNING</h3>
 <p>
-Neste processo de análise e escolha do modelo machine learning, inicialmente vamos testar os algorítmos DecisionTreeClassifier para analisar a influência da predição do modelo machine learning nas features quantidade total de visualizações e visualizações por dia. Aqui vamos obter a <em><strong>baseline</strong></em> sob as métricas curva roc (roc_auc_score) e média de precisão (average_precision_score), para analisar os próximos modelos machine learning.<br>
-Utilizaremos a técnica para reduzir o impacto de tokens que ocorrem com muita frequência (TfidfVectorizer).<br>
-Aplicaremos a técnica de Active Learning para melhor adequar o dataset aos modelos de predição machine learning. E juntamente a esta técnica vamos aplicar diversas limpezas e transformações de dados no dataset.<br>
-Aplicaremos o modelo RandomForestClassifier e vamos comparar os resultados com a nossa <em><strong>baseline</strong></em>.
-Executaremos a técnica para concatenar conteúdo denso com conteúdo esparso e faremos a predição probabilística com as features visualizações e visualizações por dia mais o título do vídeo, para entender se estamos contruindo um dataset com boa qualidade e se estamos encontrando o algorítmo de predição adequado.
+Neste processo de analisar eficiência do modelo machine learning, inicialmente vamos testar os algorítmos DecisionTreeClassifier para analisar a influência da predição do modelo machine learning nas features quantidade total de visualizações e visualizações por dia. Aqui vamos obter a <em><strong>baseline</strong></em> sob as métricas curva auc-roc (roc_auc_score) e média de precisão (average_precision_score), para analisar os próximos modelos machine learning.
+</p>
 
+<p>
+Depois executaremos o modelo RandomForestClassifier e vamos comparar os resultados preditivos com a nossa <em><strong>baseline</strong></em>.
+</p>
+
+<p>
+Também utilizaremos a técnica para reduzir o impacto de tokens que ocorrem com muita frequência, utilizando o algorítmo TfidfVectorizer. E ainda o utilizaremos como um algorítmo para predizer os vídeos que provavelmente vamos assistir.
+</p>
+
+<p>
+Aplicaremos a técnica Active Learning para melhor adequar o dataset aos modelos de predição machine learning. E juntamente a esta técnica vamos aplicar diversas limpezas e transformações de dados no dataset.
+</p>
+
+<p>
+A todo momento nós vamos comparar os resultados com a nossa <em><strong>baseline</strong></em>.
+</p>
+
+<p>
+Executaremos a técnica para concatenar conteúdo denso com conteúdo esparso e faremos a predição probabilística com as features visualizações e visualizações por dia mais o título do vídeo, para entender se estamos contruindo um dataset com boa qualidade e se o algorítmo de predição esta com boa predição.
 </p>
 
 <p>O processo mais trabalhoso para o Cientista de Dados é o processo da qualidade dos dados composto por :
@@ -86,7 +101,7 @@ Executaremos a técnica para concatenar conteúdo denso com conteúdo esparso e 
     </ul>
 </p>
 
-<p>O segundo processo mais trabalhoso para o Cientista de Dados é o processo avaliação de dados :
+<p>O segundo processo mais trabalhoso para o Cientista de Dados  é o processo avaliação de dados :
     <ul>
         <li>obter o dataset</li>
         <li>identificar as inconsistências no dataset</li>
@@ -142,12 +157,3 @@ A alta qualidade do dataset significa alto sucesso ao modelo de predição machi
 
 <a id="itemtec" >Tecnologias utilizadas neste projeto</a><br>
 <em><a href="#itemtec">Tecnologias utilizadas neste projeto</a></em>
-
-<!--<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></br>
-Projeto : Recomendador de vídeos do youtube<br>
-Nivel Conhecimento : Iniciante à avançado<br>
-Tipo de dados : Time Series<br>
-Tipo Machine Learning : Supervisionado<br>
-
-LinkedIn : https://www.linkedin.com/in/claudineien/
-</h5>-->
