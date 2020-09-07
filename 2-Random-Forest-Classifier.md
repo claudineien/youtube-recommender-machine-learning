@@ -21,6 +21,7 @@
   </table>
 </div>
 </h5>
+<br>
 
 <h1 align='center'>2o Modelo Machine Learning - RandomForestClassifier</h1>
 <p>Primeiramente abrir o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb.</a>
