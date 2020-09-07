@@ -1,7 +1,6 @@
-<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a>
-</h5>
+<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></h5>
+
 <h6>
-<div>
   <table>
     <tr>
       <th>PROJETO</th>
@@ -19,7 +18,6 @@
         <td colspan="4">LinkedIn : https://www.linkedin.com/in/claudineien/</td>
     </tr>
   </table>
-</div>
 </h6>
 <br>
 
