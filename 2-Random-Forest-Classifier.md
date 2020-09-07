@@ -67,76 +67,75 @@ Imagens radiográficas, ressonância magnética e similares precisam de especial
 </p>
 
 <p><strong>Atenção :</strong><br>
-No notebook  <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> criaremos uma linha com resultados average precision e auc roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer e utilizado pelo algorítimo RandomForestClassifier. Desta forma entendemos como esta o nosso modelo em relação baseline.
+No notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> criaremos uma linha com resultados average precision e auc roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer que serão utilizados pelo algorítimo RandomForestClassifier. Desta forma vamos entender como esta o nosso modelo em relação a baseline gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>.
 </p>
 
 <hr>
 <h3>ACTIVE LEARNING</h3>
-<p>Agora iniciaremos a técnica active learning</p>
 <p>
-Vamos pegar uma quantidade de exemplos que o modelo esta com dificuldade em classificar.<br>
-Escolhemos os dados cujo Y é nulo e apagamos todos os registros que são nan (por algum motivo estão registros com Y vazio) <br>
+A técnica active learning de forma rápida nos ajudará a selecionar e disponibilizar os dados que o modelo machine learning esta com muita dificuldade em predizer -se é o vídeo que vamos assistir ou não.<br>
+Vamos fazer as anotações necessárias manualmente e unir estes dados ao dataset <a href=".\file-csv">raw_data_with_labels.csv</a> (criado no inicio de nosso trabalho).<br>
+Vamos aprender a verificar se o active learning esta produzindo bons resultados.<br>
+</p>
 
-selecionar entre 65% e 70% manualmente e deixar entre 35% e 30% automaticamente aleatório,<br>
-para posteriormente identificarmos mais alguns exemplos que o modelo esteja com dificuldade em classificar.<br>
-Uma boa prática para selecionarmos os exemplos difíceis do modelo classificar é pegar os exemplos entre 45% e 55% (próximos à fronteira 50%-50%) e identificar os exemplos falsos positivo. Exemplos inferiores a 20% de probabilidade de ser Verdadeiro Positivo provavelmente são irrelevantes a este processo.
+<p>
+Através deste notebook vamos :<br>
+<p>
+    <ol>
+        <li>abrir o arquivo <a href=".\file-csv">raw_data_with_labels.csv</a> utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li></li>
+        <li>selecionar os dados cujo Y é nulo e que por linha, pelo menos uma coluna esteja preenchida com um dado válido.</li>
+        <li>armazenar os dados do dataset em um dataframe utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li>
+        <li>gravar o dataset em outro dataframe para termos mais liberdade nas alterações</li>
+        <li>extrair os titulos dos vídeos</li>
+        <li>extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
+		<li>extrair apenas o número de uma coluna tipo objeto, com strings e número</li>
+        <li>criar Features - Tratamentos específicos nos dados</li>
+        <li>aplicar o TfidfVectorizer, treinado anteriormente, sobre os títulos dos vídeos</li>
+        <li>concatenar conteúdo denso com conteúdo esparso utilizando a função hstack</li>
+    </ol>
+</p>
+
+<p>
+Neste momento temos um dataframe cujo dataset contém o total de views e o total de views por dia somente dos títulos que o modelo esta com dificuldade em predizer.
+</p>
+
+<p>
+Perceba que a predição foi realizada pelo algorítmo TfidfVectorizer, treinado neste mesmo notebook sob os títulos de vídeos que provavelmente vamos assistir. Criamos o campo p (probabilidade) e este será preenchido com a predição deste algorítmo.
+</p>
+
+<p>
+Uma boa prática para selecionarmos os exemplos difíceis do modelo predizer, é pegar os vídeos mais próximos da fronteira dos 50% positivo e 50% negativo (verdadeiro ou falso). Podemos considerar esta fronteira como marco 0.<br>
+Dependendo da quantidade de dados no dataset, será necessário considerar dados mais distantes da fronteira 50-50.<br>
+Outro detalhe é que amostras muito distantes da fronteira, provavelmente são vídeos que realmente não assistiremos.
+</p>
+
+<p>
+Neste processo nós programaremos um intervalo fixo para pegar entre 70 e 75 registros e deixaremos aleatório entre 30 e 35 registros, desconsiderando os já selecionados, é claro.
+</p>
+
+<p><strong>Atenção : </strong>
+O processo de separação de dados, limpeza de dados, transformação de dados são 99% iguais aos que aprendemos nos notebooks <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-dataset-collect-clean.md">0-dataset-collect-clean.md</a> e <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>
 </p>
 
 <p><strong>Dicas :</strong><br>
-Utilizar a função scipy sparse que é muito mais performática do que a função numpy sparse.<br>
-É comum concaternar matriz esparsa com matriz densa<br>
-Formatação de datas : Fique atento à formatação de datas de português para inglês ou vice-versa<br>
-Número : O local do ponto na numeração em português é diferente do em inglês<br>
-Transformar Data em valor numérico : O formato número é mais eficiente aos algoritmos machine learning<br>
-Modelo ml x Realidade : Para melhor eficiência do modelo machine learning os dados de treino e de teste devem ser o mais semelhantes possível a rotina da realidade em uma empresa ou em uma pesquisa de campo<br>
-Métrica realística : Encontrar características iguais entre os dados, ainda que seja necessário converter quantidade de dados x por ano em por dia. Ex : Upload de vídeos por dia, visualizações por dia ou algo semelhante.<br>
-Features x Banco de dados : Em um projeto real se houver muitas features, uma boa atitude é salvar em banco de dados
+    <ul>
+        <li>Utilizar a função scipy sparse que é muito mais performática do que a função numpy sparse.</li>
+        <li>É comum concaternar matriz esparsa com matriz densa</li>
+        <li>Formatação de datas : Fique atento à formatação de datas de português para inglês ou vice-versa.</li>
+        <li>Número : O local do ponto na numeração em português é diferente do em inglês.</li>
+        <li>Transformar Data em valor numérico : O formato número é mais eficiente aos algoritmos machine learning.</li>
+        <li>Modelo ml x Realidade : Para melhor eficiência do modelo machine learning os dados de treino e de teste devem ser o mais semelhantes possível a rotina da realidade em uma empresa ou em uma pesquisa de campo.</li>
+        <li>Métrica realística : Encontrar características iguais entre os dados, ainda que seja necessário converter quantidade de dados x por ano em por dia. Ex : Upload de vídeos por dia, visualizações por dia ou algo semelhante.</li>
+        <li>Features x Banco de dados : Em um projeto real se houver muitas features, uma boa atitude é salvar em banco de dados.</li>
+    </ul>
 </p>
 
 <p><strong>Nota :</strong><br>
 (*1) Matriz esparsa armazena valores diferentes de zero -é mais otimizada.<br>
-(*2)TfidfVectorizer dá mais peso as palavras que aparecem com menor frequência por linha de vídeo, considerando todas as linhas do dataset e vai ignorar as palavras que repetem em todas as linhas de vídeos, dentro do dataset.<br>
+
+(*2) TfidfVectorizer dá mais peso as palavras que aparecem com menor frequência por linha de vídeo, considerando todas as linhas do dataset e vai ignorar as palavras que repetem em todas as linhas de vídeos, dentro do dataset.<br>
 Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor.<br>
-(*3) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Conteúdo nan atrapalha a eficiência do modelo machine learning.<br>
-(*4) A probabilidade é o percentual de acerto que o modelo machine learning alcançou.<br>
-
-Vamos lembrar :<br>
-:/: Precision : é o número que responde a pergunta de todos os modelos que disse que são positivos, 50% destes são realmente positivos<br>
-
-:/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
 </p>
-
-<hr>
-<h3>MODELO MACHINE LEARNING</h3>
-Neste segundo modelo a predição será realizada sob o título do vídeo, após ser transformado pelo objeto TfidfVectorizer.A predição do modelo machine learning será com o algoritmo RandomForestClassifier.
-    <ul>
-        <li>Separar dados de treino e dados de teste - Aplicar validação temporal por ser uma time series (*3)</li>
-        <li>Importar o objeto TfidfVectorizer</li>
-        <li>Separar as descrições dos títulos para treino e teste</li>
-        <li>Transformar os textos dos títulos com o algoritmo TfidfVectorizer (*4)</li>
-        <li>Concatenar matriz densa e matriz sparsa (*5)</li>
-        <li>Treinar modelo machine learning </li>
-        <li>Executar a probabilidade do RandomForestClassifier (*6)</li>
-        <li>Aplicar a métrica de média de precisão (*6)</li>
-        <li>Tratar o ranking dos vídeos (*7)</li>
-        <li>Aplicar a curva <a href="blank_">ROC</a></li>
-        <li>Exibir a Decision tree para analisar o modelo</a></li>
-    </ul>
-
-<hr>
-<h3>LIMPAR E TRANSFORMAR DADOS</h3>
-    <ul>
-        <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
-		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número (*1)</li>
-        <li>Aplicar Features - Tratamentos específicos nos dados</li>
-        <li>Importar o objeto TfidfVectorizer</li>
-        <li>Pegar as descrições dos títulos dos vídeos</li>
-        <li>Transformar os textos dos títulos com o algoritmo TfidfVectorizer (*2)</li>
-        <li>Concatenar matriz densa e matriz sparsa (*3)</li>
-        <li>Executar a probabilidade do RandomForestClassifier (*4)</li>
-        <li>Concatenar os dataframes difíceis e aleatórios</li>
-        <li>Exibir exemplos difíceis separados de classificar e os aleatórios</li>
-    </ul>
 
 <br>
 <hr>
