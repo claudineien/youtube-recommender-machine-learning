@@ -22,24 +22,182 @@
 </div>
 </h5>
 
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+
 <h1 align='center'>2o Modelo Machine Learning - RandomForestClassifier</h1>
+<p>Primeiramente abrir o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb.</a>
+</p>
+
 <p>Este modelo é igual ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>, do processo Labelling à criação das features.<br>
-<strong>Importante :</strong><br>
-Utilizar o mesmo dataset em todos os modelos machine learning nos ajuda detectar o modelo ideal.
+</p>
+<p><strong>Importante :</strong><br>
+Utilizar o mesmo dataset durante os testes de escolha dos modelos machine learning nos ajuda detectar o modelo ideal.
 </p>
 
 <hr>
 <h3>MODELO MACHINE LEARNING</h3>
-Utilizaremos o algorítimo RandomForestClassifier para predizer quais vídeos provavelmente assistiremos.<br>
-Mas antes, vamos aplicar a técnica Active Learning que vai nos ajudar a selecionar exemplos em datasets, para fazermos anotações e com estas anotaçãoes vamos :
+O objetivo neste processo é aplicar o algorítimo RandomForestClassifier para predizer quais vídeos provavelmente assistiremos.<br>
+Mas antes, vamos aplicar a técnica Active Learning que vai nos ajudar a :
 <ol>
-    <li>melhorar o resultado da predição do algorítmo machine learning</li>
-    <li>evitar altos custos em projetos pequenos e/ou com limites de investimentos</li>
+    <li>selecionar os melhores exemplos-dados em datasets para fazermos anotações</li>
+    <li>agilizar coleta das anotações em projetos com prazo curto para fazer anotações</li>
+    <li>facilitar a coleta das anotações de profissionais especialistas como médicos, biólogos, entre outros</li>
+    <li>desenvolver modelos machine learning com melhor performance preditiva</li>
+    <li>evitar altos custos em qualquer projeto</li>
     <li>economizar investimentos financeiros em qualquer projeto</li>
-    <li>economizar investimentos de tempo em qualquer projeto</li>
-    <li>agilizar o desenvolvimento de testes em modelos preditivos machine learning</li>
+    <li>agilizar no desenvolvimento de testes em modelos preditivos machine learning</li>
 </ol>
-Ex : Dados médicos precisam de especialistas para fazer anotações de tumor maligno, tumor benigno, não tumor. Estes especialistas são caros e o active learning ajuda a reduzir custos com estes profissionais.
+</p>
+
+<p>Dependendo do projeto, fazer anotações pode aumentar muito o seu custo e/ou tempo para finalizar o projeto, e realizar anotações aleatórias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning.</p>
+
+<p>Exemplo :<br>
+Imagens radiográficas, ressonância magnética e similares precisam de especialistas médicos para fazer anotações de tumor maligno, tumor benigno, não tumor. Estes especialistas são caros e o active learning ajuda a reduzir custos com estes profissionais.
 </p>
 
 <p>Para realizar a técnica active learning primeiramente aplicaremos as técnicas :<br>
@@ -55,18 +213,34 @@ Ex : Dados médicos precisam de especialistas para fazer anotações de tumor ma
     </ul>
 </p>
 
+<p><strong>Atenção :</strong><br>
+No notebook  <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> criaremos uma linha com resultados average precision e auc roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer e utilizado pelo algorítimo RandomForestClassifier. Desta forma entendemos como esta o nosso modelo em relação baseline.
+</p>
+
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
 <hr>
 <h3>ACTIVE LEARNING</h3>
-<p>Active Learning é uma técnica que ajuda a escolher melhor quais dados devem receber anotação em um dataset, para desenvolvermos um modelo com melhor performance.</p>
-<p>Normalmente utilizado em pequenos projetos, em projetos com orçamento baixo e/ou em projetos com pouco tempo para fazer anotações em dados que serão treinados.<p>
-<p>Dependendo do projeto, fazer anotações pode aumentar muito o seu custo, e realizar anotações aleatórias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning.</p>
-<p>Por exemplo:<br>
-Em projetos de tratamento de imagem radiográfica, ressonância magnética, e similares, que exige experiência médica especializada para anotar nos datasets uma situação de tumor benigno ou maligno ou nenhum dos dois, o Active Learning nos ajuda a separar com maior qualidade os dados que precisamos que recebam as anotações destes especialistas.
-</p>
+<p>Agora iniciaremos a técnica active learning</p>
 <p>
-Vamos Pegar uma quantidade de exemplos que o modelo esta com problema em classificar, selecionar entre 65% e 70% manualmente e deixar entre 35% e 30% automaticamente aleatório, para identificarmos mais alguns exemplos que o modelo esteja com dificuldade em classificar.<br>
+Vamos pegar uma quantidade de exemplos que o modelo esta com dificuldade em classificar.<br>
+Escolhemos os dados cujo Y é nulo e apagamos todos os registros que são nan (por algum motivo estão registros com Y vazio) <br>
+
+selecionar entre 65% e 70% manualmente e deixar entre 35% e 30% automaticamente aleatório,<br>
+para posteriormente identificarmos mais alguns exemplos que o modelo esteja com dificuldade em classificar.<br>
 Uma boa prática para selecionarmos os exemplos difíceis do modelo classificar é pegar os exemplos entre 45% e 55% (próximos à fronteira 50%-50%) e identificar os exemplos falsos positivo. Exemplos inferiores a 20% de probabilidade de ser Verdadeiro Positivo provavelmente são irrelevantes a este processo.
 </p>
+
+
+
+
+
 
 <p><strong>Dicas :</strong><br>
 Utilizar a função scipy sparse que é muito mais performática do que a função numpy sparse.<br>
@@ -91,6 +265,7 @@ Vamos lembrar :<br>
 
 :/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
 </p>
+
 
 <hr>
 <h3>MODELO MACHINE LEARNING</h3>
@@ -124,6 +299,11 @@ Neste segundo modelo a predição será realizada sob o título do vídeo, após
         <li>Exibir exemplos difíceis separados de classificar e os aleatórios</li>
     </ul>
 
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
 <br>
 <hr>
 <p>Fontes de estudo :
