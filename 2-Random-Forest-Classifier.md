@@ -1,6 +1,8 @@
 <h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a>
 </h5>
-<h5>
+<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a>
+</h5>
+<h6>
 <div>
   <table>
     <tr>
@@ -20,7 +22,7 @@
     </tr>
   </table>
 </div>
-</h5>
+</h6>
 <br>
 
 <h1 align='center'>2o Modelo Machine Learning - RandomForestClassifier</h1>
