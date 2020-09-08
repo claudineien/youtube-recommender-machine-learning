@@ -21,7 +21,46 @@
   </table>
 </div>
 </h5>
-
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
+<p>-</p>
 <hr>
 <h3 align="left">SOBRE O RECOMENDADOR DE VÍDEOS DO YOUTUBE</h3>
 <p>Criaremos um modelo preditivo em machine learning sob dados tipo time series, para trazer os vídeos que possívelmente assistiremos.<br>
@@ -86,6 +125,10 @@ A todo momento nós vamos comparar os resultados com a nossa <em><strong>baselin
 
 <p>
 Executaremos a técnica para concatenar conteúdo denso com conteúdo esparso e faremos a predição probabilística com as features visualizações e visualizações por dia mais o título do vídeo, para entender se estamos contruindo um dataset com boa qualidade e se o algorítmo de predição esta com boa predição.
+</p>
+
+<p>
+Nós aprenderemos a medir o resultado que a técnica Active Learning esta trazendo ao nosso projeto.
 </p>
 
 <p>O processo mais trabalhoso para o Cientista de Dados é o processo da qualidade dos dados composto por :
@@ -157,3 +200,12 @@ A alta qualidade do dataset significa alto sucesso ao modelo de predição machi
 
 <a id="itemtec" >Tecnologias utilizadas neste projeto</a><br>
 <em><a href="#itemtec">Tecnologias utilizadas neste projeto</a></em>
+
+<!--<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></br>
+Projeto : Recomendador de vídeos do youtube<br>
+Nivel Conhecimento : Iniciante à avançado<br>
+Tipo de dados : Time Series<br>
+Tipo Machine Learning : Supervisionado<br>
+
+LinkedIn : https://www.linkedin.com/in/claudineien/
+</h5>-->
