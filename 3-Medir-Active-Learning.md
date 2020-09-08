@@ -22,8 +22,6 @@
 </div>
 </h5>
 
-<p>-</p> <p>-</p> <p>-</p> <p>-</p> <p>-</p> <p>-</p> <p>-</p>
-<p>-</p> <p>-</p> <p>-</p> <p>-</p> <p>-</p> <p>-</p>
 <h1 align='center'>Medir Resultado do Active Learning</h1>
 <p>É importante sabermos qual resultado o Active Learning esta trazendo ao nosso projeto. Isto nos ajuda a acompanhar melhor e mais rápido sobre a qualidade dos dados, se há necessidade de termos mais dados para trabalhar, identificar a performance dos modelos em teste e talvez aplicar alguma mudança em um ou mais processos do desenvolvimento do modelo machine learning.<br>
 </p>
@@ -38,7 +36,6 @@ Nós temos poucos dados sob treino e teste e isto faz o average precision e o au
 Depois será importante executar as métricas roc_auc_score e average_precision_score.
 </p>
 
-<p>-</p> <p>-</p>
 <h3>PROCESSO : APLICANDO A MÉTRICA</h3>
 <p>Nesta etapa vamos aplicar o labelling, criar mais exemplos para treino e teste, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo RandomForestClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva <a href="blank_">ROC</a> e comparar com a nossa <em>baseline</em>, gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>
 </p>
