@@ -1,11 +1,35 @@
-<h4><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></h4>
-<h4>Objetivo : Desenvolver um recomendador de vídeos do youtube
-    <p>Nivel Conhecimento : Intermediário à avançado<br>
-    Tipo Machine Learning : Supervisionado</p>
-</h4>
+<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></h5>
 
-<h1 align='center'>Medir Impacto do Active Learning</h1>
-<p>Por termos poucos dados de validação e o auc estar muito instável é importante saber se o Active Learning esta trazendo bom efeito ao projeto. Podemos medir o impacto aplicando as seguintes técnicas :<br>
+<h5>
+<div>
+  <table>
+    <tr>
+      <th>PROJETO</th>
+      <th>NÍVEL DE CONHECIMENTO</th>
+      <th>TIPO DE DADOS</th>
+      <th>TIPO MACHINE LEARNING</th>
+    </tr>
+    <tr>
+      <td>Recomendador de vídeos do youtube</td>
+      <td>Iniciante à avançado</td>
+      <td>Time Series</td>
+      <td>Supervisionado</td>
+    </tr>
+    <tr>
+        <td colspan="4">LinkedIn : https://www.linkedin.com/in/claudineien/</td>
+    </tr>
+  </table>
+</div>
+</h5>
+
+<p>-</p> <p>-</p> <p>-</p> <p>-</p> <p>-</p> <p>-</p> <p>-</p>
+<p>-</p> <p>-</p> <p>-</p> <p>-</p> <p>-</p> <p>-</p>
+<h1 align='center'>Medir Resultado do Active Learning</h1>
+<p>É importante sabermos qual resultado o Active Learning esta trazendo ao nosso projeto. Isto nos ajuda a acompanhar melhor e mais rápido sobre a qualidade dos dados, se há necessidade de termos mais dados para trabalhar, identificar a performance dos modelos em teste e talvez aplicar alguma mudança em um ou mais processos do desenvolvimento do modelo machine learning.<br>
+</p>
+
+<p>
+Nós temos poucos dados sob treino e teste e isto faz o average precision e o auc-roc variar muito rapidamente a cada pequena alteração. Este também é um motivo de medirmos o resultado do active learning e faremos aplicando as seguintes técnicas :<br>
 <ol>
     <li>aumentando apenas os dados de validação</li>
     <li>aumentando apenas os dados de treino</li>
@@ -14,9 +38,34 @@
 Depois será importante executar as métricas roc_auc_score e average_precision_score.
 </p>
 
+<p>-</p> <p>-</p>
+<h3>PROCESSO : APLICANDO A MÉTRICA</h3>
+<p>Nesta etapa vamos aplicar o labelling, criar mais exemplos para treino e teste, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo RandomForestClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva <a href="blank_">ROC</a> e comparar com a nossa <em>baseline</em>, gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>
+</p>
+
+<h3>PROCESSO : LABELLING</h3>
 <p>
-O arquivo <a href="\file-csv">raw_data_with_labels.csv</a> tem aproximadamente 500 anotações e estão com labelling 1-Vídeos Que Gosto, 0-Vídeos Que Não Gosto no campo Y.<br>
-O arquivo <a href="\file-csv" >active_labels.csv</a> contém 100 exemplos gerados pelo notebook <a href=".\file-csv">2_Random_Forest_Classifier.ipynb</a>, e através do excel foram feitas os labelling na coluna y : 1-Vídeos Que Gosto, 0-Vídeos Que Não Gosto. Este arquivo .csv também contém a coluna p com a probabilidade gerado pelo algorítmo RandomForestClassifier do mesmo notebook adicionada pela técnica Active Learning. Agora receberá através do notebook <a href="3_Medir_Active_Learning.ipynb" >3_Medir_Active_Learning.ipynb</a> coluna Novo preenchida com 1 para indicar que são os 100 exemplos que o algoritmo esta com dificuldade em classificar.
+    <ol>
+        <li>Abrir o arquivo <a href=".\file-csv">active_labels.csv</a> em uma planilha eletrônica como ms excel, <a href="https://gsuite.google.com/intl/pt-BR/products/sheets/">google sheets</a> ou <a href="https://pt-br.libreoffice.org/descubra/calc/"> LibreOffice</a> através da opção de importar um arquivo .csv</li>
+        <li>Criar a coluna Y (*1)</li>
+        <li>Inserir na coluna Y o número 0 nas linhas cujo título do vídeo, provavelmente, não vamos assistir ou inserir 1 nas linhas cujo vídeo provavelmente, vamos assistir.</li><br>
+        <p><strong>Importante:</strong><br>
+        Baixar o arquivo <a href=".\file-csv">active_labels.csv</a>, cujo o labelling foi aplicado para agilizar e facilitar nosso entendimento em cada técnica executada.</p>
+    </ol>
+</p>
+
+<p>
+Com o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3_Medir_Active_Learning.ipynb" >3_Medir_Active_Learning.ipynb</a> :
+<p>
+Vamos pegar os dados do dataset <a href="\file-csv">raw_data_with_labels.csv</a>, com aproximadamente 1182 registros com 498 anotações (labelling) no campo Y, no qual 1 para vídeos que gosto ou 0 para vídeos que não gosto.<br>
+</p>
+
+<p>
+Vamos pegar o <a href="\file-csv" >active_labels.csv</a>, com aproximadamente 100 exemplos gerados pelo notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a>. Este arquivo contém a coluna p com a probabilidade gerado pelo algorítmo RandomForestClassifier no notebook mencionado a pouco e adicionada pela técnica Active Learning.
+</p>
+
+<p>
+Agora receberá através do notebook <a href="3_Medir_Active_Learning.ipynb" >3_Medir_Active_Learning.ipynb</a> coluna Novo preenchida com 1 para indicar que são os 100 exemplos que o algoritmo esta com dificuldade em classificar.
 </p>
 
 <p>Se aplicarmos as métricas roc_auc_score e average_precision_score sob a probabilidade gerado pelo modelo RandomForestClassifier x labelling gravados no arquivo <a href="\file-csv" >active_labels.csv</a> gerado pelo notebook <a href=".\file-csv">2_Random_Forest_Classifier.ipynb</a> sob as técnicas Active Learning, tentamos responder as seguintes perguntas :<br>
@@ -136,18 +185,32 @@ Vamos lembrar :<br>
 :/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
 </p>
 
-<br>
-<hr>
-<p>Fontes :
-    <ul>
-        <li><a href="https://curso.mariofilho.com/">Curso Solução Completa de Data Science - Instrutor Mario Filho-Kagle Gran Master</a></li>
-    </ul>
+<p>Importante :<br>
+Na maior parte das vezes quanto mais conteúdo estiver no dataset, melhor será modelo machine learning.
 </p>
 
-<!--
-<p>labelling</p>
-<p>Active learning</p>
-feather-format 0.4.1
-pip install feather-format
-https://pypi.org/project/feather-format/
-<p> - = - + + : > < { [ * & % $ # @ ! } ]</p>-->
+<br>
+<br>
+<hr>
+<p>Fontes de estudo :
+    <ul>
+        <li>Curso <a href="https://curso.mariofilho.com/">   
+        Solução Completa de Data Science</a> - Instrutor Mario Filho-Kagle Gran Master</li>
+        <li><a href="https://www.youtube.com/watch?v=Y1XAP6omGzo">Entendiendo las Curvas ROC</a></li>
+        <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.plot_tree.html">Método plot_tree</a></li>
+        <li><a href="https://strftime.org/">Tabela de códigos para converter strings em datas no Python</a></li>
+        <li><a href="http://gskinner.com/RegExr/">Testador de expressões regulares</a></li>
+        <li><a href="https://numpy.org/doc/stable/reference/arrays.datetime.html">Numpy : Timedelta</a></li>
+        <li><a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">Pandas : Time/Date</a></li>
+        <li><a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py">Curva de Precision/Recall</a></li>
+        <li><a href="https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics">ROC (Receiver Operating Characteristic) Curve</a></li>
+        <li><a href="https://pypi.org/project/feather-format/">feather-format</a></li>
+        <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html">TfidfVectorizer - Term Frequency</a></li>
+        <li><a href="https://medium.com/@cmukesh8688/tf-idf-vectorizer-scikit-learn-dbc0244a911a">TF-IDF Vectorizer scikit-learn</a></li>
+        <li><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csc_matrix.html">sparse matrix</a></li>
+        <li><a href="https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics">ROC (Receiver Operating Characteristic) Curve</a></li>
+        <li><a href="https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction">Bag of Words (e TF-IDF)</a></li>
+        <li><a href="https://docs.scipy.org/doc/scipy/reference/sparse.html">Sparse matrices</a></li>
+        <li><a href="https://github.com/scikit-learn/scikit-learn/issues/16017">TfidfVectorizer ngrams does not work when vocabulary provided #16017</a></li>
+    </ul>
+</p>
