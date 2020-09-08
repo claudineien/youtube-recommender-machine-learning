@@ -62,7 +62,7 @@ Imagens radiográficas, ressonância magnética e similares precisam de especial
 </p>
 
 <p><strong>Atenção :</strong><br>
-No notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> criaremos uma linha com resultados average precision e auc-roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer que serão utilizados pelo algorítimo RandomForestClassifier. Desta forma vamos entender como esta o nosso modelo em relação a baseline gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>.
+No notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> criaremos uma linha com resultados average precision e auc-roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer que serão utilizados pelo algorítimo RandomForestClassifier. Desta forma vamos entender como esta o nosso modelo em relação a <em>baseline</em> gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>.
 </p>
 
 <hr>
