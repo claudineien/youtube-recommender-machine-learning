@@ -33,7 +33,7 @@ Nós temos poucos dados sob treino e teste e isto faz o average precision e o au
     <li>aumentando apenas os dados de treino</li>
     <li>aumentando os dados de validação e de treino</li>
 </ol>
-Depois será importante executar as métricas roc_auc_score e average_precision_score.
+Depois será importante executar as métricas roc_auc_score e average_precision_score e comparar com a <em>baseline</em> obtida no notebook 0 e compara com os resultados gerados nos notebooks 1 e 2.
 </p>
 
 <p>Nesta etapa vamos aplicar o labelling, criar mais exemplos para treino e teste, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo RandomForestClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva <a href="blank_">ROC</a> e comparar com a nossa <em>baseline</em>, gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>
@@ -55,25 +55,38 @@ Depois será importante executar as métricas roc_auc_score e average_precision_
 <h3>PROCESSO : APLICANDO A MÉTRICA</h3>
 <p>
 Com o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3_Medir_Active_Learning.ipynb" >3_Medir_Active_Learning.ipynb</a> :
-
-<p>Vamos pegar os dados do dataset <a href="\file-csv">raw_data_with_labels.csv</a>, com aproximadamente 1182 registros com 498 anotações (labelling) no campo Y, no qual 1 para vídeos que gosto ou 0 para vídeos que não gosto.<br>
 </p>
 
-<p>Vamos pegar o <a href="\file-csv" >active_labels.csv</a>, com aproximadamente 100 exemplos gerados pelo notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a>. Este arquivo contém a coluna p com a probabilidade de ser 0 ou 1, gerado pelo algorítmo RandomForestClassifier no notebook mencionado a pouco e adicionada pela técnica Active Learning.
+<p>1 Vamos pegar o <a href="\file-csv" >active_labels.csv</a>, com aproximadamente 100 exemplos gerados pelo notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a>. Este arquivo contém a coluna p com a probabilidade de ser verdadeiro positivo, gerado pelo algorítmo RandomForestClassifier no notebook mencionado a pouco e adicionada pela técnica Active Learning.
 </p>
 
-<p>Vamos incluir a coluna Novo preenchida com 1 para indicar que são os 100 exemplos que o algoritmo esta com dificuldade em classificar.
+<p>
+2 Antes de iniciar o trabalho da métrica dos valores, sem entrar e pormenores, vamos analisar as métricas average_precision_score e roc_auc_score considerando a coluna y (labelling) e a coluna p (probabilidade) que estão no arquivo <a href="\file-csv" >active_labels.csv</a><br>
+A coluna p contém a probabilidade que o modelo machine learning dá ao item 579 de ser 37,5% positivo e ao item 846 de ser 82,6% positivo.<br>
+Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, então o item ...
+- 579 seria um Falso Negativo (37,5% < 50%)
+- 846 seria um Falso Positivo (82,6% > 50%)
 </p>
 
-<p>Se aplicarmos as métricas roc_auc_score e average_precision_score sob a probabilidade gerado pelo modelo RandomForestClassifier x labelling gravados no arquivo <a href="\file-csv" >active_labels.csv</a> gerado pelo notebook <a href=".\file-csv">2_Random_Forest_Classifier.ipynb</a> sob as técnicas Active Learning, tentamos responder as seguintes perguntas :<br>
+<p>
+Algumas perguntas que procuramos responder :<br>
 01 Quais são as métricas ?<br>
 02 Qual é o erro ?<br>
 03 Qual o average_precision_score ?<br>
-04 Qual é o roc_auc_score ? <br>
-Bom... por ser a primeira vez que aplicamos este procedimento não teremos parâmetro para avaliar, mas é possível comparar com o resultado do modelo anterior e entender se esta perto ou longe do objetivo de ter um bom modelo machine learning
+04 Qual é o roc_auc_score ?<br>
+05 O modelo esta melhorando ?
 </p>
 
-<p>Ao aplicar average_precision_score e roc_auc_score no dataset  <a href="\file-csv" >active_labels.csv</a> no notebook <a href="3_Medir_Active_Learning.ipynb" >3_Medir_Active_Learning.ipynb</a> antes de iniciarmos a limpeza dos dados, comparando com o dataset criado pelo modelo RandomForestClassifier gerado no notebook  <a href=".\file-csv">2_Random_Forest_Classifier.ipynb</a> percebemos que a alteração é mínima em ambos. Atenção ao AUC que esta sensível por que estamos trabalhando com uma quantidade muito pequena de dados.
+<p>
+O único parâmetro de avaliação que temos é a <em>baseline</em> gerada no notebook , gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a> e comparando os resultados percebemos que as métricas apontam uma grande sensibilidade nos resultados average_precision_score e roc_auc_score seu valor e é possível entender se estamos perto ou longe do objetivo de ter um bom modelo machine learning.
+</p>
+
+<p>
+Vamos incluir a coluna Novo preenchida com 1 para indicar que são os 100 exemplos que o algoritmo esta com dificuldade em classificar.
+</p>
+
+<p>
+Vamos pegar os dados do dataset <a href="\file-csv">raw_data_with_labels.csv</a>, com aproximadamente 1182 registros com 498 anotações (labelling) no campo Y, no qual 1 para vídeos que gosto ou 0 para vídeos que não gosto.<br>
 </p>
 
 <p>Uma técnica que ajudará a medir do Active Learning é :</p>
@@ -82,8 +95,8 @@ Este dataframe vai unir o dataset <a href=".\file-csv">active_labels.csv</a> con
 Após esta união de datasets atualizaremos para 0 os dados da coluna [Novo] que são diferentes dos 100 exemplos que estão com 1 (*1)<br>
 Eliminar a coluna p relacionada a probabilidade de acerto dos vídeos, por que não será usada nos próximos textes.<br>
 </p>
-<p>A seguir passos a executar :</p>
 
+<p>A seguir passos a executar :</p>
 <h3>ABRIR .CSV, LIMPAR E TRANSFORMAR DADOS</h3>
 <p>
     <ul>
@@ -168,6 +181,8 @@ Novo dataframe : Evite alterar os dados no dataframe principal, trabalhe sempre 
 </p>
 
 <p><strong>Nota :</strong><br>
+(*1) Você pode colocar o nome que quiser, foi escolhido Y (Youtube) para facilitar nosso entendimento.<br>
+
 (*1) Conteúdo na coluna Novo :<br>
 1-Relacionados aos 100 exemplos do dataset <a href=".\file-csv">active_labels1_done.csv</a><br>
 0-Relacionados aos exemplos do dataset <a href=".\file-csv">raw_data_with_labels.csv</a>
