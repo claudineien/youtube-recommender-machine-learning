@@ -61,23 +61,22 @@ No processo de qualidade do dataset nós vamos :
     </ul>
 </p>
 
-<br>
 <hr>
 <h3 align="left">PROCESSO : ANALISAR EFICIÊNCIA DO MODELO MACHINE LEARNING</h3>
 <p>
-Neste processo de analisar eficiência do modelo machine learning, inicialmente vamos testar os algorítmos DecisionTreeClassifier para analisar a influência da predição do modelo machine learning nas features quantidade total de visualizações e visualizações por dia. Aqui vamos obter a <em><strong>baseline</strong></em> sob as métricas curva auc-roc (roc_auc_score) e média de precisão (average_precision_score), para analisar os próximos modelos machine learning.
+Neste processo de analisar eficiência do modelo machine learning, inicialmente vamos testar os algorítmos DecisionTreeClassifier para analisar a influência da predição do modelo machine learning nas features quantidade total de visualizações e visualizações por dia. Aqui vamos obter a <em><strong>baseline</strong></em> extraída sob as métricas curva auc-roc (roc_auc_score) e média de precisão (average_precision_score), que nos ajudará a analisar os modelos machine learning que testarmos.
 </p>
 
 <p>
-Depois executaremos o modelo RandomForestClassifier e vamos comparar os resultados preditivos com a nossa <em><strong>baseline</strong></em>.
+Aprenderemos a utilizar o algorítmo RandomForestClassifier e vamos comparar os resultados preditivos com a nossa <em><strong>baseline</strong></em>.
 </p>
 
 <p>
-Também utilizaremos a técnica para reduzir o impacto de tokens que ocorrem com muita frequência, utilizando o algorítmo TfidfVectorizer. E ainda o utilizaremos como um algorítmo para predizer os vídeos que provavelmente vamos assistir.
+Utilizaremos a técnica para reduzir o impacto de tokens que ocorrem com muita frequência, utilizando o algorítmo TfidfVectorizer. Esta também sera utilizado como um algorítmo para predizer os vídeos que provavelmente vamos assistir, com base nos títulos dos vídeos.
 </p>
 
 <p>
-Aplicaremos a técnica Active Learning para melhor adequar o dataset aos modelos de predição machine learning. E juntamente a esta técnica vamos aplicar diversas limpezas e transformações de dados no dataset.
+Aplicaremos a técnica Active Learning para melhor adequar o dataset aos modelos de predição machine learning, com foco em aumentar o a predição verdadeiro positivo em dados que o modelo esta com dificuldade de fazer. E juntamente a esta técnica vamos aplicar algumas limpezas e transformações de dados no dataset.
 </p>
 
 <p>
@@ -85,11 +84,11 @@ A todo momento nós vamos comparar os resultados com a nossa <em><strong>baselin
 </p>
 
 <p>
-Executaremos a técnica para concatenar conteúdo denso com conteúdo esparso e faremos a predição probabilística com as features visualizações e visualizações por dia mais o título do vídeo, para entender se estamos contruindo um dataset com boa qualidade e se o algorítmo de predição esta com boa predição.
+Aprenderemos a técnica de concatenar conteúdo denso com conteúdo esparso e faremos a predição probabilística com as features totais de visualizações e visualizações por dia mais o título do vídeo, para entender se estamos contruindo um dataset com boa qualidade e se o algorítmo de predição esta uma predição satisfatória.
 </p>
 
 <p>
-Nós aprenderemos a medir o resultado que a técnica Active Learning esta trazendo ao nosso projeto.
+Aprenderemos a medir o resultado que a técnica Active Learning esta trazendo ao nosso projeto. Esta prática nos ajudará a entender a qualidade de limpeza dos dados e a qualidade do active learning e na qualidade dos dados trabalhados.
 </p>
 
 <p>O processo mais trabalhoso para o Cientista de Dados é o processo da qualidade dos dados composto por :
