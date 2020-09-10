@@ -23,7 +23,7 @@
 </h5>
 
 <hr>
-<h2 align="left">TAREFA DO CIENTISTA DE DADOS</h2>
+<h3 align="left">TAREFA DO CIENTISTA DE DADOS</h3>
 <p>Para entendermos na prática uma pequena parte da tarefa de um Cientista de Dados, devemos ler e seguir ordenamente cada um dos documentos a seguir :
 <h4><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-dataset-collect-clean.md">0-dataset-collect-clean.md</a>
 </h4>
@@ -35,7 +35,7 @@
 </h4>
 
 <hr>
-<h2 align="left">O RECOMENDADOR DE VÍDEOS DO YOUTUBE</h2>
+<h3 align="left">O RECOMENDADOR DE VÍDEOS DO YOUTUBE</h3>
 <p>Criaremos um modelo preditivo supervisionado em machine learning sob dados tipo time series, para trazer os vídeos que possívelmente assistiremos dentro de um determinado conjunto de palavras ou frases.<br>
 </p>
 <p>
@@ -43,8 +43,8 @@ O modelo consultará os últimos nnn vídeos por data de upload/publicação, co
 </p>
 
 <hr>
-<h2 align="left">PROCESSOS QUE APRENDEREMOS</h2>
-<h3> COLETAR DADOS</h3>
+<h3 align="left">PROCESSOS QUE APRENDEREMOS</h3>
+<h4> COLETAR DADOS</h4>
 <p>
 Para cumprirmos o processo de coletar os dados de vídeos do youtube foi escolhida a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>. Esta biblioteca traz as informações em formato de dicionário do python, e isto agiliza todo e qualquer procedimento de manuseio dos dados.
 </p>
