@@ -80,30 +80,28 @@ Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, ent
 <h3>PROCESSO : LIMPAR E TRANSFORMAR DADOS</h3>
 <p>
     <ul>
-        <li>
-        Vamos incluir o número 1 na coluna [Novo] no dataframe com os aproximadamente 100 exemplos. O número 1 indica que são os 100 exemplos que o algoritmo esta com dificuldade em classificar.
+        <li>Vamos incluir a coluna [Novo] no dataframe com os aproximadamente 100 exemplos.
         </li>
-        <li>
-        Vamos importar aproximadamente 498 registros do dataset <a href="\file-csv">raw_data_with_labels.csv</a>, cujo o campo y seja diferente de nulo/vazio, estão com anotações (labelling) 1 para vídeos que gosto ou 0 para vídeos que não gosto.
+        <li>Vamos incluir o número 1 na coluna [Novo] criada no dataframe com os aproximadamente 100 exemplos (*2)
         </li>
-        <li>
-        Vamos unir os dois dataframes importados gerando um novo dataframe com aproximadamento 600 registros. Na coluna [Novo] estaram gravados 1 indicando dataset do dataframe que continha 100 registros e gravará nan's para os outros 500 registros.
+        <li>Vamos importar aproximadamente 498 registros do dataset <a href="\file-csv">raw_data_with_labels.csv</a>, cujo o campo y seja diferente de nulo/vazio, estão com anotações (labelling) 1 para vídeos que gosto ou 0 para vídeos que não gosto.
         </li>
-        <li>
-        Vamos substituir o conteúdo nan por 0 na coluna [Novo] referente aos 500 registros que estão com nan's (*2).
+        <li>Vamos unir os dois dataframes importados gerando um novo dataframe com aproximadamento 600 registros. Na coluna [Novo] estaram gravados 1 indicando dataset do dataframe que continha 100 registros e gravará nan's para os outros 500 registros.
         </li>
-        <li>
-        Vamos eliminar a coluna p relacionada a probabilidade de acerto dos vídeos, por que não será usada nos próximos textes.
+        <li>Vamos eliminar a coluna p relacionada a probabilidade de acerto dos vídeos. Esta não será usada nos próximos testes.
         </li>
-        <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
+        <li>Extrair a descrição dos títulos dos vídeos.</li>
+        <li>Vamos substituir o conteúdo nan por 0 na coluna [Novo] referente aos 500 registros que estão com nan's (*2).
+        </li>
+        <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas.</li>
 		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número</li>
-        <li>Aplicar Features - Tratamentos específicos nos dados</li>
+        <li>Criar Features - Tratamentos específicos nos dados.</li>
     </ul>
 </p>
 
 <hr>
 <h3>AUMENTAR DATASET DE VALIDAÇÃO</h3>
-<p>É o procedimento menos utilizado. Esta sendo utilizado por que a quantidade de dados é muito pouca é uma boa técnica para analisarmos melhor a probabilidade, média de precisão e o AUC. É indicado que o dataset de validação não seja alterado. Aqui os dados de validação são novos e os dados de treino antigos.
+<p>É o procedimento menos utilizado. Esta sendo utilizado por que a quantidade de dados é muito pouca. Esta é uma boa técnica para analisarmos melhor a probabilidade, média de precisão e o AUC ROC. Aqui os dados de validação são novos e os dados de treino antigos.
 <br>
     <ul>
         <li>Selecionar um intervalo de datas mais amplo</li>
@@ -116,9 +114,14 @@ Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, ent
     </ul>
 </p>
 
+<p><strong>Atenção :</strong><br>
+É indicado que o dataset de validação não seja alterado.<br>
+Utilizaremos 
+</p>
+
 <hr>
 <h3>AUMENTAR DATASET DE TREINO</h3>
-<p>Este é o procedimento mais tradicional/utilizado. Também utilizada a análise da probabilidade, média de precisão e o AUC. Aqui os dados de validção são antigos e os dados de treino novos.
+<p>Este é o procedimento mais tradicional/utilizado. Também utilizada a análise da probabilidade, média de precisão e o AUC ROC. Aqui os dados de validação são antigos e os dados de treino são os novos.
 <br>
     <ul>
         <li>Selecionar um intervalo de datas mais amplo</li>
