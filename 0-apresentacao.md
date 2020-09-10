@@ -23,26 +23,25 @@
 </h5>
 
 <hr>
-<h3 align="left">SOBRE O RECOMENDADOR DE VÍDEOS DO YOUTUBE</h3>
-<p>Criaremos um modelo preditivo em machine learning sob dados tipo time series, para trazer os vídeos que possívelmente assistiremos.<br>
-O modelo consultará os últimos nnn vídeos por data de upload/publicação, considerando o título, visualizações totais desde seu upload, visualizações por dia desde seu upload. </p>
-
-<hr>
-<h3 align="left">PROCEDIMENTOS</h3>
-<p>Para entendermos a tarefa de um Cientista de Dados e executarmos corretamente esta aplicação devemos primeiramente ler e depois seguir ordenadamente os seguintes documentos :
+<h2 align="left">TAREFA DO CIENTISTA DE DADOS</h2>
+<p>Para entendermos na prática uma pequena parte da tarefa de um Cientista de Dados, devemos ler e seguir ordenamente cada um dos documentos a seguir :
 <ol>
     <li><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-dataset-collect-clean.md">0-dataset-collect-clean.md</a></li>
     <li><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a></li>
     <li><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Random-Forest-Classifier.md">2-Random-Forest-Classifier.md</a></li>
     <li><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3-Medir-Active-Learning.md">3-Medir-Active-Learning.md</a></li>
-    <li></li>
-    <li></li>
-    <li></li>
 </ol>
+
+<hr>
+<h2 align="left">O RECOMENDADOR DE VÍDEOS DO YOUTUBE</h2>
+<p>Criaremos um modelo preditivo supervisionado em machine learning sob dados tipo time series, para trazer os vídeos que possívelmente assistiremos dentro de um determinado conjunto de palavras ou frases.<br>
+</p>
+<p>
+O modelo consultará os últimos nnn vídeos por data de upload/publicação, considerando o título, visualizações totais desde seu upload, visualizações por dia desde seu upload.
 </p>
 
 <hr>
-<h3 align="left">PROCESSO : COLETAR DADOS</h3>
+<h2 align="left">PROCESSOS QUE APRENDEREMOS COLETAR DADOS</h2>
 <p>
 Para cumprirmos o processo de coletar os dados de vídeos do youtube foi escolhida a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>. Esta biblioteca traz as informações em formato de dicionário do python, e isto agiliza todo e qualquer procedimento de manuseio dos dados.
 </p>
@@ -76,19 +75,19 @@ Utilizaremos a técnica para reduzir o impacto de tokens que ocorrem com muita f
 </p>
 
 <p>
-Aplicaremos a técnica Active Learning para melhor adequar o dataset aos modelos de predição machine learning, com foco em aumentar o a predição verdadeiro positivo em dados que o modelo esta com dificuldade de fazer. E juntamente a esta técnica vamos aplicar algumas limpezas e transformações de dados no dataset.
+Aplicaremos a técnica Active Learning para evitar custos desnecessários, melhor adequar o dataset aos modelos de predição machine learning, aumentar a predição verdadeiro positivo em dados que o modelo esta com dificuldade de fazer.
 </p>
 
 <p>
-A todo momento nós vamos comparar os resultados com a nossa <em><strong>baseline</strong></em>.
+A todo momento nós vamos comparar os resultados com a nossa <em><strong>baseline</strong></em>, para melhorar nossos modelos.
 </p>
 
 <p>
-Aprenderemos a técnica de concatenar conteúdo denso com conteúdo esparso e faremos a predição probabilística com as features totais de visualizações e visualizações por dia mais o título do vídeo, para entender se estamos contruindo um dataset com boa qualidade e se o algorítmo de predição esta uma predição satisfatória.
+Aprenderemos a técnica de concatenar conteúdo denso com conteúdo esparso e faremos a predição probabilística com as features : totais de visualizações, visualizações por dia e o título do vídeo. Assim entenderemos se estamos contruindo um dataset com boa qualidade e se o algorítmo de predição esta satisfatório.
 </p>
 
 <p>
-Aprenderemos a medir o resultado que a técnica Active Learning esta trazendo ao nosso projeto. Esta prática nos ajudará a entender a qualidade de limpeza dos dados e a qualidade do active learning e na qualidade dos dados trabalhados.
+Aprenderemos a medir o resultado que a técnica Active Learning esta trazendo ao nosso projeto. Neste processo entenderemos melhor sobre a qualidade de limpeza dos dados, a qualidade do active learning e na qualidade dos dados trabalhados.
 </p>
 
 <p>O processo mais trabalhoso para o Cientista de Dados é o processo da qualidade dos dados composto por :
@@ -158,14 +157,7 @@ A alta qualidade do dataset significa alto sucesso ao modelo de predição machi
     </ul>
 </p>
 
+<!--
 <a id="itemtec" >Tecnologias utilizadas neste projeto</a><br>
 <em><a href="#itemtec">Tecnologias utilizadas neste projeto</a></em>
-
-<!--<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></br>
-Projeto : Recomendador de vídeos do youtube<br>
-Nivel Conhecimento : Iniciante à avançado<br>
-Tipo de dados : Time Series<br>
-Tipo Machine Learning : Supervisionado<br>
-
-LinkedIn : https://www.linkedin.com/in/claudineien/
-</h5>-->
+-->
