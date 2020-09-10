@@ -44,17 +44,17 @@ O modelo consultará os últimos nnn vídeos por data de upload/publicação, co
 
 <hr>
 <h3 align="left">PROCESSOS QUE APRENDEREMOS</h3>
-<h4> COLETAR DADOS</h4>
+<h4>COLETAR DADOS</h4>
 <p>
-Para cumprirmos o processo de coletar os dados de vídeos do youtube foi escolhida a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>. Esta biblioteca traz as informações em formato de dicionário do python, e isto agiliza todo e qualquer procedimento de manuseio dos dados.
+Executaremos a coleta dos dados de vídeos do youtube com a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>. Esta biblioteca foi escolhoa por trazer as informações em formato de dicionário do python, e isto agiliza todo e qualquer procedimento de manuseio dos dados.
 </p>
 
 <hr>
-<h3 align="left">PROCESSO : QUALIDADE DO DATASET</h3>
+<h4>QUALIDADE DO DATASET</h4>
 <p>
 No processo de qualidade do dataset nós vamos :
     <ul>
-        <li>separar as colunas considerados mais adequadas para o modelo classificador</li>
+        <li>separar as colunas considerados mais adequadas ao modelo machine learning</li>
         <li>criar um campo para identificar se o vídeo é o que desejamos assistir ou não</li>
         <li>limpar, converter/transformar alguns dados</li>
         <li>substituir dados nulos ou com conteúdo <em>nan</em></li>
@@ -64,36 +64,35 @@ No processo de qualidade do dataset nós vamos :
 </p>
 
 <hr>
-<h3 align="left">PROCESSO : ANALISAR EFICIÊNCIA DO MODELO MACHINE LEARNING</h3>
-<p>
-Neste processo de analisar eficiência do modelo machine learning, inicialmente vamos testar os algorítmos DecisionTreeClassifier para analisar a influência da predição do modelo machine learning nas features quantidade total de visualizações e visualizações por dia. Aqui vamos obter a <em><strong>baseline</strong></em> extraída sob as métricas curva auc-roc (roc_auc_score) e média de precisão (average_precision_score), que nos ajudará a analisar os modelos machine learning que testarmos.
+<h4 align="left">ANALISAR MODELOS MACHINE LEARNING</h4>
+<p>Aprenderemos como aplicar técnicas para identificar o modelo machine learning mais eficiente a tarefa de recomendador de vídeos do youtube.
+</p>
+<p>Testaremos o algorítmo DecisionTreeClassifier para obter a nossa <em><strong>baseline</strong></em> extraída sob as métricas curva auc-roc (roc_auc_score) e média de precisão (average_precision_score), que nos ajudará a analisar os próximos modelos machine learning que vamos testar.
 </p>
 
-<p>
-Aprenderemos a utilizar o algorítmo RandomForestClassifier e vamos comparar os resultados preditivos com a nossa <em><strong>baseline</strong></em>.
+<p>Testaremos o algorítmo RandomForestClassifier e vamos comparar os resultados preditivos entre os algoritmos até aqui testados.
 </p>
 
-<p>
-Utilizaremos a técnica para reduzir o impacto de tokens que ocorrem com muita frequência, utilizando o algorítmo TfidfVectorizer. Esta também sera utilizado como um algorítmo para predizer os vídeos que provavelmente vamos assistir, com base nos títulos dos vídeos.
+<p><strong>Importante :</strong>
+O melhor modelo machine learning será aquele em que tanto o average precision (average_precision_score) quando a curva roc (roc_auc_score) ficaram o mais próximo possível de 1, que representa 100%.
 </p>
 
-<p>
-Aplicaremos a técnica Active Learning para evitar custos desnecessários, melhor adequar o dataset aos modelos de predição machine learning, aumentar a predição verdadeiro positivo em dados que o modelo esta com dificuldade de fazer.
+<p>Utilizaremos a técnica para reduzir o impacto de tokens que ocorrem com muita frequência, utilizando o algorítmo TfidfVectorizer. Este também será utilizado como um algorítmo para predizer os vídeos que provavelmente vamos assistir, com base nos títulos dos vídeos.
 </p>
 
-<p>
-A todo momento nós vamos comparar os resultados com a nossa <em><strong>baseline</strong></em>, para melhorar nossos modelos.
+<p>Aplicaremos a técnica Active Learning para evitar custos desnecessários, ajudar nas anotações, ajudar a adequar o dataset aos modelos de predição machine learning e contribuir para aumentar a predição verdadeiro positivo em dados que o modelo esta com dificuldade de fazer.
 </p>
 
-<p>
-Aprenderemos a técnica de concatenar conteúdo denso com conteúdo esparso e faremos a predição probabilística com as features : totais de visualizações, visualizações por dia e o título do vídeo. Assim entenderemos se estamos contruindo um dataset com boa qualidade e se o algorítmo de predição esta satisfatório.
+<p>A todo momento nós vamos comparar os resultados com a nossa <em><strong>baseline</strong></em>, para melhorar nossos modelos.
 </p>
 
-<p>
-Aprenderemos a medir o resultado que a técnica Active Learning esta trazendo ao nosso projeto. Neste processo entenderemos melhor sobre a qualidade de limpeza dos dados, a qualidade do active learning e na qualidade dos dados trabalhados.
+<p>Aprenderemos a técnica de concatenar conteúdo denso com conteúdo esparso e faremos a predição probabilística com as features : totais de visualizações, visualizações por dia e o título do vídeo. Assim entenderemos se estamos construindo um dataset com boa qualidade para o algorítmo de predição.
 </p>
 
-<p>O processo mais trabalhoso para o Cientista de Dados é o processo da qualidade dos dados composto por :
+<p>Aprenderemos a medir o resultado que a técnica Active Learning esta trazendo ao nosso projeto. Neste processo entenderemos a qualidade do active learning aplicado, entenderemos melhor sobre a qualidade da limpeza dos dados para o active learning e para o modelo machine learning. E o mais importante entenderemos se será necessário mudar a estratégia de trabalho com e/ou nos dataset.
+</p>
+
+<p>O processo mais trabalhoso para o Cientista de Dados é o processo da qualidade do dataset composto por :
     <ul>
         <li>obter o dataset</li>
         <li>identificar as inconsistências no dataset</li>
@@ -102,25 +101,25 @@ Aprenderemos a medir o resultado que a técnica Active Learning esta trazendo ao
         <li>possivelmente aplicar padronization</p>
         <li>extrair sujeiras do dataset</li>
         <li>transformar alguns dados no dataset</li>
-        <li>analisar e validar a qualidade do dataset</li>
+        <li>aplicar os dataset em um ou mais modelos ml para obter uma baseline</li>
     </ul>
 </p>
 
-<p>O segundo processo mais trabalhoso para o Cientista de Dados  é o processo avaliação de dados :
+<p>O segundo processo mais trabalhoso para o Cientista de Dados  é o processo avaliação da qualidade do dataset :
     <ul>
-        <li>obter o dataset</li>
-        <li>identificar as inconsistências no dataset</li>
+        <li>analisar o resultados no modelo machine learning</li>
+        <li>comparar os resultados em diversos modelos ml</li>
+        <li>identificar técnicas para melhorar a qualidade do dataset</p>
         <li>possivelmente aplicar labelling</p>
         <li>possivelmente aplicar normatization</p>
         <li>possivelmente aplicar padronization</p>
         <li>extrair sujeiras do dataset</li>
         <li>transformar alguns dados no dataset</li>
-        <li>analisar e validar a qualidade do dataset</li>
     </ul>
 </p>
 
 <p>
-A alta qualidade do dataset significa alto sucesso ao modelo de predição machine learning.
+Paciência, perseverança, pensamento analítico, vão produzir dataset com alta qualidade, e a alta qualidade do dataset significa alto sucesso ao modelo de predição machine learning.
 </p>
 
 <br>
