@@ -52,24 +52,10 @@ Depois será importante executar as métricas roc_auc_score e average_precision_
 </p>
 
 <hr>
-<h3>PROCESSO : APLICANDO A MÉTRICA</h3>
+<h3>PROCESSO : ANALISE BÁSICA DAS MÉTRICAS</h3>
 <p>
-Com o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3_Medir_Active_Learning.ipynb" >3_Medir_Active_Learning.ipynb</a> :
-</p>
-
-<p>1 Vamos pegar o <a href="\file-csv" >active_labels.csv</a>, com aproximadamente 100 exemplos gerados pelo notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a>. Este arquivo contém a coluna p com a probabilidade de ser verdadeiro positivo, gerado pelo algorítmo RandomForestClassifier no notebook mencionado a pouco e adicionada pela técnica Active Learning.
-</p>
-
-<p>
-2 Antes de iniciar o trabalho da métrica dos valores, sem entrar e pormenores, vamos analisar as métricas average_precision_score e roc_auc_score considerando a coluna y (labelling) e a coluna p (probabilidade) que estão no arquivo <a href="\file-csv" >active_labels.csv</a><br>
-A coluna p contém a probabilidade que o modelo machine learning dá ao item 579 de ser 37,5% positivo e ao item 846 de ser 82,6% positivo.<br>
-Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, então o item ...
-- 579 seria um Falso Negativo (37,5% < 50%)
-- 846 seria um Falso Positivo (82,6% > 50%)
-</p>
-
-<p>
-Algumas perguntas que procuramos responder :<br>
+Antes de iniciar o trabalho da métrica do active learning,  vamos, sem entrar e pormenores, com o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3_Medir_Active_Learning.ipynb" >3_Medir_Active_Learning.ipynb</a>, importar o <a href="\file-csv" >active_labels.csv</a>, com aproximadamente 100 exemplos gerados pelo notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> e aplicaremos as métricas average_precision_score e roc_auc_score, considerando as colunas y (labelling) e p (probabilidade), esta última adicionada pela técnica Active Learning.<br>
+Com esta ação tentaremos responder as seguintes perguntas :<br>
 01 Quais são as métricas ?<br>
 02 Qual é o erro ?<br>
 03 Qual o average_precision_score ?<br>
@@ -78,32 +64,34 @@ Algumas perguntas que procuramos responder :<br>
 </p>
 
 <p>
-O único parâmetro de avaliação que temos é a <em>baseline</em> gerada no notebook , gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a> e comparando os resultados percebemos que as métricas apontam uma grande sensibilidade nos resultados average_precision_score e roc_auc_score seu valor e é possível entender se estamos perto ou longe do objetivo de ter um bom modelo machine learning.
+Não temos parâmetro de comparação de valores de métricas referente para os 100 exemplos <em>baseline</em> gerada pelo notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>, mas podemos concluir que :<br>
+- As métricas apontam uma grande sensibilidade nos resultados average_precision_score e roc_auc_score.<br>
+- Com estes valores entendemos que falta alguns ajustes para termos um bom modelo machine learning.<br>
+- Analisando o dataframe do arquivo <a href="\file-csv" >active_labels.csv</a> identificamos que a coluna p contém a probabilidade que o modelo machine learning dá ao item 579 de ser 37,5% positivo e ao item 846 de ser 82,6% positivo.<br>
+Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, então o item ...<br>
+- 579 seria um Falso Negativo (37,5% < 50%)<br>
+- 846 seria um Falso Positivo (82,6% > 50%)
 </p>
 
-<p>
-Vamos incluir a coluna Novo preenchida com 1 para indicar que são os 100 exemplos que o algoritmo esta com dificuldade em classificar.
-</p>
-
-<p>
-Vamos pegar os dados do dataset <a href="\file-csv">raw_data_with_labels.csv</a>, com aproximadamente 1182 registros com 498 anotações (labelling) no campo Y, no qual 1 para vídeos que gosto ou 0 para vídeos que não gosto.<br>
-</p>
-
-<p>Uma técnica que ajudará a medir do Active Learning é :</p>
-<p>Criar um novo dataframe no notebook <a href=".\file-csv">3_Medir_Active_Learning.ipynb</a>.<br>
-Este dataframe vai unir o dataset <a href=".\file-csv">active_labels.csv</a> contendo 100 exemplos mais uma nova coluna [Novo] igual a 1 ao dataframe original <a href=".\file-csv">raw_data_with_labels.csv</a>.<br>
-Após esta união de datasets atualizaremos para 0 os dados da coluna [Novo] que são diferentes dos 100 exemplos que estão com 1 (*1)<br>
-Eliminar a coluna p relacionada a probabilidade de acerto dos vídeos, por que não será usada nos próximos textes.<br>
-</p>
-
-<p>A seguir passos a executar :</p>
-<h3>ABRIR .CSV, LIMPAR E TRANSFORMAR DADOS</h3>
+<hr>
+<h3>PROCESSO : LIMPAR E TRANSFORMAR DADOS</h3>
 <p>
     <ul>
-        <li>Abrir o arquivo <a href="\file-csv">raw_data_with_labels.csv</a></li>
-        <li>Abrir o arquivo <a href="\file-csv" >active_labels.csv</a></li>
-        <li>Em ambos os arquivos pegar somente as linhas cuja coluna Y é diferente de nula</li>
-        <li>Aplicar o algoritmo fillna() para eliminar o conteúdo nan (*2)
+        <li>
+        Vamos incluir o número 1 na coluna [Novo] no dataframe com os aproximadamente 100 exemplos. O número 1 indica que são os 100 exemplos que o algoritmo esta com dificuldade em classificar.
+        </li>
+        <li>
+        Vamos importar aproximadamente 498 registros do dataset <a href="\file-csv">raw_data_with_labels.csv</a>, cujo o campo y seja diferente de nulo/vazio, estão com anotações (labelling) 1 para vídeos que gosto ou 0 para vídeos que não gosto.
+        </li>
+        <li>
+        Vamos unir os dois dataframes importados gerando um novo dataframe com aproximadamento 600 registros. Na coluna [Novo] estaram gravados 1 indicando dataset do dataframe que continha 100 registros e gravará nan's para os outros 500 registros.
+        </li>
+        <li>
+        Vamos substituir o conteúdo nan por 0 na coluna [Novo] referente aos 500 registros que estão com nan's (*2).
+        </li>
+        <li>
+        Vamos eliminar a coluna p relacionada a probabilidade de acerto dos vídeos, por que não será usada nos próximos textes.
+        </li>
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
 		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número</li>
         <li>Aplicar Features - Tratamentos específicos nos dados</li>
@@ -183,9 +171,10 @@ Novo dataframe : Evite alterar os dados no dataframe principal, trabalhe sempre 
 <p><strong>Nota :</strong><br>
 (*1) Você pode colocar o nome que quiser, foi escolhido Y (Youtube) para facilitar nosso entendimento.<br>
 
-(*1) Conteúdo na coluna Novo :<br>
+(*2) Conteúdo na coluna Novo :<br>
 1-Relacionados aos 100 exemplos do dataset <a href=".\file-csv">active_labels1_done.csv</a><br>
 0-Relacionados aos exemplos do dataset <a href=".\file-csv">raw_data_with_labels.csv</a>
+
 (*2) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Conteúdo nan atrapalha a eficiência do modelo machine learning.<br>
 (*3) TfidfVectorizer dá mais peso as palavras que aparecem bastante em determinado exemplo mas não aparece tanto no dadtaset como um todo. Palavras que aparecem pouco entre todos os videos mas aparecerem muito em um video tem mais peso. Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor
 Há uma forma mais simples que é criar matriz com contagem de palavras em que em cada linha tem um video, e cada coluna é uma palavra e coloca a quantas vezes a palavra aparece no cruzamento da linha do video com a palavra do titulo do vídeo<br>
