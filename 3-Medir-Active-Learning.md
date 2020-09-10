@@ -23,20 +23,21 @@
 </h5>
 
 <h1 align='center'>Medir Resultado do Active Learning</h1>
-<p>É importante sabermos qual resultado o Active Learning esta trazendo ao nosso projeto. Isto nos ajuda a acompanhar melhor e mais rápido a qualidade dos dados, se há necessidade de termos mais dados para trabalhar, identificar a performance dos modelos em teste e talvez aplicar alguma mudança em um ou mais processos do desenvolvimento do modelo machine learning.<br>
+<p>É importante sabermos qual resultado o Active Learning esta trazendo ao nosso projeto. Isto nos ajuda a acompanhar melhor e mais rápido a qualidade dos dados, entender se há necessidade de termos mais dados para trabalhar, identificar a performance dos modelos em teste e talvez aplicar alguma mudança em um ou mais processos do desenvolvimento do modelo machine learning.<br>
 </p>
 
 <p>
 Nós temos poucos dados sob treino e teste e isto faz o average precision e o auc-roc variar com facilidade a cada pequena alteração. Este também é um motivo de medirmos o resultado do active learning e faremos aplicando as seguintes técnicas :<br>
-<ol>
-    <li>aumentando apenas os dados de validação</li>
-    <li>aumentando apenas os dados de treino</li>
-    <li>aumentando os dados de validação e de treino</li>
-</ol>
-Depois será importante executar as métricas roc_auc_score e average_precision_score e comparar com a <em>baseline</em> obtida no notebook  <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1_Decision_Tree_Classifier.ipynb">1_Decision_Tree_Classifier.ipynb</a> e comparar com os resultados gerados no notebook  <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a>.
+    <ol>
+        <li>aumentando apenas os dados de validação</li>
+        <li>aumentando apenas os dados de treino</li>
+        <li>aumentando os dados de validação e de treino</li>
+    </ol>
 </p>
 
-<p>Nesta etapa vamos aplicar o labelling, criar mais exemplos para treino e teste, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo RandomForestClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva <a href="blank_">ROC</a> e comparar com a nossa <em>baseline</em>, gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>
+<hr>
+<p>
+Nesta etapa vamos aplicar o labelling, criar mais exemplos para treino e teste, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo RandomForestClassifier, analisar sua probabilidade, executar as métricas roc_auc_score e average_precision_score, comparar com a <em>baseline</em> obtida no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1_Decision_Tree_Classifier.ipynb">1_Decision_Tree_Classifier.ipynb</a> e comparar com os resultados gerados no notebook  <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a>.
 </p>
 
 <hr>
