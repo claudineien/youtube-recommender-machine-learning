@@ -36,6 +36,7 @@ Nós temos poucos dados sob treino e teste e isto faz o average precision e o au
 </p>
 
 <hr>
+<h3>RESUMINDO</h3>
 <p>
 Nesta etapa vamos aplicar o labelling, criar mais exemplos para treino e teste, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo RandomForestClassifier, analisar sua probabilidade, executar as métricas roc_auc_score e average_precision_score, comparar com a <em>baseline</em> obtida no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1_Decision_Tree_Classifier.ipynb">1_Decision_Tree_Classifier.ipynb</a> e comparar com os resultados gerados no notebook  <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a>.
 </p>
@@ -44,7 +45,7 @@ Nesta etapa vamos aplicar o labelling, criar mais exemplos para treino e teste, 
 <h3>PROCESSO : LABELLING</h3>
 <p>
     <ol>
-        <li>Abrir o arquivo <a href=".\file-csv">active_labels.csv</a> em uma planilha eletrônica como ms excel, <a href="https://gsuite.google.com/intl/pt-BR/products/sheets/">google sheets</a> ou <a href="https://pt-br.libreoffice.org/descubra/calc/"> LibreOffice</a> através da opção de importar um arquivo .csv</li>
+        <li>Abrir o arquivo <a href=".\file-csv">active_labels.csv</a> através da opção de importar um arquivo .csv, em um dos seguintes programas como : planilha eletrônica ms excel, <a href="https://gsuite.google.com/intl/pt-BR/products/sheets/">google sheets</a> ou <a href="https://pt-br.libreoffice.org/descubra/calc/"> LibreOffice</a> </li>
         <li>Criar a coluna Y (*1)</li>
         <li>Inserir na coluna Y o número 0 nas linhas cujo título do vídeo, provavelmente, não vamos assistir ou inserir 1 nas linhas cujo vídeo provavelmente, vamos assistir.</li><br>
         <p><strong>Importante:</strong><br>
@@ -62,10 +63,11 @@ Com esta ação tentaremos responder as seguintes perguntas :<br>
 03 Qual o average_precision_score ?<br>
 04 Qual é o roc_auc_score ?<br>
 05 O modelo esta melhorando ?
+06 Quais ações executar para melhorar o modelo ?
 </p>
 
 <p>
-Não temos parâmetro de comparação de valores de métricas referente para os 100 exemplos <em>baseline</em> gerada pelo notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>, mas podemos concluir que :<br>
+Não temos parâmetros para comparar os valores de métricas referente para os 100 exemplos gerados pelo notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a>, mas podemos concluir que :<br>
 - As métricas apontam uma grande sensibilidade nos resultados average_precision_score e roc_auc_score.<br>
 - Com estes valores entendemos que falta alguns ajustes para termos um bom modelo machine learning.<br>
 - Analisando o dataframe do arquivo <a href="\file-csv" >active_labels.csv</a> identificamos que a coluna p contém a probabilidade que o modelo machine learning dá ao item 579 de ser 37,5% positivo e ao item 846 de ser 82,6% positivo.<br>
