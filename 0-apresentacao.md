@@ -87,7 +87,7 @@ Nós coletaremos os dados de vídeos do youtube com a bibioteca <a href="https:/
 </p>
 <hr>
 <h3>CONSIDERAÇÕES DO AUTOR</h3>
-<p>A tarefa de um Data Scientist é árdua (causa cansaço/fadiga),  porém muito recompensadora quando o resultado é melhorar a vida das pessoas envolvidas diretamente e indiretamente no e pelo processo da organização que utiliza o produto de inteligência arficial que eliminam problemas.</p>
+<p>A tarefa de um Data Scientist é árdua (causa cansaço/fadiga),  porém muito recompensadora quando o resultado é melhorar a vida das pessoas envolvidas diretamente e indiretamente no e pelo processo da organização que utiliza o produto de inteligência arficial para eliminar problemas.</p>
 
 <!--
 <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
