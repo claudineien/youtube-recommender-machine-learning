@@ -43,7 +43,7 @@ Vamos entender um pouco da técnica que Data Scientists de sucesso como Andrew Y
 </p>
 
 <hr>
-<h3">RECOMENDADOR DE VÍDEOS DO YOUTUBE</h3>
+<h3>RECOMENDADOR DE VÍDEOS DO YOUTUBE</h3>
 <p>Criaremos na linguagem python um modelo machine learning do tipo supervisionado sob dados <em>Time Series</em>, para trazer os vídeos que possívelmente assistiremos dentro de um determinado conjunto de palavras ou frases.<br>
 </p>
 
