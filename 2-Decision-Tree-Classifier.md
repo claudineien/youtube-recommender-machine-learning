@@ -1,17 +1,17 @@
-<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></h5>
-
+<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a>
+</h5>
 <h5>
 <div>
   <table>
     <tr>
       <th>PROJETO</th>
-      <th>NÍVEL DE CONHECIMENTO</th>
+      <th>OBJETIVO</th>
       <th>TIPO DE DADOS</th>
       <th>TIPO MACHINE LEARNING</th>
     </tr>
     <tr>
       <td>Recomendador de vídeos do youtube</td>
-      <td>Iniciante à avançado</td>
+      <td>Entender Ciência de dados na prática</td>
       <td>Time Series</td>
       <td>Supervisionado</td>
     </tr>
@@ -40,7 +40,7 @@
 
 <hr>
 <h3>LIMPAR E TRANSFORMAR DADOS</h3>
-<p>Primeiramente abrir o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1_Decision_Tree_Classifier.ipynb">1_Decision_Tree_Classifier.ipynb</a> e executar as linhas com os códigos para :
+<p>Primeiramente abrir o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Decision_Tree_Classifier.ipynb">2_Decision_Tree_Classifier.ipynb</a> e executar as linhas com os códigos para :
     <ol>
         <li>armazenar os dados do dataset em um dataframe utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li>
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
