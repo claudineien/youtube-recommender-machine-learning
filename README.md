@@ -37,7 +37,7 @@
 </p>
 
 <hr>
-<h2>Para um melhor entendimento devemos ler e seguir ordenamente cada um dos documentos a seguir :
+<h2>Para um melhor entendimento devemos ler e seguir ordenamente os documentos a seguir :
 </h2>
 
 <h3>TÉCNICAS QUE APRENDEREMOS</h3>
