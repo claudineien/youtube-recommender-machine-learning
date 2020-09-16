@@ -1,17 +1,17 @@
-<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></h5>
-
+<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a>
+</h5>
 <h5>
 <div>
   <table>
     <tr>
       <th>PROJETO</th>
-      <th>NÍVEL DE CONHECIMENTO</th>
+      <th>OBJETIVO</th>
       <th>TIPO DE DADOS</th>
       <th>TIPO MACHINE LEARNING</th>
     </tr>
     <tr>
       <td>Recomendador de vídeos do youtube</td>
-      <td>Iniciante à avançado</td>
+      <td>Entender Ciência de dados na prática</td>
       <td>Time Series</td>
       <td>Supervisionado</td>
     </tr>
@@ -42,7 +42,7 @@ Nesta etapa vamos aplicar o labelling, criar mais exemplos para treino e teste, 
 </p>
 
 <hr>
-<h3>PROCESSO : LABELLING</h3>
+<h3>LABELLING</h3>
 <p>
     <ol>
         <li>Abrir o arquivo <a href=".\file-csv">active_labels.csv</a> através da opção de importar um arquivo .csv, em um dos seguintes programas como : planilha eletrônica ms excel, <a href="https://gsuite.google.com/intl/pt-BR/products/sheets/">google sheets</a> ou <a href="https://pt-br.libreoffice.org/descubra/calc/"> LibreOffice</a> </li>
@@ -150,18 +150,6 @@ Utilizaremos
 <p>A precisão da pontuação entre a probabilidade dos dados de treino e dados de validação infelizmente diminuiu mas o AUC melhorou -esta mais próximo de 1. Entendemos que ambos estão bem sensíveis, por conta da pouca quantidade de dados.
 </p>
 
-<p><strong>Aprender mais :</strong><br>
-    <a href="https://strftime.org/">Tabela de códigos para converter strings em datas no Python</a><br>
-    <a href="http://gskinner.com/RegExr/">Testador de expressões regulares</a><br>
-    <a href="https://numpy.org/doc/stable/reference/arrays.datetime.html">Numpy : Timedelta</a><br> 
-    <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html">Pandas : Time/Date</a><br>
-    <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html#sphx-glr-auto-examples-model-selection-plot-precision-recall-py">Curva de Precision/Recall</a><br>
-    <a href="https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics">ROC (Receiver Operating Characteristic) Curve</a><br>
-    <a href="">Dados train and test</a><br>
-    <a href="https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction">Bag of Words (e TF-IDF)</a><br>
-    <a href="https://docs.scipy.org/doc/scipy/reference/sparse.html">Sparse matrices</a><br>
-</p>
-
 <p><strong>Dica :</strong><br>
 Formatação de datas : Fique atento à formatação de datas de português para inglês ou vice-versa<br>
 Número : O local do ponto em português é diferente do inglês<br>
@@ -181,16 +169,18 @@ Novo dataframe : Evite alterar os dados no dataframe principal, trabalhe sempre 
 1-Relacionados aos 100 exemplos do dataset <a href=".\file-csv">active_labels1_done.csv</a><br>
 0-Relacionados aos exemplos do dataset <a href=".\file-csv">raw_data_with_labels.csv</a>
 
-(*2) Observar que a função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Conteúdo nan atrapalha a eficiência do modelo machine learning.<br>
 (*3) TfidfVectorizer dá mais peso as palavras que aparecem bastante em determinado exemplo mas não aparece tanto no dadtaset como um todo. Palavras que aparecem pouco entre todos os videos mas aparecerem muito em um video tem mais peso. Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor
 Há uma forma mais simples que é criar matriz com contagem de palavras em que em cada linha tem um video, e cada coluna é uma palavra e coloca a quantas vezes a palavra aparece no cruzamento da linha do video com a palavra do titulo do vídeo<br>
+
 (*4) Matriz esparsa armazena valores diferentes de zero -é mais otimizada.<br>
 (*5) A probabilidade é o percentual de acerto que o modelo machine learning alcançou.<br>
 
 Vamos lembrar :<br>
 :/: Precision : é o número que responde a pergunta de todos os modelos que disse que são positivos, 50% destes são realmente positivos<br>
 
-:/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?
+:/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?<br>
+
+A função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Conteúdo nan atrapalha a eficiência do modelo machine learning.
 </p>
 
 <p>Importante :<br>
