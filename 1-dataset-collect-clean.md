@@ -1,18 +1,39 @@
-<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></br>
-Projeto : Recomendador de vídeos do youtube<br>
-Nivel Conhecimento : Iniciante à avançado<br>
-Tipo Machine Learning : Supervisionado<br>
-LinkedIn : https://www.linkedin.com/in/claudineien/
+<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a>
 </h5>
-<br>
-<h3 align="center">COLETAR DATASET DE VÍDEOS DO YOUTUBE</h3>
+<h5>
+<div>
+  <table>
+    <tr>
+      <th>PROJETO</th>
+      <th>OBJETIVO</th>
+      <th>TIPO DE DADOS</th>
+      <th>TIPO MACHINE LEARNING</th>
+    </tr>
+    <tr>
+      <td>Recomendador de vídeos do youtube</td>
+      <td>Entender Ciência de dados na prática</td>
+      <td>Time Series</td>
+      <td>Supervisionado</td>
+    </tr>
+    <tr>
+        <td colspan="4">LinkedIn : https://www.linkedin.com/in/claudineien/</td>
+    </tr>
+  </table>
+</div>
+</h5>
 
 <br>
-<p>Atenção :<br>
+<h3 align="center">COLETAR DATASET DE VÍDEOS DO YOUTUBE</h3>
+<p>
+Nós coletaremos os dados de vídeos do youtube com a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a> por trazer as informações em formato de dicionário do python, e isto agiliza todo e qualquer processo de preparação dos dados para o modelo machine learning.
+</p>
+
+<br>
+<p><strong>Atenção :</strong><br>
 Para facilitar o entendimento em cada técnica executada, baixar o arquivo <a href=".\file-csv">raw_data_with_labels.csv</a>.
 </p>
 
-<p>O notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0_dataset_collect_clean.ipynb">0_dataset_collect_clean.ipynb</a> contém scripts para :
+<p>O notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1_dataset_collect_clean.ipynb">1_dataset_collect_clean.ipynb</a> contém scripts para :
     <ul>
         <li>download dos dados de vídeos do youtube utilizando a biblioteca <a href="https://youtube-dl.org/">youtube_dl</a></li>
         <li>armazenar os dados em um dataframe utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li>
