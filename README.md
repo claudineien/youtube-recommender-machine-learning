@@ -5,13 +5,13 @@
   <table>
     <tr>
       <th>PROJETO</th>
-      <th>NÍVEL DE CONHECIMENTO</th>
+      <th>OBJETIVO</th>
       <th>TIPO DE DADOS</th>
       <th>TIPO MACHINE LEARNING</th>
     </tr>
     <tr>
       <td>Recomendador de vídeos do youtube</td>
-      <td>Iniciante à avançado</td>
+      <td>Entender Ciência de dados na prática</td>
       <td>Time Series</td>
       <td>Supervisionado</td>
     </tr>
@@ -20,6 +20,8 @@
     </tr>
   </table>
 </div>
+</h5>
+
 <h2>CICLO DE VIDA DE UMA SOLUÇÃO EM CIÊNCIA DE DADOS</h2>
 <h3>DEFINIR O PROBLEMA E A SOLUÇÃO</h3>
 <h4>01 QUAL É O PROBLEMA ?</h4>
@@ -69,13 +71,14 @@
 <p><strong>Dica para sair do zero com Machine Learning :</strong><br>
 Desenvolva machine learning sobre um problema resolvido diversas vezes com objetivo de fazer um modelo preditivo no mínimo 10% melhor que o atual modelo.</p>
 
-<h4>EM CIÊNCIA DE DADOS DEVEMOS CONSIDERAR QUE :
+<p>
+<h4>EM CIÊNCIA DE DADOS DEVEMOS CONSIDERAR QUE :</h4>
     <ol>
         <li>Passos 01 e 02 : serve para entender todo o processo do negócio, para definir o problema e a melhor solução.</li>
         <li>Passos 03 e 04 : serve para desenvolver o modelo machine learning sob os processos e métricas do negócio.</li>
         <li>Passo 05 : serve para testar o modelo machine learning desenvolvido sob os processos e métricas do negócio e disponibilizá-lo em produção.</li>
     </ol>
-</h4>
+</p>
 
 <h3>COLETAR E TRABALHAR OS E/OU NOS DADOS</h3>
 <p>Nesta etapa o Cientista de dados aplicará todas as técnicas para tornar os dados em perfeita conformidade ao modelo de predição que será desenvolvido</p>
