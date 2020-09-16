@@ -46,7 +46,7 @@ Para um melhor entendimento devemos ler e seguir ordenamente os documentos a seg
 
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3-Random-Forest-Classifier-Active-Learning.md">3-Random-Forest-Classifier-Active-Learning.md</a> iniciaremos o entendimento sobre algumas técnicas para identificar o modelo machine learning mais eficiente entre o DecisionTreeClassifier e RandomForestClassifier, além de continuarmos com as adequações no dataset, aplicar a técnica Active Learning o utilizar o algorítimo TfidfVectorizer.</p>
 
-<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3-Medir-Active-Learning.md">4-Medir-Active-Learning.md</a> nós vamos entender o resultado que Active Learning traz ao nosso projeto.</p>
+<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/4-Medir-Active-Learning.md">4-Medir-Active-Learning.md</a> nós vamos entender o resultado que Active Learning traz ao nosso projeto.</p>
 
 <p>Durante o processo nós vamos encontrar respostas à algumas perguntas como :
     <ol>
