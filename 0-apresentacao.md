@@ -26,12 +26,20 @@
 <h3 align="left">CIÊNCIA DE DADOS NA RECOMENDAÇÃO DE VÍDEOS DO YOUTUBE</h3>
 <p>Através deste projeto recomendador de vídeos do youtube nós entenderemos na prática uma pequena parte de tarefas executadas no processo Ciência de Dados.</p>
 
-<p>Utilizaremos a linguagem <a href="https://www.python.org/">python</a> 3.7 no <a href="https://jupyter.org/">jupyter notebook</a> no desenvolvimento de um modelo machine learning do tipo supervisionado sob dados <em>Time Series</em>.</p>
-
-<p>Para um melhor entendimento devemos ler e seguir ordenamente cada um dos documentos a seguir :
+<p>Utilizaremos :
+    <ul>
+        <li>linguagem de programação <a href="https://www.python.org/">python</a> 3.7</li>
+        <li>plataforma de desenvolvimento <a href="https://jupyter.org/">jupyter notebook</a></li>
+        <li>sistema operacional Windows Professional 64bits processador x64</li>
+        <li>8g memória RAM</li>
+        <li>processador Intel (R) Corel (TM) i7-2640M CPU @ 2.80GHZ 2.80GHz</li>
+    </ul>
 </p>
 
 <hr>
+<h2>Para um melhor entendimento devemos ler e seguir ordenamente cada um dos documentos a seguir :
+</h2>
+
 <h3>TÉCNICAS QUE APRENDEREMOS</h3>
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-ciclo-de-vida.md">0-ciclo-de-vida.md</a> aprenderemos sobre o ciclo de vida de um projeto Data Science e através desta técnica desenvolveremos o modelo machine learning para recomendar vídeos do youtube.</p>
 
