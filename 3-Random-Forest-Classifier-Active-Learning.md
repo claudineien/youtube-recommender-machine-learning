@@ -1,17 +1,17 @@
-<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a></h5>
-
+<h5><a href="blank_">[en]</a> | <a href="blank_">[pt-br]</a>
+</h5>
 <h5>
 <div>
   <table>
     <tr>
       <th>PROJETO</th>
-      <th>NÍVEL DE CONHECIMENTO</th>
+      <th>OBJETIVO</th>
       <th>TIPO DE DADOS</th>
       <th>TIPO MACHINE LEARNING</th>
     </tr>
     <tr>
       <td>Recomendador de vídeos do youtube</td>
-      <td>Iniciante à avançado</td>
+      <td>Entender Ciência de dados na prática</td>
       <td>Time Series</td>
       <td>Supervisionado</td>
     </tr>
@@ -23,10 +23,10 @@
 </h5>
 
 <h1 align='center'>2o Modelo Machine Learning - RandomForestClassifier</h1>
-<p>Primeiramente abrir o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb.</a>
+<p>Primeiramente abrir o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb.</a>
 </p>
 
-<p>Este modelo é igual ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>, do processo Labelling à criação das features.<br>
+<p>Este modelo é igual ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>, do processo Labelling à criação das features.<br>
 </p>
 <p><strong>Prática ideal do Data Scientist :</strong><br>
 Utilizar o mesmo dataset durante os testes de escolha dos modelos machine learning nos ajuda detectar o modelo ideal.
@@ -62,7 +62,7 @@ Imagens radiográficas, ressonância magnética e similares precisam de especial
 </p>
 
 <p><strong>Atenção :</strong><br>
-No notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> criaremos uma linha com resultados average precision e auc-roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer que serão utilizados pelo algorítimo RandomForestClassifier. Desta forma vamos entender como esta o nosso modelo em relação a <em>baseline</em> gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>.
+No notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a> criaremos uma linha com resultados average precision e auc-roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer (*1) que serão utilizados pelo algorítimo RandomForestClassifier. Desta forma vamos entender como esta o nosso modelo em relação a <em>baseline</em> gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>.
 </p>
 
 <hr>
@@ -74,7 +74,7 @@ Também vamos aprender a verificar se o active learning esta produzindo bons res
 </p>
 
 <p>
-Através do notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> vamos :<br>
+Através do notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a> vamos :<br>
 <p>
     <ol>
         <li>abrir o arquivo <a href=".\file-csv">raw_data_with_labels.csv</a> utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li></li>
@@ -85,7 +85,7 @@ Através do notebook <a href="https://github.com/claudineien/youtube-recommender
         <li>extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
 		<li>extrair apenas o número de uma coluna tipo objeto, com strings e número</li>
         <li>criar Features - Tratamentos específicos nos dados</li>
-        <li>aplicar o TfidfVectorizer, treinado anteriormente, sobre os títulos dos vídeos difíceis de serem preditos</li>
+        <li>aplicar o TfidfVectorizer (*1), treinado anteriormente, sobre os títulos dos vídeos difíceis de serem preditos</li>
         <li>concatenar conteúdo denso com conteúdo esparso utilizando a função hstack</li>
     </ol>
 </p>
@@ -95,7 +95,7 @@ Neste momento temos um dataframe cujo dataset contém o total de views e o total
 </p>
 
 <p>
-Perceba que a predição foi realizada pelo algorítmo TfidfVectorizer, treinado neste mesmo notebook sob os títulos de vídeos que provavelmente vamos assistir. Criamos o campo p (probabilidade) e este será preenchido com a predição deste algorítmo.
+Perceba que a predição foi realizada pelo algorítmo TfidfVectorizer (*1), treinado neste mesmo notebook sob os títulos de vídeos que provavelmente vamos assistir. Criamos o campo p (probabilidade) e este será preenchido com a predição deste algorítmo.
 </p>
 
 <p>
@@ -114,7 +114,7 @@ Por fim, será gerado o arquivo active_labels.csv disponibilizado <a href=".\fil
 
 
 <p><strong>Atenção : </strong><br>
-O processo de separação de dados, limpeza de dados, transformação de dados são ações, instruções, scripts 99% iguais aos que aprendemos nos notebooks <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-dataset-collect-clean.md">0-dataset-collect-clean.md</a> e <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">1-Decision-Tree-Classifier.md</a>
+O processo de separação de dados, limpeza de dados, transformação de dados são ações, instruções, scripts 99% iguais aos que aprendemos nos notebooks <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> e <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>
 </p>
 
 <p><strong>Dicas :</strong><br>
@@ -131,13 +131,12 @@ O processo de separação de dados, limpeza de dados, transformação de dados s
 </p>
 
 <p><strong>Nota :</strong><br>
-(*1) TfidfVectorizer dá mais peso as palavras que aparecem com menor frequência por linha de vídeo, considerando todas as linhas do dataset e vai ignorar as palavras que repetem em todas as linhas de vídeos, dentro do dataset.<br>
+(*1) TfidfVectorizer reduzirá o impacto de tokens que ocorrem com muita frequência dando mais peso as palavras que aparecem com menor frequência por linha de vídeo, considerando todas as linhas do dataset e vai ignorar as palavras que repetem em todas as linhas de vídeos, dentro do dataset.<br>
 Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor.<br><br>
 O argumento min_df do algoritmo TfidfVectorizer :<br>
 -> min_df=2 : o algorítmo vai considerar significante as palavras que aparecerem o mínimo possível por linha dentro do conjunto de linhas dentro do dataset.<br>
 -> min_df=1 : o algorítmo vai considerar significante cada palavra diferente encontrada, por linha dentro do conjunto de linhas dentro do dataset. Uma palavra considerada única em uma linha, pode estar na linha seguinte e será considerada incorretamente como difrentes, então dependendo do projeto esta configuração pode prejudicar.<br><br>
-(*2) Matriz esparsa armazena valores diferentes de zero e isto significa matriz mais otimizada.<br>
-</p>
+(*2) Matriz esparsa armazena valores diferentes de zero e isto significa matriz mais otimizada.<br></p>
 
 <br>
 <hr>
