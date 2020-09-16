@@ -36,8 +36,8 @@
     </ul>
 </p>
 
-<h3>TÉCNICAS QUE APRENDEREMOS</h3>
-<h3>Para um melhor entendimento devemos ler e seguir ordenamente os documentos a seguir :</h3>
+<h3>TÉCNICAS QUE APRENDEREMOS<br>
+Para um melhor entendimento devemos ler e seguir ordenamente os documentos a seguir :</h3>
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-ciclo-de-vida.md">0-ciclo-de-vida.md</a> aprenderemos sobre o ciclo de vida de um projeto Data Science e através desta técnica desenvolveremos o modelo machine learning para recomendar vídeos do youtube.</p>
 
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> aprenderemos sobre a coleta de dados de vídeos do youtube com a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>, por trazer os dados em formato de dicionário do python, que agiliza todo e qualquer processo de preparação dos dados para o modelo machine learning.</p>
