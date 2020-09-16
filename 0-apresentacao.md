@@ -5,13 +5,13 @@
   <table>
     <tr>
       <th>PROJETO</th>
-      <th>NÍVEL DE CONHECIMENTO</th>
+      <th>OBJETIVO</th>
       <th>TIPO DE DADOS</th>
       <th>TIPO MACHINE LEARNING</th>
     </tr>
     <tr>
       <td>Recomendador de vídeos do youtube</td>
-      <td>Iniciante à avançado</td>
+      <td>Entender Ciência de dados na prática</td>
       <td>Time Series</td>
       <td>Supervisionado</td>
     </tr>
@@ -23,71 +23,47 @@
 </h5>
 
 <hr>
-<h3 align="left">TAREFA DO CIENTISTA DE DADOS</h3>
-<p>Para entendermos na prática uma pequena parte da tarefa de um Cientista de Dados e executar esta pequena aplicação, devemos ler e seguir ordenamente cada um dos documentos a seguir :
-<h4><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-apresentacao.md">0-ciclo-de-vida.md</a>
-</h4>
-<h4><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-dataset-collect-clean.md">1-dataset-collect-clean.md</a>
-</h4>
-<h4><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>
-</h4>
-<h4><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Random-Forest-Classifier.md">3-Random-Forest-Classifier.md</a>
-</h4>
-<h4><a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3-Medir-Active-Learning.md">4-Medir-Active-Learning.md</a>
-</h4>
+<h3 align="left">CIÊNCIA DE DADOS NA RECOMENDAÇÃO DE VÍDEOS DO YOUTUBE</h3>
+<p>Através deste projeto recomendador de vídeos do youtube nós entenderemos na prática uma pequena parte de tarefas executadas no processo Ciência de Dados.</p>
 
-<hr>
-<h3>CICLO DE VIDA DE UMA SOLUÇÃO DATA SCIENCE</h3>
-<p>
-Vamos entender um pouco da técnica que Data Scientists de sucesso como Andrew Y.Ng, Mario Filho entre outros tem aplicado em seus projetos.
+<p>Utilizaremos a linguagem <a href="https://www.python.org/">python</a> 3.7 no <a href="https://jupyter.org/">jupyter notebook</a> no desenvolvimento de um modelo machine learning do tipo supervisionado sob dados <em>Time Series</em>.</p>
+
+<p>Para um melhor entendimento devemos ler e seguir ordenamente cada um dos documentos a seguir :
 </p>
 
 <hr>
-<h3>RECOMENDADOR DE VÍDEOS DO YOUTUBE</h3>
-<p>Criaremos na linguagem python um modelo machine learning do tipo supervisionado sob dados <em>Time Series</em>, para trazer os vídeos que possívelmente assistiremos dentro de um determinado conjunto de palavras ou frases.<br>
-</p>
+<h3>TÉCNICAS QUE APRENDEREMOS</h3>
+<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-ciclo-de-vida.md">0-ciclo-de-vida.md</a> aprenderemos sobre o ciclo de vida de um projeto Data Science e através desta técnica desenvolveremos o modelo machine learning para recomendar vídeos do youtube.</p>
 
-<hr>
-<h3>PROCESSOS QUE APRENDEREMOS</h3>
-<h>COLETAR DADOS</h4>
-<p>
-Nós coletaremos os dados de vídeos do youtube com a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a> por trazer as informações em formato de dicionário do python, e isto agiliza todo e qualquer processo de manuseio dos dados.
-</p>
+<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> aprenderemos sobre a coleta de dados de vídeos do youtube com a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>, por trazer os dados em formato de dicionário do python, que agiliza todo e qualquer processo de preparação dos dados para o modelo machine learning.</p>
 
-<h4>QUALIDADE DO DATASET</h4>
-<p>Nós aprenderemos algumas técnicas que adequam o dataset para uma melhor predição pelo modelo machine learning.
-</p>
+<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a> aprenderemos algumas técnicas para adequar o dataset para uma melhor predição pelo modelo machine learning com o algorítmo DecisionTreeClassifier.</p>
 
-<h4>ANALISAR MODELOS MACHINE LEARNING</h4>
-<p>Aprenderemos algumas técnicas para identificar o modelo machine learning mais eficiente para recomendar vídeos do youtube.
-</p>
-<p>Utilizaremos os algorítmos DecisionTreeClassifier, RandomForestClassifier e TfidfVectorizer na predição dos vídeos.</p>
-<p>Também utilizaremos nos algoritmos mencionados as seguintes técnicas :
-    <ul>
-        <li>Reduzir o impacto de tokens que ocorrem com muita frequência</li>
-        <li>Active Learning</li>
-        <li>Concatenar conteúdo denso com conteúdo esparso</li>
-    </ul>
-</p>
+<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3-Random-Forest-Classifier-Active-Learning.md">3-Random-Forest-Classifier-Active-Learning.md</a> iniciaremos o entendimento sobre algumas técnicas para identificar o modelo machine learning mais eficiente entre o DecisionTreeClassifier e RandomForestClassifier, além de continuarmos com as adequações no dataset, aplicar a técnica Active Learning o utilizar o algorítimo TfidfVectorizer.</p>
 
-<p>Durante este processo nós vamos procurar respostas para algumas perguntas como :
+<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3-Medir-Active-Learning.md">4-Medir-Active-Learning.md</a> nós vamos entender o resultado que Active Learning traz ao nosso projeto.</p>
+
+<p>Durante o processo nós vamos encontrar respostas à algumas perguntas como :
     <ol>
-        <li>Qual será nossa baseline ?</li>
+        <li>Qual é o problema a resolver ?</li>
+        <li>Qual será a melhor solução ?</li>
+        <li>Qual será nossa a baseline dentro no dataset ?</li>
+        <li>Qual será nossa a baseline no modelo machine learning ?</li>
         <li>O dataset está com ótima qualidade para o modelo machine learning ?</li>
         <li>Qual é o erro do modelo machine learning ?</li>
         <li>Estamos melhorando a predição com o modelo X ou Y ?</li>
         <li>Quais ações executar para melhorar o modelo ?</li>
         <li>Como está a probabilidade de acerto ?</li>
         <li>Quais métricas de avaliação, validação aplicar sobre modelo machine learning para melhora-lo ?</li>
-        <li>Esta sendo utilizado o limpeza adequado ao dataset ?</li>
+        <li>Esta sendo utilizado a limpeza adequada no dataset ?</li>
         <li>Quais gráficos utilizar para melhor analisar a melhoria do modelo machine learning ?</li>
         <li>O average_precision_score esta melhorando ?</li>
         <li>O roc_auc_score esta melhorando ?</li>
     </ol>
 </p>
 <hr>
-<h3>CONSIDERAÇÕES DO AUTOR</h3>
-<p>A tarefa de um Data Scientist é árdua (causa cansaço/fadiga),  porém muito recompensadora quando o resultado é melhorar a vida das pessoas envolvidas diretamente e indiretamente no e pelo processo da organização que utiliza o produto de inteligência arficial para eliminar problemas.</p>
+<h3>MENSAGEM DO AUTOR</h3>
+<p>A tarefa de um Data Scientist é árdua (causa cansaço/fadiga),  porém muito recompensadora quando o resultado é melhorar a vida das pessoas envolvidas diretamente e indiretamente pelo processo que utiliza a inteligência arficial para eliminar problemas.</p>
 
 <!--
 <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
