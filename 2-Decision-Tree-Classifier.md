@@ -40,7 +40,7 @@
 
 <hr>
 <h3>LIMPAR E TRANSFORMAR DADOS</h3>
-<p>Primeiramente abrir o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Decision_Tree_Classifier.ipynb">2_Decision_Tree_Classifier.ipynb</a> e executar as linhas com os códigos para :
+<p>Primeiramente abrir o notebook <a href="/file-ipynb/2_Decision_Tree_Classifier.ipynb">2_Decision_Tree_Classifier.ipynb</a> e executar as linhas com os códigos para :
     <ol>
         <li>armazenar os dados do dataset em um dataframe utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li>
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
