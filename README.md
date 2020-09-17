@@ -30,8 +30,7 @@
     <ul>
         <li>linguagem de programação <a href="https://www.python.org/">python</a> 3.7</li>
         <li>plataforma de desenvolvimento <a href="https://jupyter.org/">jupyter notebook</a></li>
-        <li>sistema operacional Windows Professional 64bits processador x64</li>
-        <li>8g memória RAM</li>
+        <li>sistema operacional Windows Professional 64bits processador x64 com 8g memória RAM</li>
         <li>processador Intel (R) Corel (TM) i7-2640M CPU @ 2.80GHZ 2.80GHz</li>
     </ul>
 </p>
@@ -40,15 +39,16 @@
 Para um melhor entendimento devemos ler e seguir ordenamente os documentos a seguir :</h3>
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-ciclo-de-vida.md">0-ciclo-de-vida.md</a> aprenderemos sobre o ciclo de vida de um projeto Data Science e através desta técnica desenvolveremos o modelo machine learning para recomendar vídeos do youtube.</p>
 
-<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> aprenderemos sobre a coleta de dados de vídeos do youtube com a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>, por trazer os dados em formato de dicionário do python, que agiliza todo e qualquer processo de preparação dos dados para o modelo machine learning.</p>
+<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> aprenderemos sobre a coleta de dados de vídeos do youtube com a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>, escolhida por trazer os dados em formato de dicionário do python, que agiliza todo e qualquer processo de preparação dos dados para o modelo machine learning.</p>
 
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a> aprenderemos algumas técnicas para adequar o dataset para uma melhor predição pelo modelo machine learning com o algorítmo DecisionTreeClassifier.</p>
 
-<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3-Random-Forest-Classifier-Active-Learning.md">3-Random-Forest-Classifier-Active-Learning.md</a> iniciaremos o entendimento sobre algumas técnicas para identificar o modelo machine learning mais eficiente entre o DecisionTreeClassifier e RandomForestClassifier, além de continuarmos com as adequações no dataset, aplicar a técnica Active Learning o utilizar o algorítimo TfidfVectorizer.</p>
+<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3-Random-Forest-Classifier-Active-Learning.md">3-Random-Forest-Classifier-Active-Learning.md</a> iniciaremos o entendimento de algumas técnicas para identificar o modelo machine learning mais eficiente. Neste momento vamos comparar o DecisionTreeClassifier e RandomForestClassifier.<br>
+Também vamos continuar com as adequações no dataset, aplicar a técnica Active Learning e utilizar o algorítimo TfidfVectorizer para melhorar a predição.</p>
 
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/4-Medir-Active-Learning.md">4-Medir-Active-Learning.md</a> nós vamos entender o resultado que Active Learning traz ao nosso projeto.</p>
 
-<p>Durante o processo nós vamos encontrar respostas à algumas perguntas como :
+<p>Durante o processo nós encontraremos respostas à algumas perguntas como :
     <ol>
         <li>Qual é o problema a resolver ?</li>
         <li>Qual será a melhor solução ?</li>
@@ -56,12 +56,11 @@ Para um melhor entendimento devemos ler e seguir ordenamente os documentos a seg
         <li>Qual será nossa a baseline no modelo machine learning ?</li>
         <li>O dataset está com ótima qualidade para o modelo machine learning ?</li>
         <li>Qual é o erro do modelo machine learning ?</li>
-        <li>Estamos melhorando a predição com o modelo X ou Y ?</li>
+        <li>Qual é o melhor algorítimo machine learning para resulver o problema ?</li>
         <li>Quais ações executar para melhorar o modelo ?</li>
         <li>Como está a probabilidade de acerto ?</li>
         <li>Quais métricas de avaliação, validação aplicar sobre modelo machine learning para melhora-lo ?</li>
         <li>Esta sendo utilizado a limpeza adequada no dataset ?</li>
-        <li>Quais gráficos utilizar para melhor analisar a melhoria do modelo machine learning ?</li>
         <li>O average_precision_score esta melhorando ?</li>
         <li>O roc_auc_score esta melhorando ?</li>
     </ol>
