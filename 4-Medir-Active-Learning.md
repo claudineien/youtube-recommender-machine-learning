@@ -38,7 +38,7 @@ Nós temos poucos dados sob treino e teste e isto faz o average precision e o au
 <hr>
 <h3>RESUMINDO</h3>
 <p>
-Nesta etapa vamos aplicar o labelling, criar mais exemplos para treino e teste, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo RandomForestClassifier, analisar sua probabilidade, executar as métricas roc_auc_score e average_precision_score, comparar com a <em>baseline</em> obtida no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1_Decision_Tree_Classifier.ipynb">1_Decision_Tree_Classifier.ipynb</a> e comparar com os resultados gerados no notebook  <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a>.
+Nesta etapa vamos aplicar o labelling, criar mais exemplos para treino e teste, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo RandomForestClassifier, analisar sua probabilidade, executar as métricas roc_auc_score e average_precision_score, comparar com a referencial inicial obtida no notebook <a href="/file-ipynb/2_Decision_Tree_Classifier.ipynb">2_Decision_Tree_Classifier.ipynb</a> e comparar com os resultados gerados no notebook  <a href="/file-ipynb/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a>.
 </p>
 
 <hr>
@@ -56,7 +56,7 @@ Nesta etapa vamos aplicar o labelling, criar mais exemplos para treino e teste, 
 <hr>
 <h3>PROCESSO : ANALISE BÁSICA DAS MÉTRICAS</h3>
 <p>
-Antes de iniciar o trabalho da métrica do active learning,  vamos, sem entrar e pormenores, com o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3_Medir_Active_Learning.ipynb" >3_Medir_Active_Learning.ipynb</a>, importar o <a href="\file-csv" >active_labels.csv</a>, com aproximadamente 100 exemplos gerados pelo notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a> e aplicaremos as métricas average_precision_score e roc_auc_score, considerando as colunas y (labelling) e p (probabilidade), esta última adicionada pela técnica Active Learning.<br>
+Antes de iniciar o trabalho da métrica do active learning,  vamos, sem entrar e pormenores, com o notebook <a href="/file-ipynb/4_Medir_Active_Learning.ipynb" >4_Medir_Active_Learning.ipynb</a>, importar o <a href="\file-csv" >active_labels.csv</a>, com aproximadamente 100 exemplos gerados pelo notebook <a href="/file-ipynb/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a> e aplicaremos as métricas average_precision_score e roc_auc_score, considerando as colunas y (labelling) e p (probabilidade), esta última adicionada pela técnica Active Learning.<br>
 Com esta ação tentaremos responder as seguintes perguntas :<br>
 01 Quais são as métricas ?<br>
 02 Qual é o erro ?<br>
@@ -67,7 +67,7 @@ Com esta ação tentaremos responder as seguintes perguntas :<br>
 </p>
 
 <p>
-Não temos parâmetros para comparar os valores de métricas referente para os 100 exemplos gerados pelo notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2_Random_Forest_Classifier.ipynb">2_Random_Forest_Classifier.ipynb</a>, mas podemos concluir que :<br>
+Não temos parâmetros para comparar os valores de métricas referente para os 100 exemplos gerados pelo notebook <a href="/file-ipynb/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a>, mas podemos concluir que :<br>
 - As métricas apontam uma grande sensibilidade nos resultados average_precision_score e roc_auc_score.<br>
 - Com estes valores entendemos que falta alguns ajustes para termos um bom modelo machine learning.<br>
 - Analisando o dataframe do arquivo <a href="\file-csv" >active_labels.csv</a> identificamos que a coluna p contém a probabilidade que o modelo machine learning dá ao item 579 de ser 37,5% positivo e ao item 846 de ser 82,6% positivo.<br>
