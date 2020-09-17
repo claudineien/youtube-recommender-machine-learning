@@ -21,14 +21,14 @@
   </table>
 </div>
 </h5>
-
+<hr>
 <h2>CICLO DE VIDA DE UMA SOLUÇÃO EM CIÊNCIA DE DADOS</h2>
 <h3>DEFINIR O PROBLEMA E A SOLUÇÃO</h3>
 <h4>01 QUAL É O PROBLEMA ?</h4>
 <p>Antes mesmo de iniciar um projeto de ciência de dados, você deve definir o problema que deverá ser resolvido. O problema deverá estar diretamente relacionado ao objetivo do requisito do negócio.</p>
 <p>Definir o problema é uma responsabilidade do cientista de dados com o time de negócios, responsabilidade bilateral.</p>
 <p>Em nosso projeto <strong>O problema</strong> é : ' Muito tempo gasto buscando novos vídeos no youtube '.</p>
-<hr>
+
 <h4>02 QUAL A MELHOR SOLUÇÃO ?</h4>
 <p>O Cientista de dados é o especialista em sua área, e é seu trabalho guiar/ajudar a organização a encontrar o que quer e/ou que precisa.</p>
 <p>O Cientista de dados deve ser capaz de traduzir as questões de negócio ao seu "botão mágico para conquistar o sucesso" em algo que possa ser resolvido matematicamente com o dataset da organização.</p>
@@ -36,7 +36,8 @@
 <p>Em nosso projeto <strong>A solução ideal</strong> é ' Listar apenas vídeos que eu vou gostar '.</p>
 
 <h4>03 COMO CRIAR A/UMA SOLUÇÃO DATA SCIENCE USANDO MACHINE LEARNING ?</h4>
-<p>O Cientista de dados como uma ferramenta a mais para eliminar problemas, analisa o processo da organização e o relaciona ao problema definido versus a melhor solução definida, então desenvolve o algoritmo machine learning sob determinadas amostras. O algoritmo deve ter um resultado igual ou melhor ao resultado esperado.</p>
+<p>O Cientista de dados coleta todo e qualquer dado possível, analisa o processo da organização e o relaciona ao problema definido versus a melhor solução definida, então desenvolve o algoritmo machine learning sob determinadas amostras.</p>
+<p>Importante : O algoritmo deve ter um resultado igual ou melhor ao resultado esperado.</p>
 <p>Em nosso projeto <strong>Criaremos um Recomendador de vídeos</strong> que irá executar um ou mais processos a seguir :
     <ul>
         <li>Exibir apenas os vídeos que eu vou gostar</li>
@@ -49,13 +50,13 @@
 </p>
 
 <h4>04 COMO A SOLUÇÃO SERÁ USADA PRODUTIVAMENTE ?</h4>
-<p>O Cientista de dados analisa o resultado retornado, como este resultado será apresentado e define como devem ser tratados os novos dados.</p>
-<p>O resultado pode ser apresentado em um Web app, ERP system, Dashboard, Excel, etc...</p>
-<p>Em primeiro momento é responsabilidade do Cientista de dados definir como a solução será usada produtivamente. Após ter o modelo definitivo o Cientista de dados com o time de negócios estabelecem como a solução será usada definitivamente em produção.</p>
+<p>O Cientista de dados analisa o resultado machine learning retornado, como este resultado será apresentado e define como devem ser tratados os novos dados.</p>
+<p>O resultado pode ser apresentado em um Web app, sistema ERP, Dashboard, Excel, entre outros fontes de visualização.</p>
+<p>No primeiro momento é responsabilidade do Cientista de dados definir como a solução será usada produtivamente. Após ter o modelo definitivo o Cientista de dados com o time de negócios estabelecem como a solução será usada definitivamente em produção.</p>
 <p>Em nosso projeto <strong>criaremos um Web App</strong> com link dos vídeos e as previsões ordenadas e com os seguintes dados : Título, Label, Anotações, Descrição</p>
 
 <h4>05 COMO SABER SE A SOLUÇÃO DEU CERTO ?</h4>
-<p>O Cientista de dados define as métricas de acordo com a área de negócio e dados obtidos, compara os resultados entre solução machine learning e os resultados atualmente conquistados sem machine learning.</p>
+<p>O Cientista de dados define as métricas de acordo com a área de negócio e dados obtidos, compara os resultados entre solução machine learning e os resultados atualmente conquistados sem machine learning. Este ciclo é repetido algumas vezes até o modelo estar pronto e ser disponibilizado em produção.</p>
 <p>Deve haver uma métrica primária e uma ou mais métricas secundárias.</p>
 <p>Em nosso projeto :
     <ul>
@@ -68,19 +69,19 @@
         </ul>
     </ul>
 </p>
+<hr>
+<h4>PODEMOS CONSIDERAR QUE :</h4>
+    <ol>
+        <li>Etapas 01 e 02 : serve para entender todo o processo do negócio, para definir o problema e a melhor solução.</li>
+        <li>Etapas 03 e 04 : durante esta etapa é realizada a coleta dos dados e desenvolvimento do modelo machine learning sob os processos e métricas do negócio.</li>
+        <li>Etapa 05 : serve para testar e otimizar o modelo machine learning desenvolvido sob os processos e métricas do negócio e disponibilizá-lo em produção.</li>
+    </ol>
+
 <p><strong>Dica para sair do zero com Machine Learning :</strong><br>
 Desenvolva machine learning sobre um problema resolvido diversas vezes com objetivo de fazer um modelo preditivo no mínimo 10% melhor que o atual modelo.</p>
 
-<p>
-<h4>EM CIÊNCIA DE DADOS DEVEMOS CONSIDERAR QUE :</h4>
-    <ol>
-        <li>Passos 01 e 02 : serve para entender todo o processo do negócio, para definir o problema e a melhor solução.</li>
-        <li>Passos 03 e 04 : serve para desenvolver o modelo machine learning sob os processos e métricas do negócio.</li>
-        <li>Passo 05 : serve para testar o modelo machine learning desenvolvido sob os processos e métricas do negócio e disponibilizá-lo em produção.</li>
-    </ol>
-</p>
-
-<h3>COLETAR E TRABALHAR OS E/OU NOS DADOS</h3>
+<hr>
+<h2>DA COLETA A MODELAGEM DE DADOS</h2>
 <p>Nesta etapa o Cientista de dados aplicará todas as técnicas para tornar os dados em perfeita conformidade ao modelo de predição que será desenvolvido</p>
 
 <h4>COLETAR OS DADOS</h4>
@@ -89,14 +90,16 @@ Desenvolva machine learning sobre um problema resolvido diversas vezes com objet
     <ul>
         <li>banco de dados relacional e estruturado</li>
         <li>banco de dados NoSQL</li>
-        <li>buscando na internet (scraping)</li>
-        <li>de imagens</li>
-        <li>de emails</li>
+        <li>buscando na internet (scraping, plugins, bibliotecas específicas)</li>
+        <li>imagens (fotos, radiografias, microfilmagens)</li>
+        <li>vídeos</li>
+        <li>emails</li>
         <li>com as pessoas envolvidas no processo</li>
         <li>planilhas excel</li>
         <li>redes sociais</li>
         <li>sensores</li>
-        <li>documentos word/pdf e similares</li>
+        <li>documentos word/pdf</li>
+        <li>qualquer fonte de dados em que seja possível extrair os dados</li>
     </ul>
 </p>
 
@@ -142,13 +145,13 @@ Desenvolva machine learning sobre um problema resolvido diversas vezes com objet
 </p>
 
 <h4>MODELAR OS DADOS</h4>
-<p>Nesta fase o Cientista de dados separa seu conjunto de dados nas seguinte proporções :</p>
+<p>Nesta fase o Cientista de dados separa o conjunto de dados nas seguinte proporções :</p>
 <p>
     <ul>
         <li>Uma proporção para treinar o modelo, conhecido como conjunto de dados de treino</li>
         <li>Uma proporção para testar a eficiência do modelo, conhecido com conjunto de dados de teste</li>
     </ul>
-Nesta fase o modelo de dados esta sendo contruÍdo pelo conjunto de dados de treino e sendo evoluÍdo pelo conjunto de dados de teste.
+O modelo de dados esta sendo construido pelo conjunto de dados de treino e sendo evoluido pelo conjunto de dados de teste.
 </p>
 
 <h3>OTIMIZAR E IMPLANTAR</h3>
