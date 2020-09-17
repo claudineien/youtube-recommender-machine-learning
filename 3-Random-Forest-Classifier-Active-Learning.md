@@ -23,7 +23,7 @@
 </h5>
 
 <h1 align='center'>2o Modelo Machine Learning - RandomForestClassifier</h1>
-<p>Primeiramente abrir o notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb.</a>
+<p>Primeiramente abrir o notebook <a href="/file-ipynb/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb.</a>
 </p>
 
 <p>Este modelo é igual ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>, do processo Labelling à criação das features.<br>
