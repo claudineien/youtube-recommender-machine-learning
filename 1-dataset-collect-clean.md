@@ -33,7 +33,7 @@ Nós coletaremos os dados de vídeos do youtube com a bibioteca <a href="https:/
 Para facilitar o entendimento em cada técnica executada, baixar o arquivo <a href=".\file-csv">raw_data_with_labels.csv</a>.
 </p>
 
-<p>O notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1_dataset_collect_clean.ipynb">1_dataset_collect_clean.ipynb</a> contém scripts para :
+<p>O notebook <a href="/file-ipynb/1_dataset_collect_clean.ipynb">1_dataset_collect_clean.ipynb</a> contém scripts para :
     <ul>
         <li>download dos dados de vídeos do youtube utilizando a biblioteca <a href="https://youtube-dl.org/">youtube_dl</a></li>
         <li>armazenar os dados em um dataframe utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li>
