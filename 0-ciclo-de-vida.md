@@ -38,7 +38,7 @@
 <h4>03 COMO CRIAR A/UMA SOLUÇÃO DATA SCIENCE USANDO MACHINE LEARNING ?</h4>
 <p>O Cientista de dados <a href="/0-documentation/0-ciclo-de-vida0.md">coleta todo e qualquer dado</a> possível, analisa o processo da organização e o relaciona ao problema definido versus a melhor solução definida, então desenvolve o algoritmo machine learning sob determinadas amostras.</p>
 <p>Importante : <br>
-O algoritmo de <a href="/0-documentation/0-ciclo-de-vida0.md">inteligência artificial</a> machine learning deve ter um resultado igual ou melhor ao resultado esperado.</p>
+O algoritmo de <a href="/0-documentation/0-ciclo-de-vida0.md">inteligência artificial nos dados</a> através de machine learning deve ter um resultado igual ou melhor ao resultado esperado.</p>
 <p>Em nosso projeto <strong>Criaremos um Recomendador de vídeos</strong> que irá executar um ou mais processos a seguir :
     <ul>
         <li>Exibir apenas os vídeos que eu vou gostar</li>
