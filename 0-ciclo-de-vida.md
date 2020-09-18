@@ -57,7 +57,7 @@ O algoritmo de <a href="/0-documentation/0-ciclo-de-vida0.md">inteligência arti
 <p>Em nosso projeto <strong>criaremos um Web App</strong> com link dos vídeos e as previsões ordenadas e com os seguintes dados : Título, Label, Anotações, Descrição</p>
 
 <h4>05 COMO SABER SE A SOLUÇÃO DEU CERTO ?</h4>
-<p>O Cientista de dados define as métricas de acordo com a área de negócio e dados obtidos, compara os resultados entre solução machine learning e os resultados atualmente conquistados sem machine learning. Este ciclo é repetido algumas vezes até o modelo estar <a href="/0-documentation/0-ciclo-de-vida0.md">otimizado</a> para ser disponibilizado em produção.</p>
+<p>O Cientista de dados define as métricas de acordo com a área de negócio e dados obtidos, compara os resultados entre solução machine learning e os resultados atualmente conquistados sem machine learning. Este ciclo é repetido algumas vezes até o <a href="/0-documentation/0-ciclo-de-vida0.md">modelo estar otimizado</a> para ser disponibilizado em produção.</p>
 <p>Deve haver uma métrica primária e uma ou mais métricas secundárias.</p>
 <p>Em nosso projeto :
     <ul>
