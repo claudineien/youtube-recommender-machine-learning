@@ -22,8 +22,8 @@
 </div>
 </h5>
 
-<details>
-  <summary><h3>CIÊNCIA DE DADOS NA RECOMENDAÇÃO DE VÍDEOS DO YOUTUBE</h3></summary>
+<details open>
+  <h3><summary>CIÊNCIA DE DADOS NA RECOMENDAÇÃO DE VÍDEOS DO YOUTUBE</summary></h3>
 <p>Através deste projeto recomendador de vídeos do youtube nós entenderemos na prática uma pequena parte de tarefas executadas no processo Ciência de Dados.</p>
 
 <p>Utilizaremos :
