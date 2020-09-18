@@ -23,7 +23,7 @@
 </h5>
 <br><br><br><br><br><br><br><br><br><br>
 <details open>
-  <summary>CIÊNCIA DE DADOS NA RECOMENDAÇÃO DE VÍDEOS DO YOUTUBE</summary>
+  <summary><strong>CIÊNCIA DE DADOS NA RECOMENDAÇÃO DE VÍDEOS DO YOUTUBE</strong></summary>
   <p>Através deste projeto recomendador de vídeos do youtube nós entenderemos na prática uma parte da tarefa de um Cientista de Dados com inteligência artificial.</p>
 
 <p>Utilizaremos :
