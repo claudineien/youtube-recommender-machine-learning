@@ -21,8 +21,8 @@
   </table>
 </div>
 </h5>
-<br><br><br><br><br><br><br><br><br><br>
-<details open>
+
+<details>
   <summary><strong>CIÊNCIA DE DADOS NA RECOMENDAÇÃO DE VÍDEOS DO YOUTUBE</strong></summary>
   <p>Através deste projeto recomendador de vídeos do youtube nós entenderemos na prática uma parte da tarefa de um Cientista de Dados com inteligência artificial.</p>
 
@@ -36,8 +36,9 @@
 </p>
 </details>
 
-<h3>TÉCNICAS QUE APRENDEREMOS<br>
-Para um melhor entendimento devemos ler e seguir ordenamente os documentos a seguir :</h3>
+<details>
+  <summary><strong>TÉCNICAS QUE APRENDEREMOS</strong></summary>
+Para um melhor entendimento devemos ler e seguir ordenamente os documentos a seguir :
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-ciclo-de-vida.md">0-ciclo-de-vida.md</a> aprenderemos sobre o ciclo de vida de um projeto Data Science e através desta técnica desenvolveremos o modelo machine learning para recomendar vídeos do youtube.</p>
 
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> aprenderemos sobre a coleta de dados de vídeos do youtube com a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>, escolhida por trazer os dados em formato de dicionário do python, que agiliza todo e qualquer processo de preparação dos dados para o modelo machine learning.</p>
@@ -66,11 +67,14 @@ Também vamos continuar com as adequações no dataset, aplicar a técnica Activ
         <li>O roc_auc_score esta melhorando ?</li>
     </ol>
 </p>
-<hr>
-<h3>MENSAGEM DO AUTOR</h3>
-<p>A tarefa de um Data Scientist é árdua (causa cansaço/fadiga),  porém muito recompensadora quando o resultado é melhorar a vida das pessoas envolvidas diretamente e indiretamente pelo processo que utiliza a inteligência arficial para eliminar problemas.</p>
+</details>
 
-<details open>
+<details>
+  <summary><strong>MENSAGEM DO AUTOR</strong></summary>
+<p>A tarefa de um Data Scientist é árdua (causa cansaço/fadiga),  porém muito recompensadora quando o resultado é melhorar a vida das pessoas envolvidas diretamente e indiretamente pelo processo que utiliza a inteligência arficial para eliminar problemas.</p>
+</details>
+
+<details>
   <summary><strong>AGRADECIMENTOS</strong></summary>
   <p>*Ser agradecido para mim é a atitude que torna as pessoas seres melhores*</p>
   <p>Agradeço a mulher mais importante da minha vida, a minha mãe sra Rosalita Borges Evangelista por ter sido uma lutadora incansável, lutando por mim, para mim e comigo e também com meus irmãos. Minha mãe é o motivo de eu me tornar um ser humano honrado.</p>
@@ -82,9 +86,10 @@ Também vamos continuar com as adequações no dataset, aplicar a técnica Activ
   <p>Desejo muito sucesso a todas estas incríveis personagens !</p>
 </details>
 
-<hr>
-<h3>FONTES DE ESTUDO</h3>
+<details>
+  <summary><strong>FONTES DE ESTUDO</strong></summary>
 <p>Veremos em cada documento estudado.</p>
+</details>
 
 <!--
 <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
