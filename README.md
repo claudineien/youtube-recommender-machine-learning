@@ -22,8 +22,8 @@
 </div>
 </h5>
 
-<hr>
-<h3 align="left">CIÊNCIA DE DADOS NA RECOMENDAÇÃO DE VÍDEOS DO YOUTUBE</h3>
+<details>
+  <summary><h3>CIÊNCIA DE DADOS NA RECOMENDAÇÃO DE VÍDEOS DO YOUTUBE</h3></summary>
 <p>Através deste projeto recomendador de vídeos do youtube nós entenderemos na prática uma pequena parte de tarefas executadas no processo Ciência de Dados.</p>
 
 <p>Utilizaremos :
@@ -34,7 +34,7 @@
         <li>processador Intel (R) Corel (TM) i7-2640M CPU @ 2.80GHZ 2.80GHz</li>
     </ul>
 </p>
-
+</details>
 <h3>TÉCNICAS QUE APRENDEREMOS<br>
 Para um melhor entendimento devemos ler e seguir ordenamente os documentos a seguir :</h3>
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-ciclo-de-vida.md">0-ciclo-de-vida.md</a> aprenderemos sobre o ciclo de vida de um projeto Data Science e através desta técnica desenvolveremos o modelo machine learning para recomendar vídeos do youtube.</p>
@@ -70,7 +70,7 @@ Também vamos continuar com as adequações no dataset, aplicar a técnica Activ
 <p>A tarefa de um Data Scientist é árdua (causa cansaço/fadiga),  porém muito recompensadora quando o resultado é melhorar a vida das pessoas envolvidas diretamente e indiretamente pelo processo que utiliza a inteligência arficial para eliminar problemas.</p>
 
 <details open>
-  <summary><strong>9 AGRADECIMENTOS</strong></summary>
+  <summary><strong>AGRADECIMENTOS</strong></summary>
   <p>*Ser agradecido para mim é a atitude que torna as pessoas seres melhores*</p>
   <p>Agradeço a mulher mais importante da minha vida, a minha mãe sra Rosalita Borges Evangelista por ter sido uma lutadora incansável, lutando por mim, para mim e comigo e também com meus irmãos. Minha mãe é o motivo de eu me tornar um ser humano honrado.</p>
   <p>Agradeço aos meus dois irmãos que me ajudaram nos momentos em que mais precisei.</p>
