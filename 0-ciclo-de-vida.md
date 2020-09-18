@@ -36,8 +36,9 @@
 <p>Em nosso projeto <strong>A solução ideal</strong> é ' Listar apenas vídeos que eu vou gostar '.</p>
 
 <h4>03 COMO CRIAR A/UMA SOLUÇÃO DATA SCIENCE USANDO MACHINE LEARNING ?</h4>
-<p>O Cientista de dados coleta todo e qualquer dado possível, analisa o processo da organização e o relaciona ao problema definido versus a melhor solução definida, então desenvolve o algoritmo machine learning sob determinadas amostras.</p>
-<p>Importante : O algoritmo deve ter um resultado igual ou melhor ao resultado esperado.</p>
+<p>O Cientista de dados <a href="/0-documentation/0-ciclo-de-vida0.md">coleta todo e qualquer dado</a> possível, analisa o processo da organização e o relaciona ao problema definido versus a melhor solução definida, então desenvolve o algoritmo machine learning sob determinadas amostras.</p>
+<p>Importante : <br>
+O <a href="/0-documentation/0-ciclo-de-vida0.md">algoritmo machine learning</a> deve ter um resultado igual ou melhor ao resultado esperado.</p>
 <p>Em nosso projeto <strong>Criaremos um Recomendador de vídeos</strong> que irá executar um ou mais processos a seguir :
     <ul>
         <li>Exibir apenas os vídeos que eu vou gostar</li>
@@ -79,85 +80,6 @@
 
 <p><strong>Dica para sair do zero com Machine Learning :</strong><br>
 Desenvolva machine learning sobre um problema resolvido diversas vezes com objetivo de fazer um modelo preditivo no mínimo 10% melhor que o atual modelo.</p>
-
-<hr>
-<h2>DA COLETA A MODELAGEM DE DADOS</h2>
-<p>Nesta etapa o Cientista de dados aplicará todas as técnicas para tornar os dados em perfeita conformidade ao modelo de predição que será desenvolvido</p>
-
-<h4>COLETAR OS DADOS</h4>
-<p>Os dados podem ser coletados das seguintes fontes :</p>
-<p>
-    <ul>
-        <li>banco de dados relacional e estruturado</li>
-        <li>banco de dados NoSQL</li>
-        <li>buscando na internet (scraping, plugins, bibliotecas específicas)</li>
-        <li>imagens (fotos, radiografias, microfilmagens)</li>
-        <li>vídeos</li>
-        <li>emails</li>
-        <li>com as pessoas envolvidas no processo</li>
-        <li>planilhas excel</li>
-        <li>redes sociais</li>
-        <li>sensores</li>
-        <li>documentos word/pdf</li>
-        <li>qualquer fonte de dados em que seja possível extrair os dados</li>
-    </ul>
-</p>
-
-<h4>ANALISAR E EXPLORAR OS DADOS</h4>
-<p>
-    <ul>
-        <li>detectar se há os dados que precisa para desenvolver a solução</li>
-        <li>analisar o tipo de cada dado : string, objeto, float, inteiro</li>
-        <li>analisar o conteúdo de cada dado</li>
-        <li>analisar a correlação entre os dados</li>
-        <li>Detectar padrões entre os dados</li>
-        <li>Detectar tendências entre os dados</li>
-    </ul>
-</p>
-
-<h4>LIMPAR OS DADOS</h4>
-<p>
-    <ul>
-        <li>remover dados redundantes</li>
-        <li>trabalhar nos dados faltantes</li>
-        <li>trabalhar nos dados duplicados</li>
-        <li>trabalhar nos dados desnecessários</li>
-    </ul>
-</p>
-
-<h4>CONVERTER OS DADOS</h4>
-<p>
-    <ul>
-        <li>de objetos para data</li>
-        <li>de objetos para string</li>
-        <li>de data para string</li>
-        <li>categóricos para numéricos</li>
-    </ul>
-</p>
-
-<h4>ANALISAR E EXPLORAR OS DADOS</h4>
-<p>
-    <ul>
-        <li>Detectar padrões entre os dados</li>
-        <li>Detectar tendências entre os dados</li>
-        <li>Detectar correlação entre os dados</li>
-    </ul>
-</p>
-
-<h4>MODELAR OS DADOS</h4>
-<p>Nesta fase o Cientista de dados separa o conjunto de dados nas seguinte proporções :</p>
-<p>
-    <ul>
-        <li>Uma proporção para treinar o modelo, conhecido como conjunto de dados de treino</li>
-        <li>Uma proporção para testar a eficiência do modelo, conhecido com conjunto de dados de teste</li>
-    </ul>
-O modelo de dados esta sendo construido pelo conjunto de dados de treino e sendo evoluido pelo conjunto de dados de teste.
-</p>
-
-<h3>OTIMIZAR E IMPLANTAR</h3>
-<p>Esta fase serve para melhorar a eficiência do modelo machine learning, e realizar mais predições precisas.</p>
-<p>O objetivo final é implantar o modelo de machine learning em ambiente de validação ou em ambiente de produção para aceitação dos usuários</p>
-<p>Os usuários deverão testar o desempenho do modelo machine learning e verificar se há quaisquer inconsistências, que serão corrigidos pelo Cientista de dados.</p>
 <br><br><br>
 <hr>
 <p>Fontes de estudo
