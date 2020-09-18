@@ -68,6 +68,19 @@ Também vamos continuar com as adequações no dataset, aplicar a técnica Activ
 <hr>
 <h3>MENSAGEM DO AUTOR</h3>
 <p>A tarefa de um Data Scientist é árdua (causa cansaço/fadiga),  porém muito recompensadora quando o resultado é melhorar a vida das pessoas envolvidas diretamente e indiretamente pelo processo que utiliza a inteligência arficial para eliminar problemas.</p>
+
+<details open>
+  <summary><strong>9 AGRADECIMENTOS</strong></summary>
+  <p>*Ser agradecido para mim é a atitude que torna as pessoas seres melhores*</p>
+  <p>Agradeço a mulher mais importante da minha vida, a minha mãe sra Rosalita Borges Evangelista por ter sido uma lutadora incansável, lutando por mim, para mim e comigo e também com meus irmãos. Minha mãe é o motivo de eu me tornar um ser humano honrado.</p>
+  <p>Agradeço aos meus dois irmãos que me ajudaram nos momentos em que mais precisei.</p>
+  <p>Agradeço à minha esposa e às minhas duas filhas por serem minha razão, emoção e inspiração e por me apoiar em todos os momentos.</p>
+  <p>Agradeço aos criadores do computador, da internet, das linguagens de programação computacional, inteligência artificial e tecnologias em geral.</p>
+  <p>Agradeço ao sr Mario Filho por disponibilizar a um investimento acessível um pouco de sua experiência, através de um curso que nos instrui a identificar o problema, preparar os dados, otimizar o modelo machine learning e implantar o produto desenvolvido em machine learning.</p><br><br>
+  <p>Muito obrigado a todos :wink:</p><br>
+  <p>Desejo muito sucesso a todas estas incríveis personagens !</p>
+</details>
+
 <hr>
 <h3>FONTES DE ESTUDO</h3>
 <p>Veremos em cada documento estudado.</p>
