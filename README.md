@@ -21,10 +21,10 @@
   </table>
 </div>
 </h5>
-
+<br><br><br><br><br><br><br><br><br><br>
 <details open>
-  <h3><summary>CIÊNCIA DE DADOS NA RECOMENDAÇÃO DE VÍDEOS DO YOUTUBE</summary></h3>
-<p>Através deste projeto recomendador de vídeos do youtube nós entenderemos na prática uma pequena parte de tarefas executadas no processo Ciência de Dados.</p>
+  <summary>CIÊNCIA DE DADOS NA RECOMENDAÇÃO DE VÍDEOS DO YOUTUBE</summary>
+  <p>Através deste projeto recomendador de vídeos do youtube nós entenderemos na prática uma parte da tarefa de um Cientista de Dados com inteligência artificial.</p>
 
 <p>Utilizaremos :
     <ul>
@@ -35,6 +35,7 @@
     </ul>
 </p>
 </details>
+
 <h3>TÉCNICAS QUE APRENDEREMOS<br>
 Para um melhor entendimento devemos ler e seguir ordenamente os documentos a seguir :</h3>
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-ciclo-de-vida.md">0-ciclo-de-vida.md</a> aprenderemos sobre o ciclo de vida de um projeto Data Science e através desta técnica desenvolveremos o modelo machine learning para recomendar vídeos do youtube.</p>
