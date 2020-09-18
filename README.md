@@ -44,7 +44,7 @@ Para um melhor entendimento devemos ler e seguir ordenamente os documentos a seg
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a> aprenderemos algumas técnicas para adequar o dataset para uma melhor predição pelo modelo machine learning com o algorítmo DecisionTreeClassifier.</p>
 
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3-Random-Forest-Classifier-Active-Learning.md">3-Random-Forest-Classifier-Active-Learning.md</a> iniciaremos o entendimento de algumas técnicas para identificar o modelo machine learning mais eficiente. Neste momento vamos comparar o DecisionTreeClassifier e RandomForestClassifier.<br>
-Também vamos continuar com as adequações no dataset, aplicar a técnica Active Learning e utilizar o algorítimo TfidfVectorizer para melhorar a predição.</p>
+Também vamos continuar com as adequações no dataset, aplicar a técnica Active Learning, utilizar o algorítimo TfidfVectorizer e trabalhar com matriz esparsa, para melhorar a predição.</p>
 
 <p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/4-Medir-Active-Learning.md">4-Medir-Active-Learning.md</a> nós vamos entender o resultado que Active Learning traz ao nosso projeto.</p>
 
@@ -68,6 +68,9 @@ Também vamos continuar com as adequações no dataset, aplicar a técnica Activ
 <hr>
 <h3>MENSAGEM DO AUTOR</h3>
 <p>A tarefa de um Data Scientist é árdua (causa cansaço/fadiga),  porém muito recompensadora quando o resultado é melhorar a vida das pessoas envolvidas diretamente e indiretamente pelo processo que utiliza a inteligência arficial para eliminar problemas.</p>
+<hr>
+<h3>FONTES DE ESTUDO</h3>
+<p>Veremos em cada documento estudado.</p>
 
 <!--
 <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
