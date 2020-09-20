@@ -79,7 +79,8 @@ Também vamos continuar com as adequações no dataset, aplicar a técnica Activ
     <ul>Principal fonte de estudo e informação :
         <li>Curso <a href="https://curso.mariofilho.com/">   Solução Completa de Data Science - Instrutor Mario Filho - Kagle Gran Master</a></li>
     </ul>
-    Nota :<br>Durante o curso fiz divesar consultas a outras fontes de informação.
+    Nota :<br>
+    Durante o curso consultei outras diversar fontes de informação.
 </details>
 
 <details>
