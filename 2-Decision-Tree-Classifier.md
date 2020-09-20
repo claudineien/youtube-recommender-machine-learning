@@ -66,7 +66,12 @@ Métrica realística : Encontrar características iguais entre os dados, ainda q
     </ul>
 
 <p>O gráfico mostra um grande volume de vídeos no final do período que nós informamos no código, em relação aos meses anteriores. Isto merece muita atenção, por que pode significar que o youtube deixou de trazer exatamente os últimos vídeos que solicitamos e assim possivelmente evitaremos grande desbalanceamento na definição do dataset para treino e dataset para teste, consequentemente evitaremos erros nos ajustes do modelo de classificação machine learning.<br>
-Para aumentar a qualidade dos dataset criaremos features por visualizações totais e visualizações por dia por data de upload.</p>
+Para aumentar a qualidade dos dataset criaremos features por visualizações totais e visualizações por dia por data de upload.<br>
+Quantidade de vídeos por ano-mês
+<img src="/3-images/grafico_video_ano_mes.png">
+</p>
+
+</p>
 
 <hr>
 <h3>MODELO MACHINE LEARNING</h3>
@@ -89,7 +94,7 @@ Arvore de decisão : Uma das melhores maneiras de entender a relação das featu
 </p>
 
 <h3>INTERPRETAR A DECISION TREE</h3>
-<p>Esta é uma boa forma de entender rapidamente como o as features (recursos) se relacionam ao target (alvo)</p>
+<p>Esta é uma boa forma de entender rapidamente como o as features (recursos) se relacionam ao target (alvo)
 <img src="img\decisiontree.png">
 </p>
 
