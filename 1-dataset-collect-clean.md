@@ -45,7 +45,7 @@ Para facilitar o entendimento em cada técnica executada, baixar o arquivo <a hr
 </p>
 <br>
 <hr>
-<p>Inconsistências na biblioteca youtube_dl no Github :<br>
+<p>Inconsistências na biblioteca youtube_dl registrada github :<br>
     <ul>
         <li><a href="https://github.com/ytdl-org/youtube-dl/issues/26219">ytsearchdateall only returns the first page (20 videos) of results</a></li>
         <li><a href="https://github.com/ytdl-org/youtube-dl/issues/26484">How can we use extract_info from youtube-dl to extract 50, 60, 70 or more videos ?</a></li>
