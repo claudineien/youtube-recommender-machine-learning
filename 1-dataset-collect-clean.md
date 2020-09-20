@@ -30,7 +30,7 @@ Nós coletaremos os dados de vídeos do youtube com a bibioteca <a href="https:/
 
 <br>
 <p><strong>Atenção :</strong><br>
-Para facilitar o entendimento em cada técnica executada, baixar o arquivo <a href=".\file-csv">raw_data_with_labels.csv</a>.
+Para facilitar o entendimento em cada técnica executada, baixar o arquivo <a href="/2-dataset">raw_data_with_labels.csv</a>.
 </p>
 
 <p>O notebook <a href="/file-ipynb/1_dataset_collect_clean.ipynb">1_dataset_collect_clean.ipynb</a> contém scripts para :
