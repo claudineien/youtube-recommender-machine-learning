@@ -95,7 +95,7 @@ Arvore de decisão : Uma das melhores maneiras de entender a relação das featu
 
 <h3>INTERPRETAR A DECISION TREE</h3>
 <p>Esta é uma boa forma de entender rapidamente como o as features (recursos) se relacionam ao target (alvo)
-<img src="img\decisiontree.png">
+<img src="/3-images/decisiontree.png">
 </p>
 
 <p>
