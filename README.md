@@ -24,7 +24,7 @@
 
 <details>
   <summary><strong>CIÊNCIA DE DADOS NA RECOMENDAÇÃO DE VÍDEOS DO YOUTUBE</strong></summary>
-  <p>Através deste projeto recomendador de vídeos do youtube nós entenderemos na prática uma parte da tarefa de um Cientista de Dados com inteligência artificial.</p>
+  <p>Através deste projeto recomendador de vídeos do youtube nós entenderemos na prática uma parte da tarefa de um Cientista de Dados utilizando inteligência artificial.</p>
 
 <p>Utilizaremos :
     <ul>
@@ -75,6 +75,14 @@ Também vamos continuar com as adequações no dataset, aplicar a técnica Activ
 </details>
 
 <details>
+  <summary><strong>FONTES DE ESTUDO</strong></summary>
+    <ul>Principal fonte de estudo e informação :
+        <li>Curso <a href="https://curso.mariofilho.com/">   Solução Completa de Data Science - Instrutor Mario Filho - Kagle Gran Master</a></li>
+    </ul>
+    Nota :<br>Durante o curso fiz divesar consultas a outras fontes de informação.
+</details>
+
+<details>
   <summary><strong>AGRADECIMENTOS</strong></summary>
   <p>*Ser agradecido para mim é a atitude que torna as pessoas seres melhores*</p>
   <p>Agradeço a mulher mais importante da minha vida, a minha mãe sra Rosalita Borges Evangelista por ter sido uma lutadora incansável, lutando por mim, para mim e comigo e também com meus irmãos. Minha mãe é o motivo de eu me tornar um ser humano honrado.</p>
@@ -84,11 +92,6 @@ Também vamos continuar com as adequações no dataset, aplicar a técnica Activ
   <p>Agradeço ao sr Mario Filho por disponibilizar a um investimento acessível um pouco de sua experiência, através de um curso que nos instrui a identificar o problema, preparar os dados, otimizar o modelo machine learning e implantar o produto desenvolvido em machine learning.</p><br><br>
   <p>Muito obrigado a todos :wink:</p><br>
   <p>Desejo muito sucesso a todas estas incríveis personagens !</p>
-</details>
-
-<details>
-  <summary><strong>FONTES DE ESTUDO</strong></summary>
-<p>Veremos em cada documento estudado.</p>
 </details>
 
 <!--
