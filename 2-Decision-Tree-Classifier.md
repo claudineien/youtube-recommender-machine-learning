@@ -30,11 +30,11 @@
 <h3>LABELLING</h3>
 <p>
 <ol>
-    <li>Abrir o arquivo <a href=".\file-csv">raw_data_sem_labels.csv</a> em uma planilha eletrônica como ms excel, <a href="https://gsuite.google.com/intl/pt-BR/products/sheets/">google sheets</a> ou <a href="https://pt-br.libreoffice.org/descubra/calc/"> LibreOffice</a> através da opção de importar um arquivo .csv</li>
+    <li>Abrir o arquivo <a href="/2-dataset">raw_data_sem_labels.csv</a> em uma planilha eletrônica como ms excel, <a href="https://gsuite.google.com/intl/pt-BR/products/sheets/">google sheets</a> ou <a href="https://pt-br.libreoffice.org/descubra/calc/"> LibreOffice</a> através da opção de importar um arquivo .csv</li>
     <li>Criar a coluna Y (*1)</li>
     <li>Inserir na coluna Y o número 0 nas linhas cujo título do vídeo, provavelmente, não vamos assistir ou inserir 1 nas linhas cujo vídeo provavelmente, vamos assistir.</li><br>
     <p><strong>Importante:</strong><br>
-    Baixar o arquivo <a href=".\file-csv">raw_data_with_labels.csv</a>, cujo o labelling foi aplicado para facilitar nosso entendimento em cada técnica executada</p>
+    Baixar o arquivo <a href="/2-dataset">raw_data_with_labels.csv</a>, cujo o labelling foi aplicado para facilitar nosso entendimento em cada técnica executada</p>
 </ol>
 </p>
 
