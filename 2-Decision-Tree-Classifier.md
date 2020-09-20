@@ -65,12 +65,9 @@ Métrica realística : Encontrar características iguais entre os dados, ainda q
         <li>Permite analisar os dados para ajudar a desenhar o melhor cenário de para o modelo machine learning</li>
     </ul>
 
-<p>O gráfico mostra um grande volume de vídeos no final do período que nós informamos no código, em relação aos meses anteriores. Isto merece muita atenção, por que pode significar que o youtube deixou de trazer exatamente os últimos vídeos que solicitamos e assim possivelmente evitaremos grande desbalanceamento na definição do dataset para treino e dataset para teste, consequentemente evitaremos erros nos ajustes do modelo de classificação machine learning.<br>
-Para aumentar a qualidade dos dataset criaremos features por visualizações totais e visualizações por dia por data de upload.<br>
-Quantidade de vídeos por ano-mês
+<p>O gráfico quantidade de vídeos por ano-mês, a seguir: mostra um grande volume muito alto de vídeos no final do período, em relação aos meses anteriores. Isto merece muita atenção, por que pode significar que o youtube deixou de trazer exatamente os últimos vídeos que solicitamos e com estas informações podemos evitaremos grande desbalanceamento na definição do dataset para treino e dataset para teste, consequentemente aumentarremos a otimização nos ajustes do modelo de predição machine learning.<br>
+E uma das forma de aumentar a qualidade dos dataset é criar features por visualizações totais e visualizações por dia, por data de upload.<br>
 <img src="/3-images/grafico_video_ano_mes.png">
-</p>
-
 </p>
 
 <hr>
