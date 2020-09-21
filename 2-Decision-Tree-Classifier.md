@@ -23,7 +23,7 @@
 </h5>
 <br><br><br><br>
 <h1 align='center'>1o Modelo Machine Learning - DecisionTreeClassifier</h1>
-<p>Nosso objetivo neste processo será aprender como obter as primeiras métricas, que servirão como guia para nos ajudar a otimizar os algorítmos machine learning até obter um modelo no qual diversas métricas o indiquem como sendo a solução que precisamos.</p>
+<p>Nosso objetivo neste processo é obter as primeiras métricas, que servirão como guia para nos ajudar a otimizar os algorítmos machine learning até obter um modelo no qual as métricas indiquem como sendo a solução machine learning que precisamos.</p>
 <p>Nossas métricas base serão:
     <ol>
         <li><strong>AUC-ROC</strong> para indicar se o nosso modelo esta rankeando corretamente os exemplos. É a probabilidade que exemplo selecionado randômicamente tem mais probabilidade preditiva de ser positivo do que ser um exemplo randomicamente selecionado negativo.</li>
@@ -31,7 +31,7 @@
     </ol>
 </p>
 <p>Utilizaremos o notebook <a href="/file-ipynb/2_Decision_Tree_Classifier.ipynb">2_Decision_Tree_Classifier.ipynb</a> para entendermos um pouco de como este processo funciona.</p>
-<p>Iniciaremos aplicando a técnica Labelling, criaremos algumas Features, analisaremos o gráfico time series da biblioteca pandas, treinaremos o algorítmo DecisionTreeClassifier e por fim teremos o resultados das métricas.</p>
+<p>Iniciaremos aplicando a técnica Labelling, aplicaremos limpezas no dataset, criaremos algumas Features, analisaremos o gráfico time series da biblioteca pandas, faremos tuning no algorítmo machine learning, treinaremos o algorítmo DecisionTreeClassifier e por fim teremos o resultados das métricas.</p>
 <hr>
 <h3>LABELLING</h3>
 <p>Vamos aplicar o labelling para o algoritmo machine learning predizer com o melhor average precision e auc-roc possível o vídeo que possivelmente assistiremos.</p>
