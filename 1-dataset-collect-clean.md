@@ -22,26 +22,16 @@
 </div>
 </h5>
 
-<br>
 <h3 align="center">COLETAR DATASET DE VÍDEOS DO YOUTUBE</h3>
-<p>
-Nós coletaremos os dados de vídeos do youtube com a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a> por trazer as informações em formato de dicionário do python, e isto agiliza todo e qualquer processo de preparação dos dados para o modelo machine learning.
-</p>
-
-<br>
-<p><strong>Atenção :</strong><br>
-Para facilitar o entendimento em cada técnica executada, baixar o arquivo <a href="/2-dataset">raw_data_with_labels.csv</a>.
-</p>
-
-<p>O notebook <a href="/file-ipynb/1_dataset_collect_clean.ipynb">1_dataset_collect_clean.ipynb</a> contém scripts para :
-    <ul>
-        <li>download dos dados de vídeos do youtube utilizando a biblioteca <a href="https://youtube-dl.org/">youtube_dl</a></li>
-        <li>armazenar os dados em um dataframe utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li>
-        <li>analisar o conteúdo do dataset utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li>
-        <li>limpar e/ou tratar dados para o modelo de predição utilizando a biblioteca <a href="https://numpy.org/install/">numpy</a></li>
-        <li>preparar dataset para realizar o labelling</li>
-        <li>gravar os dados em arquivo com extensão .csv, para realizar o labelling</li>
-    </ul>
+Para obtermos os mesmos resultados e facilitar o nosso entendimento em cada técnica executada, baixar os arquivos :
+<ul>
+  <li><a href="/2-dataset">raw_data_with_labels.csv</a></li>
+  <li><a href="/file-ipynb/1_dataset_collect_clean.ipynb">1_dataset_collect_clean.ipynb</a></li>
+</ul>
+<p>Vamos aprender a fazer download dos dados de vídeos do youtube utilizando a biblioteca <a href="https://youtube-dl.org/">youtube_dl</a> que é muito boa por trazer as informações em formato de dicionário do python, e este formato agiliza todo e qualquer processo de preparação dos dados para o modelo machine learning.</p>
+<p>Precisamos aplicar o labelling para treinar o modelo machine learning, que é classificar manualmente se o vídeo é o que possivelmente vamos assistir ou não. Para isto será necessário converter o tipo de dado objeto com conteúdo de data para o tipo data e encontrar a quantidade de dias de publicação do vídeo.</p>
+<p>Os tratamentos dos dados serão respectivamente realizados com a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a> e <a href="https://numpy.org/install/">numpy</a> ambas muito boas para tratamento do dataset.</p>
+<p>Disponibilizaremos o dataset trabalhado em um arquivo .csv para aplicar labelling, que ajudará na predição do algoritmo machine learning.</p>
 </p>
 <br>
 <hr>
@@ -52,17 +42,23 @@ Para facilitar o entendimento em cada técnica executada, baixar o arquivo <a hr
     </ul>
 </p>
 
+<br>
 <hr>
 <p>Fontes de estudo :
     <ul>
         <li>Curso <a href="https://curso.mariofilho.com/">   
         Solução Completa de Data Science</a> - Instrutor Mario Filho-Kagle Gran Master</li>
+        <li><a href="https://numpy.org/install/">numpy</a></li>
+        <li><a href="https://pandas.pydata.org/community/ecosystem.html">pandas.pydata.org</a></li>
         <li><a href="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#how-do-i-update-youtube-dl">youtube_dl README.md</a></li>
         <li><a href="https://www.reddit.com/r/youtubedl/comments/hqc577/getting_error_unable_to_extract_video_data/">reddit - YouTube</a></li>
         <li><a href="https://pypi.org/project/yt-search/">yt-search</a></li>
-        <li><a href="https://python-pytube.readthedocs.io/en/latest/user/quickstart.html#downloading-a-video">pytube3</a></li>
-        <li><a href="https://www.geeksforgeeks.org/python-program-to-download-complete-youtube-playlist/?ref=rp">BeautifulSoup</a></li>
         <li><a href="https://www.bogotobogo.com/VideoStreaming/YouTube/youtube-dl-embedding.php">youtube-dl embedded</a></li>
-        <li><a href="https://www.bogotobogo.com/VideoStreaming/YouTube/Dissecting-YouTube-URLs.php">BeautifulSoup to download complete Youtube playlist</a></li>
-    </ul>
+      </ul>
 </p>
+
+<!--
+<li><a href="https://python-pytube.readthedocs.io/en/latest/user/quickstart.html#downloading-a-video">pytube3</a></li>
+<li><a href="https://www.geeksforgeeks.org/python-program-to-download-complete-youtube-playlist/?ref=rp">BeautifulSoup</a></li>
+<li><a href="https://www.bogotobogo.com/VideoStreaming/YouTube/Dissecting-YouTube-URLs.php">BeautifulSoup to download complete Youtube playlist</a></li>
+-->
