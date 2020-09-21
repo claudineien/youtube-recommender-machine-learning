@@ -77,9 +77,9 @@ Métrica realística : Encontrar características iguais entre os dados, ainda q
 
 <h4>APLICAR AS MÉTRICAS</h4>
 <p>Métrica <strong>average precision</strong> da biblioteca sklearn.metrics que conforme imagem a seguir informa que o algorítmo teve um percentual de 14,81% de exemplos positivos, que representa vídeos cujo labelling é 1 (*2).<br>
-<img src=".\git-hub-youtuberecommender\3-image\0dectrecla_aver_prec.png"></p>
+<img src="/3-images/0dectrecla_aver_prec.png"></p>
 <p>Métrica <strong>auc-roc</strong> da biblioteca sklearn.metrics que conforme imagem a seguir informa que o algorítmo teve uma probabilidade percentual de 57,05% de selecionar os exemplos positivos, que representa vídeos cujo labelling é 1 (*2).<br>
-<img src=".\git-hub-youtuberecommender\3-image\0dectrecla_auc_roc.png"></p>
+<img src="/3-images/0dectrecla_auc_roc.png"></p>
 <p>Esta serve para melhor visualizarmos o ranking dos vídeos : dos mais interessantes para os menos interessantes.</p><br>
 <p>Importante :<br>
 O objetivo em ambos métricas average precision e auc-roc é alcançar 1.0 ou o valor mais próximo possível, sendo esta a nossa baseline em machine learning.</p>
