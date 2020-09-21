@@ -21,7 +21,7 @@
   </table>
 </div>
 </h5>
-<br><br><br><br>
+
 <h1 align='center'>1o Modelo Machine Learning - DecisionTreeClassifier</h1>
 <p>Nosso objetivo neste processo é obter as primeiras métricas, que servirão como guia para nos ajudar a otimizar os algorítmos machine learning até obter um modelo no qual as métricas indiquem como sendo a solução machine learning que precisamos.</p>
 <p>Nossas métricas base serão:
@@ -32,6 +32,7 @@
 </p>
 <p>Utilizaremos o notebook <a href="/file-ipynb/2_Decision_Tree_Classifier.ipynb">2_Decision_Tree_Classifier.ipynb</a> para entendermos um pouco de como este processo funciona.</p>
 <p>Iniciaremos aplicando a técnica Labelling, aplicaremos limpezas no dataset, criaremos algumas Features, analisaremos o gráfico time series da biblioteca pandas, faremos tuning no algorítmo machine learning, treinaremos o algorítmo DecisionTreeClassifier e por fim teremos o resultados das métricas.</p>
+
 <hr>
 <h3>LABELLING</h3>
 <p>Vamos aplicar o labelling para o algoritmo machine learning predizer com o melhor average precision e auc-roc possível o vídeo que possivelmente assistiremos.</p>
@@ -62,7 +63,7 @@ Métrica realística : Encontrar características iguais entre os dados, ainda q
 <h4>PLOTAR - EXIBIR DADOS EM GRÁFICO</h4>
 <p>Para uma visualização rápida da quantidade de videos visualizados por dia por ano-mês, vamos plotar um gráfico time series com a biblioteca pandas. Vamos observar que há um grande pico no volume de vídeos visualizados no final do período ano-mês que pode ter sido por conta do youtube ter aplicado alguma aleatoridade na pesquisa dos dados ou por conta de uma situação extraordinária qualquer.</p>
 <img src="/3-images/grafico_video_ano_mes.png">
-<p>Este aumento muito desproporcional apenas em um mês do ano pode prejudicar o treinamento do algoritmo machine learning, se não executarmos a técnica de balanceamento dos dados</p>
+<p>Este aumento muito desproporcional apenas em um mês do ano pode prejudicar o treinamento do algoritmo machine learning, se não executarmos a técnica de balanceamento dos dados adequada.</p>
 
 <h4>MODELO MACHINE LEARNING</h4>
 <p>Com o algorítmo DecisionTreeClassifier vamos analisar rapidamente a influência da predição do modelo machine learning apenas com features view e view_por_dia por data de upload. Para esta análise devemos :
@@ -80,21 +81,19 @@ Métrica realística : Encontrar características iguais entre os dados, ainda q
 <img src="/3-images/0dectrecla_aver_prec.png"></p>
 <p>Métrica <strong>auc-roc</strong> da biblioteca sklearn.metrics que conforme imagem a seguir informa que o algorítmo teve uma probabilidade percentual de 57,05% de selecionar os exemplos positivos, que representa vídeos cujo labelling é 1 (*2).<br>
 <img src="/3-images/0dectrecla_auc_roc.png"></p>
-<p>Esta serve para melhor visualizarmos o ranking dos vídeos : dos mais interessantes para os menos interessantes.</p><br>
+<p>Esta serve para melhor visualizarmos o ranking dos vídeos : dos mais interessantes para os menos interessantes.</p>
 <p>Importante :<br>
-O objetivo em ambos métricas average precision e auc-roc é alcançar 1.0 ou o valor mais próximo possível, sendo esta a nossa baseline em machine learning.</p>
+O objetivo em ambos métricas average precision e auc-roc é alcançar 1.0 ou o valor mais próximo possível, sendo esta a nossa baseline técnica em machine learning.</p>
 
 <br>
 <p><strong>Dica :</strong><br>
-50% para treino e 50% para teste : Por ser uma time series, é quase 100% certeza que os dados de treino serão diferentes dos dados de validação, e a metodologia mais eficiente é dividir os dados o mais próximo possível de 50%<br>
+Dataset Time series 50% treino e 50% teste : Por ser uma time series, é quase 100% certeza que os dados de treino serão diferentes dos dados de validação, e a metodologia mais eficiente é dividir os dados o mais próximo possível de 50%<br>
 Arvore de decisão : É uma das melhores maneiras de entender a relação das features (recursos) com o target (alvo)</p>
 
 <h3>INTERPRETAR A DECISION TREE</h3>
-<li>Exibir a Decision tree para analisar o modelo</a></li>
-<p>Esta é uma boa forma de entender rapidamente como o as features (recursos) se relacionam ao target (alvo)
-Utilizamos a profundidade máxima (max_depth) de 2 níveis de nós e a class_weight="balanced"<br>
-<img src="/3-images/decisiontree.png">
-</p>
+<p>Esta é uma boa forma de entender rapidamente como o as features (recursos) se relacionam ao target (alvo).</p>
+<p>Para uma rápida analise configuramos a profundidade máxima (max_depth) de 2 níveis de nós.<br>
+<img src="/3-images/decisiontree.png"></p>
 <p>
 Aplicamos balanceamento (class_weight="balanced") no peso dos vídeos, e o nó raiz exibe dentro do total 15110.0 visualizações, amostra de 228 vídeos, heterogeneidade em 50% (gini) e os valores com peso balanceado em 114.0 exemplos negativos e 114.0 positivos. Então :<br>
     <ol>
@@ -104,14 +103,11 @@ Aplicamos balanceamento (class_weight="balanced") no peso dos vídeos, e o nó r
     </ol>
 </p>
 
-<p>Utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo DecisionTreeClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva <a href="blank_">ROC</a></p>
-
 <p><strong>Nota :</strong><br>
 (*1) Você pode colocar o nome que quiser, foi escolhido Y (Youtube) para facilitar nosso entendimento.<br>
 (*2) 0 -Vídeo que provavelmente não vamos assistir; 1 -Vídeos que provavelmente vamos assistir
 (*3) Há bibliotecas com métodos para separar os dados de treino e os dados de teste, que pode ser em percentual e/ou em quantidade.<br>
 <br>
-
 Vamos lembrar :<br>
 :/: Precision : é o número que responde a pergunta de todos os modelos que disse que são positivos, 50% destes são realmente positivos<br>
 
