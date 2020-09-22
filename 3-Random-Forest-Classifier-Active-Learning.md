@@ -23,7 +23,7 @@
 </h5>
 
 <h1 align='center'>2o Modelo Machine Learning - RandomForestClassifier</h1>
-<br><br><br><br><br><br>
+
 <p>Nesta etapa o objetivo é aprendermos algumas técnicas para obter um modelo machine learning melhor que o anterior.</p>
 <p>Para alcançar este objetivo vamos aprender a utilizar o algoritmo RandomForestClassifier, aprender os algoritmos TfidfVectorizer da sklearn.feature_extraction.text e scipy.sparse e também aprenderemos como aplicar a técnica Active Learning.</p>
 
