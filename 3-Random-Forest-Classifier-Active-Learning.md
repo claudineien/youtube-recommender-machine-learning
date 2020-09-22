@@ -23,32 +23,44 @@
 </h5>
 
 <h1 align='center'>2o Modelo Machine Learning - RandomForestClassifier</h1>
-<p>Primeiramente abrir o notebook <a href="/1-source-code/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb.</a></p>
-
-<p>Este modelo é igual ao <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>, do processo Labelling à criação das features.</p>
+<br><br><br><br><br><br>
+<p>Nesta etapa o objetivo é aprendermos algumas técnicas para obter um modelo machine learning melhor que o anterior.</p>
+<p>Para alcançar este objetivo vamos aprender a utilizar o algoritmo RandomForestClassifier, aprender os algoritmos TfidfVectorizer da sklearn.feature_extraction.text e scipy.sparse e também aprenderemos como aplicar a técnica Active Learning.</p>
 
 <hr>
-<h3>MODELO MACHINE LEARNING</h3>
-O objetivo neste processo é aplicar o algorítimo RandomForestClassifier para predizer quais vídeos provavelmente assistiremos.<br>
+<h3>COM NOTEBOOK <a href="/1-source-code/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a></h3>
+<p>Utilizaremos o arquivo <a href="/2-dataset">raw_data_with_labels.csv</a> e seguiremos conforme documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a> até a criação das features.</p>
+
+<h4>MODELO MACHINE LEARNING</h4>
+<p>Após criamos as features, vamos separar o dataset de treino e dataset teste por data de publicação/upload, por ser uma time series.</p>
+<p>Vamos transformar strings dos datasets treino e teste em uma representação numérica significativa criando uma matriz esparsa (*1) com o algoritmo Term-frequency TfidfVectorizer (*2).</p>
+<p>É importante observamos a quantidade 1277 na linha 24 e a explicação sobre a otimização na linha 25 do notebook :<br>
+<img src="/3-images/2rand_fores_tfid0.png"><br>
+<img src="/3-images/2rand_fores_tfid1.png"></p>
+<p>Outra boa e comum prática é concatenaremos variáveis com dados numéricos a variáveis com dados string ou concatenarmos matriz densa a uma matriz esparsa, e para isto utilizaremos a biblioteca scipy.sparse</p>
+<p>Após estas técnicas vamos treinar o algorítmo RandomForestClassifier configurando o argumento class_weight="balanced" (mesmo objetivo do explicado no documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>)</p>
+
+<h4>APLICAR AS MÉTRICAS</h4>
+<p>A métrica <strong>predict_proba</strong> do algorítmo RandomForestClassifier traz a distribuição da probabilidade prevista da classe label 1 do dataset. Esta é importante para calcular a pontuação no auc-roc conforme imagem a seguir <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html">roc_auc_score</a><br>
+<img src="/3-images/2rand_fores_proba0.png">.</p>
+<p>Criaremos uma linha com resultados average precision e auc-roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer (*1) que serão utilizados pelo algorítimo RandomForestClassifier. Desta forma vamos entender como esta o nosso modelo em relação a métrica referencia inicial gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>.</p>
+
+<p>Métrica <strong>average precision</strong> da biblioteca sklearn.metrics que conforme imagem a seguir informa que o algorítmo teve um percentual de 14,81% de exemplos positivos, que representa vídeos cujo labelling é 1 (*2).<br>
+<img src="/3-images/0dectrecla_aver_prec.png"></p>
+<p>Métrica <strong>auc-roc</strong> da biblioteca sklearn.metrics que conforme imagem a seguir informa que o algorítmo teve uma probabilidade percentual de 57,05% de selecionar os exemplos positivos, que representa vídeos cujo labelling é 1 (*2).<br>
+<img src="/3-images/0dectrecla_auc_roc.png"></p>
+<p>Esta serve para melhor visualizarmos o ranking dos vídeos : dos mais interessantes para os menos interessantes.</p>
+<p>Importante :<br>
+O objetivo em ambos métricas average precision e auc-roc é alcançar 1.0 ou o valor mais próximo possível, sendo esta a nossa baseline técnica em machine learning.</p>
+
+
+
+<hr>
+<h3>ACTIVE LEARNING</h3>
 <p>Dependendo do projeto, fazer anotações pode aumentar muito o seu custo e/ou tempo para finalizar o projeto, e realizar anotações aleatórias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning. Por exemplo :<br>
 Imagens radiográficas, ressonância magnética e similares precisam de especialistas médicos para fazer anotações de tumor maligno, tumor benigno, não tumor. Estes especialistas são caros e o active learning ajuda a reduzir custos na coleta das anotações com estes profissionais.
 </p>
 
-<p>Para realizar a técnica active learning primeiramente aplicaremos as técnicas :<br>
-    <ul>
-        <li>Term-frequency :
-        Utilizaremos o algorítmo TfidfVectorizer (1*) para transformar strings em uma representação numérica significativa criando uma matriz esparsa (2*).<br>
-        </li>
-        <li>Concatenaremos variáveis com dados numéricos a variáveis com dados string.</li>
-        <li>Concatenaremos matriz densa a uma matriz esparsa</li>
-    </ul>
-</p>
-
-<p><strong>Atenção :</strong><br>
-No notebook <a href="/1-source-code/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a> criaremos uma linha com resultados average precision e auc-roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer (*1) que serão utilizados pelo algorítimo RandomForestClassifier. Desta forma vamos entender como esta o nosso modelo em relação a métrica referencia inicial gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>.</p>
-
-<hr>
-<h3>ACTIVE LEARNING</h3>
 <p>
 A técnica Active Learning que vai nos ajudar a :
 <ol>
@@ -121,13 +133,13 @@ O processo de separação de dados, limpeza de dados, transformação de dados s
 </p>
 
 <p><strong>Nota :</strong><br>
-(*1) TfidfVectorizer reduzirá o impacto de tokens que ocorrem com muita frequência dando mais peso as palavras que aparecem com menor frequência por linha de vídeo, considerando todas as linhas do dataset e vai ignorar as palavras que repetem em todas as linhas de vídeos, dentro do dataset.<br>
+(*1) Matriz esparsa é aquela que armazena valores diferentes de zero e isto significa matriz mais otimizada.<br>
+(*2) TfidfVectorizer reduz o impacto de tokens que ocorrem com muita frequência dando mais peso as palavras que aparecem com menor frequência por linha de vídeo, considerando todas as linhas do dataset e vai ignorar as palavras que repetem em todas as linhas de vídeos, dentro do dataset.<br>
 Utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo DecisionTreeClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva ROC.<br>
 Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor.<br><br>
 O argumento min_df do algoritmo TfidfVectorizer :<br>
 -> min_df=2 : o algorítmo vai considerar significante as palavras que aparecerem o mínimo possível por linha dentro do conjunto de linhas dentro do dataset.<br>
--> min_df=1 : o algorítmo vai considerar significante cada palavra diferente encontrada, por linha dentro do conjunto de linhas dentro do dataset. Uma palavra considerada única em uma linha, pode estar na linha seguinte e será considerada incorretamente como difrentes, então dependendo do projeto esta configuração pode prejudicar.<br><br>
-(*2) Matriz esparsa armazena valores diferentes de zero e isto significa matriz mais otimizada.<br></p>
+-> min_df=1 : o algorítmo vai considerar significante cada palavra diferente encontrada, por linha dentro do conjunto de linhas dentro do dataset. Uma palavra considerada única em uma linha, pode estar na linha seguinte e será considerada incorretamente como difrentes, então dependendo do projeto esta configuração pode prejudicar.</p><br><br>
 
 <br>
 <hr>
@@ -135,6 +147,7 @@ O argumento min_df do algoritmo TfidfVectorizer :<br>
     <ul>
         <li>Curso <a href="https://curso.mariofilho.com/">   
         Solução Completa de Data Science</a> - Instrutor Mario Filho-Kagle Gran Master</li>
+        <li><a href="https://towardsdatascience.com/my-random-forest-classifier-cheat-sheet-in-python-fedb84f8cf4f">predict_proba</a></li>
         <li><a href="https://www.youtube.com/watch?v=Y1XAP6omGzo">Entendiendo las Curvas ROC</a></li>
         <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.plot_tree.html">Método plot_tree</a></li>
         <li><a href="https://strftime.org/">Tabela de códigos para converter strings em datas no Python</a></li>
