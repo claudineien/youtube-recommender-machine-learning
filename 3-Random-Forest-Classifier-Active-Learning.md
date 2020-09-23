@@ -74,7 +74,7 @@ Imagens radiográficas, ressonância magnética e similares precisam de especial
 Mas muita atenção ! Dependendo da quantidade de dados no dataset, será necessário considerar dados mais distantes da fronteira 50-50.<br>
 Outro detalhe é que amostras muito distantes da fronteira, provavelmente são vídeos que realmente não assistiremos.</p>
 
-<p>Neste processo nós programaremos um intervalo fixo para pegar entre 70 e 75 registros e deixaremos aleatório entre 30 e 35 registros, desconsiderando os já selecionados, é claro.</p>
+<p>Neste processo nós programaremos um intervalo fixo para pegar entre 70 e 75 registros e deixaremos aleatório entre 30 e 25 registros, desconsiderando os já selecionados, é claro.</p>
 
 <p>Perceba que a predição foi realizada pelo algorítmo TfidfVectorizer (*1), treinado neste mesmo notebook sob os títulos de vídeos que provavelmente vamos assistir. Criamos o campo p (probabilidade) e este será preenchido com a predição deste algorítmo.</p>
 
