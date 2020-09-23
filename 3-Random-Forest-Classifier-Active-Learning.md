@@ -29,91 +29,60 @@
 
 <hr>
 <h3>COM NOTEBOOK <a href="/1-source-code/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a></h3>
-<p>Utilizaremos o arquivo <a href="/2-dataset">raw_data_with_labels.csv</a> e seguiremos conforme documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a> até a criação das features.</p>
+<p>Utilizaremos o arquivo <a href="/2-dataset">raw_data_with_labels.csv</a> e faremos conforme documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a> até a criação das features.</p>
 
 <h4>MODELO MACHINE LEARNING</h4>
 <p>Após criamos as features, vamos separar o dataset de treino e dataset teste por data de publicação/upload, por ser uma time series.</p>
-<p>Vamos transformar strings dos datasets treino e teste em uma representação numérica significativa criando uma matriz esparsa (*1) com o algoritmo Term-frequency TfidfVectorizer (*2).</p>
-<p>É importante observamos a quantidade 1277 na linha 24 e a explicação sobre a otimização na linha 25 do notebook :<br>
+<p>Vamos transformar as strings dos títulos dos vídeos dos datasets treino e dataset teste em uma representação numérica significativa criando uma matriz esparsa (*1) com o algoritmo Term-frequency TfidfVectorizer (*2), para reduzir de forma inteligente a quantidade de elementos a consultar. As figuras a seguir nos mostram que reduziremos de 44004 elementos para 1277 elementos :<br>
+Linha 24 do notebook<br>
 <img src="/3-images/2rand_fores_tfid0.png"><br>
+Linha 25 do notebook<br>
 <img src="/3-images/2rand_fores_tfid1.png"></p>
-<p>Outra boa e comum prática é concatenaremos variáveis com dados numéricos a variáveis com dados string ou concatenarmos matriz densa a uma matriz esparsa, e para isto utilizaremos a biblioteca scipy.sparse</p>
-<p>Após estas técnicas vamos treinar o algorítmo RandomForestClassifier configurando o argumento class_weight="balanced" (mesmo objetivo do explicado no documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>)</p>
+<p>Outra boa e comum prática é concatenaremos dados numéricos com dados string ou concatenarmos matriz densa com matriz esparsa, e para isto utilizaremos a biblioteca scipy.sparse</p>
+<p>Após estas técnicas vamos treinar o algorítmo RandomForestClassifier configurando o argumento class_weight="balanced" (mesmo objetivo do explicado no documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>).</p>
 
-<h4>APLICAR AS MÉTRICAS</h4>
-<p>A métrica <strong>predict_proba</strong> do algorítmo RandomForestClassifier traz a distribuição da probabilidade prevista da classe label 1 do dataset. Esta é importante para calcular a pontuação no auc-roc conforme imagem a seguir <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html">roc_auc_score</a><br>
-<img src="/3-images/2rand_fores_proba0.png">.</p>
-<p>Criaremos uma linha com resultados average precision e auc-roc, referente a alguns experimentos alterando o argumento mindf do TfidfVectorizer (*1) que serão utilizados pelo algorítimo RandomForestClassifier. Desta forma vamos entender como esta o nosso modelo em relação a métrica referencia inicial gerada no notebook <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>.</p>
-
-<p>Métrica <strong>average precision</strong> da biblioteca sklearn.metrics que conforme imagem a seguir informa que o algorítmo teve um percentual de 14,81% de exemplos positivos, que representa vídeos cujo labelling é 1 (*2).<br>
-<img src="/3-images/0dectrecla_aver_prec.png"></p>
-<p>Métrica <strong>auc-roc</strong> da biblioteca sklearn.metrics que conforme imagem a seguir informa que o algorítmo teve uma probabilidade percentual de 57,05% de selecionar os exemplos positivos, que representa vídeos cujo labelling é 1 (*2).<br>
-<img src="/3-images/0dectrecla_auc_roc.png"></p>
+<h4>AS MÉTRICAS DE AVALIAÇÃO</h4>
+<p>Visualizaremos a métrica <strong>predict_proba</strong> do algorítmo RandomForestClassifier para verificar a distribuição da probabilidade prevista da classe label 1 do dataset. Esta é importante para calcular a pontuação no auc-roc conforme imagem a seguir :<br>
+<img src="/3-images/2rand_fores_proba0.png"><br>
+<a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html">roc_auc_score - probability estimates which sum to 1</a> </p>
+<p>A métrica <strong>average precision</strong> da biblioteca sklearn.metrics conforme imagem a seguir informa que o algorítmo teve um percentual de 19,49% de exemplos positivos, que representa vídeos cujo labelling é 1 (*3).<br>
+<img src="/3-images/2rand_fores_aver_prec.png"></p>
+<p>A métrica <strong>auc-roc</strong> da biblioteca sklearn.metrics conforme imagem a seguir informa que o algorítmo teve uma probabilidade percentual de 59,58% de selecionar os exemplos positivos, que representa vídeos cujo labelling é 1 (*3).<br>
+<img src="/3-images/2rand_fores_auc_roc.png"></p>
 <p>Esta serve para melhor visualizarmos o ranking dos vídeos : dos mais interessantes para os menos interessantes.</p>
 <p>Importante :<br>
 O objetivo em ambos métricas average precision e auc-roc é alcançar 1.0 ou o valor mais próximo possível, sendo esta a nossa baseline técnica em machine learning.</p>
+<p>Aqui vamos perceber que houve uma pequena melhora nas métricas com o mesmo tuning aplicado no algorítmo DecisionTreeClassifier e RandomForestClassifier. Vamos aplicar a técnica active learning para melhorar mais as métricas.</p>
 
-
-
-<hr>
-<h3>ACTIVE LEARNING</h3>
-<p>Dependendo do projeto, fazer anotações pode aumentar muito o seu custo e/ou tempo para finalizar o projeto, e realizar anotações aleatórias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning. Por exemplo :<br>
-Imagens radiográficas, ressonância magnética e similares precisam de especialistas médicos para fazer anotações de tumor maligno, tumor benigno, não tumor. Estes especialistas são caros e o active learning ajuda a reduzir custos na coleta das anotações com estes profissionais.
-</p>
-
-<p>
-A técnica Active Learning que vai nos ajudar a :
-<ol>
-    <li>selecionar os melhores exemplos-dados em datasets para fazermos anotações</li>
-    <li>agilizar na coleta das anotações em projetos com prazo curto para fazer anotações</li>
-    <li>facilitar a coleta das anotações de profissionais especialistas como médicos, biólogos, astronomos, entre outros</li>
-    <li>desenvolver modelos machine learning mais performáticos</li>
-    <li>evitar altos custos em qualquer projeto</li>
-    <li>economizar investimentos financeiros em qualquer projeto</li>
-    <li>agilizar no desenvolvimento de testes em modelos preditivos machine learning</li>
-</ol>
-</p>
-
-<p>
-A técnica active learning de forma rápida nos ajudará a selecionar e disponibilizar os dados muito difíceis do modelo machine learning predizer, ou seja, se o vídeo é o que vamos assistir ou não.<br>
-Depois vamos fazer as anotações necessárias manualmente e unir estes dados ao dataset <a href="/2-dataset">raw_data_with_labels.csv</a> (criado no inicio de nosso trabalho).<br>
-Também vamos aprender a verificar se o active learning esta produzindo bons resultados.<br>
-</p>
-
-<p><strong>Prática ideal do Data Scientist :</strong><br>
-Utilizar o mesmo dataset durante os testes de escolha dos modelos machine learning nos ajuda detectar o modelo ideal.
-</p>
-
-
-<p>
-Através do notebook <a href="/1-source-code/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a> vamos :<br>
-<p>
+<h4>ACTIVE LEARNING</h4>
+<p>Dependendo do projeto, fazer anotações pode aumentar desnecessariamente o investimento financeiro e/ou tempo para finalizá-lo, e realizar anotações aleatórias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning. Por exemplo :<br>
+Imagens radiográficas, ressonância magnética e similares precisam de especialistas médicos para fazer anotações de tumor maligno, tumor benigno, não tumor. Estes especialistas são caros e o active learning ajuda a reduzir investimentos na coleta das anotações com estes profissionais.</p>
+<p>A técnica Active Learning de forma rápida vai nos ajudar a :
     <ol>
-        <li>abrir o arquivo <a href=".\file-csv">raw_data_with_labels.csv</a> utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li></li>
-        <li>selecionar os dados cujo Y é nulo e por linha haja pelo menos uma coluna preenchida com um dado válido.</li>
-        <li>armazenar os dados do dataset em um dataframe utilizando a biblioteca <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a></li>
-        <li>gravar o dataset em outro dataframe para termos mais liberdade nas alterações</li>
-        <li>extrair os titulos dos vídeos</li>
-        <li>extrair apenas a data de uma coluna tipo objeto, com strings e datas</li>
-		<li>extrair apenas o número de uma coluna tipo objeto, com strings e número</li>
-        <li>criar Features - Tratamentos específicos nos dados</li>
-        <li>aplicar o TfidfVectorizer (*1), treinado anteriormente, sobre os títulos dos vídeos difíceis de serem preditos</li>
-        <li>concatenar conteúdo denso com conteúdo esparso utilizando a função hstack</li>
+        <li>selecionar e disponibilizar os dados mais difíceis do modelo machine learning predizer</li>
+        <li>selecionar os melhores exemplos-dados em datasets para fazermos as anotações</li>
+        <li>agilizar na coleta das anotações em projetos com prazo curto para fazer anotações</li>
+        <li>facilitar a coleta das anotações de profissionais especialistas como médicos, biólogos, astronomos, entre outros</li>
+        <li>desenvolver modelos machine learning mais performáticos</li>
+        <li>evitar altos custos em qualquer projeto</li>
+        <li>economizar investimentos financeiros em qualquer projeto</li>
+        <li>agilizar no desenvolvimento de testes em modelos preditivos machine learning</li>
     </ol>
 </p>
 
-<p>Neste momento temos um dataframe cujo dataset contém o total de views e o total de views por dia somente dos títulos que o modelo esta com dificuldade em predizer.</p>
-
-<p>Perceba que a predição foi realizada pelo algorítmo TfidfVectorizer (*1), treinado neste mesmo notebook sob os títulos de vídeos que provavelmente vamos assistir. Criamos o campo p (probabilidade) e este será preenchido com a predição deste algorítmo.</p>
-
-<p>Uma boa prática para selecionarmos os exemplos difíceis do modelo predizer, é pegar os vídeos mais próximos da fronteira dos 50% positivo e 50% negativo (verdadeiro ou falso).<br>
+<p>Vamos pegar o dataset original <a href="/2-dataset">raw_data_with_labels.csv</a> e selecionar os exemplos difíceis do modelo predizer. E uma boa prática é pegar os vídeos mais próximos da fronteira dos 50% positivo e 50% negativo (verdadeiro ou falso), por que são os mais prováveis de acertar também.<br>
 Mas muita atenção ! Dependendo da quantidade de dados no dataset, será necessário considerar dados mais distantes da fronteira 50-50.<br>
 Outro detalhe é que amostras muito distantes da fronteira, provavelmente são vídeos que realmente não assistiremos.</p>
 
 <p>Neste processo nós programaremos um intervalo fixo para pegar entre 70 e 75 registros e deixaremos aleatório entre 30 e 35 registros, desconsiderando os já selecionados, é claro.</p>
 
+<p>Perceba que a predição foi realizada pelo algorítmo TfidfVectorizer (*1), treinado neste mesmo notebook sob os títulos de vídeos que provavelmente vamos assistir. Criamos o campo p (probabilidade) e este será preenchido com a predição deste algorítmo.</p>
+
 <p>Por fim, será gerado o arquivo active_labels.csv disponibilizado <a href=".\file-csv">aqui</a>. Neste devemos aplicar o labelling na coluna Y -Youtube.</p>
 
+<p>Vamos fazer as anotações necessárias manualmente e unir estes dados ao dataset <a href="/2-dataset">raw_data_with_labels.csv</a> (criado no inicio deste projeto).</p>
+
+<p>Vamos aprender a verificar se o active learning esta produzindo bons resultados.</p>
 
 <p><strong>Atenção : </strong><br>
 O processo de separação de dados, limpeza de dados, transformação de dados são ações, instruções, scripts 99% iguais aos que aprendemos nos notebooks <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> e <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>
@@ -139,8 +108,11 @@ Utilizar o objeto TfidfVectorizer para transformar textos em uma representação
 Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor.<br><br>
 O argumento min_df do algoritmo TfidfVectorizer :<br>
 -> min_df=2 : o algorítmo vai considerar significante as palavras que aparecerem o mínimo possível por linha dentro do conjunto de linhas dentro do dataset.<br>
--> min_df=1 : o algorítmo vai considerar significante cada palavra diferente encontrada, por linha dentro do conjunto de linhas dentro do dataset. Uma palavra considerada única em uma linha, pode estar na linha seguinte e será considerada incorretamente como difrentes, então dependendo do projeto esta configuração pode prejudicar.</p><br><br>
+-> min_df=1 : o algorítmo vai considerar significante cada palavra diferente encontrada, por linha dentro do conjunto de linhas dentro do dataset. Uma palavra considerada única em uma linha, pode estar na linha seguinte e será considerada incorretamente como difrentes, então dependendo do projeto esta configuração pode prejudicar.<br>
+(*3) Labelling 0 -Vídeo que provavelmente não vamos assistir; Labelling 1 -Vídeos que provavelmente vamos assistir
 
+<br>
+<br>
 <br>
 <hr>
 <p>Fontes de estudo :
