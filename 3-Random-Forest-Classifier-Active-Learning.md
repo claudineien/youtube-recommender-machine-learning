@@ -69,25 +69,12 @@ Imagens radiográficas, ressonância magnética e similares precisam de especial
         <li>agilizar no desenvolvimento de testes em modelos preditivos machine learning</li>
     </ol>
 </p>
-
-<p>Vamos pegar o dataset original <a href="/2-dataset">raw_data_with_labels.csv</a> e selecionar os exemplos difíceis do modelo predizer. E uma boa prática é pegar os vídeos mais próximos da fronteira dos 50% positivo e 50% negativo (verdadeiro ou falso), por que são os mais prováveis de acertar também.<br>
-Mas muita atenção ! Dependendo da quantidade de dados no dataset, será necessário considerar dados mais distantes da fronteira 50-50.<br>
+<p>Vamos pegar o dataset original <a href="/2-dataset">raw_data_with_labels.csv</a>, executar o processo de separação de dados, limpeza de dados, transformação de dados, que são 99% iguais aos que aprendemos nos notebooks <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> e <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>, vamos trazer apenas os registros cuja coluna Y seja nula, aplicaremos o algorítmo predict_proba do algorítmo RandomForestClassifier sob os títulos de vídeos e gravaremos o resultado no dataset, em um novo campo p (probabilidade). Então selecionaremos os vídeos mais próximos da fronteira dos 50% positivo e 50% negativo (verdadeiro ou falso), por que são os mais prováveis de acertar mesmo sendo difíceis do modelo predizer.</p>
+<p>Atenção :<br>
+Dependendo da quantidade de dados no dataset, será necessário considerar dados mais distantes da fronteira 50-50.<br>
 Outro detalhe é que amostras muito distantes da fronteira, provavelmente são vídeos que realmente não assistiremos.</p>
-
 <p>Neste processo nós programaremos um intervalo fixo para pegar entre 70 e 75 registros e deixaremos aleatório entre 30 e 25 registros, desconsiderando os já selecionados, é claro.</p>
-
-<p>Perceba que a predição foi realizada pelo algorítmo TfidfVectorizer (*1), treinado neste mesmo notebook sob os títulos de vídeos que provavelmente vamos assistir. Criamos o campo p (probabilidade) e este será preenchido com a predição deste algorítmo.</p>
-
-<p>Por fim, será gerado o arquivo active_labels.csv disponibilizado <a href=".\file-csv">aqui</a>. Neste devemos aplicar o labelling na coluna Y -Youtube.</p>
-
-<p>Vamos fazer as anotações necessárias manualmente e unir estes dados ao dataset <a href="/2-dataset">raw_data_with_labels.csv</a> (criado no inicio deste projeto).</p>
-
-<p>Vamos aprender a verificar se o active learning esta produzindo bons resultados.</p>
-
-<p><strong>Atenção : </strong><br>
-O processo de separação de dados, limpeza de dados, transformação de dados são ações, instruções, scripts 99% iguais aos que aprendemos nos notebooks <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> e <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>
-</p>
-
+<p>Por fim, geraremos o arquivo active_labels.csv com estes aproximadamente 100 registros, para fazermos as anotações.</p>
 <p><strong>Dicas :</strong><br>
     <ul>
         <li>Utilizar a função scipy sparse que é muito mais performática do que a função numpy sparse.</li>
@@ -100,12 +87,11 @@ O processo de separação de dados, limpeza de dados, transformação de dados s
         <li>Features x Banco de dados : Em um projeto real se houver muitas features, uma boa atitude é salvar em banco de dados.</li>
     </ul>
 </p>
-
 <p><strong>Nota :</strong><br>
 (*1) Matriz esparsa é aquela que armazena valores diferentes de zero e isto significa matriz mais otimizada.<br>
 (*2) TfidfVectorizer reduz o impacto de tokens que ocorrem com muita frequência dando mais peso as palavras que aparecem com menor frequência por linha de vídeo, considerando todas as linhas do dataset e vai ignorar as palavras que repetem em todas as linhas de vídeos, dentro do dataset.<br>
 Utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo DecisionTreeClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva ROC.<br>
-Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor.<br><br>
+Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor.<br>
 O argumento min_df do algoritmo TfidfVectorizer :<br>
 -> min_df=2 : o algorítmo vai considerar significante as palavras que aparecerem o mínimo possível por linha dentro do conjunto de linhas dentro do dataset.<br>
 -> min_df=1 : o algorítmo vai considerar significante cada palavra diferente encontrada, por linha dentro do conjunto de linhas dentro do dataset. Uma palavra considerada única em uma linha, pode estar na linha seguinte e será considerada incorretamente como difrentes, então dependendo do projeto esta configuração pode prejudicar.<br>
