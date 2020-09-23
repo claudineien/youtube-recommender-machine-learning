@@ -74,7 +74,7 @@ Imagens radiográficas, ressonância magnética e similares precisam de especial
 Dependendo da quantidade de dados no dataset, será necessário considerar dados mais distantes da fronteira 50-50.<br>
 Outro detalhe é que amostras muito distantes da fronteira, provavelmente são vídeos que realmente não assistiremos.</p>
 <p>Neste processo nós programaremos um intervalo fixo para pegar entre 70 e 75 registros e deixaremos aleatório entre 30 e 25 registros, desconsiderando os já selecionados, é claro.</p>
-<p>Por fim, geraremos o arquivo active_labels.csv com estes aproximadamente 100 registros, para fazermos as anotações.</p>
+<p>Por fim, geraremos o arquivo active_labels.csv com estes aproximadamente 100 registros a mais, para fazermos as anotações e melhorar nosso modelo machine learning.</p>
 <p><strong>Dicas :</strong><br>
     <ul>
         <li>Utilizar a função scipy sparse que é muito mais performática do que a função numpy sparse.</li>
