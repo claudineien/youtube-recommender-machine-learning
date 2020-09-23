@@ -75,9 +75,9 @@ Dependendo da quantidade de dados no dataset, será necessário considerar dados
 Outro detalhe é que amostras muito distantes da fronteira, provavelmente são vídeos que realmente não assistiremos.</p>
 <p>Neste processo nós programaremos um intervalo fixo para pegar entre 70 e 75 registros e deixaremos aleatório entre 30 e 25 registros, desconsiderando os já selecionados, é claro.</p>
 <p>Por fim, geraremos o arquivo active_labels.csv com estes aproximadamente 100 registros a mais, para fazermos as anotações e melhorar nosso modelo machine learning.</p>
-<p><strong>Dicas :</strong><br>
+<p>Dicas :<br>
     <ul>
-        <li>Utilizar a função scipy sparse que é muito mais performática do que a função numpy sparse.</li>
+        <li>A função scipy sparse é mais performática do que a função numpy sparse.</li>
         <li>É comum concaternar matriz esparsa com matriz densa</li>
         <li>Formatação de datas : Fique atento à formatação de datas de português para inglês ou vice-versa.</li>
         <li>Número : O local do ponto na numeração em português é diferente do em inglês.</li>
@@ -87,7 +87,7 @@ Outro detalhe é que amostras muito distantes da fronteira, provavelmente são v
         <li>Features x Banco de dados : Em um projeto real se houver muitas features, uma boa atitude é salvar em banco de dados.</li>
     </ul>
 </p>
-<p><strong>Nota :</strong><br>
+<p>Nota :<br>
 (*1) Matriz esparsa é aquela que armazena valores diferentes de zero e isto significa matriz mais otimizada.<br>
 (*2) TfidfVectorizer reduz o impacto de tokens que ocorrem com muita frequência dando mais peso as palavras que aparecem com menor frequência por linha de vídeo, considerando todas as linhas do dataset e vai ignorar as palavras que repetem em todas as linhas de vídeos, dentro do dataset.<br>
 Utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, utilizar a predição do algoritmo DecisionTreeClassifier, analisar sua probabilidade de acerto de predição e sua precisão curva ROC.<br>
