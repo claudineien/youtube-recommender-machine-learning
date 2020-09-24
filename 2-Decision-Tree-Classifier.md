@@ -45,7 +45,7 @@ A seguir estão os procedimentos para aplicarmos o labelling:
     </ol>
 </p>
 <p><strong>Importante:</strong><br>
-Baixar o arquivo <a href="/2-dataset">raw_data_with_labels.csv</a>, cujo o labelling foi aplicado para facilitar nosso entendimento em cada técnica executada</p>
+Baixar o arquivo <a href="/2-dataset">raw_data_with_labels.csv</a>, cujo labelling foi aplicado para facilitar nosso entendimento em cada técnica executada</p>
 
 <hr>
 <h3>COM NOTEBOOK <a href="/1-source-code/2_Decision_Tree_Classifier.ipynb">2_Decision_Tree_Classifier.ipynb</a></h3>
