@@ -41,6 +41,8 @@ Baixar o arquivo <a href="/2-dataset">active_labels.csv</a>, cujo labelling já 
 <p>Ao aplicarmos as métricas average precision e auc-roc sobre o arquivo <a href="/2-dataset">active_labels.csv</a> considerando
 as colunas y (labelling) e p (probabilidade) com o percentual de probabilidade de ser 1 (Video que provavelmente vamos assistir), vamos obter o seguinte resultado :<br>
 <img src="/3-images/3rand_for_activ_learn.png"><br>
+Comparando com as primeiras métricas, exibidas a seguir, do modelo DecisionTreeClassifier percebemos que houve uma melhora nas métricas :<br>
+<img src="/3-images/2rand_fores_tfid0.png"> | <img src="/3-images/2rand_fores_tfid1.png">
 <p>Esta primeira métrica realizada sobre o dataset com 100 exemplos que o modelo machine learning esta com dificuldade em classificar, indica que :<br>
 - As métricas average_precision_score e roc_auc_score estão sensíveis com relação a pequena quantidade de dados que temos.<br>
 - O dataset provavelmente deve receber mais tratamento e/ou mais dados para melhorarmos o modelo machine learning.<br>
@@ -50,7 +52,7 @@ A coluna p contém a probabilidade que o modelo machine learning dá ao item 579
 Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, então o item :<br>
 - 579 seria um Falso Negativo (37,5% < 50%)<br>
 - 846 seria um Falso Positivo (82,6% > 50%)</p>
-<p>Vamos concatenar os arquivos <a href="/2-dataset">active_labels.csv</a> com aproximadamento 100 exemplos ao <a href="/2-dataset">raw_data_with_labels.csv</a> com aproximadamento 500 e ambos com labelling realizado, para treinarmos o modelo machine learning.</p>
+<p>Vamos concatenar os arquivos <a href="/2-dataset">active_labels.csv</a> com aproximadamento 100 exemplos ao <a href="/2-dataset">raw_data_with_labels.csv</a> com aproximadamento 500 exemplos e ambos com labelling realizado, para melhor treinarmos o modelo machine learning.</p>
 
 <p>, criar mais exemplos para treino e teste, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, vamos analisar probabilidade, métricas roc_auc_score e average_precision_score, comparar com a referencial inicial obtida no notebook <a href="/1-source-code/2_Decision_Tree_Classifier.ipynb">2_Decision_Tree_Classifier.ipynb</a> e comparar com os resultados gerados no notebook <a href="/1-source-code/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a>.
 </p>
