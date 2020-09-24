@@ -41,7 +41,7 @@ Baixar o arquivo <a href="/2-dataset">active_labels.csv</a>, cujo labelling já 
 <p>Ao aplicarmos as métricas average precision e auc-roc sobre o arquivo <a href="/2-dataset">active_labels.csv</a> considerando
 as colunas y (labelling) e p (probabilidade) com o percentual de probabilidade de ser 1 (Video que provavelmente vamos assistir), vamos obter o seguinte resultado :<br>
 <img src="/3-images/3rand_for_activ_learn.png"><br>
-Comparando com as primeiras métricas, exibidas a seguir, do modelo DecisionTreeClassifier percebemos que houve uma melhora nas métricas :<br>
+Comparando com as primeiras métricas do modelo DecisionTreeClassifier, exibidas a seguir, percebemos que houve uma melhora nas métricas:<br>
 <img src="/3-images/0dectrecla_aver_prec.png"> | <img src="/3-images/0dectrecla_auc_roc.png">
 <p>Esta primeira métrica realizada sobre o dataset com 100 exemplos que o modelo machine learning esta com dificuldade em classificar, indica que :<br>
 - As métricas average_precision_score e roc_auc_score estão sensíveis com relação a pequena quantidade de dados que temos.<br>
