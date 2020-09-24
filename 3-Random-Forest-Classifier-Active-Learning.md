@@ -23,7 +23,6 @@
 </h5>
 
 <h1 align='center'>2o Modelo Machine Learning - RandomForestClassifier</h1>
-
 <p>Nesta etapa o objetivo é aprendermos algumas técnicas para obter um modelo machine learning melhor que o anterior.</p>
 <p>Para alcançar este objetivo vamos aprender a utilizar o algoritmo RandomForestClassifier, aprender os algoritmos TfidfVectorizer da sklearn.feature_extraction.text e scipy.sparse e também aprenderemos como aplicar a técnica Active Learning.</p>
 
@@ -41,7 +40,7 @@ Linha 25 do notebook<br>
 <p>Outra boa e comum prática é concatenaremos dados numéricos com dados string ou concatenarmos matriz densa com matriz esparsa, e para isto utilizaremos a biblioteca scipy.sparse</p>
 <p>Após estas técnicas vamos treinar o algorítmo RandomForestClassifier configurando o argumento class_weight="balanced" (mesmo objetivo do explicado no documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>).</p>
 
-<h4>AS MÉTRICAS DE AVALIAÇÃO</h4>
+<h4>AS MÉTRICAS DE CLASSIFICAÇÃO</h4>
 <p>Visualizaremos a métrica <strong>predict_proba</strong> do algorítmo RandomForestClassifier para verificar a distribuição da probabilidade prevista da classe label 1 do dataset. Esta é importante para calcular a pontuação no auc-roc conforme imagem a seguir :<br>
 <img src="/3-images/2rand_fores_proba0.png"><br>
 <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html">roc_auc_score - probability estimates which sum to 1</a> </p>
@@ -55,20 +54,23 @@ O objetivo em ambos métricas average precision e auc-roc é alcançar 1.0 ou o 
 <p>Aqui vamos perceber que houve uma pequena melhora nas métricas com o mesmo tuning aplicado no algorítmo DecisionTreeClassifier e RandomForestClassifier. Vamos aplicar a técnica active learning para melhorar mais as métricas.</p>
 
 <h4>ACTIVE LEARNING</h4>
-<p>Dependendo do projeto, fazer anotações pode aumentar desnecessariamente o investimento financeiro e/ou tempo para finalizá-lo, e realizar anotações aleatórias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning. Por exemplo :<br>
+<p>Dependendo do projeto, a coleta de mais dados assim como fazer anotações pode aumentar desnecessariamente o investimento financeiro e/ou tempo para finalizá-lo, e realizar anotações aleatórias sem um conhecimento qualificado pode prejudicar o modelo preditivo de machine learning. Por exemplo :<br>
 Imagens radiográficas, ressonância magnética e similares precisam de especialistas médicos para fazer anotações de tumor maligno, tumor benigno, não tumor. Estes especialistas são caros e o active learning ajuda a reduzir investimentos na coleta das anotações com estes profissionais.</p>
 <p>A técnica Active Learning de forma rápida vai nos ajudar a :
-    <ol>
-        <li>selecionar e disponibilizar os dados mais difíceis do modelo machine learning predizer</li>
-        <li>selecionar os melhores exemplos-dados em datasets para fazermos as anotações</li>
-        <li>agilizar na coleta das anotações em projetos com prazo curto para fazer anotações</li>
-        <li>facilitar a coleta das anotações de profissionais especialistas como médicos, biólogos, astronomos, entre outros</li>
-        <li>desenvolver modelos machine learning mais performáticos</li>
-        <li>evitar altos custos em qualquer projeto</li>
-        <li>economizar investimentos financeiros em qualquer projeto</li>
-        <li>agilizar no desenvolvimento de testes em modelos preditivos machine learning</li>
-    </ol>
+  <ol>
+    <li>entender o motivo de precisarmos de mais dados em nosso dataset</li>
+    <li>selecionar e disponibilizar os dados mais difíceis do modelo machine learning predizer</li>
+    <li>selecionar os melhores exemplos-dados em datasets para fazermos as anotações</li>
+    <li>gerar mais exemplos reais para fazer anotações</li>
+    <li>agilizar na coleta das anotações em projetos com prazo curto para fazer anotações</li>
+    <li>facilitar a coleta das anotações de profissionais especialistas como médicos, biólogos, astronomos, entre outros</li>
+    <li>desenvolver modelos machine learning mais performáticos</li>
+    <li>evitar altos custos em qualquer projeto</li>
+    <li>economizar investimentos financeiros em qualquer projeto</li>
+    <li>agilizar no desenvolvimento de testes em modelos preditivos machine learning</li>
+  </ol>
 </p>
+
 <p>Vamos pegar o dataset original <a href="/2-dataset">raw_data_with_labels.csv</a>, executar o processo de separação de dados, limpeza de dados, transformação de dados, que são 99% iguais aos que aprendemos nos notebooks <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> e <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>, vamos trazer apenas os registros cuja coluna Y seja nula, aplicaremos o algorítmo predict_proba do algorítmo RandomForestClassifier sob os títulos de vídeos e gravaremos o resultado no dataset, em um novo campo p (probabilidade). Então selecionaremos os vídeos mais próximos da fronteira dos 50% positivo e 50% negativo (verdadeiro ou falso), por que são os mais prováveis de acertar mesmo sendo difíceis do modelo predizer.</p>
 <p>Atenção :<br>
 Dependendo da quantidade de dados no dataset, será necessário considerar dados mais distantes da fronteira 50-50.<br>
