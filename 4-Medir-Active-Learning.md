@@ -42,7 +42,7 @@ Baixar o arquivo <a href="/2-dataset">active_labels.csv</a>, cujo labelling já 
 as colunas y (labelling) e p (probabilidade) com o percentual de probabilidade de ser 1 (Video que provavelmente vamos assistir), vamos obter o seguinte resultado :<br>
 <img src="/3-images/3rand_for_activ_learn.png"><br>
 Comparando com as primeiras métricas, exibidas a seguir, do modelo DecisionTreeClassifier percebemos que houve uma melhora nas métricas :<br>
-<img src="/3-images/2rand_fores_tfid0.png"> | <img src="/3-images/2rand_fores_tfid1.png">
+<img src="/3-images/0dectrecla_aver_prec.png"> | <img src="/3-images/0dectrecla_auc_roc.png">
 <p>Esta primeira métrica realizada sobre o dataset com 100 exemplos que o modelo machine learning esta com dificuldade em classificar, indica que :<br>
 - As métricas average_precision_score e roc_auc_score estão sensíveis com relação a pequena quantidade de dados que temos.<br>
 - O dataset provavelmente deve receber mais tratamento e/ou mais dados para melhorarmos o modelo machine learning.<br>
