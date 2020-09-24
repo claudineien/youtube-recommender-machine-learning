@@ -23,7 +23,7 @@
 </h5>
 
 <h1 align='center'>Resultado com Active Learning</h1>
-<p>O objetivo nesta fase é entender se o Active Learning vai trazer ou não melhorias ao nosso modelo machine learning. No primeiro momento identificaremos as melhorias através das métricas average precision e auc-roc. Esta análise também nos ajudará a acompanhar mais rápido a qualidade do dataset, entender se há necessidade de termos mais dados para treinar e testar e aplicar uma ou mais mudanças em um ou mais processos do desenvolvimento deste projeto de ciência de dados.</p>
+<p>O objetivo nesta fase é entender aonde o Active Learning vai trazer ou não melhorias ao nosso modelo machine learning. Nesta etapa identificaremos se houve melhoria ou não através das métricas average precision e auc-roc. Esta análise também nos ajudará a acompanhar mais rápidamente a qualidade do dataset, entender se há necessidade de termos mais dados para treinar e testar e aplicar uma ou mais mudanças em um ou mais processos do desenvolvimento deste projeto de ciência de dados.</p>
 <p>Utilizaremos o notebook <a href="/1-source-code/4_Resultado_Active_Learning.ipynb" >4_Resultado_Active_Learning.ipynb</a> para entendermos um pouco de como este processo funciona.</p>
 <p>Nesta etapa vamos aplicar a técnica Labelling, aplicaremos limpezas no dataset, criaremos algumas Features, trabalharemos com matriz esparsas, term frequency, faremos tuning no algorítmo machine learning, treinaremos o algorítmo RandomForestClassifier e por fim teremos o resultados das métricas.</p>
 
@@ -45,35 +45,32 @@ as colunas y (labelling) e p (probabilidade) com o percentual de probabilidade d
 - As métricas average_precision_score e roc_auc_score estão sensíveis com relação a pequena quantidade de dados que temos.<br>
 - O dataset provavelmente deve receber mais tratamento e/ou mais dados para melhorarmos o modelo machine learning.<br>
 - O modelo parece estar melhorando com o Active Learning</p>
-<p>Analisando um pouco do dataframe do arquivo <a href="/2-dataset" >active_labels.csv</a> :<br>
-A coluna p contém a probabilidade que o modelo machine learning dá ao item 579 de ser 37,5% positivo e ao item 846 de ser 82,6% positivo.<br>
-Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, então o item :<br>
+<p>Analisando um pouco do dataframe do arquivo <a href="/2-dataset" >active_labels.csv</a>, identificamos que a coluna p contém a probabilidade que o modelo machine learning dá ao item 579 de ser 37,5% positivo e ao item 846 de ser 82,6% positivo.<br>
+Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, significa que o item :<br>
 - 579 seria um Falso Negativo (37,5% < 50%)<br>
 - 846 seria um Falso Positivo (82,6% > 50%)</p>
-<p>Vamos concatenar os arquivos <a href="/2-dataset">active_labels.csv</a> com aproximadamento 100 exemplos ao <a href="/2-dataset">raw_data_with_labels.csv</a> com aproximadamento 500 exemplos e ambos com labelling realizado, que significa mais exemplos para melhor treinarmos o modelo machine learning.</p>
 
 <hr>
-<h3>ALGUMAS TÉCNICAS PARA MELHORAR AS MÉTRICAS</h3>
-<p>A seguir aprenderemos como aplicar algumas técnicas para melhorar as métricas e ter um modelo machine learning melhor :</p>
+<h3>ANALISAR RESULTADO DO ACTIVE LEARNING</h3>
+<p>Neste etapa nós aprenderemos como aplicar algumas técnicas para entendermos aonde o active learning nos esta ajudando.</p>
 
 <h4>LIMPAR E TRANSFORMAR DADOS</h4>
 <p>
     <ul>
-        <li>Vamos incluir a coluna [Novo] no dataframe com os aproximadamente 100 exemplos.</li>
-        <li>Vamos incluir o número 1 na coluna [Novo] criada no dataframe com os aproximadamente 100 exemplos (*2)</li>
-        <li>Vamos importar aproximadamente 498 registros do dataset <a href="\file-csv">raw_data_with_labels.csv</a>, cujo o campo y seja diferente de nulo/vazio, estão com anotações (labelling) 1 para vídeos que gosto ou 0 para vídeos que não gosto.</li>
-        <li>Vamos unir os dois dataframes importados gerando um novo dataframe com aproximadamento 600 registros. Na coluna [Novo] estaram gravados 1 indicando dataset do dataframe que continha 100 registros e gravará nan's para os outros 500 registros.</li>
-        <li>Vamos eliminar a coluna p relacionada a probabilidade de acerto dos vídeos. Esta não será usada nos próximos testes.</li>
-        <li>Extrair a descrição dos títulos dos vídeos.</li>
+        <li>Vamos incluir a coluna [Novo] no dataframe com os 100 exemplos separados pelo active learning e incluir o número 1 nesta coluna (*2).</li>
+        <li>Vamos importar aproximadamente 498 registros do dataset <a href="\file-csv">raw_data_with_labels.csv</a>, cujo o campo y seja diferente de nulo/vazio, que estão com anotações 1 ou 0.</li>
+        <li>Vamos concatenar os arquivos <a href="/2-dataset">active_labels.csv</a> com 100 exemplos e com a nova coluna [Novo] ao <a href="/2-dataset">raw_data_with_labels.csv</a> com aproximadamento 500 exemplos. Ambos com labelling realizado. E teremos com um dataset com 600 registros, para melhorar o treinamento de nosso modelo machine learning.</li>
+        <li>O novo dataset terá a coluna [Novo] com 1 indicando os 100 registros e gravará nan's para os outros 500 registros.</li>
+        <li>Vamos eliminar a coluna p, por que será desnecessária aos testes.</li>
         <li>Vamos substituir o conteúdo nan por 0 na coluna [Novo] referente aos 500 registros que estão com nan's (*2).</li>
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas.</li>
-		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número</li>
-        <li>Criar Features - Tratamentos específicos nos dados.</li>
+		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número.</li>
+        <li>Criar Features necessárias.</li>
     </ul>
 </p>
 
 <h4>AUMENTAR DATASET DE VALIDAÇÃO</h4>
-<p>É o procedimento menos utilizado. Esta sendo utilizado por que a quantidade de dados é muito pouca. Esta é uma boa técnica para analisarmos melhor a probabilidade, média de precisão e o AUC ROC. Aqui os dados de validação são novos e os dados de treino antigos.
+<p>Aumentar o dataset de valicação é a técnica menos utilizada. Será utilizada por que temos poucos dados e esta é uma caminho diferente para analisarmos melhor a probabilidade, média de precisão e o AUC ROC. Aqui os dados de validação são novos e os dados de treino antigos.
 <br>
     <ul>
         <li>Selecionar um intervalo de datas mais amplo</li>
@@ -185,6 +182,6 @@ Muita sabedoria a cada um de vocês família amores.
 Que você sempre tenha forças para lutar contra o pode destruir você e a quem você quer bem
 Desejo que tenham saúde mental e física para você compartilhar todas as boas ações e intenções com as pessoas que você quer bem
 Desejo que a paciência aumenta em vossa vida e na vida de todas as pessoas que convivem com você para que construam uma relação de confiança. Bom dia.
-Desejo que você alcance a vitória que lhe fará feliz, e que esta vitória seja a vitória das pessoas que você gosta e una a todos para sempre.
+Desejo que você alcance a vitória que lhe fará feliz, e que esta vitória seja a vitória também façam as pessoas que você gosta ser felizes e una a todos vocês para sempre.
 
 -->
