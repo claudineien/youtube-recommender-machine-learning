@@ -23,9 +23,9 @@
 </h5>
 
 <h1 align='center'>Resultado com Active Learning</h1>
-<p>O objetivo nesta fase é entender se o Active Learning vai trazer ou não melhorias ao nosso modelo machine learning, e identificaremos estas melhorias através das métricas average precision e auc-roc. Esta análise também nos ajudará a acompanhar mais rápido a qualidade do dataset, entender se há necessidade de termos mais dados para trabalhar e aplicar uma ou mais mudanças em um ou mais processos do desenvolvimento deste projeto de ciência de dados.</p>
+<p>O objetivo nesta fase é entender se o Active Learning vai trazer ou não melhorias ao nosso modelo machine learning. No primeiro momento identificaremos as melhorias através das métricas average precision e auc-roc. Esta análise também nos ajudará a acompanhar mais rápido a qualidade do dataset, entender se há necessidade de termos mais dados para treinar e testar e aplicar uma ou mais mudanças em um ou mais processos do desenvolvimento deste projeto de ciência de dados.</p>
 <p>Utilizaremos o notebook <a href="/1-source-code/4_Resultado_Active_Learning.ipynb" >4_Resultado_Active_Learning.ipynb</a> para entendermos um pouco de como este processo funciona.</p>
-<p>Iniciaremos aplicando a técnica Labelling, aplicaremos limpezas no dataset, criaremos algumas Features, faremos tuning no algorítmo machine learning, treinaremos o algorítmo RandomForestClassifier e por fim teremos o resultados das métricas.</p>
+<p>Nesta etapa vamos aplicar a técnica Labelling, aplicaremos limpezas no dataset, criaremos algumas Features, trabalharemos com matriz esparsas, term frequency, faremos tuning no algorítmo machine learning, treinaremos o algorítmo RandomForestClassifier e por fim teremos o resultados das métricas.</p>
 
 <hr>
 <h3>PROCEDIMENTOS QUE APLICAREMOS NO DATASET</h3>
@@ -39,20 +39,19 @@ Baixar o arquivo <a href="/2-dataset">active_labels.csv</a>, cujo labelling já 
 <h3>COM NOTEBOOK <a href="/1-source-code/4_Resultado_Active_Learning.ipynb" >4_Resultado_Active_Learning.ipynb</a></h3>
 <h4>A PRIMEIRA MÉTRICA</h4>
 <p>Ao aplicarmos as métricas average precision e auc-roc sobre o arquivo <a href="/2-dataset">active_labels.csv</a> considerando
-as colunas y (labelling) e p (probabilidade) com o percentual de probabilidade de ser 1-Video que provavelmente vamos assistir, vamos obter o seguinte resultado :<br>
+as colunas y (labelling) e p (probabilidade) com o percentual de probabilidade de ser 1 (Video que provavelmente vamos assistir), vamos obter o seguinte resultado :<br>
 <img src="/3-images/3rand_for_activ_learn.png"><br>
-<p>Esta primeira métrica realizada sobre o dataset com 100 exemplos que o modelo machine learning esta com dificuldade em classificar, nos indica que :<br>
+<p>Esta primeira métrica realizada sobre o dataset com 100 exemplos que o modelo machine learning esta com dificuldade em classificar, indica que :<br>
 - As métricas average_precision_score e roc_auc_score estão sensíveis com relação a pequena quantidade de dados que temos.<br>
 - O dataset provavelmente deve receber mais tratamento e/ou mais dados para melhorarmos o modelo machine learning.<br>
 - O modelo parece estar melhorando com o Active Learning</p>
 <p>Analisando um pouco do dataframe do arquivo <a href="/2-dataset" >active_labels.csv</a> :<br>
 A coluna p contém a probabilidade que o modelo machine learning dá ao item 579 de ser 37,5% positivo e ao item 846 de ser 82,6% positivo.<br>
-Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, então o item ...<br>
+Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, então o item :<br>
 - 579 seria um Falso Negativo (37,5% < 50%)<br>
 - 846 seria um Falso Positivo (82,6% > 50%)</p>
 <p>Vamos concatenar os arquivos <a href="/2-dataset">active_labels.csv</a> com aproximadamento 100 exemplos ao <a href="/2-dataset">raw_data_with_labels.csv</a> com aproximadamento 500 e ambos com labelling realizado, para treinarmos o modelo machine learning.</p>
 
-<p>Nesta etapa vamos pegar os 100 exemplos cujo modelo machine learning esta com grande dificuldade em predizer, vamos aplicar técnicas já conhecidas como o labelling, limpeza de dados, matriz esparsas, term frequency juntar ao dataset principal e verificar o quanto o active learning esta ajudando.</p>
 <p>, criar mais exemplos para treino e teste, analisar o conteúdo do dataset, interpretar alguns dados, fazer algumas limpezas nos dados, aplicar algumas técnicas para limpeza de dados, utilizar o objeto TfidfVectorizer para transformar textos em uma representação significante de números, vamos analisar probabilidade, métricas roc_auc_score e average_precision_score, comparar com a referencial inicial obtida no notebook <a href="/1-source-code/2_Decision_Tree_Classifier.ipynb">2_Decision_Tree_Classifier.ipynb</a> e comparar com os resultados gerados no notebook <a href="/1-source-code/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a>.
 </p>
  A seguir veremos como aplicaremos as seguintes técnicas :<br>
