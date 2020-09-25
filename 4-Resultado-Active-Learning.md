@@ -91,7 +91,7 @@ Nos dados de treino selecionaremos os primeiros 50% dos dados dos 500 exemplos a
 <p>Algumas informações importantes a saber :<br>
 1 Em todas as técnicas aplicaremos o algorítmo TfidfVectorizer e o scipy.sparse, executaremos o algorítmo RandomForestClassifier, seu algorítmo de probabilidade, o average precision e auc-roc da biblioteca sklearn.metrics.<br>
 2 As métricas estão muito sensíveis, alterando a cada pequena alteração.<br>
-3 Na maior parte das vezes quanto mais conteúdo de treino, melhor treinado será o modelo machine learning.</p>
+3 Na maior parte das vezes quanto mais o conteúdo para treino e teste, mais eficaz o modelo machine learning ficará.</p>
 
 <p>A precisão da pontuação entre a probabilidade dos dados de treino e dados de validação infelizmente diminuiu mas o AUC melhorou -esta mais próximo de 1. Entendemos que ambos estão bem sensíveis, por conta da pouca quantidade de dados.</p>
 
