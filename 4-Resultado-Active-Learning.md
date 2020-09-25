@@ -59,7 +59,7 @@ Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, sig
 <p>
     <ul>
         <li>Vamos incluir a coluna [Novo] no dataframe com os 100 exemplos separados pelo active learning e incluir o número 1 nesta coluna.</li>
-        <li>Vamos importar aproximadamente 498 registros do dataset <a href="\file-csv">raw_data_with_labels.csv</a>, cujo o campo y seja diferente de nulo/vazio, que estão com anotações 1 ou 0.</li>
+        <li>Vamos importar aproximadamente 498 registros do dataset <a href="/2-dataset">raw_data_with_labels.csv</a>, cujo o campo y seja diferente de nulo/vazio, que estão com anotações 1 ou 0.</li>
         <li>Vamos concatenar os arquivos <a href="/2-dataset">active_labels.csv</a> com 100 exemplos e com a nova coluna [Novo] ao <a href="/2-dataset">raw_data_with_labels.csv</a> com aproximadamento 500 exemplos. Ambos com labelling realizado. E teremos com um dataset com 600 registros, para melhorar o treinamento de nosso modelo machine learning.</li>
         <li>O novo dataset terá a coluna [Novo] com 1 indicando os 100 registros e gravará nan's para os outros 500 registros.</li>
         <li>Vamos eliminar a coluna p, por que será desnecessária aos testes.</li>
