@@ -89,9 +89,9 @@ Nos dados de treino selecionaremos os primeiros 50% dos dados dos 500 exemplos a
 <img src="/3-images/3rand_for_activ_learn3.png">
 <p>Comparando com as métricas do algorítmo DecicionTreeClassifier nós continuamos com melhoria nas métricas.</p>
 <p>Algumas informações importantes a saber :<br>
-1 Em todas as técnicas aplicaremos o algorítmo TfidfVectorizer o scipy.sparse, executaremos o algorítmo RandomForestClassifier, seu algorítmo de probabilidade, o average precision e auc-roc da biblioteca sklearn.metrics.<br>
+1 Em todas as técnicas aplicaremos o algorítmo TfidfVectorizer e o scipy.sparse, executaremos o algorítmo RandomForestClassifier, seu algorítmo de probabilidade, o average precision e auc-roc da biblioteca sklearn.metrics.<br>
 2 As métricas estão muito sensíveis, alterando a cada pequena alteração.<br>
-3 Na maior parte das vezes quanto mais conteúdo no dataset, melhor será modelo machine learning.</p>
+3 Na maior parte das vezes quanto mais conteúdo de treino, melhor treinado será o modelo machine learning.</p>
 
 <p>A precisão da pontuação entre a probabilidade dos dados de treino e dados de validação infelizmente diminuiu mas o AUC melhorou -esta mais próximo de 1. Entendemos que ambos estão bem sensíveis, por conta da pouca quantidade de dados.</p>
 
