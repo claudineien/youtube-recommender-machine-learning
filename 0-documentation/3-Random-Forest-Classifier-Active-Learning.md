@@ -28,7 +28,7 @@
 
 <hr>
 <h3>COM NOTEBOOK <a href="/1-source-code/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a></h3>
-<p>Utilizaremos o arquivo <a href="/2-dataset">raw_data_with_labels.csv</a> e faremos conforme documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a> até a criação das features.</p>
+<p>Utilizaremos o arquivo <a href="/2-dataset">raw_data_with_labels.csv</a> e faremos conforme documento <a href="/0-documentation/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a> até a criação das features.</p>
 
 <h4>MODELO MACHINE LEARNING</h4>
 <p>Após criamos as features, vamos separar o dataset de treino e dataset teste por data de publicação/upload, por ser uma time series.</p>
