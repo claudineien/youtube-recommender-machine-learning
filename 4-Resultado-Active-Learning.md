@@ -53,16 +53,17 @@ Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, sig
 <hr>
 <h3>ANALISAR RESULTADO DO ACTIVE LEARNING</h3>
 <p>Neste etapa nós aprenderemos como aplicar algumas técnicas para entendermos aonde o active learning nos esta ajudando.</p>
+<p>Inciaremos pela limpeza e tratamento nos dados e logo em seguida aplicaremos três técnicas : aumentar dataset de validação, aumentar dataset de treino e aumentar dataset de validação e o dataset de treino.</p>
 
 <h4>LIMPAR E TRANSFORMAR DADOS</h4>
 <p>
     <ul>
-        <li>Vamos incluir a coluna [Novo] no dataframe com os 100 exemplos separados pelo active learning e incluir o número 1 nesta coluna (*2).</li>
+        <li>Vamos incluir a coluna [Novo] no dataframe com os 100 exemplos separados pelo active learning e incluir o número 1 nesta coluna.</li>
         <li>Vamos importar aproximadamente 498 registros do dataset <a href="\file-csv">raw_data_with_labels.csv</a>, cujo o campo y seja diferente de nulo/vazio, que estão com anotações 1 ou 0.</li>
         <li>Vamos concatenar os arquivos <a href="/2-dataset">active_labels.csv</a> com 100 exemplos e com a nova coluna [Novo] ao <a href="/2-dataset">raw_data_with_labels.csv</a> com aproximadamento 500 exemplos. Ambos com labelling realizado. E teremos com um dataset com 600 registros, para melhorar o treinamento de nosso modelo machine learning.</li>
         <li>O novo dataset terá a coluna [Novo] com 1 indicando os 100 registros e gravará nan's para os outros 500 registros.</li>
         <li>Vamos eliminar a coluna p, por que será desnecessária aos testes.</li>
-        <li>Vamos substituir o conteúdo nan por 0 na coluna [Novo] referente aos 500 registros que estão com nan's (*2).</li>
+        <li>Vamos substituir o conteúdo nan por 0 na coluna [Novo] referente aos 500 registros que estão com nan's.</li>
         <li>Extrair apenas a data de uma coluna tipo objeto, com strings e datas.</li>
 		<li>Extrair apenas o número de uma coluna tipo objeto, com strings e número.</li>
         <li>Criar Features necessárias.</li>
@@ -70,49 +71,27 @@ Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, sig
 </p>
 
 <h4>AUMENTAR DATASET DE VALIDAÇÃO</h4>
-<p>Aumentar o dataset de valicação é a técnica menos utilizada. Será utilizada por que temos poucos dados e esta é uma caminho diferente para analisarmos melhor a probabilidade, média de precisão e o AUC ROC. Aqui os dados de validação são novos e os dados de treino antigos.
-<br>
-    <ul>
-        <li>Selecionar um intervalo de datas mais amplo</li>
-        <li>Importar o objeto TfidfVectorizer</li>
-        <li>Pegar as descrições dos títulos dos vídeos</li>
-        <li>Transformar os textos dos títulos com o algoritmo TfidfVectorizer (*3)</li>
-        <li>Concatenar matriz densa e matriz sparsa (*4)</li>
-        <li>Executar a probabilidade do RandomForestClassifier (*5)</li>
-        <li>Aplicar roc_auc_score e average_precision_score</li>
-    </ul>
-</p>
-
-<p><strong>Atenção :</strong><br>
-É indicado que o dataset de validação não seja alterado.<br>
-Utilizaremos </p>
+<p>Aumentar o dataset de validação é a técnica menos utilizada, mas a utilizaremos por que temos poucos dados e esta técnica é mais uma opção para analisarmos melhor a probabilidade, average precision e o auc roc.</p>
+<p>Nos dados de treino selecionaremos os primeiros 50% dos dados dos 500 exemplos antigos e nos dados de validação selecionaremos os outros 50% dos dados antigos mais os 100 exemplos dos dados separados pelo active learning.</p>
+<p>A seguir estão os valores average precision e auc-roc sob a probabilidade relacionada aos títulos :</p>
+<img src="/3-images/3rand_for_activ_learn1.png"><br>
+<p>Comparando com as métricas do algorítmo DecicionTreeClassifier nós tivemos uma melhoria nas métricas.</p>
 
 <h4>AUMENTAR DATASET DE TREINO</h4>
-<p>Este é o procedimento mais tradicional/utilizado. Também utilizada a análise da probabilidade, média de precisão e o AUC ROC. Aqui os dados de validação são antigos e os dados de treino são os novos.
-<br>
-    <ul>
-        <li>Selecionar um intervalo de datas mais amplo</li>
-        <li>Importar o objeto TfidfVectorizer</li>
-        <li>Pegar as descrições dos títulos dos vídeos</li>
-        <li>Transformar os textos dos títulos com o algoritmo TfidfVectorizer (*3)</li>
-        <li>Concatenar matriz densa e matriz sparsa (*4)</li>
-        <li>Executar a probabilidade do RandomForestClassifier (*5)</li>
-        <li>Aplicar roc_auc_score e average_precision_score</li>
-    </ul>
-</p>
+<p>Esta técnica é a mais comumente utilizada.</p>
+<p>Nos dados de treino selecionaremos os primeiros 50% dos dados dos 500 exemplos antigos mais os 100 exemplos dos dados separados pelo active learning e nos dados de validação selecionaremos a outra parte dos 50% dos dados antigos.</p>
+<p>A seguir estão os valores average precision e auc-roc sob a probabilidade relacionada aos títulos :</p>
+<img src="/3-images/3rand_for_activ_learn2.png"><br>
+<p>Comparando com as métricas do algorítmo DecicionTreeClassifier nós continuamos com melhoria nas métricas, porém menor que o anterior.</p>
 
-<hr>
 <h4>AUMENTAR DATASET DE VALIDAÇÃO E O DATASET DE TREINO</h4>
-    <ul>
-        <li>Selecionar um intervalo de datas mais amplo</li>
-        <li>Importar o objeto TfidfVectorizer</li>
-        <li>Pegar as descrições dos títulos dos vídeos</li>
-        <li>Transformar os textos dos títulos com o algoritmo TfidfVectorizer (*3)</li>
-        <li>Concatenar matriz densa e matriz sparsa (*4)</li>
-        <li>Executar a probabilidade do RandomForestClassifier (*5)</li>
-        <li>Aplicar roc_auc_score e average_precision_score</li>
-    </ul>
-</p>
+Nos dados de treino selecionaremos os primeiros 50% dos dados dos 500 exemplos antigos mais os 100 exemplos dos dados separados pelo active learning e nos dados de validação selecionaremos a outra parte dos 50% dos dados antigos</p>
+<img src="/3-images/3rand_for_activ_learn3.png"><br>
+<p>Comparando com as métricas do algorítmo DecicionTreeClassifier nós continuamos com melhoria nas métricas.</p>
+<p>Algumas informações importantes a saber :<br>
+1 Em todas as técnicas aplicaremos o algorítmo TfidfVectorizer o scipy.sparse, executaremos o algorítmo RandomForestClassifier, seu algorítmo de probabilidade, o average precision e auc-roc da biblioteca sklearn.metrics.<br>
+2 As métricas estão muito sensíveis, alterando a cada pequena alteração.<br>
+3 Na maior parte das vezes quanto mais conteúdo no dataset, melhor será modelo machine learning.</p>
 
 <p>A precisão da pontuação entre a probabilidade dos dados de treino e dados de validação infelizmente diminuiu mas o AUC melhorou -esta mais próximo de 1. Entendemos que ambos estão bem sensíveis, por conta da pouca quantidade de dados.</p>
 
@@ -122,28 +101,6 @@ Número : O local do ponto em português é diferente do inglês<br>
 Transformar Data em valor numérico : O formato número é mais eficiente aos algoritmos machine learning<br>
 Modelo ml x Realidade : Para melhor eficiência do modelo machine learning os dados de treino e de teste devem ser o mais semelhantes possível a rotina da realidade em uma empresa ou em uma pesquisa de campo<br>
 Novo dataframe : Evite alterar os dados no dataframe principal, trabalhe sempre com a cópia. Esta prática agiliza o processo de manipulação dos dados e se algo der errado basta executar a instção de cópia do dataframe novamente, alem de evitar que alguma rotina que utiliza o dataframe principal funcione indevidamente.</p>
-
-<p>Nota :<br>
-(*1) Você pode colocar o nome que quiser, foi escolhido Y (Youtube) para facilitar nosso entendimento.<br>
-(*2) Conteúdo na coluna Novo :<br>
-1-Relacionados aos 100 exemplos do dataset <a href=".\file-csv">active_labels1_done.csv</a><br>
-0-Relacionados aos exemplos do dataset <a href=".\file-csv">raw_data_with_labels.csv</a>
-(*3) TfidfVectorizer dá mais peso as palavras que aparecem bastante em determinado exemplo mas não aparece tanto no dadtaset como um todo. Palavras que aparecem pouco entre todos os videos mas aparecerem muito em um video tem mais peso. Ex : machine e learning apareceram em praticamente todos os vídeos e terão um peso menor
-Há uma forma mais simples que é criar matriz com contagem de palavras em que em cada linha tem um video, e cada coluna é uma palavra e coloca a quantas vezes a palavra aparece no cruzamento da linha do video com a palavra do titulo do vídeo<br>
-(*4) Matriz esparsa armazena valores diferentes de zero -é mais otimizada.<br>
-(*5) A probabilidade é o percentual de acerto que o modelo machine learning alcançou.<br>
-
-Vamos lembrar :<br>
-:/: Precision : é o número que responde a pergunta de todos os modelos que disse que são positivos, 50% destes são realmente positivos<br>
-
-:/: Recall : é taxa de detecção, isto é, de todos os modelos que disse que são positivos quanto o modelo realmente previu como positivos ?<br>
-
-A função fillna() serve para evitar que o conteúdo nan (considerado nulo) continue na coluna. Conteúdo nan atrapalha a eficiência do modelo machine learning.
-</p>
-
-<p>Importante :<br>
-Na maior parte das vezes quanto mais conteúdo estiver no dataset, melhor será modelo machine learning.
-</p>
 
 <p>Issue github :<br>
     <a href="https://github.com/scikit-learn/scikit-learn/issues/16017">TfidfVectorizer ngrams does not work when vocabulary provided #16017</a>
@@ -176,12 +133,12 @@ Na maior parte das vezes quanto mais conteúdo estiver no dataset, melhor será 
 </p>
 
 <!--Mensagens aos familiares e amigos pelo whatsapp
-Muita paz à vocês meus amores
-Muita felicidade amores
+Muita paz à vocês meus amores.
+Muita felicidade amores.
 Muita sabedoria a cada um de vocês família amores.
-Que você sempre tenha forças para lutar contra o pode destruir você e a quem você quer bem
+Que você sempre tenha forças para lutar contra o pode destruir você e a quem você quer bem.
 Desejo que tenham saúde mental e física para você compartilhar todas as boas ações e intenções com as pessoas que você quer bem
-Desejo que a paciência aumenta em vossa vida e na vida de todas as pessoas que convivem com você para que construam uma relação de confiança. Bom dia.
+Desejo que a paciência aumenta em vossa vida e na vida de todas as pessoas que convivem com você para que construam uma relação de confiança.
 Desejo que você alcance a vitória que lhe fará feliz, e que esta vitória seja a vitória também façam as pessoas que você gosta ser felizes e una a todos vocês para sempre.
-
+. Bom dia.
 -->
