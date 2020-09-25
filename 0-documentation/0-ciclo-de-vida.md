@@ -58,7 +58,7 @@ Um algoritmo simples de <a href="https://github.com/claudineien/graduate-datasci
 <p><strong>Em nosso projeto criaremos</strong> um Web App</strong> com link dos vídeos e as previsões ordenadas e com os seguintes dados : Título, Label, Anotações, Descrição</p>
 
 <h4>05 COMO SABER SE A SOLUÇÃO DEU CERTO ?</h4>
-O Cientista de dados define métricas primárias e métricas secundárias de acordo com a área de negócio e dataset obtidos, compara os resultados entre solução com machine learning e os resultados atualmente conquistados sem machine learning. Este ciclo é repetido algumas vezes até o <a href="/0-documentation/00data-science-lifecycle0.md">modelo estar otimizado</a> para ser disponibilizado em ambbiente produção.
+O Cientista de dados define métricas primárias e métricas secundárias de acordo com a área de negócio e dataset obtidos, compara os resultados entre solução com machine learning e os resultados atualmente conquistados sem machine learning. Este ciclo é repetido algumas vezes até o <a href="https://github.com/claudineien/graduate-datascientist/blob/master/0-documentation/00data-science-lifecycle0.md">modelo estar otimizado</a> para ser disponibilizado em ambbiente produção.
 <p>Deve haver uma métrica primária e uma ou mais métricas secundárias.</p>
 <p><strong>Em nosso projeto :</strong>
     <ul>
