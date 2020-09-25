@@ -39,16 +39,16 @@
 <details>
   <summary><strong>TÉCNICAS QUE APRENDEREMOS</strong></summary>
 Para um melhor entendimento devemos ler e seguir ordenamente os documentos a seguir :
-<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/0-ciclo-de-vida.md">0-ciclo-de-vida.md</a> aprenderemos sobre o ciclo de vida de um projeto Data Science e através desta técnica desenvolveremos o modelo machine learning para recomendar vídeos do youtube.</p>
+<p>No documento <a href="/0-documentation/0-ciclo-de-vida.md">0-ciclo-de-vida.md</a> aprenderemos sobre o ciclo de vida de um projeto Data Science e através desta técnica desenvolveremos o modelo machine learning para recomendar vídeos do youtube.</p>
 
-<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> aprenderemos sobre a coleta de dados de vídeos do youtube com a bibioteca <a href="https://youtube-dl.org/">youtube_dl</a>, escolhida por trazer os dados em formato de dicionário do python, que agiliza todo e qualquer processo de preparação dos dados para o modelo machine learning.</p>
+<p>No documento <a href="/0-documentation/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> aprenderemos sobre a coleta de dados e preparação dos dados para aplicar a técnica de labelling</p>
 
-<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a> aprenderemos algumas técnicas para adequar o dataset para uma melhor predição pelo modelo machine learning com o algorítmo DecisionTreeClassifier.</p>
+<p>No documento <a href="/0-documentation/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a> aprenderemos sobre o labelling, como aplicar algumas técnicas de adequação do dataset e melhorar o modelo machine learning com o algorítmo DecisionTreeClassifier.</p>
 
-<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/3-Random-Forest-Classifier-Active-Learning.md">3-Random-Forest-Classifier-Active-Learning.md</a> iniciaremos o entendimento de algumas técnicas para identificar o modelo machine learning mais eficiente. Neste momento vamos comparar o DecisionTreeClassifier e RandomForestClassifier.<br>
-Também vamos continuar com as adequações no dataset, aplicar a técnica Active Learning, utilizar o algorítimo TfidfVectorizer e trabalhar com matriz esparsa, para melhorar a predição.</p>
+<p>No documento <a href="/0-documentation/3-Random-Forest-Classifier-Active-Learning.md">3-Random-Forest-Classifier-Active-Learning.md</a> iniciaremos o entendimento de algumas técnicas para identificar o modelo machine learning mais eficiente. Neste momento vamos comparar o DecisionTreeClassifier e RandomForestClassifier.<br>
+Vamos comparar as métricas, continuaremos com as adequações no dataset, aplicaremos a técnica Active Learning, utilizararemos o algorítimo TfidfVectorizer e trabalharemos com matriz esparsa, para melhorar a predição.</p>
 
-<p>No documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/4-Medir-Active-Learning.md">4-Medir-Active-Learning.md</a> nós vamos entender o resultado que Active Learning traz ao nosso projeto.</p>
+<p>No documento <a href="/0-documentation/4-Resultado-Active-Learning.md">4-Resultado-Active-Learning.md</a> nós vamos entender o resultado que Active Learning traz ao nosso projeto, através das novas métricas resultantes dos algorítmos DecisionTreeClassifier e RandomForestClassifier.</p>
 
 <p>Durante o processo nós encontraremos respostas à algumas perguntas como :
     <ol>
