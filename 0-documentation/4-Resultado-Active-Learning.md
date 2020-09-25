@@ -31,7 +31,7 @@
 <h3>PROCEDIMENTOS QUE APLICAREMOS NO DATASET</h3>
 <h4>LABELLING</h4>
 No final do notebook <a href="/1-source-code/3_Random_Forest_Classifier.ipynb">3_Random_Forest_Classifier.ipynb</a> nós aplicamos a técnica active learning e criamos o arquivo <a href="/2-dataset">active_labels.csv</a> para fazermos o labelling.</p>
-<p>Vamos fazer o labelling conforme documentado em <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>.</p>
+<p>Vamos fazer o labelling conforme documentado em <a href="/0-documentation/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>.</p>
 <p>Importante :<br>
 Baixar o arquivo <a href="/2-dataset">active_labels.csv</a>, cujo labelling já foi aplicado para facilitar nosso entendimento em cada técnica executada.</p>
 
