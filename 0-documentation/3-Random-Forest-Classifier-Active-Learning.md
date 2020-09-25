@@ -38,7 +38,7 @@ Linha 24 do notebook<br>
 Linha 25 do notebook<br>
 <img src="/3-images/2rand_fores_tfid1.png"></p>
 <p>Outra boa e comum prática é concatenaremos dados numéricos com dados string ou concatenarmos matriz densa com matriz esparsa, e para isto utilizaremos a biblioteca scipy.sparse</p>
-<p>Após estas técnicas vamos treinar o algorítmo RandomForestClassifier configurando o argumento class_weight="balanced" (mesmo objetivo do explicado no documento <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>).</p>
+<p>Após estas técnicas vamos treinar o algorítmo RandomForestClassifier configurando o argumento class_weight="balanced" (mesmo objetivo do explicado no documento <a href="/0-documentation/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>).</p>
 
 <h4>AS MÉTRICAS DE CLASSIFICAÇÃO</h4>
 <p>Visualizaremos a métrica <strong>predict_proba</strong> do algorítmo RandomForestClassifier para verificar a distribuição da probabilidade prevista da classe label 1 do dataset. Esta é importante para calcular a pontuação no auc-roc conforme imagem a seguir :<br>
@@ -71,7 +71,7 @@ Imagens radiográficas, ressonância magnética e similares precisam de especial
   </ol>
 </p>
 
-<p>Vamos pegar o dataset original <a href="/2-dataset">raw_data_with_labels.csv</a>, executar o processo de separação de dados, limpeza de dados, transformação de dados, que são 99% iguais aos que aprendemos nos notebooks <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> e <a href="https://github.com/claudineien/youtube-recommender-machine-learning/blob/master/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>, vamos trazer apenas os registros cuja coluna Y seja nula, aplicaremos o algorítmo predict_proba do algorítmo RandomForestClassifier sob os títulos de vídeos e gravaremos o resultado no dataset, em um novo campo p (probabilidade). Então selecionaremos os vídeos mais próximos da fronteira dos 50% positivo e 50% negativo (verdadeiro ou falso), por que são os mais prováveis de acertar mesmo sendo difíceis do modelo predizer.</p>
+<p>Vamos pegar o dataset original <a href="/2-dataset">raw_data_with_labels.csv</a>, executar o processo de separação de dados, limpeza de dados, transformação de dados, que são 99% iguais aos que aprendemos nos notebooks <a href="/0-documentation/1-dataset-collect-clean.md">1-dataset-collect-clean.md</a> e <a href="/0-documentation/2-Decision-Tree-Classifier.md">2-Decision-Tree-Classifier.md</a>, vamos trazer apenas os registros cuja coluna Y seja nula, aplicaremos o algorítmo predict_proba do algorítmo RandomForestClassifier sob os títulos de vídeos e gravaremos o resultado no dataset, em um novo campo p (probabilidade). Então selecionaremos os vídeos mais próximos da fronteira dos 50% positivo e 50% negativo (verdadeiro ou falso), por que são os mais prováveis de acertar mesmo sendo difíceis do modelo predizer.</p>
 <p>Atenção :<br>
 Dependendo da quantidade de dados no dataset, será necessário considerar dados mais distantes da fronteira 50-50.<br>
 Outro detalhe é que amostras muito distantes da fronteira, provavelmente são vídeos que realmente não assistiremos.</p>
