@@ -74,19 +74,19 @@ Se usarmos um ponto de corte de 50%, sendo acima positivo e abaixo negativo, sig
 <p>Aumentar o dataset de validação é a técnica menos utilizada, mas a utilizaremos por que temos poucos dados e esta técnica é mais uma opção para analisarmos melhor a probabilidade, average precision e o auc roc.</p>
 <p>Nos dados de treino selecionaremos os primeiros 50% dos dados dos 500 exemplos antigos e nos dados de validação selecionaremos os outros 50% dos dados antigos mais os 100 exemplos dos dados separados pelo active learning.</p>
 <p>A seguir estão os valores average precision e auc-roc sob a probabilidade relacionada aos títulos :</p>
-<img src="/3-images/3rand_for_activ_learn1.png"><br>
+<img src="/3-images/3rand_for_activ_learn1.png">
 <p>Comparando com as métricas do algorítmo DecicionTreeClassifier nós tivemos uma melhoria nas métricas.</p>
 
 <h4>AUMENTAR DATASET DE TREINO</h4>
 <p>Esta técnica é a mais comumente utilizada.</p>
 <p>Nos dados de treino selecionaremos os primeiros 50% dos dados dos 500 exemplos antigos mais os 100 exemplos dos dados separados pelo active learning e nos dados de validação selecionaremos a outra parte dos 50% dos dados antigos.</p>
 <p>A seguir estão os valores average precision e auc-roc sob a probabilidade relacionada aos títulos :</p>
-<img src="/3-images/3rand_for_activ_learn2.png"><br>
+<img src="/3-images/3rand_for_activ_learn2.png">
 <p>Comparando com as métricas do algorítmo DecicionTreeClassifier nós continuamos com melhoria nas métricas, porém menor que o anterior.</p>
 
 <h4>AUMENTAR DATASET DE VALIDAÇÃO E O DATASET DE TREINO</h4>
 Nos dados de treino selecionaremos os primeiros 50% dos dados dos 500 exemplos antigos mais os 100 exemplos dos dados separados pelo active learning e nos dados de validação selecionaremos a outra parte dos 50% dos dados antigos</p>
-<img src="/3-images/3rand_for_activ_learn3.png"><br>
+<img src="/3-images/3rand_for_activ_learn3.png">
 <p>Comparando com as métricas do algorítmo DecicionTreeClassifier nós continuamos com melhoria nas métricas.</p>
 <p>Algumas informações importantes a saber :<br>
 1 Em todas as técnicas aplicaremos o algorítmo TfidfVectorizer o scipy.sparse, executaremos o algorítmo RandomForestClassifier, seu algorítmo de probabilidade, o average precision e auc-roc da biblioteca sklearn.metrics.<br>
