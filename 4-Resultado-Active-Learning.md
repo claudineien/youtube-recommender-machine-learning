@@ -103,8 +103,7 @@ Modelo ml x Realidade : Para melhor eficiência do modelo machine learning os da
 Novo dataframe : Evite alterar os dados no dataframe principal, trabalhe sempre com a cópia. Esta prática agiliza o processo de manipulação dos dados e se algo der errado basta executar a instção de cópia do dataframe novamente, alem de evitar que alguma rotina que utiliza o dataframe principal funcione indevidamente.</p>
 
 <p>Issue github :<br>
-    <a href="https://github.com/scikit-learn/scikit-learn/issues/16017">TfidfVectorizer ngrams does not work when vocabulary provided #16017</a>
-</p>
+    <a href="https://github.com/scikit-learn/scikit-learn/issues/16017">TfidfVectorizer ngrams does not work when vocabulary provided #16017</a></p>
 
 <br>
 <br>
@@ -133,12 +132,12 @@ Novo dataframe : Evite alterar os dados no dataframe principal, trabalhe sempre 
 </p>
 
 <!--Mensagens aos familiares e amigos pelo whatsapp
-Muita paz à vocês meus amores.
-Muita felicidade amores.
-Muita sabedoria a cada um de vocês família amores.
+Muita paz
+Muita felicidade
+Muita sabedoria a cada um de vocês.
 Que você sempre tenha forças para lutar contra o pode destruir você e a quem você quer bem.
 Desejo que tenham saúde mental e física para você compartilhar todas as boas ações e intenções com as pessoas que você quer bem
 Desejo que a paciência aumenta em vossa vida e na vida de todas as pessoas que convivem com você para que construam uma relação de confiança.
 Desejo que você alcance a vitória que lhe fará feliz, e que esta vitória seja a vitória também façam as pessoas que você gosta ser felizes e una a todos vocês para sempre.
-. Bom dia.
+Eu acredito que se você acreditar em si mesmo o seu desejo de ter paz e ser feliz será realizado. Então acredite em si mesmo ! Bom dia.
 -->
